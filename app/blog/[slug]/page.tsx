@@ -1,0 +1,9 @@
+import { Header, Footer, CTA } from '../../components';
+import { blogPosts, site } from '../../data';
+export function generateStaticParams() { return blogPosts.map((p)=>({ slug: p.slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const post = blogPosts.find((p)=>p.slug===slug); return { title: post?.title || 'Guide', description: post?.excerpt }; }
+export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
+ const { slug } = await params;
+ const post = blogPosts.find((p)=>p.slug===slug) || blogPosts[0];
+ return <><Header/><main className="section"><article className="container" style={{maxWidth:860}}><p className="eyebrow">{site.brand} guide</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><div className="card"><h2>The short answer</h2><p>Most teams should start with one clear assistant role, 5 to 10 recurring tasks, and a weekly review scorecard. Do not hand over everything at once.</p><h2>What to prepare first</h2><ul className="list"><li>Task examples and sample replies</li><li>Tool list, logins, and permission levels</li><li>Daily or weekly success metric</li><li>Escalation rules for anything sensitive</li><li>First-week training calls and QA checks</li></ul><h2>Common price ranges</h2><p>Overseas virtual assistants often range from $6 to $18 per hour depending on skill level, country, English fluency, schedule, and management support. Local assistants usually cost more but may fit better for in-person work.</p><h2>Questions to ask a provider</h2><ul className="list"><li>Who screens the assistant?</li><li>Who replaces the assistant if fit is poor?</li><li>How is quality checked each week?</li><li>What happens with passwords and customer data?</li><li>Can we start with a small pilot?</li></ul></div></article><CTA/></main><Footer/></>;
+}

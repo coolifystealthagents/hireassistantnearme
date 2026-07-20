@@ -28,6 +28,19 @@ export const industries = [
   'home services',
 ] as const;
 
+export const localMarkets = [
+  { city: 'Austin', focus: 'Real estate offices, agencies, and busy solo owners', tasks: 'calendar cleanup, lead follow-up, listing admin' },
+  { city: 'Phoenix', focus: 'Home services, healthcare offices, and local support teams', tasks: 'call notes, appointment reminders, inbox triage' },
+  { city: 'Tampa', focus: 'Ecommerce, service businesses, and growing sales teams', tasks: 'CRM updates, order questions, quote follow-up' },
+  { city: 'Charlotte', focus: 'Finance, legal admin, and client service teams', tasks: 'document prep, meeting notes, customer replies' },
+] as const;
+
+export const proofCards = [
+  { label: 'BLS admin wage benchmark', value: '$23.08/hr', note: 'The May 2025 national mean wage for secretaries and administrative assistants was $23.08 per hour, before recruiting time, payroll costs, or manager time.' },
+  { label: 'Best pilot size', value: '10-20 hrs/wk', note: 'Enough time to test inbox, calendar, CRM, and support tasks without handing over the whole business.' },
+  { label: 'Safe first review window', value: '5 days', note: 'Review daily at first. Small fixes in week one prevent bigger customer problems later.' },
+] as const;
+
 export const stats = [
   { label: 'Typical overseas VA range', value: '$6-$18/hr', note: 'varies by role, country, and management level' },
   { label: 'Common ramp time', value: '7-21 days', note: 'with SOPs, tools, and call examples ready' },

@@ -10,8 +10,20 @@ const process = (dataAny.staffingProcess || dataAny.checklistSteps || []).slice(
 const questions = (dataAny.leadQuestions || dataAny.faqs || []).slice(0, 5);
 const compare = (dataAny.compareRows || dataAny.proofCards || dataAny.sourcePlaceholders || []).slice(0, 4);
 const offer = dataAny.staffingOffer || {};
-const getTitle = (item: any, fallback = 'Service') => typeof item === 'string' ? item : (item.title || item.name || item.label || item.question || fallback);
-const getText = (item: any, fallback = 'Clear scope, simple handoff, and a practical staffing plan built around the work.') => typeof item === 'string' ? item : (item.desc || item.body || item.excerpt || item.note || item.answer || fallback);
+const formatList = (value: any) => Array.isArray(value) ? value.filter(Boolean).join(', ') : value;
+const getTitle = (item: any, fallback = 'Service') => typeof item === 'string' ? item : (item.title || item.name || item.label || item.question || item.option || item.country || fallback);
+const getText = (item: any, fallback = 'Clear scope, simple handoff, and a practical staffing plan built around the work.') => {
+  if (typeof item === 'string') return item;
+  const direct = item.desc || item.body || item.copy || item.excerpt || item.note || item.answer;
+  if (direct) return formatList(direct);
+  const parts = [
+    item.bestFor ? `Best for: ${formatList(item.bestFor)}` : '',
+    item.watch ? `Watch out for: ${formatList(item.watch)}` : '',
+    item.ask ? `Ask: ${formatList(item.ask)}` : '',
+    item.overlap ? `Coverage: ${formatList(item.overlap)}` : '',
+  ].filter(Boolean);
+  return parts.length ? parts.join(' • ') : fallback;
+};
 
 export default function Home(){
   const schema = { '@context':'https://schema.org', '@type':'WebSite', name: site.brand, url: `https://${site.domain}` };
@@ -22,7 +34,7 @@ export default function Home(){
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Local hiring map</p>
-          <h1>Hire Assistant Near Me built as a local coverage map.</h1>
+          <h1>Hire Assistant Near Me: a local coverage map for clearer staffing decisions.</h1>
           <p className="lead">A redesigned hire assistant near me guide for local business owners who want nearby-feeling assistant support without local hiring planning. The page now uses a distinct split-screen local guide layout, industry-specific planning sections, and a conversion path that feels made for this niche.</p>
           <div className="hero-actions"><a className="btn primary" href="/contact">Request staffing plan</a><a className="btn secondary" href="#services">Explore the plan</a></div>
         </div>

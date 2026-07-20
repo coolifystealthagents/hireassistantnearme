@@ -35,8 +35,32 @@ export const localMarkets = [
   { city: 'Charlotte', focus: 'Finance, legal admin, and client service teams', tasks: 'document prep, meeting notes, customer replies' },
 ] as const;
 
+export const localImageCards = [
+  {
+    title: 'Front desk feel without a front desk hire',
+    body: 'Use local hours, call rules, and a shared inbox so customers get quick answers while the owner keeps final say.',
+    image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80',
+    alt: 'Friendly reception desk in a small local office',
+    tag: 'Local office tasks',
+  },
+  {
+    title: 'Remote support that still feels close',
+    body: 'Match the assistant to your time zone, tools, and daily review habit before you hand over more work.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80',
+    alt: 'Small team planning assistant work on laptops in a bright office',
+    tag: 'Remote assistant fit',
+  },
+  {
+    title: 'City-by-city task planning',
+    body: 'A real estate office, clinic, and home service company should not send the same assistant brief.',
+    image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80',
+    alt: 'Map pins and city route planning for local assistant coverage',
+    tag: 'Near-me map',
+  },
+] as const;
+
 export const proofCards = [
-  { label: 'BLS admin wage benchmark', value: 'custom role plan', note: 'The May 2025 national mean wage for secretaries and administrative assistants was custom role planfor the role, before recruiting time, payroll planning, or manager time.' },
+  { label: 'BLS wage benchmark', value: 'OEWS data', note: 'The Bureau of Labor Statistics publishes local wage data for secretaries and administrative assistants, which helps owners compare local hiring against remote support.' },
   { label: 'Best pilot size', value: '10-20 hrs/wk', note: 'Enough time to test inbox, calendar, CRM, and support tasks without handing over the whole business.' },
   { label: 'Safe first review window', value: '5 days', note: 'Review daily at first. Small fixes in week one prevent bigger customer problems later.' },
 ] as const;
@@ -104,7 +128,7 @@ export const blogPosts = [
       { heading: 'Start with work that repeats', body: 'The best first tasks happen every day or every week. Examples include calendar cleanup, inbox labels, appointment reminders, lead list updates, simple reports, and customer reply drafts.' },
       { heading: 'Do not delegate judgment too early', body: 'Keep staffing details changes, refunds, legal advice, medical judgment, hiring decisions, and large spending decisions with the owner. The assistant can prepare information, but the owner should approve the decision.' },
       { heading: 'Give examples', body: 'Show three good examples and one bad example. A short screen recording can save hours of training. The assistant should know what finished work looks like.' },
-      { heading: 'Review the first five days', body: 'Check work daily for the first week. Fix the checklist, not just the person. If the same mistake happens twice, the instruction is probably unclear.' },
+      { heading: 'Review the first five days', body: 'Check work daily for the first week. Fix the checklist before you blame the person. If the same mistake happens twice, the instruction is probably unclear.' },
     ],
     script: 'For the first week, please only draft replies and update the CRM. Do not send messages or change staffing choices without approval. Mark anything unclear with a question.',
   },

@@ -1,71 +1,57 @@
 import * as data from './data';
 import { Header, Footer, JsonLd } from './components';
 
-const dataAny = data as any;
-const site = dataAny.site || {};
-const services = (dataAny.services || dataAny.roles || dataAny.industries || []).slice(0, 6);
-const posts = (dataAny.blogPosts || []).slice(0, 4);
-const stats = (dataAny.stats || []).slice(0, 3);
-const process = (dataAny.staffingProcess || dataAny.checklistSteps || []).slice(0, 5);
-const questions = (dataAny.leadQuestions || dataAny.faqs || []).slice(0, 5);
-const compare = (dataAny.compareRows || dataAny.proofCards || dataAny.sourcePlaceholders || []).slice(0, 4);
-const offer = dataAny.staffingOffer || {};
-const formatList = (value: any) => Array.isArray(value) ? value.filter(Boolean).join(', ') : value;
-const getTitle = (item: any, fallback = 'Service') => typeof item === 'string' ? item : (item.title || item.name || item.label || item.question || item.option || item.country || fallback);
-const getText = (item: any, fallback = 'Clear scope, simple handoff, and a practical staffing plan built around the work.') => {
-  if (typeof item === 'string') return item;
-  const direct = item.desc || item.body || item.copy || item.excerpt || item.note || item.answer;
-  if (direct) return formatList(direct);
-  const parts = [
-    item.bestFor ? `Best for: ${formatList(item.bestFor)}` : '',
-    item.watch ? `Watch out for: ${formatList(item.watch)}` : '',
-    item.ask ? `Ask: ${formatList(item.ask)}` : '',
-    item.overlap ? `Coverage: ${formatList(item.overlap)}` : '',
-  ].filter(Boolean);
-  return parts.length ? parts.join(' • ') : fallback;
+const d = data as any;
+const site = d.site || {};
+const services = (d.services || d.roles || d.industries || []).slice(0, 4);
+const posts = (d.blogPosts || []).slice(0, 3);
+const stats = (d.stats || []).slice(0, 3);
+const offer = d.staffingOffer || {};
+
+const title = (x:any) => typeof x === 'string' ? x : (x.title || x.name || x.label || x.question || 'Managed support role');
+const text = (x:any) => {
+  if (typeof x === 'string') return `A practical staffing lane for ${x} work with clear tasks, safe access, and weekly review.`;
+  return x.desc || x.excerpt || x.note || x.body ||
+    (x.bestFor ? `Best for ${x.bestFor.join(', ')}` : 'Clear tasks, safe access, owner review, and a managed first week.');
 };
+const slug = (x:any) => (typeof x === 'string' ? x : (x.slug || title(x))).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+const keyword = site.primary || String(site.brand || 'managed offshore staffing').toLowerCase();
+const audience = site.audience || 'business owners comparing managed offshore staffing options';
+const heroImage = site.heroImage || site.serviceImage || 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80';
+const taskLabel = keyword.includes('call') ? 'Call coverage' : keyword.includes('bookkeep') || keyword.includes('payroll') || keyword.includes('billing') || keyword.includes('accounts') ? 'Back office tasks' : keyword.includes('program') || keyword.includes('develop') ? 'Dev handoff' : keyword.includes('design') ? 'Design queue' : keyword.includes('legal') ? 'Legal admin' : 'Inbox + admin';
+const secondTask = keyword.includes('call') ? 'QA call notes' : keyword.includes('program') || keyword.includes('develop') ? 'Ticket cleanup' : keyword.includes('design') ? 'Page revisions' : 'CRM follow-up';
 
 export default function Home(){
-  const schema = { '@context':'https://schema.org', '@type':'WebSite', name: site.brand, url: `https://${site.domain}` };
-  return <><Header/><main>
-    <JsonLd data={schema}/>
-    <section className="hero-shell">
-      <div className="hero-kicker"><span>{site.badge || 'Staffing guide'}</span><span>{site.domain}</span></div>
-      <div className="hero-grid">
-        <div className="hero-copy">
-          <p className="eyebrow">Local hiring map</p>
-          <h1>Hire Assistant Near Me: a local coverage map for clearer staffing decisions.</h1>
-          <p className="lead">A redesigned hire assistant near me guide for local business owners who want nearby-feeling assistant support without local hiring planning. The page now uses a distinct split-screen local guide layout, industry-specific planning sections, and a conversion path that feels made for this niche.</p>
-          <div className="hero-actions"><a className="btn primary" href="/contact">Request staffing plan</a><a className="btn secondary" href="#services">Explore the plan</a></div>
+  const schema = {'@context':'https://schema.org','@type':'WebSite',name:site.brand,url:`https://${site.domain}`};
+  return <><Header/><main className="belay"><JsonLd data={schema}/>
+    <section className="hero">
+      <div className="container hero-grid">
+        <div className="copy">
+          <p className="eyebrow">Premium managed staffing</p>
+          <h1>{site.brand}: hire offshore support without screening alone.</h1>
+          <p className="lead">A clearer way for {audience} to plan the role, compare providers, and launch dependable remote help with onboarding, QA, backup, and reporting built in.</p>
+          <div className="actions"><a className="btn primary" href="/contact">Request staffing plan</a><a className="btn secondary" href="#tasks">Get task ideas</a></div>
+          <p className="risk">No public rate card. Share the work first, then get a practical scope.</p>
         </div>
-        <figure className="hero-media"><img src={site.heroImage || site.serviceImage} alt={site.alt || `${site.brand} planning visual`}/><figcaption>map pins and neighborhood chips</figcaption></figure>
+        <div className="match-card">
+          <div className="portrait-wrap"><img src={heroImage} alt={site.alt || `${site.brand} managed staffing visual`}/><span className="badge">Top-fit match</span></div>
+          <div className="task-note note-a"><b>{taskLabel}</b><span>daily owner brief</span></div>
+          <div className="task-note note-b"><b>{secondTask}</b><span>clear handoff rules</span></div>
+          <div className="task-note note-c"><b>21-day launch</b><span>scope → shadow → live QA</span></div>
+        </div>
       </div>
+      <div className="container proof-bar"><span>Right role before right hire</span>{stats.map((s:any,i:number)=><b key={i}>{s.value || s.label}</b>)}</div>
     </section>
 
-    <section className="selector-board"><div><p className="eyebrow">Start here</p><h2>Pick the workstream before picking the person.</h2></div>{services.slice(0,4).map((item:any, idx:number)=><button key={idx}><span>{String(idx+1).padStart(2,'0')}</span>{getTitle(item)}</button>)}</section>
-    <section className="image-break"><img src={site.serviceImage || site.heroImage} alt={site.alt || ''}/><div><h2>Built around the daily handoff.</h2><p>{site.angle || 'The site is organized around scopes, tools, review habits, and launch decisions.'}</p></div></section>
-    <section className="proof-stack">{stats.map((s:any, idx:number)=><article key={idx}><strong>{s.value || 'Plan'}</strong><span>{s.label || 'Planning signal'}</span><p>{s.note || 'Confirm this during role scoping.'}</p></article>)}</section>
-
-    <section className="service-index" id="services">
-      <div className="section-label"><span>Service index</span><b>{String(services.length).padStart(2,'0')}</b></div>
-      <div className="index-list">{services.map((item:any, idx:number)=><a className="index-row" href={`/services/${item.slug || String(getTitle(item)).toLowerCase().replace(/[^a-z0-9]+/g,'-')}`} key={idx}><span>{String(idx+1).padStart(2,'0')}</span><strong>{getTitle(item)}</strong><em>{getText(item)}</em></a>)}</div>
+    <section className="container section" id="tasks">
+      <div className="split-head"><div><p className="eyebrow">Task ideas</p><h2>Start with work that repeats every week.</h2></div><p>Make the hire feel human, specific, and low risk before the contact form. The page explains scope, access, manager review, and the first handoff.</p></div>
+      <div className="task-grid">{services.map((s:any,i:number)=><a key={i} href={`/services/${slug(s)}`}><span>{String(i+1).padStart(2,'0')}</span><h3>{title(s)}</h3><p>{text(s)}</p><b>See handoff →</b></a>)}</div>
     </section>
 
-    <section className="process-ribbon" id="process">
-      <div><p className="eyebrow">Operating rhythm</p><h2>Turn the scope into a managed handoff.</h2></div>
-      <div className="timeline">{process.map((item:any, idx:number)=><article key={idx}><span>{String(idx+1).padStart(2,'0')}</span><h3>{getTitle(item, `Step ${idx+1}`)}</h3><p>{getText(item)}</p></article>)}</div>
-    </section>
+    <section className="relationship"><div className="container rel-grid"><div><p className="eyebrow">Managed, not marketplace</p><h2>Your team should come with backup, onboarding, and quality checks.</h2></div><div className="rel-list">{(offer.included || ['role planning call','candidate matching','onboarding guidance','managed support']).slice(0,4).map((x:string,i:number)=><article key={i}><span>✓</span><p>{x}</p></article>)}</div></div></section>
 
-    <section className="question-block">
-      <div className="question-intro"><p className="eyebrow">Before you request help</p><h2>Answer these before the first match.</h2><p>{dataAny.staffingFitNote || 'The best plan depends on scope, tools, schedule, skills, and the way quality will be checked.'}</p></div>
-      <ul>{questions.map((q:any, idx:number)=><li key={idx}><span>{idx+1}</span>{getTitle(q, String(q))}</li>)}</ul>
-    </section>
+    <section className="container section guide-row"><div><p className="eyebrow">Before you hire</p><h2>Short guides for safer staffing decisions.</h2></div>{posts.map((p:any,i:number)=><a href={`/blog/${p.slug}`} key={i}><span>{p.minutes || 7} min</span><strong>{title(p)}</strong><p>{text(p)}</p></a>)}</section>
 
-    <section className="resource-strip">
-      <div><p className="eyebrow">Resource library</p><h2>Read the guides before you scale.</h2></div>
-      <div className="resource-grid">{posts.map((post:any, idx:number)=><a href={`/blog/${post.slug || '#'}`} key={idx}><span>{post.minutes || 7} min</span><strong>{getTitle(post)}</strong><p>{getText(post)}</p></a>)}</div>
-    </section>
-
-    <section className="final-cta"><p className="eyebrow">Next step</p><h2>Send the role details and get the plan.</h2><p>{offer.promise || 'Share the work you want off your plate and get a practical staffing plan.'}</p><a className="btn primary" href="/contact">Request staffing plan</a></section>
+    <section className="container final"><h2>Request the staffing plan before you interview.</h2><a className="btn primary" href="/contact">Request staffing plan</a></section>
   </main><Footer/></>;
 }

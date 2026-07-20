@@ -5,7 +5,7 @@ import { site } from './data';
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: 'Hire Assistant Near Me | Simple virtual assistant hiring guides', template: '%s | Hire Assistant Near Me' },
-  description: 'Simple, practical guides for hiring, pricing, onboarding, and managing near-me assistant support.',
+  description: 'Simple, practical guides for hiring, onboarding, managing, and scaling near-me assistant support.',
   openGraph: { title: 'Hire Assistant Near Me', description: 'Practical virtual assistant hiring guides for busy local teams.', url: site.url, siteName: site.brand, type: 'website' },
   twitter: { card: 'summary_large_image', title: site.brand, description: 'Plain assistant hiring guides for local, remote, and overseas support.' },
 };

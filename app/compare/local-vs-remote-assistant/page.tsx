@@ -16,7 +16,7 @@ export default function LocalVsRemoteAssistant() {
       { '@type': 'HowToStep', name: 'List the work', text: 'Write the weekly tasks, tools, customer touchpoints, and expected output.' },
       { '@type': 'HowToStep', name: 'Mark what must be local', text: 'Keep in-person duties, errands, paper files, and sensitive office tasks local.' },
       { '@type': 'HowToStep', name: 'Move tool-based work remote', text: 'Consider remote help for inbox, calendar, CRM, support drafts, reporting, and follow-up.' },
-      { '@type': 'HowToStep', name: 'Run a short pilot', text: 'Start with 10 to 20 hours per week and review work daily for the first week.' },
+      { '@type': 'HowToStep', name: 'Run a short pilot', text: 'Start with a focused pilot scope and review work daily for the first week.' },
     ],
   };
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };

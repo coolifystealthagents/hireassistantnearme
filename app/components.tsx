@@ -1,60 +1,12 @@
-import { site } from './data';
+import * as data from './data';
 
-export function Header() {
-  return (
-    <header className="nav">
-      <div className="container nav-inner">
-        <a href="/" className="logo"><span className="mark">VA</span><span>{site.brand}</span></a>
-        <nav className="links">
-          <a href="/#services">Services</a>
-          <a href="/#pricing">Pricing</a>
-          <a href="/compare/local-vs-remote-assistant">Local vs remote</a>
-          <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
-        </nav>
-        <a className="btn" href="/contact">Get shortlist</a>
-      </div>
-    </header>
-  );
-}
+const site = (data as any).site;
+const dataAny = data as any;
+const footerItems = (dataAny.services || dataAny.roles?.map((title: string)=>({ title, slug: String(title).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') })) || dataAny.industries?.map((title: string)=>({ title, slug: String(title).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') })) || dataAny.blogPosts || []).slice(0,6);
+const systemName = site.style || site.badge || site.primary || 'Outsourcing guide';
+const badgeName = site.badge || site.primary || 'Hiring guide';
 
-export function Footer() {
-  return (
-    <footer className="footer">
-      <div className="container footer-grid">
-        <div>
-          <b>{site.brand}</b>
-          <p>Research-backed virtual assistant hiring guides for buyers who want clear steps, not hype.</p>
-          <p>© {new Date().getFullYear()} {site.brand}. Independent education site. Replace contact details before launch.</p>
-        </div>
-        <div>
-          <b>Plan your hire</b>
-          <p><a href="/compare/local-vs-remote-assistant">Local vs remote assistant</a></p>
-          <p><a href="/blog/virtual-assistant-costs">Assistant cost guide</a></p>
-          <p><a href="/blog/assistant-onboarding-checklist">Onboarding checklist</a></p>
-        </div>
-        <div>
-          <b>Site</b>
-          <p><a href="/contact">Contact</a></p>
-          <p><a href="/privacy">Privacy</a></p>
-          <p><a href="/terms">Terms</a></p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-export function CTA() {
-  return (
-    <section className="section">
-      <div className="container">
-        <div className="callout">
-          <p className="eyebrow" style={{ color: 'white' }}>Need help deciding?</p>
-          <h2>Get a simple assistant hiring plan.</h2>
-          <p>Tell us the tasks, tools, hours, and coverage you need. We will map the role, cost range, interview questions, and first-week checklist.</p>
-          <a className="btn secondary" href="/contact">Request a quote-style plan</a>
-        </div>
-      </div>
-    </section>
-  );
-}
+export function JsonLd({data}:{data: Record<string, unknown>}){return <script type='application/ld+json' dangerouslySetInnerHTML={{__html: JSON.stringify(data)}} />}
+export function Header(){return <header className={`nav nav-${site.slug}`} data-system={systemName}><div className='container nav-inner'><a className='logo' href='/' aria-label={`${site.brand} home`}><img className='logo-img' src='/logo.svg' alt={`${site.brand} logo`}/><span className='logo-text'><span className='logo-name'>{site.brand}</span><span className='logo-sub'>{badgeName} · {systemName}</span></span></a><nav className='links'><a href='/#services'>Services</a><a href='/#process'>Process</a><a href='/#compare'>Compare</a><a href='/blog'>Blog</a><a href='/contact'>Contact</a></nav><a className='btn nav-cta' href='/contact'>Start Hiring</a></div></header>}
+export function Footer(){return <footer className='footer'><div className='container two'><div><b>{site.brand}</b><p>Stealth Agents-style offshore outsourcing guides for buyers who want clear next steps.</p></div><div>{footerItems.map((s: any)=>{ const label = s.title || s.name || s.label || s.question || String(s); const href = s.slug ? `/services/${s.slug}` : '/blog'; return <a className='pill' href={href} key={s.slug || label}>{label}</a> })}</div></div></footer>}
+export function CTA(){return <section className='section dark'><div className='container two'><div><p className='eyebrow'>Ready for a plan?</p><h2>Map the role before you hire.</h2><p>Share the work, tools, schedule, and success metric. Build a small pilot first, then scale what works.</p></div><div><a className='btn' href='/contact'>Get a quote-style plan</a></div></div></section>}

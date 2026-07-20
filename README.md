@@ -4,7 +4,7 @@ SEO lead generation site for `hireassistantnearme.com`. Built with Next.js, Dock
 
 ## Placeholder swaps
 
-- Connect `/contact` to CRM/Formspree/Stealth Agents intake.
+- Connect `/contact` to CRM/Formspree/Staffing intake.
 - Add analytics ID.
 - Add real testimonials only after approval.
 - Add legal/privacy pages before paid traffic.

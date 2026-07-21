@@ -71,7 +71,7 @@ export const stats = [
   { label: 'Best first handoff', value: '5-10 tasks', note: 'small recurring work beats a vague all-in role' },
 ];
 
-export const sourcePlaceholders = [
+export const publicSources = [
   { name: 'U.S. Bureau of Labor Statistics', url: 'https://www.bls.gov/oes/current/oes436014.htm', note: 'Use for local administrative assistant wage benchmarks.' },
   { name: 'IRS independent contractor guidance', url: 'https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined', note: 'Use when comparing employee and contractor choices.' },
   { name: 'FTC business guidance', url: 'https://www.ftc.gov/business-guidance', note: 'Use for honest marketing, claims, and consumer-data reminders.' },
@@ -106,8 +106,8 @@ export const compareRows = [
 export const blogPosts = [
   {
     slug: 'virtual-assistant-planning',
-    title: 'How much does a virtual assistant plan near me?',
-    excerpt: 'A plain guide to public, monthly, local, U.S.-remote, and overseas assistant staffing details.',
+    title: 'How should I budget for assistant help near me?',
+    excerpt: 'A plain guide to the variables behind local, U.S.-remote, and overseas assistant support.',
     minutes: 7,
     takeaways: ['Local help often needs more support, but may fit in-person work.', 'Remote and overseas help can work well when the task list is clear.', 'Start with a small weekly hour block before scaling.'],
     sections: [
@@ -175,9 +175,9 @@ export const routes = [
 
 export const staffingOffer = {
   partner: 'our staffing team',
-  promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',
+  promise: 'Get a managed assistant role plan built around the work you need removed from your plate.',
   fit: [
-    'business owners who need reliable remote staff but do not want to screen alone',
+    'business owners who need reliable assistant support but do not want to screen alone',
     'teams that want trained support, backup coverage, and a clear manager path',
     'companies that need help with admin, operations, customer support, calls, bookkeeping, development, or marketing work',
   ],
@@ -210,4 +210,4 @@ export const staffingProcess = [
   { step: '4', title: 'Scale what works', body: 'Once the first tasks are stable, add more work, better reporting, and stronger delegation without guessing.' },
 ] as const;
 
-export const staffingFitNote = 'Every staffing plan depends on role scope, schedule, skills, tools, and management needs. Send the role details and our staffing team can guide the best fit.';
+export const staffingFitNote = 'Every assistant plan depends on the role, schedule, skills, tools, location needs, and review process. Send the details so a staffing team can help sort the best fit.';

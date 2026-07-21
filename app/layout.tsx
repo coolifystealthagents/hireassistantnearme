@@ -4,10 +4,10 @@ import { site } from './data';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'Hire Assistant Near Me | Simple virtual assistant hiring guides', template: '%s | Hire Assistant Near Me' },
-  description: 'Simple, practical guides for hiring, onboarding, managing, and scaling near-me assistant support.',
-  openGraph: { title: 'Hire Assistant Near Me', description: 'Practical virtual assistant hiring guides for busy local teams.', url: site.url, siteName: site.brand, type: 'website' },
-  twitter: { card: 'summary_large_image', title: site.brand, description: 'Plain assistant hiring guides for local, remote, and overseas support.' },
+  title: { default: 'Hire Assistant Near Me | Local and remote hiring guides', template: '%s | Hire Assistant Near Me' },
+  description: 'Compare local and remote assistants, choose the first tasks, and write a role brief your business can use.',
+  openGraph: { title: 'Hire Assistant Near Me', description: 'Straightforward assistant hiring guides for local business owners.', url: site.url, siteName: site.brand, type: 'website' },
+  twitter: { card: 'summary_large_image', title: site.brand, description: 'Compare local, remote, and overseas assistant options before you hire.' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

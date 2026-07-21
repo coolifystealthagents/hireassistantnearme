@@ -4,7 +4,7 @@ export const site = {
   brand: 'Hire Assistant Near Me',
   url: 'https://hireassistantnearme.com',
   primary: 'hire assistant near me',
-  audience: 'local business owners who want nearby-feeling assistant support without local hiring planning',
+  audience: 'local business owners who want assistant help without managing a local hiring process on their own',
   angle: 'near-me assistant hiring explained with local, remote, and overseas options',
   color: '#7c3aed',
   accent: '#0f766e',
@@ -61,14 +61,14 @@ export const localImageCards = [
 
 export const proofCards = [
   { label: 'BLS wage benchmark', value: 'OEWS data', note: 'The Bureau of Labor Statistics publishes local wage data for secretaries and administrative assistants, which helps owners compare local hiring against remote support.' },
-  { label: 'Best pilot size', value: '10-20 hrs/wk', note: 'Enough time to test inbox, calendar, CRM, and support tasks without handing over the whole business.' },
-  { label: 'Safe first review window', value: '5 days', note: 'Review daily at first. Small fixes in week one prevent bigger customer problems later.' },
+  { label: 'Pilot approach', value: 'Start small', note: 'Test a short list of inbox, calendar, CRM, or support tasks before handing over more work.' },
+  { label: 'Early review', value: 'Check daily', note: 'Review the first few batches closely so unclear instructions show up before the task list grows.' },
 ] as const;
 
 export const stats = [
   { label: 'Role clarity', value: 'Scope first', note: 'the right plan depends on tasks, schedule, skill, tools, and management needs' },
-  { label: 'Common ramp time', value: '7-21 days', note: 'with SOPs, tools, and call examples ready' },
-  { label: 'Best first handoff', value: '5-10 tasks', note: 'small recurring work beats a vague all-in role' },
+  { label: 'Early training', value: 'Review often', note: 'give the assistant examples, limited access, and a place to ask questions' },
+  { label: 'First handoff', value: 'Keep it narrow', note: 'a few recurring tasks are easier to teach and check than an all-purpose role' },
 ];
 
 export const publicSources = [
@@ -80,7 +80,7 @@ export const publicSources = [
 export const faqs = [
   {
     question: 'Can I really hire an assistant near me if the work is remote?',
-    answer: 'Yes. Many owners search near me because they want easy communication, similar hours, and trust. The assistant may be local, U.S.-remote, or overseas. The safer choice depends on the tasks, access level, and how fast you need help.',
+    answer: 'Yes. Many owners search near me because they want easy communication and similar hours. The assistant may be local, U.S.-remote, or overseas. The better fit depends on the tasks, access level, and how quickly you need help.',
   },
   {
     question: 'What should I delegate first?',
@@ -97,8 +97,8 @@ export const faqs = [
 ];
 
 export const compareRows = [
-  { option: 'Local assistant', bestFor: 'In-person work, office errands, paper files, trusted local presence', watch: 'Higher plan, local hiring time, payroll and management work' },
-  { option: 'U.S.-remote assistant', bestFor: 'Same-country communication and remote admin support', watch: 'Usually needs more support than offshore support' },
+  { option: 'Local assistant', bestFor: 'In-person work, office errands, paper files, trusted local presence', watch: 'Local recruiting, payroll, workspace, and day-to-day management' },
+  { option: 'U.S.-remote assistant', bestFor: 'Same-country communication and remote admin support', watch: 'The work still needs a clear brief, secure access, and regular review' },
   { option: 'Overseas virtual assistant', bestFor: 'Recurring admin, support, CRM, scheduling, research, and follow-up', watch: 'Needs clear SOPs, access rules, and time-zone planning' },
   { option: 'Managed assistant service', bestFor: 'Owners who want help with screening, backup, and role setup', watch: 'You still need to define the role and review quality' },
 ];
@@ -107,13 +107,13 @@ export const blogPosts = [
   {
     slug: 'virtual-assistant-planning',
     title: 'How should I budget for assistant help near me?',
-    excerpt: 'A plain guide to the variables behind local, U.S.-remote, and overseas assistant support.',
+    excerpt: 'A plain guide to the hours, duties, location, and management choices that affect an assistant budget.',
     minutes: 7,
-    takeaways: ['Local help often needs more support, but may fit in-person work.', 'Remote and overseas help can work well when the task list is clear.', 'Start with a small weekly hour block before scaling.'],
+    takeaways: ['Local help follows local wages and may fit in-person work.', 'Remote and overseas help can work well when the task list is clear.', 'Start with a small weekly hour limit before adding more.'],
     sections: [
-      { heading: 'The simple plan range', body: 'A local assistant often follows local wage pressure. A remote or overseas assistant can plan less, but the lowest rate is not always the best deal. You are buying reliable help, clear communication, and fewer mistakes. Plan the first month as a test, not a forever decision.' },
-      { heading: 'What changes the plan', body: 'Plan changes with the role. Inbox cleanup, appointment setting, and simple CRM updates are easier to train. Bookkeeping support, sales follow-up, executive support, and customer care need better judgment and closer review.' },
-      { heading: 'A safe first budget', body: 'Many owners can test the role with 10 to 20 hours a week. Write down the exact tasks, the tools used, and what good work looks like. If the assistant saves owner time and mistakes stay low, add more hours.' },
+      { heading: 'Start with the work, not a price', body: 'Local assistants are usually paid against the local labor market. Remote and overseas services may use different pay or billing structures. Either way, a low rate can become expensive when the role is vague or the work needs constant correction. Treat the first month as a test.' },
+      { heading: 'What affects the budget', body: 'The duties matter more than the job title. Inbox cleanup, appointment setting, and basic CRM updates are usually easier to teach. Bookkeeping support, sales follow-up, executive support, and customer care call for more judgment and closer review.' },
+      { heading: 'Set a first-month limit', body: 'Choose a weekly hour limit and a short task list. Write down the tools used and what finished work should look like. Add hours only after the assistant can handle the first tasks without creating more work for the owner.' },
       { heading: 'What to ask before you pay', body: 'Ask who screens the assistant, how replacement works, what time zone they cover, and who checks quality. If a provider cannot explain the first week clearly, slow down.' },
     ],
     script: 'We need help with a focused pilot scope first. The main tasks are inbox sorting, calendar cleanup, CRM updates, and lead follow-up. Can you show how you screen for this and what the first week looks like?',
@@ -126,7 +126,7 @@ export const blogPosts = [
     takeaways: ['Pick work that repeats every week.', 'Keep sensitive decisions with the owner.', 'Use examples before you expect speed.'],
     sections: [
       { heading: 'Start with work that repeats', body: 'The best first tasks happen every day or every week. Examples include calendar cleanup, inbox labels, appointment reminders, lead list updates, simple reports, and customer reply drafts.' },
-      { heading: 'Do not delegate judgment too early', body: 'Keep staffing details changes, refunds, legal advice, medical judgment, hiring decisions, and large spending decisions with the owner. The assistant can prepare information, but the owner should approve the decision.' },
+      { heading: 'Do not delegate judgment too early', body: 'Keep pay-rate changes, refunds, legal advice, medical judgment, hiring decisions, and large purchases with the owner. The assistant can gather the information, but the owner should make the decision.' },
       { heading: 'Give examples', body: 'Show three good examples and one bad example. A short screen recording can save hours of training. The assistant should know what finished work looks like.' },
       { heading: 'Review the first five days', body: 'Check work daily for the first week. Fix the checklist before you blame the person. If the same mistake happens twice, the instruction is probably unclear.' },
     ],
@@ -135,7 +135,7 @@ export const blogPosts = [
   {
     slug: 'virtual-assistant-vs-employee',
     title: 'Virtual assistant vs employee: which is better for a local business?',
-    excerpt: 'When to hire in-house and when a managed assistant is the safer first step.',
+    excerpt: 'When to hire in-house and when a managed assistant may be easier to start with.',
     minutes: 8,
     takeaways: ['Use an employee for in-person duties and deep company ownership.', 'Use a VA for clear recurring tasks.', 'Check worker classification rules before treating a contractor like staff.'],
     sections: [
@@ -156,7 +156,7 @@ export const blogPosts = [
       { heading: 'Before day one', body: 'Make a tool list, create limited-access accounts, record one or two task videos, and write the first five tasks. Do not share the owner password. Use role-based access where possible.' },
       { heading: 'Day one', body: 'Walk through the business, the customers, and the task list. Show what good work looks like. Ask the assistant to repeat the rules back in their own words.' },
       { heading: 'Days two to four', body: 'Let the assistant complete small batches. Review the work the same day. Keep notes in one shared place so the checklist improves.' },
-      { heading: 'Day five review', body: 'Score accuracy, speed, communication, and judgment. Keep the role if the trend is good. If not, fix the scope or change the fit before adding more work.' },
+      { heading: 'Day five review', body: 'Check the work for accuracy and sound judgment. Note missed steps, slow replies, and questions that keep coming back. Fix the instructions or the role fit before adding more work.' },
     ],
     script: 'This week is a training week. Please ask when unsure, write down blockers, and wait for approval on anything involving money, refunds, legal, medical, or customer promises.',
   },
@@ -205,9 +205,9 @@ export const leadQuestions = [
 
 export const staffingProcess = [
   { step: '1', title: 'Map the role', body: 'We turn messy tasks into one clear role with outcomes, tools, limits, and a first-week checklist.' },
-  { step: '2', title: 'Match the staff', body: 'our staffing team can help match remote staff to the work, schedule, communication style, and skill level you need.' },
+  { step: '2', title: 'Match the staff', body: 'A staffing team can look for remote staff who fit the work, schedule, tools, and level of judgment you need.' },
   { step: '3', title: 'Launch with control', body: 'Start with SOPs, sample work, limited access, daily review, and a simple scorecard so quality is easy to see.' },
-  { step: '4', title: 'Scale what works', body: 'Once the first tasks are stable, add more work, better reporting, and stronger delegation without guessing.' },
+  { step: '4', title: 'Add work carefully', body: 'Once the first tasks are steady, add one new duty at a time and keep checking the work.' },
 ] as const;
 
 export const staffingFitNote = 'Every assistant plan depends on the role, schedule, skills, tools, location needs, and review process. Send the details so a staffing team can help sort the best fit.';

@@ -19,20 +19,20 @@ export default function Home() {
       <div className="container hero-shell">
         <div className="hero-copy">
           <p className="eyebrow">A clearer way to hire assistant help</p>
-          <h1>Find an assistant <em>near your workday.</em></h1>
+          <h1>Find an assistant <em>who fits your workday.</em></h1>
           <p className="hero-deck">Keep the office work local. Move the laptop work off your plate. We help you sort the role before you choose local, remote, or managed support.</p>
           <div className="hero-actions">
             <a className="btn primary" href="/contact">Build my role brief</a>
             <a className="text-link" href="/compare/local-vs-remote-assistant">Compare local and remote <span>↗</span></a>
           </div>
-          <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> Start with your hours, tools, and tasks. Your best fit may be across town or working remotely in the same time zone.</p></div>
+          <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> Start with your hours, tools, and tasks. Your best fit may be nearby or remote in your time zone.</p></div>
         </div>
         <div className="hero-visual">
           <img src="/images/local-team.jpg" alt="Small business team planning assistant responsibilities in an office"/>
           <div className="location-card">
             <div className="location-top"><span>Role brief</span><b>01</b></div>
             <h2>Where should the work happen?</h2>
-            <div className="choice active"><span>●</span><div><b>Remote, local hours</b><small>For work handled in your online tools</small></div></div>
+            <div className="choice active"><span>●</span><div><b>Remote, your business hours</b><small>For work handled in your online tools</small></div></div>
             <div className="choice"><span>○</span><div><b>In person</b><small>For front desk, errands, or paper files</small></div></div>
             <div className="choice"><span>○</span><div><b>Help me decide</b><small>Sort the task list with a staffing team</small></div></div>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>
-        <p className="image-disclaimer">These images show common support settings, not available candidates or customer endorsements.</p>
+        <p className="image-disclaimer">These photos illustrate assistant roles. They do not show available candidates or customer endorsements.</p>
       </div>
     </section>
 
@@ -80,18 +80,18 @@ export default function Home() {
 
     <section className="brief-section">
       <div className="container brief-grid">
-        <div className="brief-copy"><p className="eyebrow">A useful first brief</p><h2>A short task list. One schedule. Clear limits.</h2><p>That is enough to start. You do not need a polished job description or a stack of SOPs before the first conversation.</p></div>
+        <div className="brief-copy"><p className="eyebrow">A useful first brief</p><h2>A short task list is enough to begin.</h2><p>Add the hours and the decisions that stay with you. You do not need a polished job description or a stack of SOPs before the first conversation.</p></div>
         <ol className="brief-steps">
           <li><span>01</span><div><b>List the repeat work</b><p>Write down what keeps coming back every day or week.</p></div></li>
           <li><span>02</span><div><b>Mark the sensitive parts</b><p>Keep approvals, money decisions, and customer promises with the right owner.</p></div></li>
-          <li><span>03</span><div><b>Pick a review rhythm</b><p>Check work daily at first, then loosen the cadence when quality holds.</p></div></li>
+          <li><span>03</span><div><b>Decide when to review it</b><p>Check the work daily at first. Review less often once the assistant can handle it reliably.</p></div></li>
         </ol>
       </div>
     </section>
 
     <section className="section guidance-section">
       <div className="container guidance-card">
-        <div><p className="eyebrow">Planning guidance</p><h2>A small pilot is easier to judge.</h2><p>For recurring admin work, a focused weekly schedule can expose gaps in the brief before you hand over more. The range below is a planning aid, not a promised result.</p></div>
+        <div><p className="eyebrow">Planning guidance</p><h2>Test the role before you add more work.</h2><p>A limited weekly schedule makes it easier to spot missing instructions. The range below is an example for planning, not a promised result.</p></div>
         <div className="guidance-range"><span>Suggested pilot</span><strong>10–20</strong><b>hours each week</b><small>Adjust for the role, tools, and review time.</small></div>
       </div>
     </section>

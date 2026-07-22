@@ -1,11 +1,2 @@
-import * as data from '../data';
-export function GET() {
-  const d=data as any;
-  const site=d.site||{};
-  const services=d.services||[];
-  const blogPosts=d.blogPosts||[];
-  const base = site.url || `https://${String(site.domain).toLowerCase()}`;
-  const urls = ['/', '/blog', '/compare/local-vs-remote-assistant', '/contact', '/privacy', '/terms', '/cancellation-policy', ...services.map((service:any) => `/services/${service.slug}`), ...blogPosts.map((post:any) => `/blog/${post.slug}`)];
-  const body = urls.map((path) => `<url><loc>${base}${path === '/' ? '' : path}</loc></url>`).join('');
-  return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`, { headers: { 'content-type': 'application/xml' } });
-}
+import * as data from '../data'; import {fleetServices,researchPosts,postsPerPage} from '../fleet-data';
+export function GET(){const d=data as any;const base=`https://${d.site.domain.toLowerCase()}`;const blogs=d.blogPosts||[];const pages=Math.max(1,Math.ceil(blogs.length/postsPerPage));const paths=['','/services','/pricing','/blog','/research','/contact','/privacy','/terms','/cancellation-policy',...fleetServices.map(s=>`/services/${s.slug}`),...blogs.map((b:any)=>`/blog/${b.slug}`),...Array.from({length:pages},(_,i)=>`/blog/page/${i+1}`),...researchPosts.map(r=>`/research/${r.slug}`)];const body=paths.map(path=>`<url><loc>${base}${path}</loc></url>`).join('');return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`,{headers:{'content-type':'application/xml'}})}

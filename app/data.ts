@@ -4,8 +4,8 @@ export const site = {
   brand: 'Hire Assistant Near Me',
   url: 'https://hireassistantnearme.com',
   primary: 'hire assistant near me',
-  audience: 'local business owners who want assistant help without managing a local hiring process on their own',
-  angle: 'near-me assistant hiring explained with local, remote, and overseas options',
+  audience: 'local business owners who want a Philippines-based remote assistant without running the hiring process alone',
+  angle: 'near-me hiring intent matched with Filipino remote talent and local-work boundaries',
   color: '#7c3aed',
   accent: '#0f766e',
 } as const;
@@ -80,7 +80,7 @@ export const publicSources = [
 export const faqs = [
   {
     question: 'Can I really hire an assistant near me if the work is remote?',
-    answer: 'Yes. Many owners search near me because they want easy communication and similar hours. The assistant may be local, U.S.-remote, or overseas. The better fit depends on the tasks, access level, and how quickly you need help.',
+    answer: 'Yes, if the work can be done online. We recruit and hire assistants only in the Philippines, then plan the role around your business hours, tools, and review needs. We do not offer local or in-person candidates.',
   },
   {
     question: 'What should I delegate first?',
@@ -92,15 +92,14 @@ export const faqs = [
   },
   {
     question: 'Is a local assistant better than an overseas virtual assistant?',
-    answer: 'Local can be better for in-person work, errands, paper files, or sensitive office duties. Overseas or remote can be better for recurring admin, support, follow-up, and back-office work with clear instructions.',
+    answer: 'A local employee or vendor is the better fit for in-person work, errands, paper files, or front desk duties. This service offers Filipino remote assistants for recurring online admin, support, follow-up, and back-office work with clear instructions.',
   },
 ];
 
 export const compareRows = [
-  { option: 'Local assistant', bestFor: 'In-person work, office errands, paper files, trusted local presence', watch: 'Local recruiting, payroll, workspace, and day-to-day management' },
-  { option: 'U.S.-remote assistant', bestFor: 'Same-country communication and remote admin support', watch: 'The work still needs a clear brief, secure access, and regular review' },
-  { option: 'Overseas virtual assistant', bestFor: 'Recurring admin, support, CRM, scheduling, research, and follow-up', watch: 'Needs clear SOPs, access rules, and time-zone planning' },
-  { option: 'Managed assistant service', bestFor: 'Owners who want help with screening, backup, and role setup', watch: 'You still need to define the role and review quality' },
+  { option: 'Local employee or vendor', bestFor: 'In-person work, office errands, paper files, and front desk coverage', watch: 'Not offered by Hire Assistant Near Me' },
+  { option: 'Filipino remote assistant', bestFor: 'Recurring admin, support, CRM, scheduling, research, and follow-up', watch: 'Needs clear access rules, written examples, and agreed working hours' },
+  { option: 'Managed Philippines staffing', bestFor: 'Owners who want help shaping the role, screening candidates, and starting the handoff', watch: 'The owner still approves sensitive work and reviews quality' },
 ];
 
 export const blogPosts = [
@@ -109,9 +108,9 @@ export const blogPosts = [
     title: 'How should I budget for assistant help near me?',
     excerpt: 'A plain guide to the hours, duties, location, and management choices that affect an assistant budget.',
     minutes: 7,
-    takeaways: ['Local help follows local wages and may fit in-person work.', 'Remote and overseas help can work well when the task list is clear.', 'Start with a small weekly hour limit before adding more.'],
+    takeaways: ['Local help follows local wages and may fit in-person work.', 'This service recruits Filipino remote assistants for clear online tasks.', 'Start with a small weekly hour limit before adding more.'],
     sections: [
-      { heading: 'Start with the work, not a price', body: 'Local assistants are usually paid against the local labor market. Remote and overseas services may use different pay or billing structures. Either way, a low rate can become expensive when the role is vague or the work needs constant correction. Treat the first month as a test.' },
+      { heading: 'Start with the work, not a price', body: 'Local assistants are usually paid against the local labor market. A Philippines-based service may use a different billing structure. Either way, a low rate can become expensive when the role is vague or the work needs constant correction. Treat the first month as a test.' },
       { heading: 'What affects the budget', body: 'The duties matter more than the job title. Inbox cleanup, appointment setting, and basic CRM updates are usually easier to teach. Bookkeeping support, sales follow-up, executive support, and customer care call for more judgment and closer review.' },
       { heading: 'Set a first-month limit', body: 'Choose a weekly hour limit and a short task list. Write down the tools used and what finished work should look like. Add hours only after the assistant can handle the first tasks without creating more work for the owner.' },
       { heading: 'What to ask before you pay', body: 'Ask who screens the assistant, how replacement works, what time zone they cover, and who checks quality. If a provider cannot explain the first week clearly, slow down.' },

@@ -20,21 +20,21 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">A clearer way to hire assistant help</p>
           <h1>Find an assistant <em>who fits your workday.</em></h1>
-          <p className="hero-deck">Keep the office work local. Move the laptop work off your plate. We help you sort the role before you choose local, remote, or managed support.</p>
+          <p className="hero-deck">Keep in-person work with your local team. Move repeat online work to a Filipino assistant hired for your hours, tools, and task list.</p>
           <div className="hero-actions">
             <a className="btn primary" href="/contact">Build my role brief</a>
             <a className="text-link" href="/compare/local-vs-remote-assistant">Compare local and remote <span>↗</span></a>
           </div>
-          <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> Start with your hours, tools, and tasks. Your best fit may be nearby or remote in your time zone.</p></div>
+          <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
         </div>
         <div className="hero-visual">
-          <img src="/images/local-team.jpg" alt="Small business team planning assistant responsibilities in an office"/>
+          <img src="/images/local-team.jpg" alt="Small business team planning work for a Philippines-based remote assistant"/>
           <div className="location-card">
             <div className="location-top"><span>Role brief</span><b>01</b></div>
             <h2>Where should the work happen?</h2>
-            <div className="choice active"><span>●</span><div><b>Remote, your business hours</b><small>For work handled in your online tools</small></div></div>
-            <div className="choice"><span>○</span><div><b>In person</b><small>For front desk, errands, or paper files</small></div></div>
-            <div className="choice"><span>○</span><div><b>Help me decide</b><small>Sort the task list with a staffing team</small></div></div>
+            <div className="choice active"><span>●</span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
+            <div className="choice"><span>○</span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
+            <div className="choice"><span>○</span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
           </div>
 
         </div>
@@ -60,13 +60,13 @@ export default function Home() {
 
     <section className="decision-section">
       <div className="container decision-grid">
-        <div className="decision-intro"><p className="eyebrow light">The location test</p><h2>Nearby matters. Just not for every task.</h2><p>If someone needs the office key, hire locally. If the work lives in your inbox, calendar, CRM, or help desk, a remote assistant can still feel close.</p><a className="btn cream" href="/compare/local-vs-remote-assistant">Use the full comparison</a></div>
+        <div className="decision-intro"><p className="eyebrow light">The location test</p><h2>Keep physical work local. Send online work to the Philippines.</h2><p>If someone needs the office key, this service is not the right fit. If the work lives in your inbox, calendar, CRM, or help desk, a Filipino remote assistant can handle it during agreed hours.</p><a className="btn cream" href="/compare/local-vs-remote-assistant">Use the full comparison</a></div>
         <div className="decision-board">
-          <div className="board-head"><span>Keep nearby</span><span>Move remote</span></div>
+          <div className="board-head"><span>Keep with your local team</span><span>Send to a Filipino assistant</span></div>
           <div className="board-row"><div><b>Front desk coverage</b><small>Walk-ins and on-site calls</small></div><div><b>Inbox triage</b><small>Drafts, labels, and follow-up</small></div></div>
           <div className="board-row"><div><b>Paper files</b><small>Scanning and physical records</small></div><div><b>CRM upkeep</b><small>Notes, stages, and reminders</small></div></div>
           <div className="board-row"><div><b>Office errands</b><small>Mail, supplies, and drop-offs</small></div><div><b>Scheduling</b><small>Calendars and confirmations</small></div></div>
-          <div className="board-foot">The split is based on where the work must happen, not where the assistant lives.</div>
+          <div className="board-foot">We provide remote talent only from the Philippines. We do not fill in-person positions.</div>
         </div>
       </div>
     </section>

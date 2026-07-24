@@ -293,6 +293,145 @@ export const blogPosts = [
     ],
     script: 'We need a Philippines-based assistant for one clear role. Please show us how you screen for the tasks and support the first month.',
   },
+  {
+    slug: 'hire-filipino-virtual-assistant',
+    mainKeyword: 'hire filipino virtual assistant',
+    title: 'Hire Filipino virtual assistant help with a six-step role plan',
+    excerpt: 'Hire Filipino virtual assistant help by defining one role, testing real work, and setting clear approval rules. This guide shows how to use a managed Philippines-only hiring process without handing over owner decisions.',
+    published: '2026-07-24',
+    richPublished: true,
+    minutes: 13,
+    takeaways: [
+      'Start with one role and a short list of repeat tasks.',
+      'Use real work samples to screen for care, judgment, and clear questions.',
+      'Set tool access and approval limits before the first workday.',
+      'Choose managed staffing if you want help with screening, hiring, launch, and fit questions.',
+    ],
+    detail: {
+      revision: '2026-07-24-hire-filipino-virtual-assistant',
+      directAnswer: [
+        'To hire a Filipino virtual assistant, first turn your loose task list into one job with clear hours, tools, outputs, and stop rules. Then screen Philippines-based candidates with a short sample task that looks like the real work.',
+        'A managed staffing service can help write the role, screen candidates, plan the first week, and handle fit or replacement questions. You still choose the work, approve access, and keep final business decisions with your team.',
+      ],
+      sections: [
+        {
+          heading: 'Write one role before you look at candidates',
+          paragraphs: [
+            'A long list of unrelated chores makes it hard to tell who fits. Group the work into one lane, such as executive inbox care, customer reply drafts, CRM upkeep, or calendar support.',
+            'Write the task trigger, the finished result, the tool used, and the person who approves it. Add the work hours and time zone so candidates know when live overlap is needed.',
+          ],
+        },
+        {
+          heading: 'Build a short role brief',
+          paragraphs: [
+            'Keep the first brief to one page if you can. Name the top three duties, the tools, the work schedule, and the choices the assistant must never make alone.',
+            'Add two good examples and one bad example from past work, with private details removed. The contrast helps a candidate see what you mean by complete, careful, and ready for review.',
+          ],
+        },
+        {
+          heading: 'Screen for the work you will hand over',
+          paragraphs: [
+            'A polished resume does not show how someone will handle your inbox or CRM. Ask the candidate to explain a similar task, the checks they used, and what they did when a detail was missing.',
+            'Use the same five questions for each interview so the answers are easier to compare. Score clear writing, attention to instructions, useful questions, and willingness to stop when approval is needed.',
+          ],
+        },
+        {
+          heading: 'Use a small paid work sample',
+          paragraphs: [
+            'Make the sample close to the real role, but use made-up or masked customer details. A planning example could include 10 inbox messages, 5 CRM records, or one meeting brief that takes about 30 to 60 minutes.',
+            'Tell each candidate what you will check before the sample starts. Look for correct steps, clear notes, careful handling of missing details, and a clean handoff to the manager.',
+          ],
+        },
+        {
+          heading: 'Set access rules before day one',
+          paragraphs: [
+            'Give each person a named account and only the access needed for the first duties. NIST describes least privilege as limiting access to the functions and information needed for assigned tasks.',
+            'Turn on multi-factor authentication where the tool allows it, and keep recovery control with the owner. CISA says MFA adds another identity check beyond a password, which makes a stolen password less useful by itself.',
+          ],
+        },
+        {
+          heading: 'Check the working arrangement',
+          paragraphs: [
+            'The IRS says the facts of the working relationship matter when a business decides whether someone is an employee or an independent contractor. A label in an agreement does not settle the question by itself.',
+            'Ask a qualified tax or legal adviser about the setup that applies to your business. A staffing provider can explain its service model, but it should not make that decision for your company.',
+          ],
+        },
+        {
+          heading: 'Protect personal information',
+          paragraphs: [
+            'List the customer, employee, and business data the role may see before you open real accounts. The Philippine Data Privacy Act covers the processing of personal information and sets duties around lawful handling and protection.',
+            'Use masked records for early practice when possible, then open only the data needed for approved work. Keep a simple access list and remove permissions when a duty or role ends.',
+          ],
+        },
+        {
+          heading: 'Manage the first 30 days',
+          paragraphs: [
+            'Use small batches during the first five workdays and review them on the same day. Keep questions, corrections, and changed rules in one shared place so the assistant does not have to search several chats.',
+            'Hold a fit review after two weeks and a role review at 30 days. Decide which tasks are steady, which instructions need repair, and which duties should stay with the owner.',
+          ],
+        },
+      ],
+      decisionRows: [
+        { need: 'You want to search and screen alone', fit: 'Direct hiring', reason: 'The owner writes the post, reviews applications, runs checks, plans onboarding, and handles future fit questions.' },
+        { need: 'You want a short project or trial task', fit: 'Freelance marketplace', reason: 'The owner chooses the person and manages the agreement, access, quality checks, and next assignment.' },
+        { need: 'You want help shaping and filling one role', fit: 'Managed Philippines staffing', reason: 'The staffing team helps plan the role, screen Filipino candidates, support launch, and handle match questions.' },
+        { need: 'The work must happen in your office', fit: 'Local employee or vendor', reason: 'This Philippines-only service supplies remote talent and should not be used for errands, front desk coverage, or physical files.' },
+      ],
+      planningNumbers: [
+        { value: '1 role', label: 'Scope example', note: 'Begin with one task lane instead of a mixed helper job.' },
+        { value: '3 duties', label: 'Brief example', note: 'Name the three duties that matter most in the first month.' },
+        { value: '5 days', label: 'Launch example', note: 'Use small batches and same-day checks during week one.' },
+        { value: '2 weeks', label: 'Fit example', note: 'Review questions, accuracy, attendance, and role fit.' },
+        { value: '30 days', label: 'Role example', note: 'Choose what should stay, change, grow, or stop.' },
+      ],
+      scripts: [
+        {
+          title: 'Provider call script',
+          text: 'We want to hire a Filipino virtual assistant for one clear role. The first duties are inbox sorting, calendar updates, and follow-up drafts. How do you screen for this work, who helps with launch, and what happens if the match is not right?',
+        },
+        {
+          title: 'Candidate interview script',
+          text: 'Please walk me through a similar task you handled. Tell me what you checked, what you did when information was missing, and which step needed manager approval. Then show me how you would report the finished work and any open questions.',
+        },
+      ],
+      scenario: {
+        title: 'Sample workflow: screen an inbox assistant',
+        intro: 'This is a planning example for an owner who needs help sorting email and preparing drafts. It does not promise a hiring or business result.',
+        steps: [
+          { step: '1', title: 'Owner writes the rules', body: 'The owner names the labels, urgent message types, draft limits, and messages that must stay private.' },
+          { step: '2', title: 'Staffing team screens', body: 'The staffing team checks Filipino candidates against the role brief, schedule, tools, and writing needs.' },
+          { step: '3', title: 'Candidate completes a sample', body: 'The candidate sorts 10 masked messages, drafts two replies, and flags anything that needs owner judgment.' },
+          { step: '4', title: 'Owner reviews the sample', body: 'The owner checks the same scorecard for each candidate and asks about any missed detail or unclear choice.' },
+          { step: '5', title: 'Team starts with limited access', body: 'The chosen assistant uses a named account, works in small batches, and waits for approval before any live send.' },
+        ],
+      },
+      faqs: [
+        { question: 'Where are the assistants recruited and hired?', answer: 'Every candidate offered through this service is recruited and hired in the Philippines. Hire Assistant Near Me does not supply talent from another country.' },
+        { question: 'What should I put in the role brief?', answer: 'List the top duties, tools, hours, finished outputs, and approval limits. Add two good examples so the candidate can see the standard before the first workday.' },
+        { question: 'Should I use a work sample?', answer: 'A small paid sample can show how a candidate follows instructions and handles missing details. Use masked information, explain the scorecard first, and keep the task close to the real job.' },
+        { question: 'Can a Filipino assistant work during my business hours?', answer: 'Live overlap can be part of the role brief and matching process. State the time zone, coverage window, response needs, and work that can wait for the next review.' },
+        { question: 'What should the owner keep?', answer: 'Keep final control of money, contracts, legal or medical judgment, hiring choices, and customer promises. The assistant can prepare information and drafts, but the accountable person should approve sensitive actions.' },
+        { question: 'What does managed staffing handle?', answer: 'Managed staffing can help shape the role, screen Filipino candidates, support onboarding, and provide a path for fit or replacement questions. The owner still sets the work, access, and approval rules.' },
+      ],
+      relatedLinks: [
+        { href: '/services/executive-assistance', label: 'Plan an executive assistance role' },
+        { href: '/services/calendar-and-inbox-support', label: 'Review calendar and inbox support' },
+        { href: '/blog/tasks-to-delegate-first', label: 'Choose the first tasks to delegate' },
+        { href: '/blog/assistant-onboarding-checklist', label: 'Prepare the first-week checklist' },
+        { href: '/contact', label: 'Build a Philippines-only role brief' },
+      ],
+      sources: [
+        { name: 'NIST SP 800-53 Rev. 5, Security and Privacy Controls', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'See the access-control guidance for least privilege and named account planning.' },
+        { name: 'CISA multi-factor authentication guidance', url: 'https://www.cisa.gov/resources-tools/resources/multi-factor-authentication-mfa', note: 'Use this when planning sign-in protection for remote work accounts.' },
+        { name: 'IRS: Independent contractor defined', url: 'https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined', note: 'Review the official explanation of control and worker classification.' },
+        { name: 'Philippine Data Privacy Act of 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Read the law covering personal information processing in the Philippines.' },
+      ],
+    },
+    sections: [
+      { heading: 'Start with one role', body: 'Write the work, tools, hours, and approval limits before you look at candidates. Use a small sample that matches the real job.' },
+    ],
+    script: 'We want to hire a Filipino virtual assistant for one clear role. Please show us how you screen for the work and support the first month.',
+  },
 ] as const;
 
 export const routes = [

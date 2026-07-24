@@ -65,6 +65,15 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
         { '@type': 'ListItem', position: 3, name: service.title, item: url },
       ],
     },
+    ...(service.faqs ? [{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: service.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    }] : []),
   ];
 
   return <>
@@ -92,6 +101,26 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
           <div className="card" id="first-week"><h2>First-week plan</h2><ol>{service.firstWeek.map((step) => <li key={step}>{step}</li>)}</ol></div>
         </div>
       </section>
+      {service.bestFor && service.keepLocal && <section className="service-fit-section">
+        <div className="container service-fit-grid">
+          <div className="service-fit-copy">
+            <p className="eyebrow light">Check the fit before hiring</p>
+            <h2>Remote inbox help works best when the rules are easy to see.</h2>
+            <p>A Filipino assistant can keep routine messages and meetings moving. Your local team should keep physical work and decisions that need an owner or qualified professional.</p>
+            <a className="btn cream" href="/contact">Build a calendar and inbox brief</a>
+          </div>
+          <div className="service-fit-board">
+            <article><span>Good remote fit</span><ul>{service.bestFor.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            <article><span>Keep with your local team</span><ul>{service.keepLocal.map((item) => <li key={item}>{item}</li>)}</ul></article>
+          </div>
+        </div>
+      </section>}
+      {service.faqs && <section className="section service-faq-section">
+        <div className="container service-faq-shell">
+          <div><p className="eyebrow">Calendar and inbox questions</p><h2>What owners ask before sharing access</h2></div>
+          <div className="service-faq-list">{service.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
+        </div>
+      </section>}
       <CTA />
     </main>
     <Footer />

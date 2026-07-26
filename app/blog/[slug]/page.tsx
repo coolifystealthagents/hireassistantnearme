@@ -24,6 +24,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+type StrictDetail = {
+  revision: string;
+  directAnswer: readonly { text: string; sourceLabel?: string; sourceUrl?: string }[];
+  sections: readonly { heading: string; paragraphs: readonly { text: string; sourceLabel?: string; sourceUrl?: string }[] }[];
+  statisticRows: readonly { measure: string; value: string; period: string; meaning: string }[];
+  chartRows: readonly { label: string; value: number }[];
+  chartNote: string;
+  expertQuote: { text: string; person: string; title: string; sourceLabel: string; sourceUrl: string };
+  accessRows: readonly { area: string; firstAccess: string; ownerKeeps: string }[];
+  processSteps: readonly { short: string; title: string; note: string }[];
+  ctas: readonly { slot: string; eyebrow: string; heading: string; body: string; label: string; href: string }[];
+  faqs: readonly { question: string; answer: string }[];
+  relatedLinks: readonly { href: string; label: string }[];
+  sources: readonly { name: string; url: string; note: string }[];
+};
+
 type RichDetail = {
   revision: string;
   directAnswer: readonly string[];
@@ -46,8 +62,195 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     mainKeyword?: string;
     published?: string;
     richPublished?: boolean;
+    strictPublished?: boolean;
     detail?: RichDetail;
+    strictDetail?: StrictDetail;
   };
+
+  if (richPost.strictPublished && richPost.strictDetail) {
+    const detail = richPost.strictDetail;
+    const canonical = `${site.url}/blog/${post.slug}`;
+    const published = richPost.published || '2026-07-25';
+    const articleSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: post.title,
+      description: post.excerpt,
+      url: canonical,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      datePublished: published,
+      dateModified: published,
+      keywords: richPost.mainKeyword,
+      author: { '@id': `${site.url}/#organization` },
+      publisher: { '@id': `${site.url}/#organization` },
+      citation: detail.sources.map((source) => source.url),
+    };
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: detail.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    };
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+        { '@type': 'ListItem', position: 2, name: 'Hiring guides', item: `${site.url}/blog` },
+        { '@type': 'ListItem', position: 3, name: post.title, item: canonical },
+      ],
+    };
+    const maxChartValue = Math.max(...detail.chartRows.map((row) => row.value));
+    const renderParagraph = (paragraph: { text: string; sourceLabel?: string; sourceUrl?: string }) => <p data-narrative="true" key={paragraph.text}>
+      {paragraph.text}{paragraph.sourceUrl && paragraph.sourceLabel ? <> <a className="inline-source" href={paragraph.sourceUrl} rel="noreferrer">{paragraph.sourceLabel}</a>.</> : null}
+    </p>;
+    const renderBanner = (slot: string) => {
+      const banner = detail.ctas.find((item) => item.slot === slot);
+      return banner ? <aside className="article-banner" data-article-banner={slot} aria-label={`${slot} article action`}>
+        <div><p className="eyebrow light">{banner.eyebrow}</p><h2>{banner.heading}</h2><p>{banner.body}</p></div>
+        <a className="btn coral" href={banner.href}>{banner.label}</a>
+      </aside> : null;
+    };
+
+    return <>
+      <Header />
+      <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
+        <article className="container article-shell">
+          <p className="eyebrow">Philippines-only hiring guide</p>
+          <h1>{post.title}</h1>
+          <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
+          <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on July 25, 2026.</p>
+
+          <section className="article-block answer-card" aria-labelledby="direct-answer">
+            <h2 id="direct-answer">Direct answer</h2>
+            {detail.directAnswer.map(renderParagraph)}
+          </section>
+
+          <section className="article-block card">
+            <h2>First rules to write down</h2>
+            <ul className="list">{post.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
+          </section>
+
+          {renderBanner('top')}
+
+          {detail.sections.slice(0, 3).map((section) => <section className="article-block" key={section.heading}>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map(renderParagraph)}
+          </section>)}
+
+          <section className="article-block" data-module="security-statistics" aria-labelledby="security-statistics">
+            <h2 id="security-statistics">What the 2024 FBI report recorded</h2>
+            <p data-narrative="true">The figures below come from reports sent to the FBI Internet Crime Complaint Center. They describe reported events, so they should not be read as a count of every event that happened.</p>
+            <div className="article-table-wrap" role="region" aria-labelledby="security-statistics" tabIndex={0}>
+              <table className="article-table"><caption>Published online crime complaint figures</caption>
+                <thead><tr><th scope="col">Measure</th><th scope="col">Published value</th><th scope="col">Period</th><th scope="col">What it means</th></tr></thead>
+                <tbody>{detail.statisticRows.map((row) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.value}</td><td>{row.period}</td><td>{row.meaning}</td></tr>)}</tbody>
+              </table>
+            </div>
+            <p className="module-source"><a className="inline-source" href={detail.sources[0].url} rel="noreferrer">Source: FBI 2024 IC3 Annual Report</a></p>
+          </section>
+
+          <figure className="article-block visual-card" data-visual-type="labeled-data-chart">
+            <h2>Complaints that reported an actual loss</h2>
+            <svg className="security-chart" viewBox="0 0 760 260" role="img" aria-labelledby="chart-title chart-desc">
+              <title id="chart-title">FBI IC3 complaints in 2024</title>
+              <desc id="chart-desc">Horizontal bars compare all 859,532 complaints with 256,256 complaints that reported an actual loss.</desc>
+              {detail.chartRows.map((row, index) => {
+                const y = 54 + index * 92;
+                const width = Math.round((row.value / maxChartValue) * 500);
+                return <g key={row.label}>
+                  <text x="0" y={y - 12} className="chart-label">{row.label}</text>
+                  <rect x="0" y={y} width="500" height="34" rx="8" className="chart-track" />
+                  <rect x="0" y={y} width={width} height="34" rx="8" className={index === 0 ? 'chart-bar primary-bar' : 'chart-bar secondary-bar'} />
+                  <text x={Math.min(width + 14, 620)} y={y + 24} className="chart-value">{row.value.toLocaleString('en-US')}</text>
+                </g>;
+              })}
+            </svg>
+            <figcaption>{detail.chartNote} <a className="inline-source" href={detail.sources[0].url} rel="noreferrer">Open the FBI report</a>.</figcaption>
+          </figure>
+
+          {detail.sections.slice(3, 6).map((section) => <section className="article-block" key={section.heading}>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map(renderParagraph)}
+          </section>)}
+
+          {renderBanner('middle')}
+
+          <section className="article-block quote-section" aria-labelledby="expert-note">
+            <h2 id="expert-note">Report a suspected incident</h2>
+            <blockquote>"{detail.expertQuote.text}"</blockquote>
+            <p className="quote-credit">{detail.expertQuote.person}, {detail.expertQuote.title}. <a className="inline-source" href={detail.expertQuote.sourceUrl} rel="noreferrer">{detail.expertQuote.sourceLabel}</a>.</p>
+          </section>
+
+          <section className="article-block" data-module="access-boundary-table" aria-labelledby="access-boundaries">
+            <h2 id="access-boundaries">A first-access table for common assistant work</h2>
+            <p data-narrative="true">Use this table as a starting point, then change it to match the tools and legal duties in your business. A Filipino assistant can prepare and update approved work while the accountable owner keeps sensitive control.</p>
+            <p className="table-scroll-cue" id="access-table-cue">Swipe to compare all columns.</p>
+            <div className="article-table-wrap" role="region" aria-labelledby="access-boundaries" aria-describedby="access-table-cue" tabIndex={0}>
+              <table className="article-table"><caption>Suggested first-access boundaries</caption>
+                <thead><tr><th scope="col">Work area</th><th scope="col">Start with</th><th scope="col">Owner or manager keeps</th></tr></thead>
+                <tbody>{detail.accessRows.map((row) => <tr key={row.area}><th scope="row">{row.area}</th><td>{row.firstAccess}</td><td>{row.ownerKeeps}</td></tr>)}</tbody>
+              </table>
+            </div>
+          </section>
+
+          <figure className="article-block visual-card process-visual" data-visual-type="security-process-diagram">
+            <h2>A safe access handoff</h2>
+            <svg viewBox="0 0 940 260" role="img" aria-labelledby="process-title process-desc">
+              <title id="process-title">Five-step virtual assistant security process</title>
+              <desc id="process-desc">Map the task, limit access, test safely, check the work, and close access.</desc>
+              <path d="M92 92 H848" className="process-line" />
+              {detail.processSteps.map((step, index) => {
+                const x = 92 + index * 189;
+                return <g key={step.short}>
+                  <circle cx={x} cy="92" r="38" className="process-dot" />
+                  <text x={x} y="99" textAnchor="middle" className="process-short">{step.short}</text>
+                  <text x={x} y="158" textAnchor="middle" className="process-title">{step.title}</text>
+                  <foreignObject x={x - 78} y="174" width="156" height="64"><div className="process-note">{step.note}</div></foreignObject>
+                </g>;
+              })}
+            </svg>
+            <figcaption>This process is a planning aid. The business should adjust it for its systems, contracts, data, and legal duties.</figcaption>
+          </figure>
+
+          {detail.sections.slice(6).map((section) => <section className="article-block" key={section.heading}>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map(renderParagraph)}
+          </section>)}
+
+          {renderBanner('bottom')}
+
+          <section className="article-block" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Questions about virtual assistant security</h2>
+            <div className="faq-stack">{detail.faqs.map((faq) => <details key={faq.question} open>
+              <summary>{faq.question}</summary><p>{faq.answer}</p>
+            </details>)}</div>
+          </section>
+
+          <section className="article-block card" aria-labelledby="related-guides">
+            <h2 id="related-guides">Keep planning the role</h2>
+            <p data-narrative="true">Pick the next page that matches the work you want to hand over. Each link stays inside the Philippines-only hiring path on this site.</p>
+            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={link.href}>{link.label}</a></li>)}</ul>
+          </section>
+
+          <section className="article-block sources-card" data-source-list aria-labelledby="sources-heading">
+            <h2 id="sources-heading">Sources</h2>
+            <p data-narrative="true">These primary sources support the figures, quote, account guidance, access guidance, and Philippine privacy notes above. We checked each link before publication and kept the source wording separate from our planning advice.</p>
+            <ol className="list">{detail.sources.map((source) => <li key={source.url}>
+              <a className="text-link" href={source.url} rel="noreferrer">{source.name}</a>: {source.note}
+            </li>)}</ol>
+          </section>
+        </article>
+      </main>
+      <Footer />
+    </>;
+  }
 
   if (richPost.richPublished && richPost.detail) {
     const detail = richPost.detail;

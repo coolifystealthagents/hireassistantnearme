@@ -432,6 +432,170 @@ export const blogPosts = [
     ],
     script: 'We want to hire a Filipino virtual assistant for one clear role. Please show us how you screen for the work and support the first month.',
   },
+  {
+    slug: 'virtual-assistant-security-checklist',
+    mainKeyword: 'virtual assistant security checklist',
+    title: 'Virtual assistant security checklist for a safe first month',
+    excerpt: 'Use this virtual assistant security checklist to set up a Filipino remote assistant with limited access, named accounts, clear approval rules, and a clean exit plan.',
+    published: '2026-07-25',
+    strictPublished: true,
+    minutes: 15,
+    takeaways: [
+      'Use a named account, not the owner login.',
+      'Open only what the first task needs.',
+      'Use a second sign-in check.',
+      'Write stop rules for sensitive work.',
+    ],
+    strictDetail: {
+      revision: '2026-07-25-virtual-assistant-security-checklist-r1',
+      directAnswer: [
+        { text: 'A virtual assistant security checklist should cover the account, device, data, task, approval, review, and exit rules for the role. For a Filipino remote assistant, set these rules before the first live login and test them with masked sample work.' },
+        { text: 'Start with a named account, the smallest useful set of permissions, and a second sign-in check. Keep account recovery, payments, contracts, private staff matters, and final customer promises with the owner or another named manager.' },
+      ],
+      sections: [
+        {
+          heading: 'Why a small business needs a written security plan',
+          paragraphs: [
+            { text: 'A remote assistant may touch the inbox, calendar, cloud files, CRM, or customer notes. One loose login can expose more of the business than the task needs, so access must follow the job instead of the person asking for it.' },
+            { text: 'The 2024 FBI Internet Crime Complaint Center report logged 859,532 complaints and reported a 33 percent rise in losses from 2023. Those figures cover many kinds of online crime, but they show why a new remote account should never be treated as a casual setup.', sourceLabel: 'Read the FBI 2024 IC3 report', sourceUrl: 'https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf' },
+          ],
+        },
+        {
+          heading: 'Map the role before you open an account',
+          paragraphs: [
+            { text: 'Write one sentence that says what the assistant does, which tool starts the task, and what finished work looks like. A calendar assistant may prepare meeting options and notes, while the owner keeps private events, deletions, purchases, and final sends.' },
+            { text: 'List the records the role may see and the choices it may not make. This short map becomes the access plan, the training list, and the review sheet for the first week.' },
+          ],
+        },
+        {
+          heading: 'Use a named account for each person',
+          paragraphs: [
+            { text: 'Do not send the owner password through chat or email. Create a separate account for the Filipino assistant, use their work name, and record who approved it and which role it supports.' },
+            { text: 'A named account makes actions easier to review and access easier to remove when the role changes. It also keeps the owner account and its recovery methods away from daily task work.' },
+          ],
+        },
+        {
+          heading: 'Give only the access the first tasks need',
+          paragraphs: [
+            { text: 'NIST defines least privilege as allowing only the access needed to complete assigned work. In plain terms, an inbox assistant does not need every drive folder, billing control, staff record, or admin setting.', sourceLabel: 'See the NIST least-privilege control', sourceUrl: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final' },
+            { text: 'Open one tool at a time and test the account before the first shift. If the assistant cannot finish the approved task, add one permission after the manager checks why it is needed.' },
+          ],
+        },
+        {
+          heading: 'Protect every sign-in and recovery path',
+          paragraphs: [
+            { text: 'CISA tells users to make passwords at least 16 characters and to use a different strong password for each account. A password manager can create and store those passwords without asking the assistant to reuse an easy phrase.', sourceLabel: 'Use the CISA password guide', sourceUrl: 'https://www.cisa.gov/secure-our-world/use-strong-passwords' },
+            { text: 'Turn on multi-factor authentication for email, the CRM, cloud storage, and the password manager when each tool supports it. CISA says MFA adds a second check beyond the password, so the password alone is not enough to enter the account.', sourceLabel: 'Read the CISA MFA guide', sourceUrl: 'https://www.cisa.gov/secure-our-world/turn-mfa' },
+          ],
+        },
+        {
+          heading: 'Train with masked records first',
+          paragraphs: [
+            { text: 'Use old or made-up records for the first practice batch, and remove names, phone numbers, addresses, and account details. Ask the assistant to show the exact steps for sorting, drafting, updating, and handing the work back.' },
+            { text: 'Open live data only after the sample is correct and the stop rules are clear. The Philippine Data Privacy Act of 2012 covers personal information processing and requires reasonable protection against improper access, loss, or disclosure.', sourceLabel: 'Read Republic Act 10173', sourceUrl: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html' },
+          ],
+        },
+        {
+          heading: 'Write simple stop and approval rules',
+          paragraphs: [
+            { text: 'Tell the assistant to stop when a request involves a payment, refund, contract, password reset, private staff issue, angry customer, or unusual file. The assistant should collect the facts, mark the task, and ask the named manager before taking the next step.' },
+            { text: 'Keep the rule short enough to use during a busy shift. A clear rule such as "draft it, flag it, and wait" is easier to follow than a long policy that nobody can recall.' },
+          ],
+        },
+        {
+          heading: 'Check links and change requests outside the message',
+          paragraphs: [
+            { text: 'A message can look like it came from the owner even when it did not. If it asks for a new login, a file share, a money action, or a change to recovery details, verify the request in a known channel before doing anything.' },
+            { text: 'Do not rely on the reply address, display name, or urgent tone as proof. Save the suspicious message, tell the manager what happened, and use the company reporting path instead of forwarding it around the team.' },
+          ],
+        },
+        {
+          heading: 'Review the first week in small batches',
+          paragraphs: [
+            { text: 'Have the assistant work in small batches that a manager can check on the same day. Review wrong labels, unexpected downloads, skipped approvals, and any question that arrived too late.' },
+            { text: 'Fix the written rule when two careful people read it in different ways. Add wider access only when the current task is steady and the manager can name the reason for the change.' },
+          ],
+        },
+        {
+          heading: 'Keep a short account and data list',
+          paragraphs: [
+            { text: 'Record the tool, account owner, permission level, data type, approver, review date, and removal step in one list. The list should be useful during onboarding, a role change, an incident, and the final day.' },
+            { text: 'Check the list after the first week and once each month while the role is active. Remove unused access rather than leaving it open for a task that may return later.' },
+          ],
+        },
+        {
+          heading: 'Plan the exit before the role starts',
+          paragraphs: [
+            { text: 'Write who will disable accounts, move unfinished work, change shared secrets, recover company files, and check active sessions. Set the order before a rushed exit makes the team guess.' },
+            { text: 'On the last day, remove access first, then confirm that the company has the needed work and records. Keep a dated note of the accounts closed and the manager who checked each one.' },
+          ],
+        },
+      ],
+      statisticRows: [
+        { measure: 'Online crime complaints received', value: '859,532', period: '2024', meaning: 'Reports sent to IC3 that year.' },
+        { measure: 'Complaints reporting an actual loss', value: '256,256', period: '2024', meaning: 'Reports that included an actual loss.' },
+        { measure: 'Increase in reported losses', value: '33%', period: '2024 vs. 2023', meaning: 'Change from the prior year.' },
+        { measure: 'Average complaints per day', value: 'More than 2,000', period: '2020-2024', meaning: 'Daily average over five years.' },
+      ],
+      chartRows: [
+        { label: 'All complaints', value: 859532 },
+        { label: 'Reported a loss', value: 256256 },
+      ],
+      chartNote: 'Units are complaints submitted to the FBI Internet Crime Complaint Center in 2024. Bar lengths use the published counts and are rounded to the nearest whole pixel; they do not estimate unreported events.',
+      expertQuote: {
+        text: 'We want to be there for you, and what you report will help us help others.',
+        person: 'B. Chad Yarbrough',
+        title: 'Operations Director for Criminal and Cyber, Federal Bureau of Investigation',
+        sourceLabel: '2024 IC3 Annual Report',
+        sourceUrl: 'https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf',
+      },
+      accessRows: [
+        { area: 'Email and calendar', firstAccess: 'Assigned mailbox or limited calendar rights', ownerKeeps: 'Recovery, private folders, deletion, and sensitive sends' },
+        { area: 'CRM and customer notes', firstAccess: 'Named user with needed records only', ownerKeeps: 'Exports, mass changes, refunds, contracts, and private notes' },
+        { area: 'Cloud files', firstAccess: 'One folder for approved tasks', ownerKeeps: 'Admin rights, staff files, legal files, and full-drive sharing' },
+        { area: 'Password manager', firstAccess: 'Entries for approved tools only', ownerKeeps: 'Recovery, owner logins, and unrelated vault items' },
+        { area: 'Money and purchases', firstAccess: 'View or prepare approved information', ownerKeeps: 'Transfers, purchases, refunds, and banking actions' },
+      ],
+      processSteps: [
+        { short: 'Map', title: 'Map the task', note: 'Name the tool, data, output, and owner.' },
+        { short: 'Limit', title: 'Limit access', note: 'Open only what the first task needs.' },
+        { short: 'Test', title: 'Test safely', note: 'Use masked records and small batches.' },
+        { short: 'Check', title: 'Check the work', note: 'Review actions, questions, and stop rules.' },
+        { short: 'Close', title: 'Close access', note: 'Remove accounts when the role or task ends.' },
+      ],
+      ctas: [
+        { slot: 'top', eyebrow: 'Start with a safe role brief', heading: 'List the tools before you meet candidates.', body: 'Bring the first tasks, accounts, data limits, work hours, and manager name. We can help shape a Philippines-only assistant role around that list.', label: 'Build my role brief', href: '/contact' },
+        { slot: 'middle', eyebrow: 'Match access to the role', heading: 'Hire for one clear task lane.', body: 'Choose inbox, calendar, customer support, or another defined lane first. Add work only after the first rules and checks hold up.', label: 'See executive assistance', href: '/services/executive-assistance' },
+        { slot: 'bottom', eyebrow: 'Plan the first week', heading: 'Set the review habit before day one.', body: 'Use small batches, named accounts, and a manager check. A managed Philippines staffing plan can help keep the handoff clear.', label: 'Prepare the onboarding list', href: '/blog/assistant-onboarding-checklist' },
+      ],
+      faqs: [
+        { question: 'Should a virtual assistant use my main login?', answer: 'No. Give each assistant a named account with only the access needed for the assigned tasks. Keep the owner login and recovery controls with the owner or a trusted manager.' },
+        { question: 'What should I give a Filipino assistant on day one?', answer: 'Start with one tool, masked practice records, written stop rules, and a small task batch. Open live records only after the assistant can show the task and handoff correctly.' },
+        { question: 'Does a remote assistant need multi-factor authentication?', answer: 'Use MFA on every work account that supports it. Keep recovery methods with the company, and write down who can restore access if a device is lost.' },
+        { question: 'Can an assistant handle customer data?', answer: 'The role may handle approved customer data when the business has a lawful reason and suitable protection. Limit the records, train with masked examples, and keep sensitive decisions with the right manager or qualified person.' },
+        { question: 'What happens when the assistant leaves?', answer: 'Disable accounts, end active sessions, recover company work, change any shared secrets, and move unfinished tasks to a named owner. Record what was closed and who checked it.' },
+        { question: 'Where are assistants hired through this service?', answer: 'Every candidate offered through this service is recruited and hired in the Philippines. The work is remote, so local errands, walk-in reception, and physical file duties need a local employee or vendor.' },
+      ],
+      relatedLinks: [
+        { href: '/services/executive-assistance', label: 'Plan a Filipino executive assistant role' },
+        { href: '/services/calendar-and-inbox-support', label: 'Set up calendar and inbox support' },
+        { href: '/blog/assistant-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
+        { href: '/blog/tasks-to-delegate-first', label: 'Choose the first tasks to delegate' },
+        { href: '/contact', label: 'Build a Philippines-only role brief' },
+      ],
+      sources: [
+        { name: 'FBI Internet Crime Complaint Center, 2024 IC3 Annual Report', url: 'https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf', note: 'Complaint figures and the exact expert quote.' },
+        { name: 'CISA, Use Strong Passwords', url: 'https://www.cisa.gov/secure-our-world/use-strong-passwords', note: 'Password and password-manager guidance.' },
+        { name: 'CISA, Turn on Multifactor Authentication', url: 'https://www.cisa.gov/secure-our-world/turn-mfa', note: 'Guidance on a second sign-in check.' },
+        { name: 'NIST SP 800-53 Rev. 5, Security and Privacy Controls', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'Access controls and least privilege.' },
+        { name: 'Republic Act No. 10173, Data Privacy Act of 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Philippine personal-information law.' },
+      ],
+    },
+    sections: [
+      { heading: 'Start with named accounts', body: 'Give the assistant only the account and records needed for the first task. Keep recovery and final approval with the owner.' },
+    ],
+    script: 'Please use only the named account and approved records for this task. Stop and ask before any new access, money action, private file, or customer promise.',
+  },
 ] as const;
 
 export const routes = [

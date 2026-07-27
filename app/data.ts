@@ -104,196 +104,6 @@ export const compareRows = [
 
 export const blogPosts = [
   {
-    slug: 'virtual-assistant-planning',
-    title: 'How should I budget for assistant help near me?',
-    excerpt: 'A plain guide to the hours, duties, location, and management choices that affect an assistant budget.',
-    minutes: 7,
-    takeaways: ['Local help follows local wages and may fit in-person work.', 'This service recruits Filipino remote assistants for clear online tasks.', 'Start with a small weekly hour limit before adding more.'],
-    sections: [
-      { heading: 'Start with the work, not a price', body: 'Local assistants are usually paid against the local labor market. A Philippines-based service may use a different billing structure. Either way, a low rate can become expensive when the role is vague or the work needs constant correction. Treat the first month as a test.' },
-      { heading: 'What affects the budget', body: 'The duties matter more than the job title. Inbox cleanup, appointment setting, and basic CRM updates are usually easier to teach. Bookkeeping support, sales follow-up, executive support, and customer care call for more judgment and closer review.' },
-      { heading: 'Set a first-month limit', body: 'Choose a weekly hour limit and a short task list. Write down the tools used and what finished work should look like. Add hours only after the assistant can handle the first tasks without creating more work for the owner.' },
-      { heading: 'What to ask before you pay', body: 'Ask who screens the assistant, how replacement works, what time zone they cover, and who checks quality. If a provider cannot explain the first week clearly, slow down.' },
-    ],
-    script: 'We need help with a focused pilot scope first. The main tasks are inbox sorting, calendar cleanup, CRM updates, and lead follow-up. Can you show how you screen for this and what the first week looks like?',
-  },
-  {
-    slug: 'tasks-to-delegate-first',
-    title: 'What assistant tasks should you delegate first?',
-    excerpt: 'Start with repeatable admin, follow-up, inbox, CRM, and scheduling work.',
-    minutes: 6,
-    takeaways: ['Pick work that repeats every week.', 'Keep sensitive decisions with the owner.', 'Use examples before you expect speed.'],
-    sections: [
-      { heading: 'Start with work that repeats', body: 'The best first tasks happen every day or every week. Examples include calendar cleanup, inbox labels, appointment reminders, lead list updates, simple reports, and customer reply drafts.' },
-      { heading: 'Do not delegate judgment too early', body: 'Keep pay-rate changes, refunds, legal advice, medical judgment, hiring decisions, and large purchases with the owner. The assistant can gather the information, but the owner should make the decision.' },
-      { heading: 'Give examples', body: 'Show three good examples and one bad example. A short screen recording can save hours of training. The assistant should know what finished work looks like.' },
-      { heading: 'Review the first five days', body: 'Check work daily for the first week. Fix the checklist before you blame the person. If the same mistake happens twice, the instruction is probably unclear.' },
-    ],
-    script: 'For the first week, please only draft replies and update the CRM. Do not send messages or change staffing choices without approval. Mark anything unclear with a question.',
-  },
-  {
-    slug: 'virtual-assistant-vs-employee',
-    title: 'Virtual assistant vs employee: which is better for a local business?',
-    excerpt: 'When to hire in-house and when a managed assistant may be easier to start with.',
-    minutes: 8,
-    takeaways: ['Use an employee for in-person duties and deep company ownership.', 'Use a VA for clear recurring tasks.', 'Check worker classification rules before treating a contractor like staff.'],
-    sections: [
-      { heading: 'When an employee fits better', body: 'Choose an employee when the work must happen in your office, needs constant judgment, or touches core business decisions all day. Employees can be trained deeply, but they also need payroll, management, and a longer hiring process.' },
-      { heading: 'When a VA fits better', body: 'Choose a virtual assistant when the work is repeatable, remote, and easy to check. Good examples are inbox cleanup, CRM updates, appointment setting, customer support drafts, data entry, and simple research.' },
-      { heading: 'The control question', body: 'If you need to control the exact hours, tools, process, and daily method, talk with a professional about worker classification. The IRS has guidance on contractor versus employee status.' },
-      { heading: 'A practical first step', body: 'If you are unsure, start with a narrow remote support role. Keep the role simple for 30 days. Then decide if you need local in-house help.' },
-    ],
-    script: 'We are testing a remote assistant role first. We will keep the scope narrow, review work weekly, and avoid treating contractor support like an in-house employee unless we set that up correctly.',
-  },
-  {
-    slug: 'assistant-onboarding-checklist',
-    title: 'Assistant onboarding checklist for the first week',
-    excerpt: 'A simple first-week checklist for logins, SOPs, calls, QA, and scorecards.',
-    minutes: 9,
-    takeaways: ['Prepare tool access before day one.', 'Use a small task list for the first week.', 'Review work daily until quality is steady.'],
-    sections: [
-      { heading: 'Before day one', body: 'Make a tool list, create limited-access accounts, record one or two task videos, and write the first five tasks. Do not share the owner password. Use role-based access where possible.' },
-      { heading: 'Day one', body: 'Walk through the business, the customers, and the task list. Show what good work looks like. Ask the assistant to repeat the rules back in their own words.' },
-      { heading: 'Days two to four', body: 'Let the assistant complete small batches. Review the work the same day. Keep notes in one shared place so the checklist improves.' },
-      { heading: 'Day five review', body: 'Check the work for accuracy and sound judgment. Note missed steps, slow replies, and questions that keep coming back. Fix the instructions or the role fit before adding more work.' },
-    ],
-    script: 'This week is a training week. Please ask when unsure, write down blockers, and wait for approval on anything involving money, refunds, legal, medical, or customer promises.',
-  },
-  {
-    slug: 'virtual-assistant-for-small-business',
-    mainKeyword: 'virtual assistant for small business',
-    title: 'Virtual assistant for small business: a practical hiring plan',
-    excerpt: 'A virtual assistant for small business can take on repeat admin work while the owner keeps final decisions. This guide shows how to plan and launch a Philippines-only managed role.',
-    minutes: 12,
-    takeaways: [
-      'Choose one clear role instead of handing over every loose task.',
-      'Hire from the Philippines through a managed staffing plan with named review rules.',
-      'Start with limited access, sample work, and a short first-week task list.',
-      'Keep money, legal, medical, hiring, and final customer decisions with the owner.',
-    ],
-    detail: {
-      directAnswer: [
-        'A virtual assistant for small business is a remote team member who handles clear, repeatable work through online tools. For this service, every candidate is recruited and hired in the Philippines, with a managed plan for matching, launch, and review.',
-        'Start by listing the work that repeats each day or week, then group it into one role. Give the assistant examples, limited tool access, and a named person who checks the first batches before more work is added.',
-      ],
-      sections: [
-        {
-          heading: 'Pick one job for the assistant',
-          paragraphs: [
-            'A small business often has many loose tasks but does not need an all-purpose helper. Pick one job such as lead follow-up, calendar care, customer reply drafts, CRM cleanup, or bookkeeping prep.',
-            'Write down what starts each task, what the assistant must produce, and who approves the final step. This makes the role easier to screen in the Philippines and easier to manage after launch.',
-          ],
-        },
-        {
-          heading: 'Turn the job into a clear role brief',
-          paragraphs: [
-            'A role brief should name the main duty, the tools used, the hours needed, and the decisions the assistant cannot make. Add two good work samples so the candidate can see the level of detail you expect.',
-            'Keep the first brief short enough to use on a real screening call. If the role needs five unrelated skill sets, split the work or choose the one task lane that causes the most daily drag.',
-          ],
-        },
-        {
-          heading: 'Choose managed staffing when you need help hiring',
-          paragraphs: [
-            'Direct hiring puts screening, interviews, checks, onboarding, attendance, and replacement planning on the owner. Managed staffing gives the owner a team that helps shape the role and match a Philippines-based candidate to it.',
-            'The owner still sets the rules and checks business judgment. The staffing team handles the hiring path and gives the owner a clear place to raise fit, attendance, or replacement questions.',
-          ],
-        },
-        {
-          heading: 'Set safe access before day one',
-          paragraphs: [
-            'Create a separate user account for each tool and give only the access needed for the first tasks. The NIST security control catalog describes least privilege as limiting access to what a person needs for assigned work.',
-            'Turn on multi-factor authentication where the tool supports it, and keep recovery methods with the owner. CISA explains that MFA adds another check beyond a password, which is useful when work happens across remote accounts.',
-          ],
-        },
-        {
-          heading: 'Know where owner approval is required',
-          paragraphs: [
-            'An assistant can collect details, draft a reply, update a record, and flag a decision. The owner or qualified team member should approve refunds, payments, contracts, medical choices, legal advice, hiring decisions, and promises made to customers.',
-            'Write these limits in the role brief and repeat them during training. A clear stop rule protects the business and helps the assistant ask before a small error becomes a bigger one.',
-          ],
-        },
-        {
-          heading: 'Plan communication across the Philippines and your workday',
-          paragraphs: [
-            'Decide which hours need live coverage and which tasks can be finished before your next review. A Philippines-based assistant may work a schedule set around your customers, but that schedule should be agreed before matching begins.',
-            'Use one place for questions, one place for task status, and one daily check-in during the first week. This keeps instructions from getting lost across email, chat, and calls.',
-          ],
-        },
-        {
-          heading: 'Check worker setup before you direct the work',
-          paragraphs: [
-            'The way a business controls work can affect worker classification and other duties. The IRS explains that labels alone do not decide whether someone is an employee or an independent contractor.',
-            'Ask a qualified adviser about the setup that fits your business and location. A managed staffing provider can explain its own service model, but it should not replace legal or tax advice.',
-          ],
-        },
-        {
-          heading: 'Protect personal data in the handoff',
-          paragraphs: [
-            'List the customer and staff data the role may see before you open any account. The Philippine Data Privacy Act covers the processing of personal information and gives a useful legal frame for a Philippines-based staffing plan.',
-            'Use masked sample records during training when possible, then open real access only after the assistant shows the task correctly. Keep a simple record of who can use each system and remove access when the role changes.',
-          ],
-        },
-      ],
-      decisionRows: [
-        { need: 'Work must happen inside your office', fit: 'Use a local employee or vendor', reason: 'This Philippines-only service is for remote work, so it should not be sold as an in-person fix.' },
-        { need: 'One repeat admin lane with online tools', fit: 'Philippines-based assistant', reason: 'A clear remote task can be screened, taught, and checked through the same systems your team already uses.' },
-        { need: 'Help with screening and role setup', fit: 'Managed Philippines staffing', reason: 'The staffing team helps plan the role, match the candidate, and handle hiring support.' },
-        { need: 'Final business judgment all day', fit: 'Keep it with the owner or manager', reason: 'The assistant can prepare information, but the accountable leader should make the decision.' },
-      ],
-      planningNumbers: [
-        { value: '1 role', label: 'Planning example', note: 'Start with one task lane instead of a mixed list of unrelated work.' },
-        { value: '3 samples', label: 'Training example', note: 'Show three finished examples so the first standard is easy to see.' },
-        { value: '5 days', label: 'Launch example', note: 'Use the first workweek for small batches, questions, and daily checks.' },
-        { value: '2 weeks', label: 'Review example', note: 'Keep close review in place before adding wider tool access or new duties.' },
-        { value: '30 days', label: 'Fit example', note: 'Hold a role review and decide what should stay, change, or stop.' },
-      ],
-      scripts: [
-        {
-          title: 'Provider call script',
-          text: 'We need a Philippines-based virtual assistant for one clear role. The first tasks are CRM updates, lead follow-up drafts, and calendar checks. How will you screen for these tasks, who supports the launch, and what happens if the match is not right?',
-        },
-        {
-          title: 'First-day approval script',
-          text: 'Please complete the draft and mark it ready for review. Do not send it, approve a refund, change a customer promise, or open new access without written approval. If a detail is missing, stop and ask in the shared task thread.',
-        },
-      ],
-      scenario: {
-        title: 'Sample workflow: lead follow-up support',
-        intro: 'This is a planning example for a small service business with leads sitting in a CRM. It shows a narrow remote role without promising a business result.',
-        steps: [
-          { step: '1', title: 'Owner sets the rule', body: 'The owner defines which lead stages need a draft and which messages require personal review.' },
-          { step: '2', title: 'Assistant checks the queue', body: 'The assistant reviews new records at the agreed times and flags missing phone, email, or service details.' },
-          { step: '3', title: 'Assistant prepares the work', body: 'The assistant updates the CRM and drafts a reply from an approved template without sending it.' },
-          { step: '4', title: 'Owner reviews the batch', body: 'The owner checks the first batches, approves edits, and notes any rule that needs clearer wording.' },
-          { step: '5', title: 'Team reviews the role', body: 'After 30 days, the owner and staffing contact decide which duties are steady and which still need close review.' },
-        ],
-      },
-      faqs: [
-        { question: 'Where does this service recruit virtual assistants?', answer: 'Every assistant offered through this service is recruited and hired in the Philippines. The service does not offer candidates from other staffing regions.' },
-        { question: 'What should a small business delegate first?', answer: 'Start with work that repeats and is easy to check, such as CRM updates, calendar care, inbox sorting, reply drafts, data cleanup, or report prep. Keep final decisions and sensitive approvals with the owner.' },
-        { question: 'Can the assistant work during my business hours?', answer: 'The schedule can be part of the role brief and matching process. State the time zone, live coverage window, response needs, and any tasks that can be completed before your next review.' },
-        { question: 'Should the assistant get every login on day one?', answer: 'No. Start with separate accounts and only the access needed for the first tasks, then add access after the work is steady and the owner approves it.' },
-        { question: 'What does managed staffing add?', answer: 'Managed staffing can help shape the role, screen Philippines-based candidates, support onboarding, and give the owner a path for fit or replacement questions. The owner still defines the work and reviews business judgment.' },
-      ],
-      relatedLinks: [
-        { href: '/blog/tasks-to-delegate-first', label: 'Choose the first tasks to delegate' },
-        { href: '/blog/assistant-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
-        { href: '/blog/virtual-assistant-vs-employee', label: 'Compare a virtual assistant with an employee' },
-        { href: '/contact', label: 'Build a Philippines-only role brief' },
-      ],
-      sources: [
-        { name: 'NIST SP 800-53 Rev. 5, Security and Privacy Controls', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'See the access-control guidance, including least privilege.' },
-        { name: 'CISA multi-factor authentication guidance', url: 'https://www.cisa.gov/resources-tools/resources/multi-factor-authentication-mfa', note: 'Use this when planning account sign-in protection.' },
-        { name: 'IRS: Independent contractor defined', url: 'https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined', note: 'Review the official explanation of worker control and classification.' },
-        { name: 'Philippine Data Privacy Act of 2012', url: 'https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html', note: 'Read the law covering the processing of personal information in the Philippines.' },
-      ],
-    },
-    sections: [
-      { heading: 'Start with a narrow role', body: 'Choose work that repeats and is easy to check. Keep the owner in charge of final decisions.' },
-    ],
-    script: 'We need a Philippines-based assistant for one clear role. Please show us how you screen for the tasks and support the first month.',
-  },
-  {
     slug: 'hire-filipino-virtual-assistant',
     mainKeyword: 'hire filipino virtual assistant',
     title: 'Hire Filipino virtual assistant help with a six-step role plan',
@@ -416,8 +226,8 @@ export const blogPosts = [
       relatedLinks: [
         { href: '/services/executive-assistance', label: 'Plan an executive assistance role' },
         { href: '/services/calendar-and-inbox-support', label: 'Review calendar and inbox support' },
-        { href: '/blog/tasks-to-delegate-first', label: 'Choose the first tasks to delegate' },
-        { href: '/blog/assistant-onboarding-checklist', label: 'Prepare the first-week checklist' },
+        { href: '/blog', label: 'Choose the first tasks to delegate' },
+        { href: '/blog', label: 'Prepare the first-week checklist' },
         { href: '/contact', label: 'Build a Philippines-only role brief' },
       ],
       sources: [
@@ -566,7 +376,7 @@ export const blogPosts = [
       ctas: [
         { slot: 'top', eyebrow: 'Start with a safe role brief', heading: 'List the tools before you meet candidates.', body: 'Bring the first tasks, accounts, data limits, work hours, and manager name. We can help shape a Philippines-only assistant role around that list.', label: 'Build my role brief', href: '/contact' },
         { slot: 'middle', eyebrow: 'Match access to the role', heading: 'Hire for one clear task lane.', body: 'Choose inbox, calendar, customer support, or another defined lane first. Add work only after the first rules and checks hold up.', label: 'See executive assistance', href: '/services/executive-assistance' },
-        { slot: 'bottom', eyebrow: 'Plan the first week', heading: 'Set the review habit before day one.', body: 'Use small batches, named accounts, and a manager check. A managed Philippines staffing plan can help keep the handoff clear.', label: 'Prepare the onboarding list', href: '/blog/assistant-onboarding-checklist' },
+        { slot: 'bottom', eyebrow: 'Plan the first week', heading: 'Set the review habit before day one.', body: 'Use small batches, named accounts, and a manager check. A managed Philippines staffing plan can help keep the handoff clear.', label: 'Prepare the onboarding list', href: '/blog' },
       ],
       faqs: [
         { question: 'Should a virtual assistant use my main login?', answer: 'No. Give each assistant a named account with only the access needed for the assigned tasks. Keep the owner login and recovery controls with the owner or a trusted manager.' },
@@ -579,8 +389,8 @@ export const blogPosts = [
       relatedLinks: [
         { href: '/services/executive-assistance', label: 'Plan a Filipino executive assistant role' },
         { href: '/services/calendar-and-inbox-support', label: 'Set up calendar and inbox support' },
-        { href: '/blog/assistant-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
-        { href: '/blog/tasks-to-delegate-first', label: 'Choose the first tasks to delegate' },
+        { href: '/blog', label: 'Use the first-week onboarding checklist' },
+        { href: '/blog', label: 'Choose the first tasks to delegate' },
         { href: '/contact', label: 'Build a Philippines-only role brief' },
       ],
       sources: [
@@ -595,8 +405,7 @@ export const blogPosts = [
       { heading: 'Start with named accounts', body: 'Give the assistant only the account and records needed for the first task. Keep recovery and final approval with the owner.' },
     ],
     script: 'Please use only the named account and approved records for this task. Stop and ask before any new access, money action, private file, or customer promise.',
-  },
-] as const;
+  },] as const;
 
 export const routes = [
   '/',

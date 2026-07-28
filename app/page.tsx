@@ -14,7 +14,7 @@ export default function Home() {
     { '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: site.url },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
   ];
-  return <><Header/><main className="finder-home" data-design="local-finder-2026"><JsonLd data={schema}/>
+  return <><Header/><main className="finder-home" data-design="local-finder-2026" data-gi-rollout="two-illustration-packs-one-icon-pack"><JsonLd data={schema}/>
     <section className="finder-hero">
       <div className="container hero-shell">
         <div className="hero-copy">
@@ -28,13 +28,13 @@ export default function Home() {
           <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
         </div>
         <div className="hero-visual">
-          <img src="/images/local-team.jpg" alt="Small business team planning work for a Philippines-based remote assistant"/>
+          <img src="/illustrations/getillustrations/goodle-business-illustrations-svg/remote-filipino-assistant.svg" alt="Illustration of a remote Filipino assistant approved for clearly scoped online work"/>
           <div className="location-card">
             <div className="location-top"><span>Role brief</span><b>01</b></div>
             <h2>Where should the work happen?</h2>
-            <div className="choice active"><span>●</span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
-            <div className="choice"><span>○</span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
-            <div className="choice"><span>○</span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
+            <div className="choice active"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/remote-fit.svg" alt="" width="24" height="24"/></span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
+            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/local-fit.svg" alt="" width="24" height="24"/></span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
+            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/role-planning.svg" alt="" width="24" height="24"/></span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
           </div>
 
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the work, then the person</p><h2>Start with a role that has edges.</h2></div><p>An assistant can do a lot. That does not mean one person should do everything. A tighter brief makes screening, onboarding, and review much easier.</p></div>
         <div className="role-grid">
           {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
-            <div className="role-photo"><img src={role.image} alt={`${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
+            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? '' : `${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
             <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>

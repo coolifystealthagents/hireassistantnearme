@@ -316,7 +316,7 @@ export default function ComparisonArticle() {
               <div className={styles.copy}>
                 <div className={styles.heading}><div><p>{company.category}</p><h3>{company.name}</h3></div><a href={company.url} target="_blank" rel="noopener noreferrer">{company.domain} ↗</a></div>
                 <dl className={styles.details}><div><dt>Niche</dt><dd>{company.niche}</dd></div><div><dt>Benefit</dt><dd>{company.benefit}</dd></div><div><dt>Best fit</dt><dd>{company.bestFor}</dd></div><div><dt>Fit for this guide</dt><dd>{company.guideFit}</dd></div></dl>
-                {index === 0 && <div className={styles.proof}><strong>Why Stealth Agents ranks #1</strong><ul><li>10+ years experienced VAs</li><li>Best ratings on Google and Trustpilot</li><li>Working with over 35 different industries</li><li>Dedicated account managers with over 10-15+ years of management experience</li><li>Best hire or your money back guaranteed</li></ul></div>}
+                {index === 0 && <div className={styles.proof}><strong>Why Stealth Agents leads this Hire Assistant Near Me comparison</strong><ul><li>Its VAs bring 10+ years of experience to virtual assistants for small businesses workflows.</li><li>Google and Trustpilot ratings give Hire Assistant Near Me readers a strong public review trail.</li><li>Work across 35+ industries helps the team understand how virtual assistants for small businesses connects with the rest of a business.</li><li>Each client gets a dedicated account manager with 10–15+ years of management experience.</li><li>The best-hire-or-money-back guarantee lowers the risk of starting with small-business virtual assistant support.</li></ul></div>}
               </div>
             </li>)}
           </ol>

@@ -54,3 +54,15 @@ main.section,.legal-page{background:var(--paper)}main.section{padding:80px 0}.se
 @media(max-width:900px){.sa-booking-grid{grid-template-columns:1fr}.sa-booking-calendar{order:2}.sa-booking-left{max-width:680px;margin:0 auto}.sa-oncehub-frame{height:850px}}
 @media(max-width:640px){.sa-booking-page{padding:2rem 0}.sa-booking-grid{gap:2.5rem}.sa-booking-left h1{font-size:2.65rem}.sa-booking-image{border-radius:12px}.sa-oncehub-frame{border-radius:10px;height:850px}.sa-testimonial-viewport{height:174px}}
 @media(prefers-reduced-motion:reduce){.sa-testimonial-track{animation:none}.sa-testimonial-viewport{height:auto;max-height:none;mask-image:none;-webkit-mask-image:none}.sa-testimonial-track>.sa-testimonial-card:nth-child(n+4){display:none}}
+
+/* Blog article standards and CTA checkpoints */
+.blog-standards-strip{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 24px;padding:14px;border:1px solid var(--line);background:var(--paper,#f8f5ee);color:var(--ink)}
+.blog-standards-strip span{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:#fff;font-size:12px;font-weight:800;letter-spacing:.03em}
+.blog-standards-strip span:before{content:'✓';color:var(--accent,var(--orange-dark,#0f8f73));font-weight:900}
+.article-rotation-banner{margin:28px 0;padding:26px;border:1px solid var(--line);background:linear-gradient(135deg,var(--paper,#f8f5ee),#fff);box-shadow:8px 8px 0 rgba(15,143,115,.12)}
+.article-rotation-banner h2{font-size:clamp(28px,3vw,38px);line-height:1.05;margin-bottom:10px;color:var(--ink)}
+.article-rotation-banner p:not(.eyebrow){max-width:680px;color:var(--muted);line-height:1.6;margin-bottom:18px}
+.article-rotation-banner .btn{background:var(--accent,var(--orange,#0f8f73));color:#fff}.article-rotation-banner .btn:hover{filter:brightness(.92)}
+.article-rotation-banner-middle{background:#fff}.article-rotation-banner-bottom{background:var(--paper,#f8f5ee)}
+@media(max-width:640px){.blog-standards-strip{display:grid}.article-rotation-banner{padding:22px}}
+.article-rotation-banner-top{background:linear-gradient(135deg,var(--paper,#f8f5ee),#fff)}

@@ -22,7 +22,7 @@ export default function Home() {
           <h1>Find an assistant <em>who fits your workday.</em></h1>
           <p className="hero-deck">Keep in-person work with your local team. Move repeat online work to a Filipino assistant hired for your hours, tools, and task list.</p>
           <div className="hero-actions">
-            <a className="btn primary" href="/contact">Build my role brief</a>
+            <a className="btn primary" href="/contact-us">Build my role brief</a>
             <a className="text-link" href="/compare/local-vs-remote-assistant">Compare local and remote <span>↗</span></a>
           </div>
           <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="role-grid">
           {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
             <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? '' : `${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
-            <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact">Add this to my brief <span>→</span></a></div>
+            <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact-us">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>
         <p className="image-disclaimer">These photos illustrate assistant roles. They do not show available candidates or customer endorsements.</p>
@@ -103,6 +103,6 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="final-section"><div className="container final-inner"><div><p className="eyebrow light">Ready when the task list is messy</p><h2>Bring the work. We'll help shape the role.</h2></div><a className="btn coral" href="/contact">Build my role brief</a></div></section>
+    <section className="final-section"><div className="container final-inner"><div><p className="eyebrow light">Ready when the task list is messy</p><h2>Bring the work. We'll help shape the role.</h2></div><a className="btn coral" href="/contact-us">Build my role brief</a></div></section>
   </main><Footer/></>;
 }

@@ -9,7 +9,7 @@ function text(form: FormData, key: string, max = MAX_FIELD_LENGTH) {
 }
 
 function errorPage(status: number) {
-  return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Submission problem</title><style>body{font-family:system-ui,sans-serif;background:#f8fafc;color:#0f172a;margin:0;padding:2rem}.card{max-width:640px;margin:10vh auto;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:2rem;box-shadow:0 18px 45px #0f172a14}a{display:inline-block;margin-top:1rem;color:#0369a1;font-weight:700}</style></head><body><main class="card"><h1>We could not send your request.</h1><p>Please go back and try again. If the problem continues, email <a href="mailto:support@stealthagents.com">support@stealthagents.com</a>.</p><a href="/contact">Return to the contact form</a></main></body></html>`, {
+  return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Submission problem</title><style>body{font-family:system-ui,sans-serif;background:#f8fafc;color:#0f172a;margin:0;padding:2rem}.card{max-width:640px;margin:10vh auto;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:2rem;box-shadow:0 18px 45px #0f172a14}a{display:inline-block;margin-top:1rem;color:#0369a1;font-weight:700}</style></head><body><main class="card"><h1>We could not send your request.</h1><p>Please go back and try again. If the problem continues, email <a href="mailto:support@stealthagents.com">support@stealthagents.com</a>.</p><a href="/contact-us">Return to the contact form</a></main></body></html>`, {
     status,
     headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' },
   });
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
   const email = text(form, 'email', 320);
   if (!fullName || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return errorPage(422);
 
-  const sourcePage = request.headers.get('referer') || new URL('/contact', request.url).toString();
+  const sourcePage = request.headers.get('referer') || new URL('/contact-us', request.url).toString();
   const details = [
     text(form, 'needs'), text(form, 'details'), text(form, 'positions'), text(form, 'role'),
     text(form, 'tier'), text(form, 'companySize'), text(form, 'website'),

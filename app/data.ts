@@ -228,7 +228,7 @@ export const blogPosts = [
         { href: '/services/calendar-and-inbox-support', label: 'Review calendar and inbox support' },
         { href: '/blog', label: 'Choose the first tasks to delegate' },
         { href: '/blog', label: 'Prepare the first-week checklist' },
-        { href: '/contact', label: 'Build a Philippines-only role brief' },
+        { href: '/contact-us', label: 'Build a Philippines-only role brief' },
       ],
       sources: [
         { name: 'NIST SP 800-53 Rev. 5, Security and Privacy Controls', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'See the access-control guidance for least privilege and named account planning.' },
@@ -374,7 +374,7 @@ export const blogPosts = [
         { short: 'Close', title: 'Close access', note: 'Remove accounts when the role or task ends.' },
       ],
       ctas: [
-        { slot: 'top', eyebrow: 'Start with a safe role brief', heading: 'List the tools before you meet candidates.', body: 'Bring the first tasks, accounts, data limits, work hours, and manager name. We can help shape a Philippines-only assistant role around that list.', label: 'Build my role brief', href: '/contact' },
+        { slot: 'top', eyebrow: 'Start with a safe role brief', heading: 'List the tools before you meet candidates.', body: 'Bring the first tasks, accounts, data limits, work hours, and manager name. We can help shape a Philippines-only assistant role around that list.', label: 'Build my role brief', href: '/contact-us' },
         { slot: 'middle', eyebrow: 'Match access to the role', heading: 'Hire for one clear task lane.', body: 'Choose inbox, calendar, customer support, or another defined lane first. Add work only after the first rules and checks hold up.', label: 'See executive assistance', href: '/services/executive-assistance' },
         { slot: 'bottom', eyebrow: 'Plan the first week', heading: 'Set the review habit before day one.', body: 'Use small batches, named accounts, and a manager check. A managed Philippines staffing plan can help keep the handoff clear.', label: 'Prepare the onboarding list', href: '/blog' },
       ],
@@ -391,7 +391,7 @@ export const blogPosts = [
         { href: '/services/calendar-and-inbox-support', label: 'Set up calendar and inbox support' },
         { href: '/blog', label: 'Use the first-week onboarding checklist' },
         { href: '/blog', label: 'Choose the first tasks to delegate' },
-        { href: '/contact', label: 'Build a Philippines-only role brief' },
+        { href: '/contact-us', label: 'Build a Philippines-only role brief' },
       ],
       sources: [
         { name: 'FBI Internet Crime Complaint Center, 2024 IC3 Annual Report', url: 'https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf', note: 'Complaint figures and the exact expert quote.' },
@@ -411,7 +411,7 @@ export const routes = [
   '/',
   '/blog',
   '/compare/local-vs-remote-assistant',
-  '/contact',
+  '/contact-us',
   '/privacy',
   '/terms',
   '/thank-you',

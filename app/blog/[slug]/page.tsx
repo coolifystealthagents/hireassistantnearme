@@ -329,7 +329,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block" aria-labelledby="planning-numbers">
             <h2 id="planning-numbers">A sample 30-day hiring board</h2>
-            <p>These are planning examples, not prices, results, or industry statistics. Change each number to match the role, risk, and review time in your business.</p>
+            <p>These are planning examples, not terms, results, or industry statistics. Change each number to match the role, risk, and review time in your business.</p>
             <div className="number-grid">{detail.planningNumbers.map((item) => <div className="number-card" key={item.value}>
               <span>{item.label}</span><strong>{item.value}</strong><small>{item.note}</small>
             </div>)}</div>
@@ -376,7 +376,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block sources-card" aria-labelledby="sources-heading">
             <h2 id="sources-heading">Sources</h2>
-            <p>These official sources support the access, sign-in, worker setup, and privacy notes in this guide. They do not set a price or promise a business result.</p>
+            <p>These official sources support the access, sign-in, worker setup, and privacy notes in this guide. They do not set a terms or promise a business result.</p>
             <ul className="list">{detail.sources.map((source) => <li key={source.url}>
               <a className="text-link" href={source.url} rel="noreferrer">{source.name}</a>: {source.note}
             </li>)}</ul>

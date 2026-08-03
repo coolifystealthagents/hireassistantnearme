@@ -63,6 +63,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     published?: string;
     richPublished?: boolean;
     strictPublished?: boolean;
+    image?: string;
+    imageAlt?: string;
     detail?: RichDetail;
     strictDetail?: StrictDetail;
   };
@@ -298,7 +300,9 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <article className="container article-shell">
           <p className="eyebrow">Philippines-only hiring guide</p>
           <h1>{post.title}</h1>
-          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+          <p className="lead">{post.excerpt}</p>
+          {richPost.image && <figure className="article-hero-image"><img src={richPost.image} alt={richPost.imageAlt || ''} width="1200" height="675" /></figure>}
+          <div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Consolidated planning tables</span></div>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
@@ -306,7 +310,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           </section>
 
           <section className="article-block card">
-            <h2>What to decide first</h2>
+            <h2>Key takeaways</h2>
             <ul className="list">{post.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
           </section>
 
@@ -328,7 +332,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           </section>
 
           <section className="article-block" aria-labelledby="planning-numbers">
-            <h2 id="planning-numbers">A sample 30-day hiring board</h2>
+            <h2 id="planning-numbers">Key stats and a 30-day scorecard</h2>
             <p>These are planning examples, not terms, results, or industry statistics. Change each number to match the role, risk, and review time in your business.</p>
             <div className="number-grid">{detail.planningNumbers.map((item) => <div className="number-card" key={item.value}>
               <span>{item.label}</span><strong>{item.value}</strong><small>{item.note}</small>

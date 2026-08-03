@@ -104,6 +104,111 @@ export const compareRows = [
 
 export const blogPosts = [
   {
+    slug: 'administrative-assistant-benchmarks-small-business-2026',
+    mainKeyword: 'administrative assistant benchmarks small business',
+    title: 'Administrative assistant benchmarks for small business owners in 2026',
+    excerpt: 'Use current wage, outlook, and business-condition data to decide which administrative work belongs in a clear assistant role, then measure the handoff with a simple weekly scorecard.',
+    published: '2026-08-03',
+    richPublished: true,
+    image: '/images/administrative-assistant-benchmarks-2026.png',
+    imageAlt: 'Desk workspace with a laptop chart and notebook for administrative work benchmarks',
+    minutes: 11,
+    takeaways: [
+      'BLS reports a $47,460 median annual wage for secretaries and administrative assistants in May 2024.',
+      'Executive administrative assistant pay is higher than the broad occupation median, while medical and general roles are lower.',
+      'BLS projects 0% employment change for the occupation from 2024 to 2034, so owners should plan around the work rather than a growth headline.',
+      'Census BTOS gives a current read on revenue, employee, hours, and input-price conditions, but it does not measure assistant productivity.',
+      'Use a weekly scorecard for completed work, corrections, response coverage, and escalations.'
+    ],
+    detail: {
+      revision: '2026-08-03-administrative-assistant-benchmarks-2026-r1',
+      directAnswer: [
+        'The most useful benchmark for a small business assistant role is not one hourly number. Start with the work: how many records, messages, calendar changes, research briefs, or follow-up items need attention in a normal week. Then compare the role with public labor data and measure the first handoff against a written scorecard.',
+        'The U.S. Bureau of Labor Statistics reported a $47,460 median annual wage for secretaries and administrative assistants in May 2024. It also projects 0% employment change for the occupation from 2024 to 2034. Those figures describe U.S. employment, not a remote Philippines role, but they give an owner a transparent reference point for the work being planned.'
+      ],
+      sections: [
+        { heading: 'What the current benchmark actually tells you', paragraphs: [
+          'BLS groups several kinds of office work under secretaries and administrative assistants. The broad median therefore helps with orientation, but it does not tell you what a particular role should cost or how quickly an assistant should work. A calendar-heavy executive role is different from a medical scheduling role or general administrative support.',
+          'The same BLS page reports a $74,260 median for executive secretaries and executive administrative assistants, $54,140 for legal secretaries and administrative assistants, $44,640 for medical secretaries and administrative assistants, and $46,290 for secretaries and administrative assistants except legal, medical, and executive. Use the comparison to define the work before you compare providers.'
+        ]},
+        { heading: 'Read the pay comparison without overreaching', paragraphs: [
+          'A wage benchmark is a labor-market reference, not a quote for a staffing service. The BLS figures cover U.S. workers and are reported as annual wages. They do not include your management time, software, recruiting, coverage, or the legal terms of a particular arrangement.',
+          'For a Philippines-only remote role, write down the task lane, hours, tools, review steps, and escalation rules first. Ask any provider to explain what its service includes. Keep classification, privacy, and contract questions with an appropriate adviser when they matter to your business.'
+        ]},
+        { heading: 'Use the outlook number as a planning signal', paragraphs: [
+          'BLS projects 0% employment change for secretaries and administrative assistants from 2024 to 2034, compared with 3% for all occupations. That is a forecast of U.S. employment, not a prediction of your lead volume or the future of remote staffing.',
+          'The practical use is narrower. A flat occupation forecast is a reason to describe the job precisely and to check whether automation, software, or a different role has changed the work. Do not use it as a reason to promise that one assistant can absorb every administrative task.'
+        ]},
+        { heading: 'Add the current business context', paragraphs: [
+          'The Census Bureau Business Trends and Outlook Survey gives a current snapshot of U.S. employer businesses. In the July 16, 2026 release, its index values were 54.6 for current performance, 43.6 for revenues, 48.5 for employees, 47.3 for hours, and 69.5 for input prices. The release says the indexes measure the previous two weeks and should be read with the survey notes.',
+          'These numbers can help an owner describe the environment around a role, but they do not measure assistant output. A business with rising input-price pressure may need cleaner purchasing records. A business with weak hours may need a narrower scope. Those are planning inferences, not findings reported by Census.'
+        ]},
+        { heading: 'Build a role around measurable work', paragraphs: [
+          'Pick one lane for the first month. Examples include inbox sorting and draft preparation, calendar coordination, CRM cleanup, research briefs, or customer follow-up. Give each task a trigger, a finished result, an example, and a rule for when the assistant must stop.',
+          'Count work in units that a reviewer can see. A unit could be a completed record batch, a correctly labeled message, a meeting brief, a researched source note, or a follow-up queue with the next action marked. Avoid a vague target such as “be proactive.”'
+        ]},
+        { heading: 'A weekly scorecard beats a vanity number', paragraphs: [
+          'A simple scorecard lets the owner see quality and coverage together. Track completed units, items returned for correction, items waiting for an owner decision, response coverage during agreed hours, and questions that exposed a missing rule.',
+          'The first two weeks are for calibration. If the correction rate is high, repair the example or process before expanding access. If the work is accurate but the queue remains open, check volume, hours, and dependencies before asking the assistant to move faster.'
+        ]},
+        { heading: 'Keep the research boundary clear', paragraphs: [
+          'Public benchmarks can describe wages, forecasts, and business conditions. They cannot tell you whether a candidate will handle your inbox carefully or whether your SOP is complete. That evidence comes from a defined sample, a review conversation, and the first batches of real work.',
+          'For a Philippines-based remote assistant, keep final approvals, sensitive account recovery, money movement, legal judgment, and customer promises with the accountable owner or qualified team member. The assistant can prepare work inside a limited access lane.'
+        ]},
+        { heading: 'Turn the benchmark into a 30-day decision', paragraphs: [
+          'At day 7, review whether the task definition and examples were clear. At day 14, compare the scorecard with the original scope. At day 30, decide whether the role should stay narrow, add one adjacent duty, or return a task to the owner.',
+          'Record the decision and the evidence behind it. A durable research routine should leave the next manager with the source links, the definition of each metric, and the reason a task moved into or out of the assistant lane.'
+        ]}
+      ],
+      decisionRows: [
+        { need: 'Calendar, inbox, or routine follow-up', fit: 'One recurring admin lane', reason: 'The output can be reviewed in batches and the owner can write clear approval rules.' },
+        { need: 'Research and source collection', fit: 'Research support lane', reason: 'The assistant can collect links and notes while the owner checks interpretation and final claims.' },
+        { need: 'Sensitive decisions or money movement', fit: 'Owner-led work', reason: 'The accountable person keeps approval, recovery access, and final judgment.' },
+        { need: 'In-person reception, errands, or paper files', fit: 'Local employee or vendor', reason: 'A remote Philippines-only role cannot perform physical work at your office.' }
+      ],
+      planningNumbers: [
+        { value: '5 metrics', label: 'Weekly scorecard', note: 'Completed, corrected, waiting, covered, and escalated work.' },
+        { value: '7 days', label: 'First review', note: 'Check whether the examples and stop rules were usable.' },
+        { value: '14 days', label: 'Fit review', note: 'Compare actual work with the written role scope.' },
+        { value: '30 days', label: 'Role decision', note: 'Keep, narrow, expand one duty, or return work to the owner.' }
+      ],
+      scripts: [
+        { title: 'Provider research question', text: 'We are planning one administrative lane around inbox sorting, calendar updates, and source-backed research notes. Which parts of your service cover screening, onboarding, quality review, and fit questions?' },
+        { title: 'Weekly review question', text: 'Which completed units were returned, which items are waiting for an owner decision, and which question showed that our written process needs an update?' }
+      ],
+      scenario: { title: 'Sample workflow: benchmark a research assistant lane', intro: 'This example shows how to turn public data into a role decision without treating a labor statistic as a productivity promise.', steps: [
+        { step: '1', title: 'Define the unit', body: 'The owner calls one finished source note a unit and writes what the note must contain.' },
+        { step: '2', title: 'Collect the benchmark', body: 'The owner records the BLS occupation, year, measure, and source URL in the research log.' },
+        { step: '3', title: 'Run a masked sample', body: 'The assistant finds sources for a small set of topics and flags claims that need owner review.' },
+        { step: '4', title: 'Score the batch', body: 'The owner counts complete notes, corrections, open questions, and time spent on review.' },
+        { step: '5', title: 'Change one rule', body: 'The team repairs one instruction or source standard before adding volume or a new topic.' }
+      ]},
+      faqs: [
+        { question: 'Does the BLS median wage set a remote assistant rate?', answer: 'No. It is a U.S. annual wage benchmark for an occupation. It does not price a Philippines-based staffing service or include management, software, coverage, recruiting, or contract terms.' },
+        { question: 'What does the 0% outlook mean for my business?', answer: 'It is BLS’s projected U.S. employment change for the occupation from 2024 to 2034. It does not predict your demand, productivity, or remote staffing needs.' },
+        { question: 'How should I measure the first month?', answer: 'Track completed units, corrections, items waiting for an owner decision, coverage during agreed hours, and escalations. Define each metric before the first batch.' },
+        { question: 'Can an assistant own the research conclusion?', answer: 'The assistant can collect sources and prepare notes. The accountable owner or qualified team member should verify the interpretation and approve published claims.' },
+        { question: 'Where are assistants hired through this service?', answer: 'Candidates offered through this service are recruited and hired in the Philippines. The work is remote and does not cover errands, front-desk duties, or physical files.' }
+      ],
+      relatedLinks: [
+        { href: '/blog/hire-filipino-virtual-assistant', label: 'Build a clear Filipino assistant role plan' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'Set access rules before the first workday' },
+        { href: '/services/project-coordination', label: 'Review project coordination tasks' },
+        { href: '/research', label: 'Browse the research hub' },
+        { href: '/contact-us', label: 'Bring the role brief to a staffing call' }
+      ],
+      sources: [
+        { name: 'U.S. Bureau of Labor Statistics, Secretaries and Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm', note: 'May 2024 median wages and 2024 to 2034 employment projections.' },
+        { name: 'U.S. Bureau of Labor Statistics, Occupational Employment and Wages 2024', url: 'https://www.bls.gov/news.release/archives/ocwage_04022025.htm', note: 'National occupation and wage tables for May 2024.' },
+        { name: 'U.S. Census Bureau, Business Trends and Outlook Survey data', url: 'https://www.census.gov/hfp/btos/data', note: 'Current performance, revenue, employee, hours, and input-price index values released July 16, 2026.' },
+        { name: 'U.S. Census Bureau, BTOS about page', url: 'https://www.census.gov/hfp/btos/about', note: 'Survey coverage, frequency, and interpretation context.' },
+        { name: 'NIST SP 800-53 Rev. 5', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'Least-privilege access planning for the assistant lane.' }
+      ]
+    },
+    sections: [{ heading: 'Start with the work', body: 'Use public benchmarks to frame a role, then measure the actual handoff with a written scorecard.' }],
+    script: 'We are planning one clear administrative lane. Please show us how you would measure the first month and how questions escalate.'
+  },
+  {
     slug: 'hire-filipino-virtual-assistant',
     mainKeyword: 'hire filipino virtual assistant',
     title: 'Hire Filipino virtual assistant help with a six-step role plan',

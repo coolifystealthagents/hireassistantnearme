@@ -126,6 +126,11 @@ export const blogPosts = [
         'The most useful benchmark for a small business assistant role is not one hourly number. Start with the work: how many records, messages, calendar changes, research briefs, or follow-up items need attention in a normal week. Then compare the role with public labor data and measure the first handoff against a written scorecard.',
         'The U.S. Bureau of Labor Statistics reported a $47,460 median annual wage for secretaries and administrative assistants in May 2024. It also projects 0% employment change for the occupation from 2024 to 2034. Those figures describe U.S. employment, not a remote Philippines role, but they give an owner a transparent reference point for the work being planned.'
       ],
+      bodyLinks: [
+        { href: '/blog/hire-filipino-virtual-assistant', label: 'role planning guide' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'access and security checklist' },
+        { href: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm', label: 'official BLS occupation benchmark' }
+      ],
       sections: [
         { heading: 'What the current benchmark actually tells you', paragraphs: [
           'BLS groups several kinds of office work under secretaries and administrative assistants. The broad median therefore helps with orientation, but it does not tell you what a particular role should cost or how quickly an assistant should work. A calendar-heavy executive role is different from a medical scheduling role or general administrative support.',

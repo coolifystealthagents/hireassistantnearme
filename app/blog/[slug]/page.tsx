@@ -43,6 +43,7 @@ type StrictDetail = {
 type RichDetail = {
   revision: string;
   directAnswer: readonly string[];
+  bodyLinks?: readonly { href: string; label: string }[];
   sections: readonly { heading: string; paragraphs: readonly string[] }[];
   decisionRows: readonly { need: string; fit: string; reason: string }[];
   planningNumbers: readonly { value: string; label: string; note: string }[];
@@ -307,6 +308,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
             {detail.directAnswer.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {detail.bodyLinks?.length ? <p className="article-context-links">Continue with the <>{detail.bodyLinks.map((link, index) => <span key={link.href}>{index ? index === detail.bodyLinks!.length - 1 ? ' and ' : ', ' : null}<a className="text-link" href={link.href} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>{link.label}</a></span>)}</>.</p> : null}
           </section>
 
           <section className="article-block card">

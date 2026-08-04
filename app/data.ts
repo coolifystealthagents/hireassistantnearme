@@ -104,6 +104,122 @@ export const compareRows = [
 
 export const blogPosts = [
   {
+    slug: 'local-vs-remote-administrative-assistant-benchmark-2026',
+    mainKeyword: 'local vs remote administrative assistant benchmark 2026',
+    title: 'Local vs remote administrative assistant: a 2026 benchmark and task-fit comparison',
+    excerpt: 'Compare a local U.S. administrative hire with a Philippines-based remote assistant using current labor data, work-at-home benchmarks, and a practical task-fit table.',
+    published: '2026-08-04',
+    richPublished: true,
+    minutes: 12,
+    image: '/images/local-vs-remote-admin-benchmark-2026.png',
+    imageAlt: 'Two administrative workspaces compared side by side, one local desk and one remote laptop setup',
+    takeaways: [
+      'The BLS median annual wage for secretaries and administrative assistants was $47,460 in May 2024.',
+      'Executive administrative assistants had a $74,260 median, while medical administrative assistants had a $44,640 median.',
+      'BLS reported that 35 percent of employed people did some or all of their work at home on days they worked in 2025.',
+      'A U.S. wage benchmark does not set the terms or cost of a Philippines-based remote staffing arrangement.',
+      'The best comparison starts with task location, access, review time, and the work that must stay with the owner.'
+    ],
+    detail: {
+      revision: '2026-08-04-local-vs-remote-administrative-assistant-benchmark-2026-r1',
+      directAnswer: [
+        'A local administrative hire is the better fit when the work needs a person at your office, physical files, walk-in reception, local errands, or in-person coordination. A Philippines-based remote assistant is a better fit when the work is online, repeatable, and easy to review through shared tools.',
+        'The U.S. Bureau of Labor Statistics reported a $47,460 median annual wage for secretaries and administrative assistants in May 2024. That is useful context for the local labor market, but it is not a quote for remote staffing. Compare the actual task lane, schedule, access, management time, and approval rules before choosing a route.'
+      ],
+      bodyLinks: [
+        { href: '/blog/administrative-assistant-benchmarks-small-business-2026', label: 'administrative benchmark guide' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'security checklist' },
+        { href: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm', label: 'BLS occupation data' }
+      ],
+      sections: [
+        { heading: 'What the wage benchmark says', paragraphs: [
+          'BLS groups several kinds of office work under the secretary and administrative assistant occupation. Its May 2024 median annual wage was $47,460, with the lowest 10 percent below $33,840 and the highest 10 percent above $76,550. The figures describe U.S. employee wages, not a managed remote assistant arrangement.',
+          'The occupation has meaningful internal differences. BLS reported medians of $74,260 for executive secretaries and executive administrative assistants, $54,140 for legal secretaries and administrative assistants, $44,640 for medical secretaries and administrative assistants, and $46,290 for other secretaries and administrative assistants. The task and training requirements matter more than the label alone.'
+        ]},
+        { heading: 'Read remote-work data with care', paragraphs: [
+          'BLS reported that 35 percent of employed people did some or all of their work at home on days they worked in 2025, while 70 percent did some or all of their work at their workplace. The two percentages overlap because a person may work at home and at a workplace on the same day.',
+          'The BLS annual telework table also reported that 35.389 million people teleworked or worked at home for pay in 2025, equal to 22.4 percent of people at work. The table measures people who worked at home for pay, not the share of tasks that can be delegated. Treat it as context for remote work, not proof that every office role can move online.'
+        ]},
+        { heading: 'Define the local work that cannot move online', paragraphs: [
+          'A local employee or vendor may be necessary for front-desk coverage, opening the office, handling paper records, taking items to a local agency, preparing a physical room, or helping customers who arrive in person. A remote assistant cannot perform those tasks from the Philippines.',
+          'Some tasks look local but are actually digital. Appointment reminders, CRM updates, document formatting, inbox sorting, meeting notes, and source collection can often be completed online when the systems, examples, and response window are clear. Confirm the workflow before assuming that a local presence is required.'
+        ]},
+        { heading: 'Match the role to the review burden', paragraphs: [
+          'A local hire may be easier to supervise when the manager is in the same building and the work changes throughout the day. That convenience does not remove the need for a written scope. The owner still needs to decide what can be sent, edited, purchased, or escalated without approval.',
+          'A Philippines-based remote assistant needs an intentional handoff. Write the trigger, finished result, examples, tools, work hours, and stop rule for each first task. Use small batches and a named reviewer until the assistant can complete the work without repeated correction.'
+        ]},
+        { heading: 'Separate published data from planning assumptions', paragraphs: [
+          'BLS publishes wages, employment projections, and work-at-home measures. The Census Bureau Business Trends and Outlook Survey publishes timely indicators about employer businesses, including current performance, revenue, employment, hours, demand, and prices. Neither source measures how many minutes your assistant needs for a task or whether a candidate will be accurate.',
+          'That boundary matters when a team compares a local hire with remote support. A wage figure is a market reference. A remote-work percentage is a context signal. The task sample, quality review, manager time, and access design are the evidence for your own decision.'
+        ]},
+        { heading: 'Build the first month around one lane', paragraphs: [
+          'Start with one recurring lane such as calendar coordination, inbox sorting, CRM cleanup, research notes, customer follow-up, or document preparation. Do not combine every administrative need into one brief. A narrow lane gives the reviewer a fair way to judge accuracy and coverage.',
+          'Count visible work units. One unit might be a correctly labeled message batch, a completed meeting brief, a cleaned CRM segment, or a research note with a source link and claim check. Track returned items, open questions, and work waiting for owner approval alongside completed units.'
+        ]},
+        { heading: 'Use the comparison table before you decide', paragraphs: [
+          'The table below keeps the published benchmark beside the operating questions that the benchmark cannot answer. It is designed to be saved with the role brief, not used as a promise of output or a substitute for local employment, privacy, tax, or contract advice.',
+          'If the work needs physical presence, keep it local. If the work is online and repeatable, a Philippines-based remote assistant may fit. If the work mixes both, split the role into a local lane and a remote lane instead of asking one person to cover incompatible duties.'
+        ]},
+        { heading: 'Make the decision at day 30', paragraphs: [
+          'At the first review, check whether the examples and stop rules were clear. At the second, compare the task sample with the written role and note where the manager spent time correcting or explaining. At day 30, keep the lane narrow, add one adjacent duty, or move the work back to the owner.',
+          'Record the choice and the evidence behind it. A useful publishing and hiring routine leaves the next manager with the source links, the definition of each metric, the access boundaries, and the reason the work belongs in a local or remote lane.'
+        ]}
+      ],
+      decisionRows: [
+        { need: 'In-person reception or paper files', fit: 'Local employee or vendor', reason: 'The work depends on physical presence, local handoffs, or office access.' },
+        { need: 'Inbox, calendar, CRM, or research support', fit: 'Philippines-based remote assistant', reason: 'The work can run in shared tools with examples, limited access, and a named reviewer.' },
+        { need: 'Mixed physical and online work', fit: 'Split the role', reason: 'A local lane and a remote lane create clearer ownership than one overloaded brief.' },
+        { need: 'Sensitive approval or money movement', fit: 'Owner-led work', reason: 'Keep final judgment, recovery access, payments, and customer promises with the accountable person.' }
+      ],
+      benchmarkRows: [
+        { measure: 'Published U.S. median wage', local: '$47,460 annual median for secretaries and administrative assistants, May 2024', remote: 'Not set by this BLS figure', reading: 'Use the figure as U.S. labor-market context, not as a remote-staffing quote.' },
+        { measure: 'Executive administrative benchmark', local: '$74,260 annual median, May 2024', remote: 'Depends on task scope and arrangement', reading: 'Executive access and judgment usually require a more specific role brief.' },
+        { measure: 'Work-at-home context', local: '35% did some or all work at home on days worked in 2025', remote: 'Remote work is possible only for online tasks', reading: 'The statistic describes workers, not delegable tasks or productivity.' },
+        { measure: 'Physical presence', local: 'Available for office, paper, and local handoffs', remote: 'Unavailable for in-person duties from the Philippines', reading: 'Keep physical work in a local lane.' },
+        { measure: 'First review question', local: 'Can the manager observe and correct the work quickly?', remote: 'Can the team define access, examples, hours, and a handoff?', reading: 'The review system is part of the role, not an afterthought.' }
+      ],
+      planningNumbers: [
+        { value: '$47,460', label: 'BLS median', note: 'U.S. secretary and administrative assistant annual median in May 2024.' },
+        { value: '35%', label: 'Worked at home', note: 'Employed people who did some or all work at home on days worked in 2025.' },
+        { value: '1 lane', label: 'First scope', note: 'Start with one repeatable task family that a manager can review.' },
+        { value: '30 days', label: 'Decision point', note: 'Keep, narrow, expand one duty, or return the work to the owner.' }
+      ],
+      scripts: [
+        { title: 'Role brief question', text: 'Which parts of this work require physical presence, and which parts can be completed in our online tools with a written approval rule?' },
+        { title: 'Provider research question', text: 'We want one online administrative lane with defined hours, named tools, examples, and a weekly review. What screening and onboarding support covers that scope?' }
+      ],
+      scenario: { title: 'Sample workflow: compare one admin lane', intro: 'This example keeps the benchmark grounded in a real task decision without treating a labor statistic as a productivity promise.', steps: [
+        { step: '1', title: 'Name the task', body: 'The owner chooses calendar preparation and follow-up notes, not every administrative duty.' },
+        { step: '2', title: 'Mark physical steps', body: 'The owner separates office visitors and paper forms into a local lane.' },
+        { step: '3', title: 'Write the remote brief', body: 'The online lane gets tools, examples, hours, output rules, and a stop rule.' },
+        { step: '4', title: 'Run a small sample', body: 'The reviewer checks completed units, corrections, questions, and access use.' },
+        { step: '5', title: 'Record the decision', body: 'The team keeps the lane narrow or changes one rule before adding work.' }
+      ]},
+      faqs: [
+        { question: 'Does the BLS median wage tell me what a remote assistant should cost?', answer: 'No. It is a U.S. annual wage benchmark for an occupation. It does not include a particular remote arrangement, management time, recruiting, software, coverage, or contract terms.' },
+        { question: 'When is a local administrative hire the better fit?', answer: 'Choose a local lane when the role needs office presence, physical files, walk-in reception, local errands, or in-person handoffs.' },
+        { question: 'What work can a Philippines-based remote assistant handle?', answer: 'Online recurring work such as calendar preparation, inbox sorting, CRM updates, research notes, document preparation, and follow-up can fit when access and review rules are clear.' },
+        { question: 'What should I measure in the first month?', answer: 'Track completed units, returned work, items waiting for an owner decision, coverage during agreed hours, and questions that exposed a missing rule.' },
+        { question: 'Where are assistants hired through this service?', answer: 'Candidates offered through this service are recruited and hired in the Philippines. The work is remote and does not cover local errands, walk-in reception, or physical files.' }
+      ],
+      relatedLinks: [
+        { href: '/blog/administrative-assistant-benchmarks-small-business-2026', label: 'Read the administrative assistant benchmark guide' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'Set access rules before the first workday' },
+        { href: '/services/calendar-and-inbox-support', label: 'Review calendar and inbox support' },
+        { href: '/research', label: 'Browse the research hub' },
+        { href: '/contact-us', label: 'Bring the role brief to a staffing call' }
+      ],
+      sources: [
+        { name: 'U.S. Bureau of Labor Statistics, Secretaries and Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm', note: 'May 2024 median wages, occupation duties, and 2024 to 2034 outlook.' },
+        { name: 'U.S. Bureau of Labor Statistics, American Time Use Survey 2025 results', url: 'https://www.bls.gov/news.release/archives/atus_06252026.htm', note: '2025 work-at-home and workplace shares for employed people on days worked.' },
+        { name: 'U.S. Bureau of Labor Statistics, CPS Table 61', url: 'https://www.bls.gov/cps/cpsaat61.htm', note: '2025 annual averages for people who teleworked or worked at home for pay.' },
+        { name: 'U.S. Census Bureau, Business Trends and Outlook Survey data', url: 'https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html', note: 'Survey scope and limits for current business-condition indicators.' }
+      ]
+    },
+    sections: [{ heading: 'Compare the work before the worker', body: 'Use labor data for context, then separate physical duties from online work and write the review rules before matching a candidate.' }],
+    script: 'We are comparing one local administrative lane with one Philippines-based remote lane. Please help us define the online tasks, hours, tools, examples, review owner, and stop rules before we discuss candidates.'
+  },
+  {
     slug: 'administrative-assistant-benchmarks-small-business-2026',
     mainKeyword: 'administrative assistant benchmarks small business',
     title: 'Administrative assistant benchmarks for small business owners in 2026',

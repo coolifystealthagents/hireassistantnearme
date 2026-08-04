@@ -46,6 +46,7 @@ type RichDetail = {
   bodyLinks?: readonly { href: string; label: string }[];
   sections: readonly { heading: string; paragraphs: readonly string[] }[];
   decisionRows: readonly { need: string; fit: string; reason: string }[];
+  benchmarkRows?: readonly { measure: string; local: string; remote: string; reading: string }[];
   planningNumbers: readonly { value: string; label: string; note: string }[];
   scripts: readonly { title: string; text: string }[];
   scenario: { title: string; intro: string; steps: readonly { step: string; title: string; body: string }[] };
@@ -128,7 +129,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <p className="eyebrow">Philippines-only hiring guide</p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
-          <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on July 25, 2026.</p>
+          <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {published}.</p>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
@@ -340,6 +341,18 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <span>{item.label}</span><strong>{item.value}</strong><small>{item.note}</small>
             </div>)}</div>
           </section>
+
+          {detail.benchmarkRows?.length ? <section className="article-block" aria-labelledby="benchmark-table">
+            <h2 id="benchmark-table">Consolidated benchmark table</h2>
+            <p>Use the table to separate published U.S. labor data from the operating questions a Philippines-based remote role still needs the owner to answer.</p>
+            <p className="table-scroll-cue" id="benchmark-table-cue">Swipe to compare all columns.</p>
+            <div className="article-table-wrap" role="region" aria-labelledby="benchmark-table" aria-describedby="benchmark-table-cue" tabIndex={0}>
+              <table className="article-table"><caption>Local administrative hire and Philippines-based remote assistant comparison</caption>
+                <thead><tr><th scope="col">Measure</th><th scope="col">Local U.S. hire</th><th scope="col">Philippines-based remote assistant</th><th scope="col">How to read it</th></tr></thead>
+                <tbody>{detail.benchmarkRows.map((row) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.local}</td><td>{row.remote}</td><td>{row.reading}</td></tr>)}</tbody>
+              </table>
+            </div>
+          </section> : null}
 
           {detail.sections.slice(3, 6).map((section) => <section className="article-block" key={section.heading}>
             <h2>{section.heading}</h2>

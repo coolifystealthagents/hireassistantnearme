@@ -631,6 +631,93 @@ export const blogPosts = [
       { heading: 'Start with named accounts', body: 'Give the assistant only the account and records needed for the first task. Keep recovery and final approval with the owner.' },
     ],
     script: 'Please use only the named account and approved records for this task. Stop and ask before any new access, money action, private file, or customer promise.',
+  },
+  {
+    slug: 'general-office-clerk-outlook-task-design-2026',
+    mainKeyword: 'general office clerk outlook task design 2026',
+    title: 'General office clerk outlook: turn a declining job count into a clearer support brief',
+    excerpt: 'The BLS projects fewer general office clerk jobs by 2034, but replacement openings remain large. Use the outlook to define the digital work a remote assistant can support.',
+    published: '2026-08-05',
+    richPublished: true,
+    minutes: 10,
+    image: '/images/local-vs-remote-admin-benchmark-2026.png',
+    imageAlt: 'Local and remote administrative workspaces compared for task planning',
+    takeaways: [
+      'BLS projects general office clerk employment to fall 7 percent from 2024 to 2034.',
+      'The same projection includes about 282,400 openings each year on average, mostly from replacement needs.',
+      'A remote assistant fits only the digital, repeatable part of the workflow.',
+      'Keep physical handling, sensitive decisions, and unclear exceptions with the named owner.'
+    ],
+    detail: {
+      revision: '2026-08-05-general-office-clerk-outlook-task-design-2026-r1',
+      directAnswer: [
+        'The general office clerk outlook is a reason to write a sharper support brief, not to assume that all office work disappears. The U.S. Bureau of Labor Statistics projects a 7 percent decline in general office clerk employment from 2024 to 2034, while still projecting about 282,400 openings each year on average because workers leave the occupation.',
+        'For a Philippines-based remote assistant, use the data as context. Separate digital intake, file naming, record cleanup, and routine information collection from physical handling, final judgment, and exceptions that need the owner.'
+      ],
+      bodyLinks: [
+        { href: '/blog/local-vs-remote-administrative-assistant-benchmark-2026', label: 'compare local and remote task fit' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'set access rules before handoff' },
+        { href: 'https://www.bls.gov/ooh/office-and-administrative-support/general-office-clerks.htm', label: 'read the official BLS outlook' }
+      ],
+      sections: [
+        { heading: 'Read the projection in two parts', paragraphs: ['BLS projects general office clerk employment to fall from 2,646,000 jobs in 2024 to 2,468,200 in 2034. That is a forecast of total employment, not a statement that every business will need less administrative coverage.', 'The agency also projects about 282,400 openings each year on average. Those openings mostly reflect replacement needs. A small team still has to decide which recurring work needs a person and which parts can move into a tool or a clearer process.'] },
+        { heading: 'Connect automation to the actual workflow', paragraphs: ['BLS points to automated phone systems, document preparation tools, electronic filing, and file-sharing software as reasons fewer general office clerks may be needed. The useful question for an owner is which steps remain after those tools are in place.', 'A workflow may still need someone to check an intake record, name a file, flag missing information, prepare a customer reply, or route an exception. Write those steps down instead of treating the occupation label as the scope.'] },
+        { heading: 'Keep physical work in a local lane', paragraphs: ['A remote assistant cannot open an office, move inventory, retrieve a paper file, meet a walk-in visitor, or complete a local errand from the Philippines. Mark those duties before writing a remote brief.', 'Some work that sounds office-bound is digital once the process is mapped. Calendar preparation, inbox sorting, CRM cleanup, source collection, and document formatting can often run online when the tools and review rules are clear.'] },
+        { heading: 'Write one measurable remote lane', paragraphs: ['Choose one repeatable lane for the first month. A unit might be a correctly labeled record batch, a completed intake checklist, a source note with a link, or a draft reply placed in the right queue.', 'For each unit, write the trigger, expected result, example, deadline, tool, and stop rule. The assistant should know when to continue, when to leave a draft, and when to ask the named reviewer.'] },
+        { heading: 'Use the outlook without making a pricing claim', paragraphs: ['The BLS projection describes U.S. employment. It does not set a Philippines-based remote assistant rate, predict your volume, or promise a productivity result. Keep those decisions in the role brief and the operating review.', 'The same boundary applies to the group wage context. Public labor data can frame a conversation, but the task sample, access design, manager time, and quality checks are what your team can actually test.'] },
+        { heading: 'Review the handoff at day 30', paragraphs: ['At day 7, check whether the examples and stop rules were usable. At day 14, count completed units, corrections, open questions, and work waiting for an owner decision.', 'At day 30, keep the lane narrow, add one adjacent duty, or move the work back to the owner. Record the evidence so the next change does not restart the same guessing process.'] },
+        { heading: 'Separate coverage from judgment', paragraphs: ['A remote assistant can prepare and organize approved work. Keep payments, account recovery, legal or medical judgment, sensitive exports, and final customer promises with the accountable owner or qualified team member.', 'That boundary makes the role easier to train and easier to review. It also gives the owner a clear list of decisions that should never be hidden inside a general office support title.'] }
+      ],
+      decisionRows: [
+        { need: 'Digital intake and record cleanup', fit: 'Philippines-based remote lane', reason: 'The work can be completed in shared tools with examples and batch review.' },
+        { need: 'Paper files and physical handoffs', fit: 'Local employee or vendor', reason: 'The work depends on presence, custody, or local access.' },
+        { need: 'Mixed workflow', fit: 'Split the role', reason: 'A local step and an online step need separate owners and a written handoff.' },
+        { need: 'Sensitive approval or money movement', fit: 'Owner-led work', reason: 'Final judgment and recovery access stay with the accountable person.' }
+      ],
+      planningNumbers: [
+        { value: '-7%', label: 'Projected change', note: 'BLS general office clerk employment change from 2024 to 2034.' },
+        { value: '282,400', label: 'Annual openings', note: 'Average projected openings, mostly from replacement needs.' },
+        { value: '1 lane', label: 'First scope', note: 'Start with one repeatable task family that a reviewer can see.' },
+        { value: '30 days', label: 'Decision point', note: 'Keep, narrow, expand one duty, or return the work to the owner.' }
+      ],
+      benchmarkRows: [
+        { measure: 'Employment outlook', local: 'BLS projects a 7% decline for general office clerks', remote: 'Only digital work may fit', reading: 'Map tasks before assigning a remote lane.' },
+        { measure: 'Replacement demand', local: 'About 282,400 openings each year on average', remote: 'Coverage still needs a defined owner', reading: 'Openings do not define your workload or rate.' },
+        { measure: 'Physical presence', local: 'Available for paper, visitors, and local handoffs', remote: 'Unavailable from the Philippines', reading: 'Keep physical duties local.' },
+        { measure: 'Review design', local: 'May allow quick in-person correction', remote: 'Needs examples, permissions, hours, and a named reviewer', reading: 'The review system is part of the role.' }
+      ],
+      scripts: [
+        { title: 'Role brief question', text: 'Which steps require a person nearby, and which steps can be completed in our online tools with a written approval rule?' },
+        { title: 'Weekly review question', text: 'Which units were completed, which were returned, which are waiting for an owner decision, and which rule needs repair?' }
+      ],
+      scenario: { title: 'Sample workflow: scope one clerk lane', intro: 'Use the outlook as a prompt to define work, not as a promise about what an assistant will produce.', steps: [
+        { step: '1', title: 'Name the unit', body: 'Choose one visible output such as a cleaned record batch or a completed intake checklist.' },
+        { step: '2', title: 'Mark the physical steps', body: 'Move paper, visitor, inventory, and local handoff work into a separate lane.' },
+        { step: '3', title: 'Write the remote brief', body: 'Add the tool, example, deadline, access limit, and stop rule.' },
+        { step: '4', title: 'Review a small batch', body: 'Count complete units, corrections, open questions, and time spent reviewing.' },
+        { step: '5', title: 'Change one rule', body: 'Repair one instruction before adding volume or a new task family.' }
+      ]},
+      faqs: [
+        { question: 'Does a declining outlook mean office support is no longer needed?', answer: 'No. BLS projects a decline in total general office clerk employment but also about 282,400 openings each year on average, mostly from replacement needs.' },
+        { question: 'What office work can a remote assistant handle?', answer: 'Digital, recurring work such as intake preparation, file naming, record cleanup, source collection, and draft routing can fit when access and review rules are clear.' },
+        { question: 'What should stay with a local person?', answer: 'Keep office opening, paper handling, walk-in coverage, local errands, inventory movement, and other physical steps with a local employee or vendor.' },
+        { question: 'Does the BLS outlook set a remote assistant rate?', answer: 'No. It describes U.S. employment projections and does not price a Philippines-based staffing arrangement or measure your task volume.' },
+        { question: 'Where are assistants hired through this service?', answer: 'Candidates offered through this service are recruited and hired in the Philippines. The work is remote and does not cover local errands or physical files.' }
+      ],
+      relatedLinks: [
+        { href: '/blog/administrative-assistant-benchmarks-small-business-2026', label: 'Read the administrative benchmark guide' },
+        { href: '/research/general-office-clerk-outlook-2024-2034', label: 'Open the supporting research report' },
+        { href: '/blog/virtual-assistant-security-checklist', label: 'Set access rules before handoff' },
+        { href: '/research', label: 'Browse the research hub' },
+        { href: '/contact-us', label: 'Bring the role brief to a staffing call' }
+      ],
+      sources: [
+        { name: 'U.S. Bureau of Labor Statistics, General Office Clerks', url: 'https://www.bls.gov/ooh/office-and-administrative-support/general-office-clerks.htm', note: '2024 employment, 2034 projection, projected change, and annual openings.' },
+        { name: 'U.S. Bureau of Labor Statistics, Office and Administrative Support Occupations', url: 'https://www.bls.gov/ooh/office-and-administrative-support/home.htm', note: 'Group-level outlook and wage context.' }
+      ]
+    },
+    sections: [{ heading: 'Start with the work', body: 'Use the outlook to define a clear digital lane, then review the actual handoff with a named owner.' }],
+    script: 'We are planning one digital administrative lane. Please help us define the units, examples, access limits, review owner, and stop rules.'
   },] as const;
 
 export const routes = [

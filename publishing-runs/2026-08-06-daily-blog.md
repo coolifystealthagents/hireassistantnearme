@@ -42,4 +42,6 @@ The selected subjects map to existing published routes including the current blo
 - Article strict validation: not applicable because the safe publish count was zero.
 - Build: PASS. `npm run build` generated 47 routes with type validation passing.
 - Strict validation: PASS on the protected `virtual-assistant-security-checklist` regression gate. 1,992 words, 2 tables, 2 SVGs, 3 banners, 5 numbered sources, 4 internal links, 5 external links, and BlogPosting, FAQPage, and BreadcrumbList schemas.
-- Push: recorded after the verified commit reached `origin/main`.
+- Publishing commit SHA: `8345d339f62a5cb431f2c5ca7136b6ad8c036a64`
+- Published file set: `publishing-runs/2026-08-06-daily-blog.md`
+- Push verification: PASS. Local `HEAD` matched `origin/main` at the recorded SHA.

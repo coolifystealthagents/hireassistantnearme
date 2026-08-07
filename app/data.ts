@@ -102,7 +102,7 @@ export const compareRows = [
   { option: 'Managed Philippines staffing', bestFor: 'Owners who want help shaping the role, screening candidates, and starting the handoff', watch: 'The owner still approves sensitive work and reviews quality' },
 ];
 
-export const blogPosts = [
+const baseBlogPosts = [
   {
     slug: 'local-vs-remote-administrative-assistant-benchmark-2026',
     mainKeyword: 'local vs remote administrative assistant benchmark 2026',
@@ -718,7 +718,69 @@ export const blogPosts = [
     },
     sections: [{ heading: 'Start with the work', body: 'Use the outlook to define a clear digital lane, then review the actual handoff with a named owner.' }],
     script: 'We are planning one digital administrative lane. Please help us define the units, examples, access limits, review owner, and stop rules.'
-  },] as const;
+  },];
+
+const dailyBlogTopics = [
+  ['inbox-triage', 'Inbox triage for a small business: write the first assistant workflow', 'inbox triage assistant workflow'],
+  ['calendar-management', 'Calendar management by a remote assistant: rules that prevent double booking', 'calendar management remote assistant'],
+  ['lead-follow-up', 'Lead follow-up assistant: a practical handoff for local service businesses', 'lead follow-up assistant'],
+  ['crm-cleanup', 'CRM cleanup with a remote assistant: define the queue before the work starts', 'CRM cleanup remote assistant'],
+  ['customer-support', 'Customer support assistant tasks: what belongs in the first month', 'customer support assistant tasks'],
+  ['real-estate-admin', 'Real estate administrative support: separate repeatable work from judgment', 'real estate administrative support'],
+  ['bookkeeping-support', 'Bookkeeping support assistant: build a reviewable document workflow', 'bookkeeping support assistant'],
+  ['research-assistant', 'Research assistant tasks for a small team: source notes that an owner can check', 'research assistant tasks'],
+  ['executive-assistant', 'Executive assistant support: turn a busy inbox into a defined task lane', 'executive assistant support'],
+  ['appointment-scheduling', 'Appointment scheduling support: create a safe calendar handoff', 'appointment scheduling assistant'],
+  ['data-entry', 'Data entry assistant work: measure accuracy without hiding exceptions', 'data entry assistant'],
+  ['ecommerce-admin', 'Ecommerce administrative support: route order questions with clear limits', 'ecommerce administrative support'],
+  ['agency-operations', 'Agency operations assistant: document the recurring work behind client delivery', 'agency operations assistant'],
+  ['home-services-admin', 'Home services admin support: organize calls, notes, and follow-up', 'home services admin support'],
+  ['healthcare-office-admin', 'Healthcare office admin support: keep remote work inside a careful scope', 'healthcare office admin support'],
+  ['legal-admin-support', 'Legal administrative support: prepare documents without taking legal judgment', 'legal administrative support'],
+  ['social-media-admin', 'Social media administrative support: create an approval-first posting workflow', 'social media administrative support'],
+  ['project-coordination', 'Project coordination assistant: make status updates easier to review', 'project coordination assistant'],
+  ['document-management', 'Document management assistant: name, route, and review files consistently', 'document management assistant'],
+  ['virtual-reception', 'Virtual reception support: give online inquiries a reliable next step', 'virtual reception assistant'],
+] as const;
+
+const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword], index) => {
+  const topic = title.split(':')[0];
+  const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
+  const internalB = '/blog/virtual-assistant-security-checklist';
+  const source = 'https://www.cisa.gov/secure-our-world/turn-mfa';
+  const paragraphs = [
+    `${topic} works best when the owner names one recurring output and shows what a finished item looks like. Start with the work that already repeats, then write the handoff in the same order a person will use it.`,
+    `A Philippines-based remote assistant can prepare online work, sort approved information, and leave clear questions for review. The role does not replace local errands, final business judgment, or access that the owner should keep.`,
+    `Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. A short brief is easier to test than a broad request for general help.`,
+    `Use a small first batch. Count completed items, corrections, questions, and work waiting for an owner decision. Those observations are more useful than a vague impression after a busy week.`,
+    `Keep sensitive actions behind named accounts and limited permissions. The assistant should know where to work and when to stop, while the accountable owner keeps recovery access and final approval.`,
+    `At the end of the first month, change one instruction at a time. Keep the lane, narrow it, or add one adjacent duty only after the review habit is working.`,
+    `The point of a written workflow is not paperwork for its own sake. It gives the assistant a fair target and gives the owner something specific to check.`,
+  ];
+  return {
+    slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
+    excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
+    published: '2026-08-07', richPublished: true, minutes: 8,
+    image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
+    takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
+    detail: {
+      revision: `2026-08-07-${slug}-r1`,
+      directAnswer: [`${topic} can fit a Philippines-based remote assistant when the work is digital, repeatable, and easy for a named owner to review.`, `The safest first brief names the output, source material, tool, deadline, examples, access limit, and escalation rule. Start with a narrow batch and expand only after the owner can see the quality.`],
+      bodyLinks: [{ href: internalA, label: 'compare local and remote task fit' }, { href: internalB, label: 'set access rules before handoff' }, { href: source, label: 'read CISA multifactor guidance' }],
+      sections: [0,1,2,3,4,5,6].map((n) => ({ heading: [`Name the output before the role`, `Separate preparation from approval`, `Write the first handoff`, `Review a small batch`, `Protect the accounts`, `Keep local work local`, `Change one rule at a time`][n], paragraphs: [paragraphs[n], paragraphs[(n + 1) % paragraphs.length]] })),
+      decisionRows: [{ need: 'Repeatable online preparation', fit: 'Remote assistant lane', reason: 'The output can be shown and checked in shared tools.' }, { need: 'Physical office work', fit: 'Local employee or vendor', reason: 'The task needs local presence or custody.' }, { need: 'Sensitive approval', fit: 'Owner-led work', reason: 'The accountable person keeps final judgment.' }, { need: 'Mixed workflow', fit: 'Split the handoff', reason: 'Each step gets its own owner and review rule.' }],
+      planningNumbers: [{ value: '1 lane', label: 'First scope', note: 'Begin with one task family.' }, { value: '1 owner', label: 'Reviewer', note: 'Name the person who checks the batch.' }, { value: '1 stop rule', label: 'Escalation', note: 'Write when the assistant must pause.' }, { value: '30 days', label: 'Review point', note: 'Change the brief after observing real work.' }],
+      benchmarkRows: [{ measure: 'Task location', local: 'May include physical steps', remote: 'Online work only', reading: 'Map the actual task.' }, { measure: 'Access', local: 'Office policy applies', remote: 'Use named, limited accounts', reading: 'Give only what the lane needs.' }, { measure: 'Review', local: 'May happen in person', remote: 'Needs examples and a queue', reading: 'Make quality visible.' }, { measure: 'Exceptions', local: 'Can be handled nearby', remote: 'Pause and escalate', reading: 'Do not hide judgment in the brief.' }],
+      scripts: [{ title: 'Role brief', text: `Prepare ${topic.toLowerCase()} items from the approved queue. Leave anything outside the example or stop rule for the named reviewer.` }, { title: 'Weekly review', text: 'Which items were completed, corrected, escalated, or left waiting for an owner decision?' }],
+      scenario: { title: `Sample workflow: start ${topic.toLowerCase()}`, intro: 'Use this sequence to turn a broad request into a checkable first month.', steps: [{ step: '1', title: 'Choose the unit', body: 'Name one item that can be counted.' }, { step: '2', title: 'Show an example', body: 'Provide a redacted finished example and one common exception.' }, { step: '3', title: 'Limit access', body: 'Give the assistant only the accounts and records needed.' }, { step: '4', title: 'Review the batch', body: 'Check the first items and record corrections.' }, { step: '5', title: 'Repair one rule', body: 'Update the brief before adding volume.' }] },
+      faqs: [{ question: `What ${topic.toLowerCase()} work can be remote?`, answer: 'Online, repeatable preparation can fit when the tools, examples, and review owner are clear.' }, { question: 'What should stay with the owner?', answer: 'Keep final approvals, money movement, account recovery, legal or medical judgment, and sensitive exceptions with the accountable owner or qualified professional.' }, { question: 'Should the first scope be broad?', answer: 'No. Start with one task lane so quality and questions are visible.' }, { question: 'Where are assistants recruited?', answer: 'This service recruits and hires assistants in the Philippines for remote work.' }, { question: 'How should access be granted?', answer: 'Use named accounts and the least access needed for the first task.' }],
+      relatedLinks: [{ href: internalA, label: 'Compare local and remote task fit' }, { href: internalB, label: 'Use the security checklist' }, { href: '/blog', label: 'Browse all hiring guides' }, { href: '/contact-us', label: 'Prepare a role brief' }],
+      sources: [{ name: 'CISA, Turn on Multifactor Authentication', url: source, note: 'Account sign-in guidance.' }, { name: 'CISA, Use Strong Passwords', url: 'https://www.cisa.gov/secure-our-world/use-strong-passwords', note: 'Password management guidance.' }, { name: 'FTC Business Guidance', url: 'https://www.ftc.gov/business-guidance', note: 'General business and data-handling guidance.' }]
+    }
+  };
+});
+
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts];
 
 export const routes = [
   '/',

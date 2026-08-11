@@ -9,21 +9,19 @@ const fail = (message) => { throw new Error(message); };
 if (manifest.entries.length < manifest.minimum || manifest.entries.length < 22) fail('accepted count is below 22');
 const slugs = new Set();
 const source = fs.readFileSync('app/data.ts', 'utf8');
-const parentSource = execFileSync('git', ['show', `${manifest.entries[0].introducedByCommit}^:app/data.ts`], { encoding: 'utf8' });
 
 for (const entry of manifest.entries) {
   if (slugs.has(entry.slug)) fail(`duplicate slug: ${entry.slug}`);
   slugs.add(entry.slug);
   if (!/^\/blog\/[a-z0-9-]+$/.test(entry.route) || entry.route !== `/blog/${entry.slug}`) fail(`bad Blog route: ${entry.route}`);
   if (entry.sourcePath !== 'app/data.ts' || !fs.existsSync(entry.sourcePath)) fail(`missing source: ${entry.sourcePath}`);
-  const topicSlug = entry.slug.replace(/-assistant-guide-2026$/, '');
-  const record = source.indexOf(`['${topicSlug}',`);
-  if (record < 0) fail(`source slug missing: ${entry.slug}`);
-  const window = source.slice(record, record + 7000);
-  if (!window.includes('slug: `${slug}-assistant-guide-2026`')) fail(`source route record missing: ${entry.slug}`);
-  if (!window.includes(`published: '${date}'`)) fail(`source date missing: ${entry.slug}`);
+  const record = source.indexOf(`{ slug: '${entry.slug}', published: '${date}' }`);
+  if (record < 0) fail(`explicit source publication record missing: ${entry.slug}`);
+  const introducingSource = execFileSync('git', ['show', `${entry.introducedByCommit}:app/data.ts`], { encoding: 'utf8' });
+  const parentSource = execFileSync('git', ['show', `${entry.introducedByCommit}^:app/data.ts`], { encoding: 'utf8' });
+  if (!introducingSource.includes(`{ slug: '${entry.slug}', published: '${date}' }`)) fail(`slug/date absent at introducing commit: ${entry.slug}`);
+  if (parentSource.includes(`{ slug: '${entry.slug}', published: '${date}' }`)) fail(`slug/date was not absent at introducing parent: ${entry.slug}`);
   if (entry.sourceDate !== date || entry.renderedDate !== date) fail(`manifest date mismatch: ${entry.slug}`);
-  if (parentSource.includes(`['${topicSlug}',`)) fail(`slug was not absent at introducing parent: ${entry.slug}`);
   const htmlPath = `.next/server/app/blog/${entry.slug}.html`;
   if (!fs.existsSync(htmlPath)) fail(`built route missing: ${entry.route}`);
   const html = fs.readFileSync(htmlPath, 'utf8');

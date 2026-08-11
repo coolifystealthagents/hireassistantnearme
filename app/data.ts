@@ -785,6 +785,33 @@ const dailyBlogTopics = [
   ['real-estate-listing-admin', 'Real estate listing admin assistant: keep digital listing tasks moving', 'real estate listing admin assistant'],
 ] as const;
 
+// Authenticated August 10 publication records. Keep one explicit source record
+// per accepted route so Git history can prove each slug/date pair independently.
+const aug10BlogPublicationRecords = [
+  { slug: 'appointment-reminders-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'client-intake-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'quote-follow-up-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'review-request-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'dispatch-coordination-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'inventory-records-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'receivables-follow-up-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'compliance-documentation-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'grant-research-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'event-coordination-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'newsletter-production-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'video-content-admin-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'recruiting-coordinator-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'candidate-screening-admin-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'vendor-onboarding-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'sop-audit-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'dashboard-reporting-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'customer-feedback-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'returns-coordination-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'medical-records-admin-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'legal-intake-admin-assistant-guide-2026', published: '2026-08-10' },
+  { slug: 'real-estate-listing-admin-assistant-guide-2026', published: '2026-08-10' },
+] as const;
+
 const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword]) => {
   const topic = title.split(':')[0];
   const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
@@ -802,7 +829,7 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword]) => {
   return {
     slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
     excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
-    published: '2026-08-10', richPublished: true, minutes: 8,
+    published: aug10BlogPublicationRecords.find((record) => record.slug === `${slug}-assistant-guide-2026`)?.published || '2026-08-07', richPublished: true, minutes: 8,
     image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
     takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
     detail: {

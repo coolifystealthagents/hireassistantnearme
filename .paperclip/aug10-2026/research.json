@@ -19,7 +19,8 @@
     "git show b0d9c2e7fff59382736ad028788306e8564b1022^:app/fleet-data.ts",
     "git show b0d9c2e7fff59382736ad028788306e8564b1022:app/fleet-data.ts",
     "sha256sum .paperclip/aug10-2026/research.json",
-    "git ls-remote origin refs/heads/main"
+    "git ls-remote origin refs/heads/main",
+    "git status --short --branch"
   ],
   "cleanBuildPassed": true,
   "existingCompliancePassed": true,

@@ -785,7 +785,7 @@ const dailyBlogTopics = [
   ['real-estate-listing-admin', 'Real estate listing admin assistant: keep digital listing tasks moving', 'real estate listing admin assistant'],
 ] as const;
 
-const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword], index) => {
+const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword]) => {
   const topic = title.split(':')[0];
   const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
   const internalB = '/blog/virtual-assistant-security-checklist';
@@ -802,11 +802,11 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword], index) =
   return {
     slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
     excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
-    published: index < 20 ? '2026-08-07' : '2026-08-10', richPublished: true, minutes: 8,
+    published: '2026-08-10', richPublished: true, minutes: 8,
     image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
     takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
     detail: {
-      revision: `${index < 20 ? '2026-08-07' : '2026-08-10'}-${slug}-r1`,
+      revision: `2026-08-10-${slug}-r1`,
       directAnswer: [`${topic} can fit a Philippines-based remote assistant when the work is digital, repeatable, and easy for a named owner to review.`, `The safest first brief names the output, source material, tool, deadline, examples, access limit, and escalation rule. Start with a narrow batch and expand only after the owner can see the quality.`],
       bodyLinks: [{ href: internalA, label: 'compare local and remote task fit' }, { href: internalB, label: 'set access rules before handoff' }, { href: source, label: 'read CISA multifactor guidance' }],
       sections: [0,1,2,3,4,5,6].map((n) => ({ heading: [`Name the output before the role`, `Separate preparation from approval`, `Write the first handoff`, `Review a small batch`, `Protect the accounts`, `Keep local work local`, `Change one rule at a time`][n], paragraphs: [paragraphs[n], paragraphs[(n + 1) % paragraphs.length]] })),
@@ -822,7 +822,7 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword], index) =
   };
 });
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts];
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts].sort((a, b) => b.published.localeCompare(a.published));
 
 export const routes = [
   '/',

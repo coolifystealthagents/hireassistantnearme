@@ -126,7 +126,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <article className="container article-shell">
-          <p className="eyebrow">Philippines-only hiring guide</p>
+          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{published}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
           <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {published}.</p>
@@ -300,7 +300,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <article className="container article-shell">
-          <p className="eyebrow">Philippines-only hiring guide</p>
+          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{published}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
           {richPost.image && <figure className="article-hero-image"><img src={richPost.image} alt={richPost.imageAlt || ''} width="1200" height="675" /></figure>}

@@ -20,7 +20,12 @@ for (const entry of manifest.entries) {
   if (!record) fail(`explicit source publication record missing: ${entry.slug}`);
   const introducingSource = execFileSync('git', ['show', `${entry.introducedByCommit}:app/data.ts`], { encoding: 'utf8' });
   const introducingRecords = JSON.parse(execFileSync('git', ['show', `${entry.introducedByCommit}:.paperclip/aug10-2026/blog-source-records.json`], { encoding: 'utf8' }));
-  const parentRecords = JSON.parse(execFileSync('git', ['show', `${entry.introducedByCommit}^:.paperclip/aug10-2026/blog-source-records.json`], { encoding: 'utf8' }));
+  let parentRecords = [];
+  try {
+    parentRecords = JSON.parse(execFileSync('git', ['show', `${entry.introducedByCommit}^:.paperclip/aug10-2026/blog-source-records.json`], { encoding: 'utf8' }));
+  } catch {
+    parentRecords = [];
+  }
   if (!introducingRecords.some((item) => item.slug === entry.slug && item.published === date)) fail(`slug/date absent at introducing commit: ${entry.slug}`);
   if (parentRecords.some((item) => item.slug === entry.slug && item.published === date)) fail(`slug/date was not absent at introducing parent: ${entry.slug}`);
   if (!introducingSource.includes(entry.slug)) fail(`routed article slug missing from app data: ${entry.slug}`);

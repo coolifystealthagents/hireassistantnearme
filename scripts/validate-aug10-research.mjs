@@ -30,7 +30,7 @@ for (const entry of manifest.entries) {
   if (parentSource.includes(`['${entry.slug}',`)) fail(`slug was not absent at introducing parent: ${entry.slug}`);
   const recordStart = source.indexOf(`['${entry.slug}',`);
   if (recordStart < 0) fail(`source slug missing: ${entry.slug}`);
-  if (!source.slice(recordStart, recordStart + 20000).includes(`published:'${date}'`)) fail(`source date missing: ${entry.slug}`);
+  if (!source.slice(recordStart, recordStart + 20000).includes(`'${date}']`)) fail(`explicit source date missing: ${entry.slug}`);
 
   const htmlPath = `.next/server/app/research/${entry.slug}.html`;
   if (!fs.existsSync(htmlPath)) fail(`built route missing: ${entry.route}`);

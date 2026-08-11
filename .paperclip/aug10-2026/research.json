@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "research",
+  "domain": "hireassistantnearme.com",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "branch": "main",
+  "minimum": 10,
+  "priorRunId": "15c6c5d0-5967-4beb-b75b-59dd708aea19",
+  "priorIssueId": "d6f928d0-6024-4ec4-9861-f9e63c605fb1",
+  "validationCommands": [
+    "npm run build",
+    "node scripts/validate-aug10-research.mjs",
+    "git diff --check",
+    "git fetch origin main && git rev-parse origin/main"
+  ],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {"slug":"assistant-permission-inventory","route":"/research/assistant-permission-inventory","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-assistant-mfa-readiness","route":"/research/remote-assistant-mfa-readiness","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"small-business-phishing-stop-rules","route":"/research/small-business-phishing-stop-rules","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-work-backup-test-checklist","route":"/research/remote-work-backup-test-checklist","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"customer-data-minimization-for-assistants","route":"/research/customer-data-minimization-for-assistants","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-assistant-records-retention","route":"/research/remote-assistant-records-retention","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"research-claim-source-ledger","route":"/research/research-claim-source-ledger","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"remote-work-at-home-data-2025","route":"/research/remote-work-at-home-data-2025","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"assistant-search-content-qa","route":"/research/assistant-search-content-qa","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
+    {"slug":"small-business-incident-response-handoff","route":"/research/small-business-incident-response-handoff","sourcePath":"app/fleet-data.ts","provenance":"original-aug10-batch","introducedByCommit":"b0d9c2e7fff59382736ad028788306e8564b1022","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"}
+  ]
+}

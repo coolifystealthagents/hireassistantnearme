@@ -255,5 +255,5 @@ export const researchPosts: readonly ResearchPost[] = [
     sources:[{name:sourceName,url:sourceUrl}],
     related:[{label:'Research library',href:'/research'},{label:'Prepare a role brief',href:'/contact-us'}]
   }))
-];
+].sort((a, b) => b.published.localeCompare(a.published));
 export const postsPerPage = 20;

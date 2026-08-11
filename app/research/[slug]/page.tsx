@@ -23,7 +23,7 @@ export default async function ResearchArticle({ params }: { params: Promise<{ sl
   ];
   return <><Header /><main><article className="section"><div className="container article-shell">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <p className="eyebrow">{site.brand} research · {post.published}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
+    <p className="eyebrow">{site.brand} research · <time dateTime={post.published}>{post.published}</time></p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
     <img className="article-thumbnail" src={post.image} alt={post.imageAlt} />
     <section className="card"><h2>Key stats</h2><div className="research-stat-grid">{post.keyStats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span><small>Source: {stat.source}</small></div>)}</div></section>
     <section className="card"><h2>Key takeaways</h2><ul>{post.takeaways.map((takeaway) => <li key={takeaway}>{takeaway}</li>)}</ul></section>

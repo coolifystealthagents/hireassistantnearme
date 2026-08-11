@@ -13,7 +13,11 @@
     "npm run build",
     "node scripts/validate-aug10-research.mjs",
     "git diff --check",
-    "git fetch origin main && git rev-parse origin/main"
+    "git fetch origin main",
+    "git rev-parse HEAD",
+    "git rev-parse origin/main",
+    "git show b0d9c2e7fff59382736ad028788306e8564b1022^:app/fleet-data.ts",
+    "git show b0d9c2e7fff59382736ad028788306e8564b1022:app/fleet-data.ts"
   ],
   "cleanBuildPassed": true,
   "existingCompliancePassed": true,

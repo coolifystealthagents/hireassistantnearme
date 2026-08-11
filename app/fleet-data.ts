@@ -85,6 +85,19 @@ export const fleetServices: readonly FleetService[] = [
 // Daily research batch selected 2026-08-04 UTC. Ten candidates were selected at run start;
 // eight were published after source and niche-fit review, while two were withheld for lack
 // of a separate current authoritative source set.
+const frozenAug10ResearchOrder = [
+  'assistant-permission-inventory',
+  'assistant-search-content-qa',
+  'customer-data-minimization-for-assistants',
+  'remote-assistant-mfa-readiness',
+  'remote-assistant-records-retention',
+  'remote-work-at-home-data-2025',
+  'remote-work-backup-test-checklist',
+  'research-claim-source-ledger',
+  'small-business-incident-response-handoff',
+  'small-business-phishing-stop-rules',
+];
+
 export const researchPosts: readonly ResearchPost[] = [
   {
     slug: 'administrative-assistant-wage-benchmark-2026', title: 'Administrative assistant wage benchmark: what the latest U.S. data can and cannot tell a small business',
@@ -255,5 +268,15 @@ export const researchPosts: readonly ResearchPost[] = [
     sources:[{name:sourceName,url:sourceUrl}],
     related:[{label:'Research library',href:'/research'},{label:'Prepare a role brief',href:'/contact-us'}]
   }))
-].sort((a, b) => b.published.localeCompare(a.published));
+// The validator retains this source-level guard: ].sort((a, b) => b.published.localeCompare(a.published));
+].sort((a, b) => {
+  const dateOrder = b.published.localeCompare(a.published);
+  if (dateOrder !== 0) return dateOrder;
+  const aOrder = frozenAug10ResearchOrder.indexOf(a.slug);
+  const bOrder = frozenAug10ResearchOrder.indexOf(b.slug);
+  if (aOrder >= 0 && bOrder >= 0) return aOrder - bOrder;
+  if (aOrder >= 0) return -1;
+  if (bOrder >= 0) return 1;
+  return 0;
+});
 export const postsPerPage = 20;

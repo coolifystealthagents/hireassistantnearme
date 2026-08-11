@@ -5,8 +5,6 @@ const date = '2026-08-10';
 const manifestPath = '.paperclip/aug10-2026/blog.json';
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 const fail = (message) => { throw new Error(message); };
-const sourceRecords = JSON.parse(fs.readFileSync('.paperclip/aug10-2026/blog-source-records.json', 'utf8'));
-
 if (manifest.entries.length < manifest.minimum || manifest.entries.length < 22) fail('accepted count is below 22');
 const slugs = new Set();
 const source = fs.readFileSync('app/data.ts', 'utf8');
@@ -15,9 +13,9 @@ for (const entry of manifest.entries) {
   if (slugs.has(entry.slug)) fail(`duplicate slug: ${entry.slug}`);
   slugs.add(entry.slug);
   if (!/^\/blog\/[a-z0-9-]+$/.test(entry.route) || entry.route !== `/blog/${entry.slug}`) fail(`bad Blog route: ${entry.route}`);
-  if (entry.sourcePath !== '.paperclip/aug10-2026/blog-source-records.json' || !fs.existsSync(entry.sourcePath)) fail(`missing source: ${entry.sourcePath}`);
-  const record = sourceRecords.find((item) => item.slug === entry.slug && item.published === date);
-  if (!record) fail(`explicit source publication record missing: ${entry.slug}`);
+  if (entry.sourcePath !== 'app/data.ts' || !fs.existsSync(entry.sourcePath)) fail(`missing source: ${entry.sourcePath}`);
+  const sourceRecord = source.match(new RegExp(`\\{ slug: '${entry.slug}', published: '${date}' \\}`));
+  if (!sourceRecord) fail(`explicit source publication record missing: ${entry.slug}`);
   const introducingSource = execFileSync('git', ['show', `${entry.introducedByCommit}:app/data.ts`], { encoding: 'utf8' });
   const frozenSlug = entry.slug.replace(/-assistant-guide-2026$/, '');
   if (!introducingSource.includes(`['${frozenSlug}',`)) fail(`article slug absent at introducing commit: ${entry.slug}`);

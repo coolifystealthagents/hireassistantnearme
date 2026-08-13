@@ -2,6 +2,11 @@ import { notFound } from 'next/navigation';
 import { Header, Footer, CTA } from '../../components';
 import { blogPosts, site, publicSources } from '../../data';
 
+const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+});
+const formatPublicationDate = (value: string) => publicationDateFormatter.format(new Date(`${value}T00:00:00Z`));
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
@@ -126,10 +131,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <article className="container article-shell">
-          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{published}</time></p>
+          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
-          <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {published}.</p>
+          <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {formatPublicationDate(published)}.</p>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
@@ -300,7 +305,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <article className="container article-shell">
-          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{published}</time></p>
+          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
           {richPost.image && <figure className="article-hero-image"><img src={richPost.image} alt={richPost.imageAlt || ''} width="1200" height="675" /></figure>}

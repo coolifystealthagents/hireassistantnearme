@@ -721,6 +721,28 @@ const baseBlogPosts = [
   },];
 
 const dailyBlogTopics = [
+  ['local-business-hours', 'Remote assistant coverage for local business hours: define the handoff window', 'remote assistant local business hours', 'Map the owner-facing opening window, the assistant overlap window, and the after-hours queue so urgent work is not confused with work that can wait.'],
+  ['shared-inbox-labels', 'Shared inbox labels for a small team: make ownership visible', 'shared inbox labels small business', 'Use labels for owner, urgency, customer, and next action; the goal is a queue another person can understand without guessing.'],
+  ['missed-call-follow-up', 'Missed-call follow-up support: turn call notes into accountable next steps', 'missed call follow-up assistant', 'Separate a missed call record from a promise to call back, then capture the caller, reason, deadline, and person who approves the response.'],
+  ['sales-call-prep', 'Sales call preparation assistant: assemble context without steering the conversation', 'sales call preparation assistant', 'Prepare a compact brief from approved CRM fields, prior questions, and open tasks while leaving qualification and commercial judgment with the seller.'],
+  ['customer-onboarding-checklist', 'Customer onboarding checklist support: keep the first handoff from going quiet', 'customer onboarding checklist assistant', 'Turn an approved onboarding plan into visible tasks, missing inputs, and a clear owner for each next step instead of sending generic reminders.'],
+  ['vendor-renewal-tracking', 'Vendor renewal tracking: surface dates and documents before decisions are due', 'vendor renewal tracking assistant', 'Track renewal dates, notice windows, current documents, and questions for review without accepting terms or making a purchasing decision.'],
+  ['team-calendar-coordination', 'Team calendar coordination: protect meeting time across a growing schedule', 'team calendar coordination assistant', 'Create rules for time zones, buffers, meeting owners, and conflicts so scheduling support reduces back-and-forth without moving protected commitments.'],
+  ['digital-file-naming', 'Digital file naming support: make client records easier to retrieve', 'digital file naming assistant', 'Choose a naming pattern that captures client, document type, period, and status, then route exceptions instead of inventing missing facts.'],
+  ['service-area-lead-routing', 'Service-area lead routing: send local inquiries to the right queue', 'service area lead routing assistant', 'Use published service areas and approved routing rules to sort inquiries, while uncertain locations and exceptions go to the owner for a decision.'],
+  ['customer-questions-log', 'Customer questions log: preserve unanswered questions until someone owns them', 'customer questions log assistant', 'A question log should show the original wording, source, promised response window, owner, and resolution so follow-up does not depend on memory.'],
+  ['meeting-agenda-prep', 'Meeting agenda preparation: turn scattered updates into a useful discussion', 'meeting agenda preparation assistant', 'Collect approved updates, unresolved decisions, and requested context into an agenda that helps the meeting owner choose what needs time.'],
+  ['document-version-control', 'Document version control for small teams: keep the approved copy findable', 'document version control assistant', 'Record version names, approval state, effective date, and superseded location so an assistant can organize files without choosing which policy is correct.'],
+  ['local-market-source-notes', 'Local market source notes: organize research a business owner can inspect', 'local market research notes assistant', 'Capture the question, source link, publication date, relevant passage, and unresolved limitation so research remains traceable rather than sounding certain.'],
+  ['return-request-intake', 'Return request intake support: separate complete requests from exceptions', 'return request intake assistant', 'Collect order reference, item, reason, timing, and requested outcome, then route policy questions and unusual cases instead of promising a resolution.'],
+  ['appointment-waitlist', 'Appointment waitlist coordination: keep openings and preferences aligned', 'appointment waitlist assistant', 'Maintain the requested service, availability window, contact preference, and confirmation state so an opening can be offered without double booking.'],
+  ['property-maintenance-log', 'Property maintenance log support: keep digital requests moving', 'property maintenance log assistant', 'Record the location, issue description, received time, access notes, vendor contact, and next update while urgent safety issues remain with the responsible manager.'],
+  ['nonprofit-program-records', 'Nonprofit program records support: make recurring updates easier to review', 'nonprofit program records assistant', 'Keep participant, activity, consent, and follow-up fields consistent while protecting confidential records and leaving eligibility decisions to authorized staff.'],
+  ['course-support-queue', 'Course support queue management: organize learner questions by next action', 'course support queue assistant', 'Sort questions by course, lesson, urgency, and needed owner so routine navigation help is separated from grading, access, or policy decisions.'],
+  ['proposal-asset-library', 'Proposal asset library support: find approved material without overpromising', 'proposal asset library assistant', 'Index approved case examples, service descriptions, and reusable answers with dates and owners so drafts use current material and flag gaps.'],
+  ['employee-onboarding-records', 'Employee onboarding records support: keep first-week paperwork visible', 'employee onboarding records assistant', 'Track required forms, access requests, due dates, and unanswered questions while managers retain employment decisions and sensitive personnel judgment.'],
+  ['ecommerce-product-questions', 'Ecommerce product-question support: route answers from approved information', 'ecommerce product questions assistant', 'Match customer questions to approved catalog details, identify missing answers, and escalate safety, warranty, or exception questions before replying.'],
+  ['weekly-owner-summary', 'Weekly owner summary assistant: compress activity into decisions and exceptions', 'weekly owner summary assistant', 'A useful summary distinguishes completed work, waiting items, exceptions, and decisions needed, rather than reporting a pile of unprioritized activity.'],
   ['inbox-triage', 'Inbox triage for a small business: write the first assistant workflow', 'inbox triage assistant workflow'],
   ['calendar-management', 'Calendar management by a remote assistant: rules that prevent double booking', 'calendar management remote assistant'],
   ['lead-follow-up', 'Lead follow-up assistant: a practical handoff for local service businesses', 'lead follow-up assistant'],
@@ -834,6 +856,33 @@ const aug11BlogPublicationRecords = [
   { slug: 'customer-success-admin-assistant-guide-2026', published: '2026-08-12' },
 ] as const;
 
+// Authenticated August 13 publication records. Each new Blog route binds the
+// campaign date in this source record so the date is auditable per article.
+const aug13BlogPublicationRecords = [
+  { slug: 'local-business-hours-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'shared-inbox-labels-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'missed-call-follow-up-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'sales-call-prep-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'customer-onboarding-checklist-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'vendor-renewal-tracking-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'team-calendar-coordination-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'digital-file-naming-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'service-area-lead-routing-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'customer-questions-log-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'meeting-agenda-prep-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'document-version-control-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'local-market-source-notes-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'return-request-intake-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'appointment-waitlist-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'property-maintenance-log-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'nonprofit-program-records-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'course-support-queue-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'proposal-asset-library-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'employee-onboarding-records-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'ecommerce-product-questions-assistant-guide-2026', published: '2026-08-13' },
+  { slug: 'weekly-owner-summary-assistant-guide-2026', published: '2026-08-13' },
+] as const;
+
 // Authenticated August 10 publication records. Keep one explicit source record
 // per accepted route so Git history can prove each slug/date pair independently.
 const aug10BlogPublicationRecords = [
@@ -861,15 +910,17 @@ const aug10BlogPublicationRecords = [
   { slug: 'real-estate-listing-admin-assistant-guide-2026', published: '2026-08-10' },
 ] as const;
 
-const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword]) => {
+const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = 'Define the work, show a finished example, and name the person who reviews exceptions.']) => {
   const topic = title.split(':')[0];
+  const articleSlug = `${slug}-assistant-guide-2026`;
+  const isAug13 = aug13BlogPublicationRecords.some((record) => record.slug === articleSlug);
   const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
   const internalB = '/blog/virtual-assistant-security-checklist';
   const source = 'https://www.cisa.gov/secure-our-world/turn-mfa';
   const paragraphs = [
-    `${topic} works best when the owner names one recurring output and shows what a finished item looks like. Start with the work that already repeats, then write the handoff in the same order a person will use it.`,
+    isAug13 ? `${topic} works best when the owner names one recurring output and shows what a finished item looks like. ${angle}` : `${topic} works best when the owner names one recurring output and shows what a finished item looks like. Start with the work that already repeats, then write the handoff in the same order a person will use it.`,
     `A Philippines-based remote assistant can prepare online work, sort approved information, and leave clear questions for review. The role does not replace local errands, final business judgment, or access that the owner should keep.`,
-    `Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. A short brief is easier to test than a broad request for general help.`,
+    isAug13 ? `Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. For this lane, ${angle.toLowerCase()} A short brief is easier to test than a broad request for general help.` : 'Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. A short brief is easier to test than a broad request for general help.',
     `Use a small first batch. Count completed items, corrections, questions, and work waiting for an owner decision. Those observations are more useful than a vague impression after a busy week.`,
     `Keep sensitive actions behind named accounts and limited permissions. The assistant should know where to work and when to stop, while the accountable owner keeps recovery access and final approval.`,
     `At the end of the first month, change one instruction at a time. Keep the lane, narrow it, or add one adjacent duty only after the review habit is working.`,
@@ -878,11 +929,11 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword]) => {
   return {
     slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
     excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
-    published: aug11BlogPublicationRecords.find((record) => record.slug === `${slug}-assistant-guide-2026`)?.published || aug10BlogPublicationRecords.find((record) => record.slug === `${slug}-assistant-guide-2026`)?.published || '2026-08-07', richPublished: true, minutes: 8,
+    published: aug13BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug11BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug10BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || '2026-08-07', richPublished: true, minutes: 8,
     image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
     takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
     detail: {
-      revision: `2026-08-10-${slug}-r1`,
+      revision: `${isAug13 ? '2026-08-13' : '2026-08-10'}-${slug}-r1`,
       directAnswer: [`${topic} can fit a Philippines-based remote assistant when the work is digital, repeatable, and easy for a named owner to review.`, `The safest first brief names the output, source material, tool, deadline, examples, access limit, and escalation rule. Start with a narrow batch and expand only after the owner can see the quality.`],
       bodyLinks: [{ href: internalA, label: 'compare local and remote task fit' }, { href: internalB, label: 'set access rules before handoff' }, { href: source, label: 'read CISA multifactor guidance' }],
       sections: [0,1,2,3,4,5,6].map((n) => ({ heading: [`Name the output before the role`, `Separate preparation from approval`, `Write the first handoff`, `Review a small batch`, `Protect the accounts`, `Keep local work local`, `Change one rule at a time`][n], paragraphs: [paragraphs[n], paragraphs[(n + 1) % paragraphs.length]] })),

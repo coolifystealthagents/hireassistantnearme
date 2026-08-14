@@ -32,9 +32,9 @@ export default function Home() {
           <div className="location-card">
             <div className="location-top"><span>Role brief</span><b>01</b></div>
             <h2>Where should the work happen?</h2>
-            <div className="choice active"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/remote-fit.svg" alt="" width="24" height="24"/></span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
-            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/local-fit.svg" alt="" width="24" height="24"/></span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
-            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/role-planning.svg" alt="" width="24" height="24"/></span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
+            <div className="choice active"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/remote-fit.svg" alt="Remote assistant role fit icon" width="24" height="24"/></span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
+            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/local-fit.svg" alt="Local in-person role fit icon" width="24" height="24"/></span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
+            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/role-planning.svg" alt="Assistant role planning icon" width="24" height="24"/></span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
           </div>
 
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the work, then the person</p><h2>Start with a role that has edges.</h2></div><p>An assistant can do a lot. That does not mean one person should do everything. A tighter brief makes screening, onboarding, and review much easier.</p></div>
         <div className="role-grid">
           {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
-            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? '' : `${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
+            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? 'Assistant and manager collaborating on role priorities' : `${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
             <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact-us">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>

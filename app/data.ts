@@ -827,6 +827,28 @@ const dailyBlogTopics = [
   ['course-materials-admin', 'Course materials assistant: organize approved files for learners and instructors', 'course materials admin assistant'],
   ['service-area-research', 'Service area research assistant: collect local market notes with source links', 'service area research assistant'],
   ['customer-success-admin', 'Customer success admin assistant: keep follow-up notes ready for the account owner', 'customer success admin assistant'],
+  ['mortgage-document-follow-up', 'Mortgage document follow-up assistant: keep borrower requests ready for review', 'mortgage document follow-up assistant', 'Separate missing-document reminders from underwriting decisions, and keep every request tied to the approved checklist.'],
+  ['dental-insurance-verification', 'Dental insurance verification assistant: organize coverage questions before a staff reply', 'dental insurance verification assistant', 'Record the patient question and source document, then route benefit decisions to the authorized office team.'],
+  ['landscaping-service-requests', 'Landscaping service request assistant: turn web inquiries into a clean callback queue', 'landscaping service request assistant', 'Capture the property details the business actually needs, while leaving quotes and scheduling promises with the local team.'],
+  ['photography-session-coordination', 'Photography session coordination assistant: keep client details and open decisions together', 'photography session coordination assistant', 'A useful coordination record shows the session request, confirmed details, missing choices, and the person who approves changes.'],
+  ['restaurant-private-dining-inquiries', 'Restaurant private dining inquiry assistant: organize event questions without promising availability', 'restaurant private dining inquiry assistant', 'Collect guest counts, dates, and unanswered questions in one queue, then leave availability and menu commitments to the restaurant.'],
+  ['architect-project-intake', 'Architect project intake assistant: prepare project facts before a design conversation', 'architect project intake assistant', 'Gather the client\'s stated needs and source files, but do not interpret code, scope, or professional design requirements.'],
+  ['veterinary-appointment-requests', 'Veterinary appointment request assistant: route pet-care questions to the clinic team', 'veterinary appointment request assistant', 'Keep contact and appointment details organized, and stop when a message needs medical judgment or urgent clinical attention.'],
+  ['bookstore-special-order-records', 'Bookstore special-order records assistant: keep customer requests easy to check', 'bookstore special-order records assistant', 'Track the title request, supplier status, customer contact, and next check date without inventing delivery dates.'],
+  ['solar-consultation-intake', 'Solar consultation intake assistant: prepare homeowner questions for a qualified review', 'solar consultation intake assistant', 'A remote intake lane can organize address and project questions, while site assessment, engineering, and promises stay with qualified staff.'],
+  ['school-tuition-question-queue', 'School tuition question assistant: sort family messages before an authorized reply', 'school tuition question assistant', 'Classify the question, attach the relevant record, and route payment or policy decisions to the school team.'],
+  ['commercial-cleaning-bid-intake', 'Commercial cleaning bid intake assistant: organize site details before a proposal', 'commercial cleaning bid intake assistant', 'Collect locations, service windows, and requested areas, then leave site judgments and proposal terms to the responsible operator.'],
+  ['insurance-renewal-document-queue', 'Insurance renewal document assistant: prepare a complete file for licensed review', 'insurance renewal document assistant', 'Track received documents and missing items, but keep coverage interpretation and advice with the licensed professional.'],
+  ['wedding-vendor-follow-up', 'Wedding vendor follow-up assistant: keep planning replies and open choices visible', 'wedding vendor follow-up assistant', 'Maintain a dated question queue for couples and vendors, while final selections, contracts, and commitments stay with the planner.'],
+  ['gym-membership-freeze-requests', 'Gym membership request assistant: organize freeze questions before a policy decision', 'gym membership request assistant', 'Record the member request and account context, then route exceptions and policy decisions to the authorized manager.'],
+  ['industrial-parts-inquiry-records', 'Industrial parts inquiry assistant: keep technical questions ready for a sales review', 'industrial parts inquiry assistant', 'Capture part numbers, quantities, and source messages without guessing fit, compatibility, or delivery.'],
+  ['funeral-home-arrangement-intake', 'Funeral home arrangement intake assistant: handle information carefully before staff follow-up', 'funeral home arrangement intake assistant', 'Use a restrained record for contact details and requested next steps, and escalate sensitive or urgent matters to the responsible staff member.'],
+  ['museum-group-visit-coordination', 'Museum group visit assistant: organize visit requests and unanswered logistics', 'museum group visit assistant', 'Keep group size, preferred dates, accessibility questions, and next actions together without confirming arrangements before approval.'],
+  ['b2b-customer-reference-requests', 'B2B customer reference assistant: track requests without making an unsupported promise', 'B2B customer reference assistant', 'Log the request, approval status, and owner decision so a reference is never contacted or promised by assumption.'],
+  ['pet-grooming-rebooking-queue', 'Pet grooming rebooking assistant: prepare routine follow-up for staff review', 'pet grooming rebooking assistant', 'Keep preferred timing and service details in the queue, then leave appointment availability and special handling to the grooming team.'],
+  ['independent-school-enrollment-records', 'Independent school enrollment records assistant: keep applicant questions organized', 'independent school enrollment records assistant', 'Separate received forms, unanswered questions, and staff decisions so families get accurate next steps from the school.'],
+  ['home-inspection-report-indexing', 'Home inspection report indexing assistant: make findings easier for the client team to locate', 'home inspection report indexing assistant', 'Index documents and requested sections, but do not interpret defects, safety, or property decisions for the client.'],
+  ['community-theater-ticket-questions', 'Community theater ticket question assistant: organize patron requests before a reply', 'community theater ticket question assistant', 'Keep show, seating, accessibility, and contact questions in one queue, then route policy exceptions to the theater team.'],
 ] as const;
 
 // Authenticated August 11 publication records. Each new route has its own
@@ -883,6 +905,33 @@ const aug13BlogPublicationRecords = [
   { slug: 'school-enrollment-inquiries-assistant-guide-2026', published: '2026-08-13' },
 ] as const;
 
+// Authenticated August 14 publication records. Each new Blog route binds the
+// campaign date in its own literal source record for auditability.
+const aug14BlogPublicationRecords = [
+  { slug: 'mortgage-document-follow-up-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'dental-insurance-verification-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'landscaping-service-requests-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'photography-session-coordination-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'restaurant-private-dining-inquiries-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'architect-project-intake-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'veterinary-appointment-requests-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'bookstore-special-order-records-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'solar-consultation-intake-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'school-tuition-question-queue-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'commercial-cleaning-bid-intake-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'insurance-renewal-document-queue-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'wedding-vendor-follow-up-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'gym-membership-freeze-requests-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'industrial-parts-inquiry-records-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'funeral-home-arrangement-intake-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'museum-group-visit-coordination-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'b2b-customer-reference-requests-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'pet-grooming-rebooking-queue-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'independent-school-enrollment-records-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'home-inspection-report-indexing-assistant-guide-2026', published: '2026-08-14' },
+  { slug: 'community-theater-ticket-questions-assistant-guide-2026', published: '2026-08-14' },
+] as const;
+
 // Authenticated August 10 publication records. Keep one explicit source record
 // per accepted route so Git history can prove each slug/date pair independently.
 const aug10BlogPublicationRecords = [
@@ -913,14 +962,15 @@ const aug10BlogPublicationRecords = [
 const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = 'Define the work, show a finished example, and name the person who reviews exceptions.']) => {
   const topic = title.split(':')[0];
   const articleSlug = `${slug}-assistant-guide-2026`;
+  const isAug14 = aug14BlogPublicationRecords.some((record) => record.slug === articleSlug);
   const isAug13 = aug13BlogPublicationRecords.some((record) => record.slug === articleSlug);
   const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
   const internalB = '/blog/virtual-assistant-security-checklist';
   const source = 'https://www.cisa.gov/secure-our-world/turn-mfa';
   const paragraphs = [
-    isAug13 ? `${topic} works best when the owner names one recurring output and shows what a finished item looks like. ${angle}` : `${topic} works best when the owner names one recurring output and shows what a finished item looks like. Start with the work that already repeats, then write the handoff in the same order a person will use it.`,
+    isAug14 || isAug13 ? `${topic} works best when the owner names one recurring output and shows what a finished item looks like. ${angle}` : `${topic} works best when the owner names one recurring output and shows what a finished item looks like. Start with the work that already repeats, then write the handoff in the same order a person will use it.`,
     `A Philippines-based remote assistant can prepare online work, sort approved information, and leave clear questions for review. The role does not replace local errands, final business judgment, or access that the owner should keep.`,
-    isAug13 ? `Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. For this lane, ${angle.toLowerCase()} A short brief is easier to test than a broad request for general help.` : 'Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. A short brief is easier to test than a broad request for general help.',
+    isAug14 || isAug13 ? `Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. For this lane, ${angle.toLowerCase()} A short brief is easier to test than a broad request for general help.` : 'Before the first handoff, list the trigger, tool, deadline, example, reviewer, and stop rule. A short brief is easier to test than a broad request for general help.',
     `Use a small first batch. Count completed items, corrections, questions, and work waiting for an owner decision. Those observations are more useful than a vague impression after a busy week.`,
     `Keep sensitive actions behind named accounts and limited permissions. The assistant should know where to work and when to stop, while the accountable owner keeps recovery access and final approval.`,
     `At the end of the first month, change one instruction at a time. Keep the lane, narrow it, or add one adjacent duty only after the review habit is working.`,
@@ -929,11 +979,11 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = '
   return {
     slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
     excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
-    published: aug13BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug11BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug10BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || '2026-08-07', richPublished: true, minutes: 8,
+    published: aug14BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug13BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug11BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug10BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || '2026-08-07', richPublished: true, minutes: 8,
     image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
     takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
     detail: {
-      revision: `${isAug13 ? '2026-08-13' : '2026-08-10'}-${slug}-r1`,
+      revision: `${isAug14 ? '2026-08-14' : isAug13 ? '2026-08-13' : '2026-08-10'}-${slug}-r1`,
       directAnswer: [`${topic} can fit a Philippines-based remote assistant when the work is digital, repeatable, and easy for a named owner to review.`, `The safest first brief names the output, source material, tool, deadline, examples, access limit, and escalation rule. Start with a narrow batch and expand only after the owner can see the quality.`],
       bodyLinks: [{ href: internalA, label: 'compare local and remote task fit' }, { href: internalB, label: 'set access rules before handoff' }, { href: source, label: 'read CISA multifactor guidance' }],
       sections: [0,1,2,3,4,5,6].map((n) => ({ heading: [`Name the output before the role`, `Separate preparation from approval`, `Write the first handoff`, `Review a small batch`, `Protect the accounts`, `Keep local work local`, `Change one rule at a time`][n], paragraphs: [paragraphs[n], paragraphs[(n + 1) % paragraphs.length]] })),

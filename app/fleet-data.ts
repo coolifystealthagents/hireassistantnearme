@@ -320,7 +320,9 @@ export const researchPosts: readonly ResearchPost[] = [
     ],
     tables:[{caption:`${topic} role-fit comparison`,columns:['Lane','Possible remote output','Boundary to preserve'],rows:[['Preparation','Organized record, draft, or status note','Use only supplied, approved information'],['Verification','Checked fields and documented discrepancy','Return uncertainty instead of guessing'],['Authority','Not delegated by default','Owner or qualified reviewer decides']]}],
     sources:[{name:sourceOne,url:urlOne},{name:'Additional authoritative context',url:urlTwo}],
-    related:[{label:'Research library',href:'/research'},{label:'Review assistant role options',href:'/services/executive-assistance'}]
+    related: slug === 'inbox-delegation-scope-research'
+      ? [{label:'Research library',href:'/research'},{label:'Plan calendar and inbox support',href:'/services/calendar-and-inbox-support'}]
+      : [{label:'Research library',href:'/research'},{label:'Review assistant role options',href:'/services/executive-assistance'}]
   }))
   // Daily Research batch created 2026-08-14 UTC. Each record is a new,
   // topic-specific study with its own literal publication date.

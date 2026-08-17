@@ -849,6 +849,28 @@ const dailyBlogTopics = [
   ['independent-school-enrollment-records', 'Independent school enrollment records assistant: keep applicant questions organized', 'independent school enrollment records assistant', 'Separate received forms, unanswered questions, and staff decisions so families get accurate next steps from the school.'],
   ['home-inspection-report-indexing', 'Home inspection report indexing assistant: make findings easier for the client team to locate', 'home inspection report indexing assistant', 'Index documents and requested sections, but do not interpret defects, safety, or property decisions for the client.'],
   ['community-theater-ticket-questions', 'Community theater ticket question assistant: organize patron requests before a reply', 'community theater ticket question assistant', 'Keep show, seating, accessibility, and contact questions in one queue, then route policy exceptions to the theater team.'],
+  ['real-estate-lead-routing', 'Real estate lead routing support: separate response speed from sales judgment', 'real estate lead routing assistant', 'Record source, property interest, response window, and next owner action without promising availability or evaluating the lead.'],
+  ['clinic-referral-coordination', 'Clinic referral coordination: keep incoming records ready for staff review', 'clinic referral coordination assistant', 'Track referral source, received documents, missing fields, and follow-up owner while clinical eligibility and care decisions stay with authorized staff.'],
+  ['home-service-callback-queue', 'Home service callback queues: make missed inquiries visible to the local team', 'home service callback assistant', 'Capture contact permission, requested work, preferred window, and callback status without quoting, diagnosing, or promising a visit.'],
+  ['law-firm-consultation-intake', 'Law firm consultation intake: organize facts without giving legal advice', 'law firm consultation intake assistant', 'Collect the caller\'s stated issue, contact details, conflicts-review fields, and unanswered questions for attorney review.'],
+  ['ecommerce-order-exception', 'Ecommerce order exceptions: route unusual cases before a customer reply', 'ecommerce order exception assistant', 'Group order number, issue type, shipment status, and requested remedy while refund, replacement, and policy decisions remain with the owner.'],
+  ['agency-client-approval-tracker', 'Agency client approval tracking: keep deliverables and decisions aligned', 'agency client approval assistant', 'Track asset version, reviewer, due date, feedback status, and blocked dependency without approving work or making a client commitment.'],
+  ['bookkeeping-missing-document', 'Bookkeeping missing-document follow-up: build a clean monthly request list', 'bookkeeping missing document assistant', 'List the period, account, missing source, reminder status, and question owner without classifying transactions or giving accounting advice.'],
+  ['property-maintenance-triage', 'Property maintenance triage: record repair requests before dispatch decisions', 'property maintenance triage assistant', 'Capture unit, issue description, urgency stated by the requester, photos, and next owner action without diagnosing hazards or authorizing work.'],
+  ['nonprofit-volunteer-coordination', 'Nonprofit volunteer coordination: turn availability into an owner-reviewed roster', 'nonprofit volunteer coordination assistant', 'Track approved contact details, preferences, shift questions, and confirmation state while safeguarding policy and placement decisions.'],
+  ['executive-meeting-briefs', 'Executive meeting briefs: prepare context without deciding priorities', 'executive meeting brief assistant', 'Gather approved agenda items, prior actions, source links, and unresolved decisions so the executive can set priorities.'],
+  ['customer-onboarding-checklist', 'Customer onboarding checklists: make the first handoff easy to inspect', 'customer onboarding checklist assistant', 'Track required inputs, owner, due date, status, and blocker while implementation scope and customer commitments remain with the accountable team.'],
+  ['vendor-invoice-intake', 'Vendor invoice intake: organize records before an approval decision', 'vendor invoice intake assistant', 'Match invoice references to approved records, flag missing fields, and route exceptions without approving payment or changing terms.'],
+  ['course-support-inbox', 'Course support inbox organization: separate learner questions from instructor decisions', 'course support inbox assistant', 'Classify access, schedule, materials, and policy questions while instructors and administrators retain academic and exception decisions.'],
+  ['marketing-asset-approval', 'Marketing asset approval tracking: keep drafts from slipping through review', 'marketing asset approval assistant', 'Record campaign, asset version, reviewer, source notes, and approval status without publishing claims or bypassing review.'],
+  ['construction-subcontractor-documents', 'Construction subcontractor documents: surface missing setup records', 'construction subcontractor document assistant', 'Track vendor, project, document type, received date, and review owner while site, safety, and contract decisions stay with qualified staff.'],
+  ['customer-renewal-preparation', 'Customer renewal preparation: assemble account context before a conversation', 'customer renewal preparation assistant', 'Summarize approved activity, open issues, renewal date, and questions without negotiating terms or promising continuation.'],
+  ['restaurant-reservation-inquiries', 'Restaurant reservation inquiry support: keep special requests reviewable', 'restaurant reservation inquiry assistant', 'Record date, party size, contact preference, accessibility or dietary questions, and confirmation state without promising a table.'],
+  ['professional-services-source-notes', 'Professional services source notes: make research checkable before delivery', 'professional services research assistant', 'Collect source links, claim notes, client questions, and open assumptions while the professional validates conclusions and recommendations.'],
+  ['membership-cancellation-requests', 'Membership cancellation requests: route account changes with a clear audit trail', 'membership cancellation assistant', 'Track member request, account reference, received date, policy question, and owner action without making exceptions or changing status.'],
+  ['field-service-photo-intake', 'Field service photo intake: organize job evidence for local review', 'field service photo intake assistant', 'Index job references, image dates, requested context, and missing files while technicians and managers retain diagnosis and scope decisions.'],
+  ['hiring-interview-feedback', 'Hiring interview feedback administration: standardize notes before a hiring review', 'hiring interview feedback assistant', 'Collect completed feedback forms, missing responses, interview stage, and follow-up owner without ranking candidates or making a hiring decision.'],
+  ['home-insurance-claim-intake', 'Home insurance claim intake: organize submitted details before review', 'home insurance claim intake assistant', 'Track claim reference, incident date, document type, and missing information while coverage and settlement decisions remain with the insurer or authorized professional.'],
 ] as const;
 
 // Authenticated August 11 publication records. Each new route has its own
@@ -932,6 +954,33 @@ const aug14BlogPublicationRecords = [
   { slug: 'community-theater-ticket-questions-assistant-guide-2026', published: '2026-08-14' },
 ] as const;
 
+// Authenticated August 17 publication records. Each new Blog route binds the
+// campaign date in its own literal source record for auditability.
+const aug17BlogPublicationRecords = [
+  { slug: 'real-estate-lead-routing-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'clinic-referral-coordination-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'home-service-callback-queue-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'law-firm-consultation-intake-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'ecommerce-order-exception-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'agency-client-approval-tracker-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'bookkeeping-missing-document-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'property-maintenance-triage-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'nonprofit-volunteer-coordination-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'executive-meeting-briefs-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'customer-onboarding-checklist-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'vendor-invoice-intake-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'course-support-inbox-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'marketing-asset-approval-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'construction-subcontractor-documents-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'customer-renewal-preparation-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'restaurant-reservation-inquiries-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'professional-services-source-notes-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'membership-cancellation-requests-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'field-service-photo-intake-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'hiring-interview-feedback-assistant-guide-2026', published: '2026-08-17' },
+  { slug: 'home-insurance-claim-intake-assistant-guide-2026', published: '2026-08-17' },
+] as const;
+
 // Authenticated August 10 publication records. Keep one explicit source record
 // per accepted route so Git history can prove each slug/date pair independently.
 const aug10BlogPublicationRecords = [
@@ -963,6 +1012,7 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = '
   const topic = title.split(':')[0];
   const articleSlug = `${slug}-assistant-guide-2026`;
   const isAug14 = aug14BlogPublicationRecords.some((record) => record.slug === articleSlug);
+  const isAug17 = aug17BlogPublicationRecords.some((record) => record.slug === articleSlug);
   const isAug13 = aug13BlogPublicationRecords.some((record) => record.slug === articleSlug);
   const internalA = '/blog/local-vs-remote-administrative-assistant-benchmark-2026';
   const internalB = '/blog/virtual-assistant-security-checklist';
@@ -979,11 +1029,11 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = '
   return {
     slug: `${slug}-assistant-guide-2026`, mainKeyword, title,
     excerpt: `Plan ${topic.toLowerCase()} around one repeatable online workflow, clear access limits, and a named review owner.`,
-    published: aug14BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug13BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug11BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug10BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || '2026-08-07', richPublished: true, minutes: 8,
+    published: aug17BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug14BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug13BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug11BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || aug10BlogPublicationRecords.find((record) => record.slug === articleSlug)?.published || '2026-08-07', richPublished: true, minutes: 8,
     image: '/images/calendar-assistant.jpg', imageAlt: `${topic} planning at a remote work desk`,
     takeaways: ['Start with one repeatable online task lane.', 'Write the expected output and stop rule before access is granted.', 'Review early batches and keep sensitive decisions with the owner.', 'A remote role does not cover physical local work.'],
     detail: {
-      revision: `${isAug14 ? '2026-08-14' : isAug13 ? '2026-08-13' : '2026-08-10'}-${slug}-r1`,
+      revision: `${isAug17 ? '2026-08-17' : isAug14 ? '2026-08-14' : isAug13 ? '2026-08-13' : '2026-08-10'}-${slug}-r1`,
       directAnswer: [`${topic} can fit a Philippines-based remote assistant when the work is digital, repeatable, and easy for a named owner to review.`, `The safest first brief names the output, source material, tool, deadline, examples, access limit, and escalation rule. Start with a narrow batch and expand only after the owner can see the quality.`],
       bodyLinks: [{ href: internalA, label: 'compare local and remote task fit' }, { href: internalB, label: 'set access rules before handoff' }, { href: source, label: 'read CISA multifactor guidance' }],
       sections: [0,1,2,3,4,5,6].map((n) => ({ heading: [`Name the output before the role`, `Separate preparation from approval`, `Write the first handoff`, `Review a small batch`, `Protect the accounts`, `Keep local work local`, `Change one rule at a time`][n], paragraphs: [paragraphs[n], paragraphs[(n + 1) % paragraphs.length]] })),

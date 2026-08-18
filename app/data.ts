@@ -1049,7 +1049,9 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = '
   };
 });
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts].sort((a, b) => b.published.localeCompare(a.published));
+import { aug18BlogPosts } from './aug18-blog';
+
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts].sort((a, b) => b.published.localeCompare(a.published));
 
 export const routes = [
   '/',

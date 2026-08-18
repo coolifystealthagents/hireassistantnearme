@@ -92,6 +92,7 @@ function makePost(topic: Aug18Topic) {
     title: topic.title,
     excerpt: `Plan ${topic.keyword} around a defined work unit, source-linked records, and an approval boundary that keeps judgment with the accountable team.`,
     published: topic.published,
+    sourceBody: `${topic.sourceBody} For this ${topic.keyword} lane, the route-specific source record should also preserve the operational questions that a reviewer will ask at the end of the day. Confirm that the ${topic.unit} can be located from the approved source, that ${topic.inputs} are recorded without invented values, and that the result remains ${topic.output}. The reviewer should compare the record with the original material, mark any correction, and keep ${topic.risk} visible as the stop condition. If the item cannot proceed, route it to ${topic.review} with the unresolved fact and the next requested action. Do not broaden the assignment into ${topic.boundary}. A short review note should capture what changed, what stayed unknown, and whether the process needs ${topic.decision}. Measure ${topic.measure}, then use those observations to improve the intake rule before adding adjacent work. This is a practical boundary for a Philippines-based remote assistant: organize the approved digital information, preserve traceability, and escalate the decision that belongs to the accountable owner.`,
     richPublished: true,
     minutes: 10,
     image: '/images/calendar-assistant.jpg',

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "contract": "fleet-authoring-2026-08-18-research-v1",
+  "targetDate": "2026-08-18",
+  "family": "research",
+  "entries": [
+    { "slug": "assistant-role-design-task-observability", "route": "/research/assistant-role-design-task-observability", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "remote-assistant-handoff-information-loss", "route": "/research/remote-assistant-handoff-information-loss", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "lead-follow-up-record-integrity", "route": "/research/lead-follow-up-record-integrity", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "small-business-research-brief-evidence-scope", "route": "/research/small-business-research-brief-evidence-scope", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "healthcare-scheduling-minimum-necessary-access", "route": "/research/healthcare-scheduling-minimum-necessary-access", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "real-estate-transaction-document-status", "route": "/research/real-estate-transaction-document-status", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "bookkeeping-source-document-completeness", "route": "/research/bookkeeping-source-document-completeness", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "ecommerce-order-exception-evidence", "route": "/research/ecommerce-order-exception-evidence", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "home-services-dispatch-information-boundary", "route": "/research/home-services-dispatch-information-boundary", "sourcePaths": ["app/research-aug18.ts"] },
+    { "slug": "legal-intake-record-preservation", "route": "/research/legal-intake-record-preservation", "sourcePaths": ["app/research-aug18.ts"] }
+  ]
+}

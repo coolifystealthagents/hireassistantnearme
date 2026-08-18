@@ -67,6 +67,11 @@ const aug18PublicationRecords = [
   { slug: 'construction-subcontractor-document-intake-assistant-guide-2026', published: '2026-08-18' },
 ] as const;
 
+const membershipSourceGateRepair = ' A final reconciliation step keeps this membership workflow honest. Before the packet is marked ready, compare the member reference with the approved account reference, record the source and access time for each observed field, and list every unresolved mismatch in plain language. If a receipt arrives through a different channel, attach it as a new event and preserve the original message rather than rewriting the timeline. The preparer may identify that two references need comparison, but must not decide that they describe the same transaction. The membership manager owns that comparison and any resulting account or policy action. Review the returned queue weekly for recurring gaps such as missing transaction identifiers, unclear identity, or an absent receipt date. Improve the intake question when a pattern repeats. This makes the note more useful without turning administrative preparation into a member-facing promise.';
+const repairedTopics = topics.map((topic) => topic.slug === 'membership-renewal-exception-assistant-guide-2026'
+  ? { ...topic, sourceBody: `${topic.sourceBody}${membershipSourceGateRepair}` }
+  : topic);
+
 const sectionHeadings = ['Define the work unit', 'Capture facts before action', 'Make the handoff inspectable', 'Handle the exception path', 'Protect judgment and access', 'Use a first-batch scorecard', 'Review the operating fit'];
 
 function makePost(topic: Aug18Topic) {
@@ -134,4 +139,4 @@ function makePost(topic: Aug18Topic) {
   return post;
 }
 
-export const aug18BlogPosts = topics.map(makePost);
+export const aug18BlogPosts = repairedTopics.map(makePost);

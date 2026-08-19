@@ -99,7 +99,7 @@ export default function Home() {
     <section className="section reading-section">
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/blog">View all guides <span>↗</span></a></div>
-        <div className="reading-grid">{blogPosts.slice(0,3).map((post, index) => <a href={`/blog/${post.slug}`} key={post.slug}><span>{String(index + 1).padStart(2, '0')} · {post.minutes} min</span><h3>{post.title}</h3><p>{post.excerpt}</p></a>)}</div>
+        <div className="reading-grid">{blogPosts.slice(0,3).map((post, index) => <a href={`/blog/${post.slug}`} key={post.slug}><span>{String(index + 1).padStart(2, '0')} · {(post as { minutes?: number }).minutes || 10} min</span><h3>{post.title}</h3><p>{post.excerpt}</p></a>)}</div>
       </div>
     </section>
 

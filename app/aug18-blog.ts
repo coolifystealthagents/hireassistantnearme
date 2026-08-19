@@ -25,6 +25,10 @@ export const aug18BlogPosts = [
       ],
       "bodyLinks": [
         {
+          "href": "/services/real-estate-assistance",
+          "label": "plan a Philippines-based real estate assistance role"
+        },
+        {
           "href": "/blog/virtual-assistant-security-checklist",
           "label": "review the remote assistant security checklist"
         },

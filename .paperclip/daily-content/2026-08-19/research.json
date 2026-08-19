@@ -1,0 +1,12 @@
+[
+  {"route":"/research/daily-research-brief-source-traceability","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/assistant-calendar-booking-conflict-evidence","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/remote-assistant-customer-status-source-match","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/remote-assistant-inbox-label-taxonomy","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/assistant-research-calendar-publishing-cutoff","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/remote-legal-intake-original-message-preservation","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/healthcare-scheduling-minimum-necessary-fields","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/bookkeeping-assistant-source-document-completeness","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/home-services-dispatch-address-scope","sourcePaths":["app/research-aug19.ts"]},
+  {"route":"/research/research-assistant-source-definition-ledger","sourcePaths":["app/research-aug19.ts"]}
+]

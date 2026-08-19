@@ -22,6 +22,7 @@ export type ResearchPost = {
   related: readonly { label: string; href: string }[];
 };
 import { aug18ResearchPosts } from './research-aug18';
+import { aug19ResearchPosts } from './research-aug19';
 
 export const fleetServices: readonly FleetService[] = [
   { slug: 'executive-assistance', title: 'Executive Assistance', desc: 'Hire a Filipino executive assistant for calendar, inbox, meeting, and follow-up work with clear access limits and daily review.', tasks: ['Sort the executive inbox and flag messages that need a personal reply', 'Prepare meeting briefs, agendas, notes, and follow-up lists', 'Coordinate calendars, travel research, and routine document updates'], controls: ['Keep final replies, purchases, and business promises with the executive', 'Use a separate account with only the calendar, inbox, and files the role needs', 'Set a same-day escalation rule for urgent, private, or unclear requests'], firstWeek: ['Choose the hours that overlap with your workday and confirm the Philippines-based schedule', 'Practice inbox labels and meeting prep with past examples', 'Review each completed batch before adding travel or document work'], image: '/images/assistant-maya.jpg', imageAlt: 'Friendly executive assistant role illustration at a desk' },
@@ -415,10 +416,19 @@ export const researchPosts: readonly ResearchPost[] = [
   }))
   ,...aug17ResearchPosts
   ,...aug18ResearchPosts
+  ,...aug19ResearchPosts
   // The validator retains this source-level guard: ].sort((a, b) => b.published.localeCompare(a.published));
 ].sort((a, b) => {
   const dateOrder = b.published.localeCompare(a.published);
   if (dateOrder !== 0) return dateOrder;
+  const aug19Order = aug19ResearchPosts.findIndex((post) => post.slug === a.slug) - aug19ResearchPosts.findIndex((post) => post.slug === b.slug);
+  if (aug19Order !== 0) {
+    const aIsAug19 = aug19ResearchPosts.some((post) => post.slug === a.slug);
+    const bIsAug19 = aug19ResearchPosts.some((post) => post.slug === b.slug);
+    if (aIsAug19 && bIsAug19) return aug19Order;
+    if (aIsAug19) return -1;
+    if (bIsAug19) return 1;
+  }
   const aug18Order = aug18ResearchPosts.findIndex((post) => post.slug === a.slug) - aug18ResearchPosts.findIndex((post) => post.slug === b.slug);
   if (aug18Order !== 0) {
     const aIsAug18 = aug18ResearchPosts.some((post) => post.slug === a.slug);

@@ -1,0 +1,28 @@
+{
+  "campaignDate": "2026-08-19",
+  "family": "blog",
+  "entries": [
+    {"route":"/blog/real-estate-lead-routing-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/clinic-appointment-prep-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/home-service-job-follow-up-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/law-firm-intake-indexing-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/ecommerce-return-queue-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/agency-client-brief-prep-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/coach-session-scheduling-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/bookkeeping-document-chase-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/property-management-maintenance-intake-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/recruiting-interview-coordination-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/saas-customer-onboarding-notes-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/nonprofit-donor-record-cleanup-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/restaurant-catering-inquiry-log-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/insurance-office-document-index-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/architect-project-file-prep-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/manufacturing-supplier-follow-up-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/education-enrollment-question-log-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/travel-advisor-research-packet-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/cybersecurity-vendor-questionnaire-index-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/membership-renewal-message-log-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/construction-subcontractor-doc-chase-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]},
+    {"route":"/blog/professional-services-meeting-brief-assistant-guide-2026","sourcePaths":["app/aug19-blog.ts"]}
+  ]
+}

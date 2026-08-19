@@ -1050,9 +1050,9 @@ const dailyBlogPosts = dailyBlogTopics.map(([slug, title, mainKeyword, angle = '
 });
 
 import { aug18BlogPosts } from './aug18-blog';
-import { aug19BlogRepairPosts } from './aug19-blog-repair';
+import { aug19BlogFinalPosts } from './aug19-blog-final';
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogRepairPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
 
 export const routes = [
   '/',

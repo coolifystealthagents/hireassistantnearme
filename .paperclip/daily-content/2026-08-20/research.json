@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-08-20",
+  "family": "research",
+  "entries": [
+    { "route": "/research/daily-research-source-hierarchy", "sourcePaths": ["app/research-aug20.ts"], "imagePath": "public/images/aug20-research-source-ledger.png", "promptReceipt": ".paperclip/daily-content/2026-08-20/image-prompts/daily-research-source-hierarchy.txt" },
+    { "route": "/research/calendar-handoff-decision-latency", "sourcePaths": ["app/research-aug20.ts"], "imagePath": "public/images/aug20-research-calendar-handoff.png", "promptReceipt": ".paperclip/daily-content/2026-08-20/image-prompts/calendar-handoff-decision-latency.txt" },
+    { "route": "/research/crm-duplicate-provenance-review", "sourcePaths": ["app/research-aug20.ts"], "imagePath": "public/images/aug20-research-record-provenance.png", "promptReceipt": ".paperclip/daily-content/2026-08-20/image-prompts/crm-duplicate-provenance-review.txt" },
+    { "route": "/research/home-services-dispatch-information-boundary", "sourcePaths": ["app/research-aug20.ts"], "imagePath": "public/images/aug20-research-dispatch-boundary.png", "promptReceipt": ".paperclip/daily-content/2026-08-20/image-prompts/home-services-dispatch-information-boundary.txt" },
+    { "route": "/research/assistant-offboarding-knowledge-continuity", "sourcePaths": ["app/research-aug20.ts"], "imagePath": "public/images/aug20-research-offboarding.png", "promptReceipt": ".paperclip/daily-content/2026-08-20/image-prompts/assistant-offboarding-knowledge-continuity.txt" }
+  ]
+}

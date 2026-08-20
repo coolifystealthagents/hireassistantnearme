@@ -1,0 +1,1 @@
+Private verification evidence for the August 20, 2026 Blog batch. The image-prompts.txt file records the Gemini prompt used for each route-specific hero asset. These files are not imported by the application.

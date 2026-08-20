@@ -1,0 +1,18 @@
+{
+  "campaignDate": "2026-08-20",
+  "family": "blog",
+  "entries": [
+    {"slug":"owner-inbox-triage-without-unauthorized-replies","route":"/blog/owner-inbox-triage-without-unauthorized-replies","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-inbox-triage.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"calendar-conflict-preparation-for-remote-assistants","route":"/blog/calendar-conflict-preparation-for-remote-assistants","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-calendar-conflicts.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"crm-cleanup-evidence-before-record-merges","route":"/blog/crm-cleanup-evidence-before-record-merges","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-crm-cleanup.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"research-source-ledger-for-daily-content-routines","route":"/blog/research-source-ledger-for-daily-content-routines","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-source-ledger.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"customer-support-escalation-notes-for-small-teams","route":"/blog/customer-support-escalation-notes-for-small-teams","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-support-escalations.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"appointment-reminder-queues-with-clear-stop-rules","route":"/blog/appointment-reminder-queues-with-clear-stop-rules","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-reminder-queues.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"invoice-follow-up-records-before-finance-escalation","route":"/blog/invoice-follow-up-records-before-finance-escalation","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-invoice-followup.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"real-estate-listing-admin-source-checks","route":"/blog/real-estate-listing-admin-source-checks","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-listing-admin.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"ecommerce-order-exception-queues-for-remote-support","route":"/blog/ecommerce-order-exception-queues-for-remote-support","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-order-exceptions.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"meeting-notes-that-preserve-decisions-and-open-questions","route":"/blog/meeting-notes-that-preserve-decisions-and-open-questions","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-meeting-notes.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"vendor-onboarding-checklists-with-approval-boundaries","route":"/blog/vendor-onboarding-checklists-with-approval-boundaries","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-vendor-onboarding.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"},
+    {"slug":"content-calendar-handoffs-for-consistent-daily-publishing","route":"/blog/content-calendar-handoffs-for-consistent-daily-publishing","sourcePath":"app/aug20-blog.ts","imagePath":"public/images/aug20-blog-content-calendar.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts.txt"}
+  ]
+}

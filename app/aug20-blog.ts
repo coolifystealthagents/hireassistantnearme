@@ -53,8 +53,9 @@ function makePost(topic: Topic, index: number) {
     `At the daily review, inspect the oldest waiting item, one recently prepared item, and one exception. Confirm that every item has a source, a current status, and a next owner action. For ${topic.focus}, ${topic.signal}. If the same correction appears more than once, update one instruction and test it on a new sample before increasing volume. Keep the review small enough that the manager can read the evidence. A large unchecked queue hides the exact problem the handoff was meant to expose.`,
     `At the weekly review, ask whether a person who did not attend the original conversation could understand ${topic.artifact} from the record alone. If not, identify the missing source link, field definition, example, or ownership label. Keep changes to the role brief separate from changes to access. When the lane becomes reliable, expand only to an adjacent task with the same decision owner and similar risk. If the owner, evidence, or boundary changes, write a new lane instead of quietly broadening ${topic.focus}.`,
   ];
-  const sourceBody = [...paragraphs, ...sourceExpansion].join(' ');
-  const sections = sectionNames.map((heading, sectionIndex) => ({ heading, paragraphs: [paragraphs[(sectionIndex + index) % paragraphs.length], paragraphs[(sectionIndex + index + 4) % paragraphs.length]] }));
+  const articleParagraphs = [...paragraphs, ...sourceExpansion];
+  const sourceBody = articleParagraphs.join(' ');
+  const sections = sectionNames.map((heading, sectionIndex) => ({ heading, paragraphs: [articleParagraphs[(sectionIndex + index) % articleParagraphs.length], articleParagraphs[(sectionIndex + index + 4) % articleParagraphs.length], articleParagraphs[(sectionIndex + index + 8) % articleParagraphs.length]] }));
   return {
     slug: topic.slug, title: topic.title, mainKeyword: `${topic.focus} remote assistant`, excerpt: `A practical August 20, 2026 guide to ${topic.focus}, with a source-linked output, review path, and clear role boundary.`, published: topic.published, richPublished: true, minutes: 11, image: topic.image, imageAlt: topic.imageAlt,
     sourceBody, takeaways: [`Define ${topic.artifact}.`, `Keep source fact separate from owner decision.`, `Stop before ${topic.boundary}.`, `Review exceptions before expanding the lane.`],

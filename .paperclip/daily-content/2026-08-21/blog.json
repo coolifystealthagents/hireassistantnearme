@@ -1,0 +1,18 @@
+{
+  "campaignDate": "2026-08-21",
+  "family": "blog",
+  "entries": [
+    {"slug":"daily-content-briefs-for-remote-assistant-handoffs","route":"/blog/daily-content-briefs-for-remote-assistant-handoffs","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-content-briefs.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"research-reading-queues-with-explicit-evidence","route":"/blog/research-reading-queues-with-explicit-evidence","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-reading-queues.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"blog-fact-checking-lanes-for-remote-assistants","route":"/blog/blog-fact-checking-lanes-for-remote-assistants","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-fact-checking.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"editorial-calendar-repair-after-missed-deadlines","route":"/blog/editorial-calendar-repair-after-missed-deadlines","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-calendar-repair.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"source-notes-for-service-page-research","route":"/blog/source-notes-for-service-page-research","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-service-research.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"newsletter-draft-queues-with-approval-boundaries","route":"/blog/newsletter-draft-queues-with-approval-boundaries","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-newsletter-queues.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"competitor-research-ledgers-without-copying","route":"/blog/competitor-research-ledgers-without-copying","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-competitor-ledgers.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"interview-transcript-notes-for-editorial-research","route":"/blog/interview-transcript-notes-for-editorial-research","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-interview-notes.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"blog-update-audits-for-aging-guides","route":"/blog/blog-update-audits-for-aging-guides","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-update-audits.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"research-briefs-for-local-vs-remote-task-fit","route":"/blog/research-briefs-for-local-vs-remote-task-fit","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-task-fit.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"daily-publishing-checklists-with-stop-rules","route":"/blog/daily-publishing-checklists-with-stop-rules","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-publishing-checklists.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"},
+    {"slug":"role-briefs-for-research-and-blog-assistant-work","route":"/blog/role-briefs-for-research-and-blog-assistant-work","sourcePath":"app/aug21-blog.ts","imagePath":"public/images/aug21-blog-role-briefs.png","promptReceipt":".paperclip/daily-content/2026-08-21/image-prompts.txt"}
+  ]
+}

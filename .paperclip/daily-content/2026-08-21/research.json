@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-08-21",
+  "family": "research",
+  "entries": [
+    {"route":"/research/assistant-access-review-before-delegation","sourcePaths":["app/research-aug21.ts"],"imagePath":"public/images/aug21-research-evidence-map.png","promptReceipt":".paperclip/daily-content/2026-08-21/.prompts/assistant-access-review-before-delegation.txt"},
+    {"route":"/research/calendar-handoff-context-across-time-zones","sourcePaths":["app/research-aug21.ts"],"imagePath":"public/images/aug21-research-calendar-context.png","promptReceipt":".paperclip/daily-content/2026-08-21/.prompts/calendar-handoff-context-across-time-zones.txt"},
+    {"route":"/research/customer-follow-up-consent-and-source-history","sourcePaths":["app/research-aug21.ts"],"imagePath":"public/images/aug21-research-followup-consent.png","promptReceipt":".paperclip/daily-content/2026-08-21/.prompts/customer-follow-up-consent-and-source-history.txt"},
+    {"route":"/research/shared-records-lifecycle-for-remote-assistant-handoffs","sourcePaths":["app/research-aug21.ts"],"imagePath":"public/images/aug21-research-records-lifecycle.png","promptReceipt":".paperclip/daily-content/2026-08-21/.prompts/shared-records-lifecycle-for-remote-assistant-handoffs.txt"},
+    {"route":"/research/prepare-verify-decide-role-boundary-research","sourcePaths":["app/research-aug21.ts"],"imagePath":"public/images/aug21-research-role-boundary.png","promptReceipt":".paperclip/daily-content/2026-08-21/.prompts/prepare-verify-decide-role-boundary-research.txt"}
+  ]
+}

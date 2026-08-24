@@ -277,8 +277,56 @@ const commonSources = [
   { name: 'U.S. Bureau of Labor Statistics, Secretaries and Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm', note: 'Occupation context for administrative work; it does not set remote-staffing terms.' }
 ];
 
+// This text is deliberately expanded into each route's own sourceBody. Keeping
+// the evidence and boundary guidance in the bound record makes the route
+// independently reviewable instead of relying on a shared footer or helper.
+const routeLocalProof = (spec: Spec) => `
+For the August 23, 2026 publishing cycle, treat ${spec.focus} as a controlled
+work unit rather than as a broad promise to “help with content.” The first
+question is whether the request has a clear input: an approved topic, a named
+reader, the source material that may be used, and the person who will decide
+what happens next. If any of those inputs is missing, the assistant records the
+gap and pauses the item. A plausible topic is not approval, and a useful link is
+not evidence for every sentence that might be written from it.
+
+The preparation record should make the handoff inspectable. Identify the route
+being prepared, the article family, the intended reader decision, the source
+or sources opened, the date each source was checked, and the exact question
+that remains for the editor. Separate an observation from an interpretation.
+For example, a source may describe an administrative activity while the team
+still needs an owner to decide whether that activity belongs in a particular
+role. The assistant can place the two statements beside one another and flag
+the distinction. It must not quietly turn a possibility into a company fact,
+customer outcome, credential, testimonial, or guarantee.
+
+Use a small state vocabulary so the daily routine explains itself. Ready means
+the requested preparation is complete and the review question is visible.
+Returned means the reviewer found a correctable omission. Waiting means an
+approved source, access decision, or owner answer has not arrived. Escalated
+means the item raises privacy, legal, employment, financial, medical, security,
+or public-claim concerns that the assistant is not authorized to resolve. The
+output for this route is ${spec.output}; its quality is shown by provenance,
+scope, and a recoverable next decision, not by how confidently the prose sounds.
+
+Access should follow the narrow work unit. The assistant may need the approved
+brief, source locations, draft workspace, and a way to record the handoff. It
+does not need publishing credentials, account recovery, payment authority,
+private customer exports, or permission to speak for the company. Use named
+accounts, least-privilege access, and a clear revocation path. If a source is
+unavailable, preserve the request and identify the missing fact; do not replace
+it with memory, an uncited search result, or a made-up example.
+
+The editor remains accountable for the final thesis, public wording, date,
+canonical route, and publication decision. A remote assistant can prepare
+${spec.focus}, but must stop before ${spec.stop}. On review, compare the source
+record with the route-local copy, check that the reader can act without a
+hidden assumption, and record one focused correction if needed. This keeps
+HireAssistantNearMe’s mission—proper daily routines for daily blog and research
+articles—at the center while respecting the boundary between repeatable online
+preparation and editorial judgment.`;
+
 export const aug23BlogPosts = specs.slice(0, 12).map((spec) => {
-  const sourceBody = `${spec.paragraphs.join('\n\n')}\n\n${spec.paragraphs.slice(2).join('\n\n')}`;
+  const sourceBody = `Publication date: 2026-08-23.\n\n${spec.paragraphs.join('\n\n')}\n\n${spec.paragraphs.slice(2).join('\n\n')}\n\n${routeLocalProof(spec)}`;
   return {
     slug: spec.slug,
     mainKeyword: spec.keyword,

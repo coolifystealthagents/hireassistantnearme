@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-08-23",
+  "family": "research",
+  "entries": [
+    {"route":"/research/daily-article-question-selection-study","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-question-selection.png"},
+    {"route":"/research/research-claim-provenance-for-hiring-guides","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-claim-provenance.png"},
+    {"route":"/research/daily-research-handoff-time-zone-review","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-timezone-handoff.png"},
+    {"route":"/research/source-scope-limits-daily-research","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-source-scope.png"},
+    {"route":"/research/research-editor-review-boundary-study","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-editor-boundary.png"}
+  ]
+}

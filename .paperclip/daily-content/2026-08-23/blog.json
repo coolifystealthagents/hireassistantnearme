@@ -1,0 +1,19 @@
+{
+  "campaignDate": "2026-08-23",
+  "family": "blog",
+  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used and no stock or retained image substituted.",
+  "entries": [
+    {"route":"/blog/daily-editorial-queue-for-remote-assistant-publishing","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/research-source-intake-for-filipino-remote-assistant","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/article-brief-handoff-for-remote-content-assistants","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/content-calendar-repair-workflow-for-small-teams","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/fact-checking-checklist-for-daily-hiring-articles","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/blog-image-briefs-without-stock-substitution","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/content-refresh-triage-for-remote-assistant-teams","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/editorial-escalation-rules-for-daily-blog-work","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/internal-link-audit-for-assistant-hiring-guides","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/publication-readiness-checklist-for-remote-content-support","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/topic-queue-deduplication-for-daily-research","sourcePaths":["app/aug23-blog.ts"]},
+    {"route":"/blog/source-ledger-maintenance-for-hiring-content","sourcePaths":["app/aug23-blog.ts"]}
+  ]
+}

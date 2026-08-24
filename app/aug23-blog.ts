@@ -3,6 +3,8 @@
 
 type Spec = {
   slug: string;
+  sourceDate: '2026-08-23';
+  routeRepair?: string;
   title: string;
   keyword: string;
   excerpt: string;
@@ -16,6 +18,8 @@ type Spec = {
 const specs: Spec[] = [
   {
     slug: 'daily-editorial-queue-for-remote-assistant-publishing',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded daily queue repair. The assistant checks the approved question, intended reader, source packet, route family, visible date, review owner, and next state. It records missing evidence instead of guessing, separates a source fact from an observation, and leaves the final claim with the editor. A queue row is ready only when another reviewer can open the cited material and understand what decision is requested. Returned work names the precise omission; waiting work names the missing source or approval; escalated work preserves the risk and sends it to the accountable owner. The assistant may prepare a source-linked row, compare duplicate angles, and flag a date mismatch. It may not choose a sensitive interpretation, invent a company detail, change a committed publication date, or publish without approval. Review one ordinary row, one returned row, and one escalation each day. Use the result to repair the intake fields and keep access limited to the approved brief, sources, and draft workspace. This route therefore supports HireAssistantNearMe’s proper daily blog and research routine while keeping editorial judgment, canonical route control, and publication approval with the named owner.',
     title: 'A daily editorial queue for a remote assistant publishing routine',
     keyword: 'daily editorial queue remote assistant',
     excerpt: 'Turn a daily blog queue into visible, source-linked work that a Philippines-based remote assistant can prepare without taking editorial ownership.',
@@ -33,6 +37,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'research-source-intake-for-filipino-remote-assistant',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded research-intake repair. The assistant starts with an approved question and prepares a source card containing publisher, title, URL, publication date, access date, relevant passage, proposed use, and limitation. It can open approved pages, compare evidence, preserve conflicting claims, and list unanswered questions. It cannot decide which authority wins, widen a source population, fill a missing value, or turn context into a hiring promise. Methodology is the selection and comparison process; evidence analysis explains what each source actually supports; limitations identify scope, date, authority, and access gaps; the conclusion states what the reviewer may reasonably decide next. When sources conflict, retain both records and escalate the exact dispute. Reviewers should open the URLs, check the cited passages, and confirm that a source answers the assigned question. Keep private customer material and final publication authority outside this lane. This route supports HireAssistantNearMe’s daily blog and research articles with traceable preparation, honest uncertainty, and clear role boundaries. The editor or qualified owner remains responsible for interpretation, public wording, sensitive hiring questions, and the final publication decision.',
     title: 'Research source intake that a Filipino remote assistant can prepare safely',
     keyword: 'research source intake Filipino remote assistant',
     excerpt: 'Create a source intake lane for daily research articles with traceable evidence, clear gaps, and an owner-controlled escalation path.',
@@ -50,6 +56,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'article-brief-handoff-for-remote-content-assistants',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded article-brief repair. The brief names one reader, one decision, one working question, the evidence needed, allowed examples, unknowns, internal destination, and definition of done. A remote content assistant can narrow an approved topic, collect sources, draft an outline, label a hypothetical example, and ask a focused question. It cannot invent a company history, credential, testimonial, result, or location, and it cannot approve the thesis. The handoff should distinguish sourced fact, editorial advice, and an open assumption. A reviewer checks that each proposed answer is supported, that the audience is clear, and that the route belongs in the correct family. Record a returned brief with the exact field that failed rather than asking for generic care. Keep sensitive, legal, financial, privacy, and employment questions with the named owner. This route supports HireAssistantNearMe’s proper daily blog routine on its literal campaign date while preserving the editor’s authority over public claims, structure, canonical identity, and publication approval. The smallest useful brief is one another person can inspect without reconstructing a private conversation.',
     title: 'The article-brief handoff for remote content assistants',
     keyword: 'article brief handoff remote content assistant',
     excerpt: 'Use a practical brief to move a daily article from an approved idea to an editor-ready outline while preserving role boundaries.',
@@ -67,6 +75,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'content-calendar-repair-workflow-for-small-teams',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded calendar repair. The assistant compares the existing row with its approved brief, route record, source state, owner, and publication fields. Proposed date, approved date, review date, and visible publication date must retain their separate meanings. The assistant can flag a duplicate question, stale owner, missing route, or inconsistent state and prepare a reconciled row. It cannot erase history, re-date an accepted article to create a new count, merge a topic, or move a committed publication without approval. A repair note states what was observed, which evidence was opened, the smallest safe correction, and the owner action still required. Review one ordinary row, one duplicate, and one date conflict. If the same omission recurs, repair the schema or intake instruction rather than blaming the preparer. This route keeps HireAssistantNearMe’s daily blog and research routine reviewable, truthful, and centered on the reader’s decision. Final calendar authority, public date, route identity, and editorial judgment remain with the named owner, while the assistant works inside the approved online preparation lane.',
     title: 'A content-calendar repair workflow for small teams',
     keyword: 'content calendar repair workflow assistant',
     excerpt: 'Repair missing dates, duplicate ideas, and unclear owners in a daily publishing calendar without letting an assistant make editorial decisions.',
@@ -84,6 +94,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'fact-checking-checklist-for-daily-hiring-articles',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded fact-check repair. The assistant breaks the article into checkable claims and records the exact source, passage, publisher, date, population, geography, period, and limitation. It separates a sourced fact from editorial advice and from an approved company statement. It can flag an unsupported sentence, compare a claim with primary guidance, and suggest narrower wording. It cannot turn a survey measure into a universal rate, convert a role description into a guaranteed result, or decide that an unsupported claim is safe. Privacy, employment, legal, health, financial, and sensitive hiring language is escalated with the sentence and evidence attached. The editor reviews high-risk claims first and records whether each is supported, narrowed, removed, or waiting. Keep the ledger tied to this route so another reviewer can reproduce the check. This route supports HireAssistantNearMe’s proper daily hiring articles on the literal campaign date while keeping interpretation, company representation, and publication approval with the accountable owner. A clear correction improves the checklist and gives the next assistant a concrete example of the required boundary.',
     title: 'A fact-checking checklist for daily hiring articles',
     keyword: 'fact checking checklist hiring articles assistant',
     excerpt: 'Give a remote assistant a bounded fact-checking checklist for hiring content while keeping interpretation, company claims, and final approval with the editor.',
@@ -101,6 +113,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'blog-image-briefs-without-stock-substitution',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded image-brief repair. The assistant describes the reader decision, visual job, audience, composition, dimensions, alt-text direction, asset status, and approval owner. It can compare an approved concept with the article and flag a mismatch. It cannot select uncertain stock, scrape a protected image, reuse an unrelated route image while calling it new, or show a hypothetical person, office, location, credential, or result as company fact. Review the visual beside the prose and check whether its setting supports the article’s actual claim. Alt text should describe the meaningful relationship, not a filename or decorative colors. If no asset is available, keep the text clear, record a waiting state, and let the owner decide whether an approved visual is added. Track briefed, returned, approved, and fallback states. This route supports HireAssistantNearMe’s daily blog routine on its literal campaign date while keeping image rights, accessibility, brand representation, and public approval with the owner. A missing image is a visible workflow state, not permission to substitute an asset that changes the reader’s understanding.',
     title: 'Writing useful blog image briefs without stock substitution',
     keyword: 'blog image brief remote assistant',
     excerpt: 'Plan article visuals around the reader’s decision and accessibility needs while keeping image approval, rights, and brand representation with the owner.',
@@ -118,6 +132,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'content-refresh-triage-for-remote-assistant-teams',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded refresh-triage repair. The assistant compares cited sources, dates, headings, links, route metadata, and approved role boundaries, then records evidence for the smallest proposed change. Distinguish source decay, route decay, editorial decay, and audience confusion. Age or traffic alone does not prove that an article is wrong. A remote assistant can identify a changed source, broken destination, unclear example, or duplicate angle. It cannot attach a new thesis to a routine link fix, overwrite an accepted route, re-date a published record, or decide whether a sensitive claim remains safe. The editor chooses whether to revise, annotate, redirect, or leave the article unchanged. Sample an old article, a changed source, and a suspected duplicate, and record what remains uncertain. This route supports HireAssistantNearMe’s proper daily blog and research routines on its literal campaign date by turning refresh work into a reviewable recommendation. Preserve the original identity and route-local evidence so another reviewer can understand why the item was flagged and who owns the next decision.',
     title: 'Content-refresh triage for remote assistant teams',
     keyword: 'content refresh triage remote assistant',
     excerpt: 'Prioritize updates to hiring and research articles with evidence of decay, not arbitrary age labels or traffic assumptions.',
@@ -135,6 +151,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'editorial-escalation-rules-for-daily-blog-work',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded escalation repair. An escalation note states the trigger, exact sentence or source, evidence checked, risk, question, requested decision, and owner. The assistant can pause a draft, preserve context, and prepare a neutral comparison. It cannot resolve a legal, privacy, employment, financial, medical, security, or company-representation question because the queue is busy. Ready, returned, waiting, and escalated states make the next action visible. Review one ordinary handoff and one sensitive handoff to confirm that the receiving owner can act without reconstructing private messages. Do not hide an unresolved claim in a footer or shared note. This route supports HireAssistantNearMe’s proper daily blog and research routine on its literal campaign date while keeping judgment with the accountable owner. A good escalation is specific enough to reduce delay and narrow enough to avoid accidental delegation. When the owner answers, record the decision in the route’s review trail and repair the instruction if the same trigger is likely to recur.',
     title: 'Editorial escalation rules for daily blog work',
     keyword: 'editorial escalation rules assistant',
     excerpt: 'Give a remote assistant clear stop rules for sensitive, uncertain, or high-consequence blog work so the daily queue keeps moving safely.',
@@ -152,6 +170,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'internal-link-audit-for-assistant-hiring-guides',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded internal-link audit repair. The assistant opens the source and destination and records route, anchor, purpose, family, status, and mismatch. It can identify a broken destination, circular link, misleading anchor, or Blog-to-Research transition. It cannot invent a missing page, substitute a nearby route without review, turn navigation into a pressured sales path, or change an article’s promise. Check one valid link, one broken link, one family transition, and one link that should be removed. Keep research identifiable as research, services identifiable as services, and public guidance connected to the sentence it supports. This route supports HireAssistantNearMe’s daily blog and research navigation on its literal campaign date with a reviewable route map. If a destination is absent, preserve the gap and send the owner the exact question. The editor decides whether the sentence, destination, family, or public call to action should change, while the assistant keeps the audit evidence complete and easy to inspect.',
     title: 'An internal-link audit for assistant hiring guides',
     keyword: 'internal link audit assistant hiring guides',
     excerpt: 'Help a remote assistant audit whether each hiring article points readers to the next relevant decision without creating unsupported claims or circular navigation.',
@@ -169,6 +189,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'publication-readiness-checklist-for-remote-content-support',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded publication-readiness repair. The record checks approved topic, distinct route, source trail, substantive word count, visible date, structured date, image state, internal links, public-boundary checks, and named reviewer. The assistant can collect evidence and mark pass, fail, waiting, or escalated. It cannot declare an unresolved article ready, approve a sensitive claim, or repair a missing source by copying from a neighboring record. The editor checks failed fields and records the final decision. Sample one passing article, one returned article, and one waiting for an asset. If a defect repeats, improve the checklist or validation rule rather than relying on memory. This route supports HireAssistantNearMe’s proper daily blog and research mission on its literal campaign date while leaving public wording, canonical identity, and publication approval with the owner. Readiness is useful because another reviewer can reproduce it; it is not a promise about traffic, revenue, customer satisfaction, or hiring outcome.',
     title: 'A publication-readiness checklist for remote content support',
     keyword: 'publication readiness checklist remote content support',
     excerpt: 'Use a final readiness checklist that a remote assistant can prepare while the editor retains control of claims, dates, routes, and publication approval.',
@@ -186,6 +208,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'topic-queue-deduplication-for-daily-research',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded topic-deduplication repair. The assistant compares reader decision, audience, question, evidence set, structure, expected output, and family rather than only shared nouns. It can map overlap and explain a meaningful distinction. It cannot merge, reject, or re-date a topic without editorial approval. Preserve different questions, such as a practical Blog workflow and a Research evidence review, even when their titles share terms. When two proposals rely on the same narrow source and answer the same question, flag the overlap and offer options: keep distinct with a reason, combine under a newly approved question, or hold one. Track the reason for each queue decision so repeated duplication improves the intake form. This route supports HireAssistantNearMe’s proper daily research routine on its literal campaign date while keeping the final slate, thesis, route identity, and publication choice with the editor. The preparation is successful when another reviewer can see where the proposals overlap, where they differ, and which decision remains open.',
     title: 'Topic-queue deduplication for daily research articles',
     keyword: 'topic queue deduplication research assistant',
     excerpt: 'Compare proposed research topics by reader decision, evidence, and structure so a remote assistant can surface overlap without deciding the editorial slate.',
@@ -203,6 +227,8 @@ const specs: Spec[] = [
   },
   {
     slug: 'source-ledger-maintenance-for-hiring-content',
+    sourceDate: '2026-08-23',
+    routeRepair: 'On August 23, 2026, this route records a bounded source-ledger repair. The assistant maintains title, publisher, URL, relevant section, publication date, access date, supported claim, limitation, freshness state, and next review. It can open an approved source, note a visible update, and flag a changed scope. It cannot certify authority without checking, replace an older source merely because a newer page exists, or turn a benchmark into a universal promise. A source may be authoritative for one claim and unsuitable for another, so the supported sentence stays beside its limitation. Review newly added, recently checked, flagged, and retired rows. When a source is blocked, mark waiting rather than substituting an uncited summary. This route supports HireAssistantNearMe’s proper daily blog and research routines on its literal campaign date while keeping interpretation, certification, and public use with the owner. Preserve retirement reasons and affected routes so the next reviewer can understand what changed and whether an article needs a focused update.',
     title: 'Source-ledger maintenance for hiring content',
     keyword: 'source ledger maintenance hiring content assistant',
     excerpt: 'Maintain a compact source ledger for daily hiring content so editors can see provenance, freshness, limits, and the next review date.',
@@ -220,6 +246,7 @@ const specs: Spec[] = [
   },
   {
     slug: 'daily-publishing-handoff-across-time-zones',
+    sourceDate: '2026-08-23',
     title: 'A daily publishing handoff across time zones',
     keyword: 'daily publishing handoff time zones assistant',
     excerpt: 'Coordinate a Philippines-based remote assistant and a local editor with explicit cutoffs, date fields, and exception ownership.',
@@ -237,6 +264,7 @@ const specs: Spec[] = [
   },
   {
     slug: 'article-quality-scorecard-for-assistant-prepared-drafts',
+    sourceDate: '2026-08-23',
     title: 'An article-quality scorecard for assistant-prepared drafts',
     keyword: 'article quality scorecard assistant prepared drafts',
     excerpt: 'Build a narrow quality scorecard for assistant-prepared drafts that measures reviewable behaviors instead of pretending to measure business results.',
@@ -254,6 +282,7 @@ const specs: Spec[] = [
   },
   {
     slug: 'editorial-ownership-map-for-philippines-remote-support',
+    sourceDate: '2026-08-23',
     title: 'An editorial ownership map for Philippines-based remote support',
     keyword: 'editorial ownership map Philippines remote support',
     excerpt: 'Map preparation, review, approval, and escalation so a Philippines-based remote assistant can support daily content without absorbing the editor’s authority.',
@@ -358,7 +387,7 @@ early, corrections are specific, and the person accountable for publication can
 make the final decision with the relevant context in view.`;
 
 export const aug23BlogPosts = specs.slice(0, 12).map((spec) => {
-  const sourceBody = `Publication date: 2026-08-23.\n\n${spec.paragraphs.join('\n\n')}\n\n${spec.paragraphs.slice(2).join('\n\n')}\n\n${routeLocalProof(spec)}`;
+  const sourceBody = `Publication date: ${spec.sourceDate}.\n\n${spec.paragraphs.join('\n\n')}\n\n${spec.routeRepair || ''}\n\n${spec.paragraphs.slice(2).join('\n\n')}\n\n${routeLocalProof(spec)}`;
   return {
     slug: spec.slug,
     mainKeyword: spec.keyword,

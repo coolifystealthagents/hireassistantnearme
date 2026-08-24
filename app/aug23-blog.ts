@@ -325,6 +325,38 @@ HireAssistantNearMe’s mission—proper daily routines for daily blog and resea
 articles—at the center while respecting the boundary between repeatable online
 preparation and editorial judgment.`;
 
+const publicArticleExtension = (spec: Spec) => `On August 23, 2026, ${spec.focus}
+is most useful when it helps a small team make one daily publishing decision easier
+to inspect. Start with the reader’s immediate problem, then name the information
+that would let that reader take a sensible next step. A person considering a
+Philippines-based remote assistant may need to distinguish preparation from
+approval, routine online support from local presence, and a clear handoff from a
+promise about results. An article should make those distinctions practical. It
+can show a sample queue row, brief, ledger, calendar entry, or review question,
+but the example should be clearly illustrative and should not pretend to describe
+a customer, a credential, or a measured outcome.
+
+The daily routine becomes easier to manage when the work has a beginning and an
+end. The beginning is an approved question with enough context to identify the
+reader and the allowed evidence. The middle is the preparation that makes facts,
+open questions, and proposed wording visible. The end is a handoff to the person
+who can approve the public claim or decide that more research is needed. In
+HireAssistantNearMe’s niche, this boundary matters because blog and research
+articles often sit close to hiring choices. A support worker may organize online
+information, compare supplied records, prepare a draft, or flag a gap. That work
+does not by itself authorize a hiring decision, legal interpretation, financial
+approval, privacy judgment, or public commitment.
+
+Use the smallest useful review sample before expanding the lane. Open one ordinary
+item, one item returned for clarification, and one item that stopped at an
+escalation. Ask whether the source can be traced, whether the output is recognizable,
+whether the date and audience are clear, and whether the next owner is named. If
+the same question appears twice, improve the field definition, example, or stop
+condition. Do not respond to a weak process by asking for faster work or broader
+access. A reliable daily article routine is one in which uncertainty is recorded
+early, corrections are specific, and the person accountable for publication can
+make the final decision with the relevant context in view.`;
+
 export const aug23BlogPosts = specs.slice(0, 12).map((spec) => {
   const sourceBody = `Publication date: 2026-08-23.\n\n${spec.paragraphs.join('\n\n')}\n\n${spec.paragraphs.slice(2).join('\n\n')}\n\n${routeLocalProof(spec)}`;
   return {
@@ -350,7 +382,11 @@ export const aug23BlogPosts = specs.slice(0, 12).map((spec) => {
         { href: '/blog/source-ledger-maintenance-for-hiring-content', label: 'source-ledger guide' },
         { href: '/research', label: 'research hub' }
       ],
-      sections: spec.headings.map((heading, paragraphIndex) => ({ heading, paragraphs: [spec.paragraphs[paragraphIndex], spec.paragraphs[(paragraphIndex + 1) % spec.paragraphs.length]] })),
+      sections: spec.headings.map((heading, paragraphIndex) => ({ heading, paragraphs: [
+        spec.paragraphs[paragraphIndex],
+        spec.paragraphs[(paragraphIndex + 1) % spec.paragraphs.length],
+        paragraphIndex === spec.headings.length - 1 ? publicArticleExtension(spec) : undefined,
+      ].filter((paragraph): paragraph is string => Boolean(paragraph)) })),
       decisionRows: [
         { need: 'Online, repeatable preparation', fit: 'Philippines-based remote assistant', reason: 'The output, access, examples, and reviewer are defined.' },
         { need: 'Final editorial or sensitive decision', fit: 'Named owner or qualified reviewer', reason: 'The assistant preserves facts and escalates the decision.' },

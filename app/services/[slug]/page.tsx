@@ -86,7 +86,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
             <p className="eyebrow">Filipino remote assistant support</p>
             <h1>{service.title}</h1>
             <p className="lead">{service.desc}</p>
-            <a className="btn primary" href="/contact-us">Discuss this service</a>
+            <a className="btn primary" href="/contact-us" id="cta-services-slug-action-1">Discuss this service</a>
           </div>
           {service.image && <figure className="service-hero-photo">
             <img src={service.image} alt={service.imageAlt ?? `${service.title} role illustration`} />
@@ -107,7 +107,7 @@ export default async function Service({ params }: { params: Promise<{ slug: stri
             <p className="eyebrow light">Check the fit before hiring</p>
             <h2>Remote inbox help works best when the rules are easy to see.</h2>
             <p>A Filipino assistant can keep routine messages and meetings moving. Your local team should keep physical work and decisions that need an owner or qualified professional.</p>
-            <a className="btn cream" href="/contact-us">Build a calendar and inbox brief</a>
+            <a className="btn cream" href="/contact-us" id="cta-services-slug-action-2">Build a calendar and inbox brief</a>
           </div>
           <div className="service-fit-board">
             <article><span>Good remote fit</span><ul>{service.bestFor.map((item) => <li key={item}>{item}</li>)}</ul></article>

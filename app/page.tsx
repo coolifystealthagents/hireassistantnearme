@@ -22,8 +22,8 @@ export default function Home() {
           <h1>Find an assistant <em>who fits your workday.</em></h1>
           <p className="hero-deck">Keep in-person work with your local team. Move repeat online work to a Filipino assistant hired for your hours, tools, and task list.</p>
           <div className="hero-actions">
-            <a className="btn primary" href="/contact-us">Build my role brief</a>
-            <a className="text-link" href="/compare/local-vs-remote-assistant">Compare local and remote <span>↗</span></a>
+            <a className="btn primary" href="/contact-us" id="cta-page-action-1">Build my role brief</a>
+            <a className="text-link" href="/compare/local-vs-remote-assistant" id="cta-page-action-2">Compare local and remote <span>↗</span></a>
           </div>
           <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
         </div>
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="role-grid">
           {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
             <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? 'Assistant and manager collaborating on role priorities' : `${role.title} support role example`}/><span>{String(index + 1).padStart(2, '0')}</span></div>
-            <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a href="/contact-us">Add this to my brief <span>→</span></a></div>
+            <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>
         <p className="image-disclaimer">These photos illustrate assistant roles. They do not show available candidates or customer endorsements.</p>
@@ -60,7 +60,7 @@ export default function Home() {
 
     <section className="decision-section">
       <div className="container decision-grid">
-        <div className="decision-intro"><p className="eyebrow light">The location test</p><h2>Keep physical work local. Send online work to the Philippines.</h2><p>If someone needs the office key, this service is not the right fit. If the work lives in your inbox, calendar, CRM, or help desk, a Filipino remote assistant can handle it during agreed hours.</p><a className="btn cream" href="/compare/local-vs-remote-assistant">Use the full comparison</a></div>
+        <div className="decision-intro"><p className="eyebrow light">The location test</p><h2>Keep physical work local. Send online work to the Philippines.</h2><p>If someone needs the office key, this service is not the right fit. If the work lives in your inbox, calendar, CRM, or help desk, a Filipino remote assistant can handle it during agreed hours.</p><a className="btn cream" href="/compare/local-vs-remote-assistant" id="cta-page-action-3">Use the full comparison</a></div>
         <div className="decision-board">
           <div className="board-head"><span>Keep with your local team</span><span>Send to a Filipino assistant</span></div>
           <div className="board-row"><div><b>Front desk coverage</b><small>Walk-ins and on-site calls</small></div><div><b>Inbox triage</b><small>Drafts, labels, and follow-up</small></div></div>
@@ -98,11 +98,11 @@ export default function Home() {
 
     <section className="section reading-section">
       <div className="container">
-        <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/blog">View all guides <span>↗</span></a></div>
+        <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/blog" id="cta-page-action-4">View all guides <span>↗</span></a></div>
         <div className="reading-grid">{blogPosts.slice(0,3).map((post, index) => <a href={`/blog/${post.slug}`} key={post.slug}><span>{String(index + 1).padStart(2, '0')} · {(post as { minutes?: number }).minutes || 10} min</span><h3>{post.title}</h3><p>{post.excerpt}</p></a>)}</div>
       </div>
     </section>
 
-    <section className="final-section"><div className="container final-inner"><div><p className="eyebrow light">Ready when the task list is messy</p><h2>Bring the work. We'll help shape the role.</h2></div><a className="btn coral" href="/contact-us">Build my role brief</a></div></section>
+    <section className="final-section"><div className="container final-inner"><div><p className="eyebrow light">Ready when the task list is messy</p><h2>Bring the work. We'll help shape the role.</h2></div><a className="btn coral" href="/contact-us" id="cta-page-action-5">Build my role brief</a></div></section>
   </main><Footer/></>;
 }

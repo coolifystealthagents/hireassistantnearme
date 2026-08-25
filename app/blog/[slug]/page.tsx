@@ -122,7 +122,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       const banner = detail.ctas.find((item) => item.slot === slot);
       return banner ? <aside className="article-banner" data-article-banner={slot} aria-label={`${slot} article action`}>
         <div><p className="eyebrow light">{banner.eyebrow}</p><h2>{banner.heading}</h2><p>{banner.body}</p></div>
-        <a className="btn coral" href={banner.href}>{banner.label}</a>
+        <a className="btn coral" href={banner.href} id="cta-blog-slug-action-1">{banner.label}</a>
       </aside> : null;
     };
 
@@ -252,7 +252,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <h2 id="sources-heading">Sources</h2>
             <p data-narrative="true">These primary sources support the figures, quote, account guidance, access guidance, and Philippine privacy notes above. We checked each link before publication and kept the source wording separate from our planning advice.</p>
             <ol className="list">{detail.sources.map((source) => <li key={source.url}>
-              <a className="text-link" href={source.url} rel="noreferrer">{source.name}</a>: {source.note}
+              <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-3">{source.name}</a>: {source.note}
             </li>)}</ol>
           </section>
         </article>
@@ -402,7 +402,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <h2 id="sources-heading">Sources</h2>
             <p>These official sources support the access, sign-in, worker setup, and privacy notes in this guide. They do not set a terms or promise a business result.</p>
             <ul className="list">{detail.sources.map((source) => <li key={source.url}>
-              <a className="text-link" href={source.url} rel="noreferrer">{source.name}</a>: {source.note}
+              <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-6">{source.name}</a>: {source.note}
             </li>)}</ul>
           </section>
 
@@ -410,7 +410,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <p className="eyebrow light">Managed staffing from the Philippines</p>
             <h2 id="managed-cta-heading">Bring one clear role to the hiring call.</h2>
             <p>Send the task list, tools, work hours, and approval limits. A staffing team can help shape the role and match a candidate recruited and hired in the Philippines.</p>
-            <a className="btn coral" href="/contact-us">Build my Philippines role brief</a>
+            <a className="btn coral" href="/contact-us" id="cta-blog-slug-action-7">Build my Philippines role brief</a>
           </section>
         </article>
       </main>

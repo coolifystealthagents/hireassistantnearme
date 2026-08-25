@@ -114,6 +114,8 @@ export function BlogBanner({ position }: { position: Position }) {
       <p>{variant.body}</p>
     </div>
     <a
+      id={`cta-blog-${position}-${variant.id.replace(/[^a-z0-9-]/g, '-')}`}
+      data-acr-track={`blog-banner-${position}-${variant.id}`}
       className="btn primary"
       href={href}
       onClick={() => {

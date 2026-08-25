@@ -21,7 +21,7 @@ export default function ThankYouPage() {
             <img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready to help" width="619" height="402" />
             <TestimonialsRail />
           </div>
-          <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title">
+          <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title" data-acr-track="contact-booking-iframe">
             <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>
             <iframe
               src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"

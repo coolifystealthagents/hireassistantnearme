@@ -1,5 +1,5 @@
 {
-  "campaignDate": "2026-08-23",
+  "campaignDate": "2026-08-24",
   "family": "research",
   "entries": [
     {"route":"/research/daily-article-question-selection-study","sourcePaths":["app/research-aug23.ts"],"imagePath":"public/images/aug23-research-question-selection.png"},

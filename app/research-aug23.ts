@@ -14,7 +14,7 @@ const post = (p: ResearchPost): ResearchPost => ({ ...p, sections: p.sections.ma
 
 export const aug23ResearchPosts: ResearchPost[] = [
   post({
-    slug: 'daily-article-question-selection-study', published: '2026-08-23',
+    slug: 'daily-article-question-selection-study', published: '2026-08-24',
     title: 'Daily article question selection: which research prompts fit remote assistant support?',
     excerpt: 'A study of how a small business can turn a broad hiring or workflow topic into a bounded, sourceable question for daily research publishing.',
     image: '/images/aug23-research-question-selection.png', imageAlt: 'Remote assistant turning a broad topic into a focused research question',
@@ -32,7 +32,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     sources: [{ name: 'U.S. Government Publishing Office Style Manual', url: 'https://www.govinfo.gov/app/details/GPO-STYLEMANUAL-2016' }, { name: 'Google Search Central, Creating helpful content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }, { name: 'NIST Small Business Cybersecurity Basics', url: 'https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics' }], related
   }),
   post({
-    slug: 'research-claim-provenance-for-hiring-guides', published: '2026-08-23',
+    slug: 'research-claim-provenance-for-hiring-guides', published: '2026-08-24',
     title: 'Research claim provenance for hiring guides: can a remote assistant preserve the evidence chain?',
     excerpt: 'A source-backed study of claim records, definitions, and review ownership when daily articles explain remote assistant roles.',
     image: '/images/aug23-research-claim-provenance.png', imageAlt: 'Research assistant tracing a hiring claim back to its public source',
@@ -50,7 +50,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     sources: [{ name: 'BLS Technical Notes', url: 'https://www.bls.gov/bls/technical-notes.htm' }, { name: 'GPO Style Manual', url: 'https://www.govinfo.gov/app/details/GPO-STYLEMANUAL-2016' }, { name: 'NIST Privacy Framework', url: 'https://www.nist.gov/privacy-framework' }], related
   }),
   post({
-    slug: 'daily-research-handoff-time-zone-review', published: '2026-08-23',
+    slug: 'daily-research-handoff-time-zone-review', published: '2026-08-24',
     title: 'Daily research handoffs across time zones: what context must reach the editor?',
     excerpt: 'A study of handoff timing, source context, and escalation ownership for a remote assistant supporting a daily article routine.',
     image: '/images/aug23-research-timezone-handoff.png', imageAlt: 'Editor and remote assistant reviewing a time-zone-aware research handoff',
@@ -68,7 +68,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     sources: [{ name: 'IANA Time Zone Database', url: 'https://www.iana.org/time-zones' }, { name: 'GPO Style Manual', url: 'https://www.govinfo.gov/app/details/GPO-STYLEMANUAL-2016' }, { name: 'BLS Secretaries and Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm' }], related
   }),
   post({
-    slug: 'source-scope-limits-daily-research', published: '2026-08-23',
+    slug: 'source-scope-limits-daily-research', published: '2026-08-24',
     title: 'Source scope limits in daily research: when should an assistant reject a near-match?',
     excerpt: 'A research study of population, date, authority, and purpose as stop rules for sourcing articles about remote assistant work.',
     image: '/images/aug23-research-source-scope.png', imageAlt: 'Remote assistant comparing source scope and a proposed research claim',
@@ -86,7 +86,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     sources: [{ name: 'BLS Occupational Outlook Handbook', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm' }, { name: 'NIST Cybersecurity Basics', url: 'https://www.nist.gov/itl/smallbusinesscyber/cybersecurity-basics' }, { name: 'Google Search Central, Helpful Content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }, { name: 'FTC Business Guidance', url: 'https://www.ftc.gov/business-guidance' }], related
   }),
   post({
-    slug: 'research-editor-review-boundary-study', published: '2026-08-23',
+    slug: 'research-editor-review-boundary-study', published: '2026-08-24',
     title: 'Research editor review boundaries: what can a remote assistant prepare before publication?',
     excerpt: 'A study separating collection, verification, analysis, and approval in a daily article workflow for remote assistant hiring research.',
     image: '/images/aug23-research-editor-boundary.png', imageAlt: 'Editor reviewing a sourced research article with clear approval boundaries',

@@ -1,0 +1,21 @@
+{
+  "campaignDate": "2026-08-31",
+  "family": "blog",
+  "entries": [
+    {"route":"/blog/morning-inbox-rescue-routine-for-remote-assistants","sourcePaths":["app/aug31-blog.ts#morning-inbox-rescue-routine-for-remote-assistants"]},
+    {"route":"/blog/calendar-buffer-audit-before-a-client-heavy-week","sourcePaths":["app/aug31-blog.ts#calendar-buffer-audit-before-a-client-heavy-week"]},
+    {"route":"/blog/crm-stale-deal-sweep-without-inventing-progress","sourcePaths":["app/aug31-blog.ts#crm-stale-deal-sweep-without-inventing-progress"]},
+    {"route":"/blog/customer-support-macro-drift-review","sourcePaths":["app/aug31-blog.ts#customer-support-macro-drift-review"]},
+    {"route":"/blog/vendor-document-expiry-watch-for-small-teams","sourcePaths":["app/aug31-blog.ts#vendor-document-expiry-watch-for-small-teams"]},
+    {"route":"/blog/weekly-founder-decision-digest-from-team-notes","sourcePaths":["app/aug31-blog.ts#weekly-founder-decision-digest-from-team-notes"]},
+    {"route":"/blog/ecommerce-return-exception-brief-for-owner-review","sourcePaths":["app/aug31-blog.ts#ecommerce-return-exception-brief-for-owner-review"]},
+    {"route":"/blog/podcast-guest-research-packet-with-source-boundaries","sourcePaths":["app/aug31-blog.ts#podcast-guest-research-packet-with-source-boundaries"]},
+    {"route":"/blog/home-service-estimate-followup-queue","sourcePaths":["app/aug31-blog.ts#home-service-estimate-followup-queue"]},
+    {"route":"/blog/research-reading-list-pruning-routine","sourcePaths":["app/aug31-blog.ts#research-reading-list-pruning-routine"]},
+    {"route":"/blog/monthly-access-recertification-for-assistant-tools","sourcePaths":["app/aug31-blog.ts#monthly-access-recertification-for-assistant-tools"]},
+    {"route":"/blog/end-of-day-research-handoff-across-time-zones","sourcePaths":["app/aug31-blog.ts#end-of-day-research-handoff-across-time-zones"]}
+  ],
+  "imageStatus": "Gemini unavailable in the configured toolset; text-complete fallback used with existing route imagery unchanged.",
+  "deploymentMutations": 0,
+  "formsSubmitted": 0
+}

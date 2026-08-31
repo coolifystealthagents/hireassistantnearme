@@ -26,6 +26,7 @@ import { aug19ResearchPosts } from './research-aug19';
 import { aug20ResearchPosts } from './research-aug20';
 import { aug21ResearchPosts } from './research-aug21';
 import { aug23ResearchPosts } from './research-aug23';
+import { aug31ResearchPosts } from './research-aug31';
 
 export const fleetServices: readonly FleetService[] = [
   { slug: 'executive-assistance', title: 'Executive Assistance', desc: 'Hire a Filipino executive assistant for calendar, inbox, meeting, and follow-up work with clear access limits and daily review.', tasks: ['Sort the executive inbox and flag messages that need a personal reply', 'Prepare meeting briefs, agendas, notes, and follow-up lists', 'Coordinate calendars, travel research, and routine document updates'], controls: ['Keep final replies, purchases, and business promises with the executive', 'Use a separate account with only the calendar, inbox, and files the role needs', 'Set a same-day escalation rule for urgent, private, or unclear requests'], firstWeek: ['Choose the hours that overlap with your workday and confirm the Philippines-based schedule', 'Practice inbox labels and meeting prep with past examples', 'Review each completed batch before adding travel or document work'], image: '/images/assistant-maya.jpg', imageAlt: 'Friendly executive assistant role illustration at a desk' },
@@ -163,6 +164,7 @@ const aug17ResearchPostsBase: ResearchPost[] = [
 const aug17ResearchPosts: ResearchPost[] = aug17ResearchPostsBase;
 
 export const researchPosts: readonly ResearchPost[] = [
+  ...aug31ResearchPosts,
   {
     slug: 'administrative-assistant-wage-benchmark-2026', title: 'Administrative assistant wage benchmark: what the latest U.S. data can and cannot tell a small business',
     excerpt: 'Use the latest BLS wage figures as labor-market context, then separate the online work that may fit a Philippines-based assistant from duties that need local presence.', published: '2026-08-04', image: '/images/administrative-assistant-benchmarks-2026.png', imageAlt: 'Administrative assistant benchmark chart on a laptop',

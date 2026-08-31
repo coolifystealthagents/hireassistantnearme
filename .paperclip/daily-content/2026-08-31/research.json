@@ -1,0 +1,12 @@
+{
+  "campaignDate": "2026-08-31",
+  "family": "research",
+  "entries": [
+    { "route": "/research/remote-assistant-queue-age-service-risk", "sourcePaths": ["app/research-aug31.ts"] },
+    { "route": "/research/least-privilege-review-sampling-remote-assistants", "sourcePaths": ["app/research-aug31.ts"] },
+    { "route": "/research/calendar-correction-taxonomy-assistant-handoffs", "sourcePaths": ["app/research-aug31.ts"] },
+    { "route": "/research/crm-field-provenance-remote-assistant-research", "sourcePaths": ["app/research-aug31.ts"] },
+    { "route": "/research/knowledge-base-freshness-remote-support-study", "sourcePaths": ["app/research-aug31.ts"] }
+  ],
+  "imageGeneration": { "provider": "Gemini", "status": "unavailable", "fallback": "text-complete; no stock or substitute images generated", "receipts": [] }
+}

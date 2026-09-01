@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+
+const blogText = await readFile(new URL('../app/sep1-blog.ts', import.meta.url), 'utf8');
+const researchText = await readFile(new URL('../app/research-sep1.ts', import.meta.url), 'utf8');
+const dataText = await readFile(new URL('../app/data.ts', import.meta.url), 'utf8');
+const fleetText = await readFile(new URL('../app/fleet-data.ts', import.meta.url), 'utf8');
+const sitemapText = await readFile(new URL('../app/sitemap.xml/route.ts', import.meta.url), 'utf8');
+const blogPageText = await readFile(new URL('../app/blog/[slug]/page.tsx', import.meta.url), 'utf8');
+const researchPageText = await readFile(new URL('../app/research/[slug]/page.tsx', import.meta.url), 'utf8');
+
+const blogSlugs = [...blogText.matchAll(/\{ slug:'([^']+)'/g)].map((m) => m[1]);
+const researchSlugs = [...researchText.matchAll(/\{slug:'([^']+)'/g)].map((m) => m[1]);
+assert.equal(blogSlugs.length, 12, 'exactly 12 September 1 blog briefs');
+assert.equal(researchSlugs.length, 5, 'exactly 5 September 1 research studies');
+assert.equal(new Set([...blogSlugs, ...researchSlugs]).size, 17, 'all slugs are unique');
+assert.match(blogText, /Publication date: September 1, 2026/);
+assert.match(blogText, /const published = '2026-09-01'/);
+assert.match(researchText, /const published = '2026-09-01'/);
+assert.match(dataText, /\.\.\.sep1BlogPosts/);
+assert.match(fleetText, /\.\.\.sep1ResearchPosts/);
+assert.match(sitemapText, /blogs\.map/);
+assert.match(sitemapText, /researchPosts\.map/);
+assert.match(blogPageText, /datePublished: published/);
+assert.match(researchPageText, /datePublished: post\.published/);
+assert.match(blogPageText, /alternates: \{ canonical:/);
+assert.match(researchPageText, /alternates: \{ canonical:/);
+const identities = [...blogSlugs.map((slug) => `/blog/${slug}`), ...researchSlugs.map((slug) => `/research/${slug}`)];
+assert.equal(new Set(identities.map((value) => createHash('sha256').update(value).digest('hex'))).size, 17);
+console.log(`Validated ${blogSlugs.length} blog + ${researchSlugs.length} research source records for 2026-09-01.`);
+console.log(identities.join('\n'));

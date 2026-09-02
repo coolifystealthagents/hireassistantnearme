@@ -28,6 +28,7 @@ import { aug21ResearchPosts } from './research-aug21';
 import { aug23ResearchPosts } from './research-aug23';
 import { aug31ResearchPosts } from './research-aug31';
 import { sep1ResearchPosts } from './research-sep1';
+import { sep2ResearchPosts } from './research-sep2';
 
 export const fleetServices: readonly FleetService[] = [
   { slug: 'executive-assistance', title: 'Executive Assistance', desc: 'Hire a Filipino executive assistant for calendar, inbox, meeting, and follow-up work with clear access limits and daily review.', tasks: ['Sort the executive inbox and flag messages that need a personal reply', 'Prepare meeting briefs, agendas, notes, and follow-up lists', 'Coordinate calendars, travel research, and routine document updates'], controls: ['Keep final replies, purchases, and business promises with the executive', 'Use a separate account with only the calendar, inbox, and files the role needs', 'Set a same-day escalation rule for urgent, private, or unclear requests'], firstWeek: ['Choose the hours that overlap with your workday and confirm the Philippines-based schedule', 'Practice inbox labels and meeting prep with past examples', 'Review each completed batch before adding travel or document work'], image: '/images/assistant-maya.jpg', imageAlt: 'Friendly executive assistant role illustration at a desk' },
@@ -427,6 +428,7 @@ export const researchPosts: readonly ResearchPost[] = [
   ,...aug20ResearchPosts
   ,...aug21ResearchPosts
   ,...aug23ResearchPosts
+  ,...sep2ResearchPosts
   // The validator retains this source-level guard: ].sort((a, b) => b.published.localeCompare(a.published));
 ].sort((a, b) => {
   const dateOrder = b.published.localeCompare(a.published);

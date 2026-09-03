@@ -1,0 +1,79 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "blog",
+  "imageStatus": "Gemini unavailable in the execution environment; text-complete fallback used without stock or retained-image substitution.",
+  "entries": [
+    {
+      "route": "/blog/clinic-referral-record-preparation-for-owner-review",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/contractor-insurance-expiry-watch-without-compliance-claims",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/real-estate-showing-feedback-queue-for-remote-assistants",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/ecommerce-catalog-discrepancy-brief-before-product-edits",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/legal-intake-conflict-check-preparation-with-clear-stop-rules",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/podcast-transcript-correction-ledger-before-show-notes",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/grant-application-source-packet-for-small-teams",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/candidate-interview-scheduling-without-hiring-authority",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/property-maintenance-work-order-triage-for-owner-approval",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/nonprofit-donor-record-cleanup-with-privacy-boundaries",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/inventory-reorder-exception-brief-without-purchase-authority",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    },
+    {
+      "route": "/blog/executive-travel-disruption-brief-across-time-zones",
+      "sourcePaths": [
+        "app/sep3-blog.ts"
+      ]
+    }
+  ]
+}

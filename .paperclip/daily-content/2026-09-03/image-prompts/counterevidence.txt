@@ -1,0 +1,2 @@
+Provider: built-in image generator (Gemini fallback)
+Prompt: A researcher balances credible conflicting evidence cards before writing a conclusion about remote assistant hiring. Modern editorial illustration, landscape 3:2, forest green, navy, ochre, no readable text, logos, or watermark.

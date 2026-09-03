@@ -1,0 +1,1 @@
+Gemini image generation was attempted first on 2026-09-03. The provider returned "API key not valid. Please pass a valid API key." No stock imagery was used. Five distinct non-stock assets were generated with the built-in image generator under the authorized provider-failure fallback.

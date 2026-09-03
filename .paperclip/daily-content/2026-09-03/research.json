@@ -1,0 +1,11 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "research",
+  "entries": [
+    {"route":"/research/source-change-signals-for-recurring-hiring-research","sourcePaths":["app/research-sep3.ts"],"imagePath":"public/images/sep3-research-source-change.png"},
+    {"route":"/research/correction-reasons-as-role-design-evidence","sourcePaths":["app/research-sep3.ts"],"imagePath":"public/images/sep3-research-correction-reasons.png"},
+    {"route":"/research/least-privilege-for-web-based-research-support","sourcePaths":["app/research-sep3.ts"],"imagePath":"public/images/sep3-research-least-privilege.png"},
+    {"route":"/research/counterevidence-in-remote-assistant-hiring-research","sourcePaths":["app/research-sep3.ts"],"imagePath":"public/images/sep3-research-counterevidence.png"},
+    {"route":"/research/topic-distance-in-a-daily-research-queue","sourcePaths":["app/research-sep3.ts"],"imagePath":"public/images/sep3-research-topic-distance.png"}
+  ]
+}

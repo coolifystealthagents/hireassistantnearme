@@ -1,0 +1,2 @@
+Provider: built-in image generator (Gemini fallback)
+Prompt: An editor maps distinct research questions across a daily topic board, separating new studies from near-duplicates. Refined editorial illustration, landscape 3:2, cobalt, lime, off-white, no readable text, logos, or watermark.

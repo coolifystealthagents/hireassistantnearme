@@ -1,0 +1,2 @@
+Provider: built-in image generator (Gemini fallback)
+Prompt: A remote researcher works within separated public-source, shared-draft, and owner-approval access lanes. Sophisticated editorial illustration, landscape 3:2, teal, indigo, pale sand, no readable text, logos, or watermark.

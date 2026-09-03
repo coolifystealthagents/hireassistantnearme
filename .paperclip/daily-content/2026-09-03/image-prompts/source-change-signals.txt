@@ -1,0 +1,2 @@
+Provider: built-in image generator (Gemini fallback)
+Prompt: A Philippines-based remote research assistant compares dated public-source versions and a claim ledger with visible change markers. Polished editorial illustration, landscape 3:2, navy, teal, cream, no readable text, logos, or watermark.

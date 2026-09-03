@@ -1,0 +1,2 @@
+Provider: built-in image generator (Gemini fallback)
+Prompt: An editor and a Philippines-based research assistant sort correction notes into different causes around a shared desk. Polished editorial illustration, landscape 3:2, deep blue, coral, warm white, no readable text, logos, or watermark.

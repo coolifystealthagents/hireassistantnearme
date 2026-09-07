@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
       url: `${site.url}/blog/${slug}`,
       type: 'article',
+      images: 'image' in post && post.image ? [post.image] : undefined,
     },
     twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt },
   };

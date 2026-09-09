@@ -12,8 +12,10 @@ RUN npm run build
 
 FROM node:22-alpine AS runner
 WORKDIR /app
+RUN apk add --no-cache tini
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 COPY --from=builder /app ./
 EXPOSE 3000
+ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["npm", "run", "start"]

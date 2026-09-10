@@ -1062,8 +1062,9 @@ import { sep4BlogPosts } from './sep4-blog';
 import { sep7BlogPosts } from './sep7-blog';
 import { sep8BlogPosts } from './sep8-blog';
 import { sep9BlogPosts } from './sep9-blog';
+import { sep10BlogPosts } from './sep10-blog';
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts, ...sep10BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
 
 export const routes = [
   '/',

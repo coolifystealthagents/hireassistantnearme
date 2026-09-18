@@ -37,7 +37,6 @@ import { sep9ResearchPosts } from './research-sep9';
 import { sep10ResearchPosts } from './research-sep10';
 import { sep11ResearchPosts } from './research-sep11';
 import { sep16ResearchPosts } from './research-sep16';
-import { sep18ResearchPosts } from './research-sep18';
 import { sep18Hira89ResearchPosts } from './research-sep18-hira89';
 
 export const fleetServices: readonly FleetService[] = [
@@ -440,7 +439,7 @@ export const researchPosts: readonly ResearchPost[] = [
   ,...aug23ResearchPosts
   ,...sep3ResearchPosts
   ,...sep4ResearchPosts
-  ,...sep7ResearchPosts,...sep8ResearchPosts,...sep9ResearchPosts,...sep10ResearchPosts,...sep11ResearchPosts,...sep16ResearchPosts,...sep18Hira89ResearchPosts,...sep18ResearchPosts
+  ,...sep7ResearchPosts,...sep8ResearchPosts,...sep9ResearchPosts,...sep10ResearchPosts,...sep11ResearchPosts,...sep16ResearchPosts,...sep18Hira89ResearchPosts
   ,...sep2ResearchPosts
   // The validator retains this source-level guard: ].sort((a, b) => b.published.localeCompare(a.published));
 ].sort((a, b) => {

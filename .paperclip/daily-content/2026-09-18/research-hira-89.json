@@ -1,0 +1,20 @@
+{
+  "run": "HIRA-89",
+  "family": "research",
+  "required": 5,
+  "repository": "https://github.com/coolifystealthagents/hireassistantnearme.git",
+  "productionBranch": "main",
+  "startingRemoteSha": "b087ed535bddc45306972beaa2304f5699d2912a",
+  "contentCommit": "76a7b78b88f0077b865dcdcee287043d95ecc0d7",
+  "publicationDate": "2026-09-18",
+  "sourceCheckedDate": "2026-09-18",
+  "timezoneBasis": "UTC runtime and public verification date",
+  "build": "passed: Next.js production build, 630 static pages",
+  "articles": [
+    {"family":"research","topic":"Sales administrative CRM field authority","slug":"sales-assistant-crm-update-authority","sources":["FTC CAN-SPAM Compliance Guide","NIST Privacy Framework","NIST SP 800-53 AC-6"],"contentHash":"1a8d9abbac4f2b3d4406fab621a4fcfbfac9b1707e31c19ee356d47cd59f084e","publicationDate":"2026-09-18","commit":"76a7b78b88f0077b865dcdcee287043d95ecc0d7","liveUrl":"https://hireassistantnearme.com/research/sales-assistant-crm-update-authority","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Ecommerce order exception authority","slug":"ecommerce-assistant-order-exception-boundary","sources":["FTC Mail Order Rule","PCI SSC Merchant Guidance","NIST SP 800-61 Rev. 3"],"contentHash":"7676df057bed18d44a3eaae7d5424881849b0a4b299184ed97139cd44b727f7a","publicationDate":"2026-09-18","commit":"76a7b78b88f0077b865dcdcee287043d95ecc0d7","liveUrl":"https://hireassistantnearme.com/research/ecommerce-assistant-order-exception-boundary","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Bookkeeping source-document controls","slug":"bookkeeping-assistant-source-document-control","sources":["IRS Recordkeeping","FTC Protecting Personal Information","CISA Recognize and Report Phishing"],"contentHash":"dbc7a2685bb0becc9dfb962515293768569b4dd601fb5787979330dc69ac9f1c","publicationDate":"2026-09-18","commit":"76a7b78b88f0077b865dcdcee287043d95ecc0d7","liveUrl":"https://hireassistantnearme.com/research/bookkeeping-assistant-source-document-control","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Recruitment candidate-record handoff","slug":"recruitment-assistant-candidate-record-handoff","sources":["EEOC Employment Tests and Selection Procedures","OPM Structured Interviews","NIST Privacy Framework"],"contentHash":"f8f9fad158cbed9454f7fb90ce04ae3f8ee5416a8d7e4498e1528f5094d98658","publicationDate":"2026-09-18","commit":"76a7b78b88f0077b865dcdcee287043d95ecc0d7","liveUrl":"https://hireassistantnearme.com/research/recruitment-assistant-candidate-record-handoff","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Project status-report evidence","slug":"project-coordinator-status-report-evidence","sources":["GAO Schedule Assessment Guide","NIST SP 800-92","PMI Code of Ethics and Professional Conduct"],"contentHash":"57aa5d86797c01b8f4131bccba5d2ebf804ee12597869924307bb8810e047fde","publicationDate":"2026-09-18","commit":"76a7b78b88f0077b865dcdcee287043d95ecc0d7","liveUrl":"https://hireassistantnearme.com/research/project-coordinator-status-report-evidence","verificationTime":null,"deploymentEvidence":null}
+  ]
+}

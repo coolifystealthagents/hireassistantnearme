@@ -4,7 +4,7 @@
 - Production repository: `coolifystealthagents/hireassistantnearme`
 - Production branch: `main`
 - Starting remote SHA: `eed6b7e00bcdb362cd5ec23ade8d8dadcdae0c33`
-- Content commit: `7eb1087367b1a623ef085fe9360fd3c7d9799e24`
+- Content commit: `b2ed37d51d81b6c06631f66dc068ebc1c88630ed`
 - Clean production build: passed (Next.js, 613 static pages)
 - Publication date: 2026-09-18, subject to same-date live verification
 - Source check date: 2026-09-18

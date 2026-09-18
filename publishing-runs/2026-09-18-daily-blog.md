@@ -9,7 +9,7 @@
 - Local validation: 12/12 direct HTTP 200; 2,075–2,142 rendered words; title, self-canonical, visible date, `datePublished`, revision, Blog index, and sitemap checks passed
 - Build: clean `next build` passed before and after the final fetch/rebase check
 - Deployment resource: Coolify3 application `jg2o6hoya80t16km9likeoim` (`hireassistantnearme`, `main`)
-- Deployment evidence: `csns2lheuz5uwivqale8l9rf` and corrected attempt `shdtnkutnb6usbjjmttaymol` remain queued and report stale SHA `eed6b7e00bcdb362cd5ec23ade8d8dadcdae0c33`
+- Deployment evidence: `csns2lheuz5uwivqale8l9rf`, corrected attempt `shdtnkutnb6usbjjmttaymol`, and final bounded attempt `q9vqwdocgm25foslfqjv08jz` remain queued and report stale SHA `eed6b7e00bcdb362cd5ec23ade8d8dadcdae0c33`
 - Sources for every entry: NIST CSF 2.0 Small Business Quick-Start Guide; FTC Protecting Personal Information; CISA Require MFA; IRS Independent Contractor Defined. NIST, CISA, and IRS returned automated HTTP 200; FTC returned automated HTTP 403 and is recorded as not machine-verified.
 - Publication date and verification time are intentionally pending. They must be set to the site's local date/time only after each URL first becomes public and passes live verification.
 

@@ -19,7 +19,7 @@ export default function Home() {
       <div className="container hero-shell">
         <div className="hero-copy">
           <p className="eyebrow">A clearer way to hire assistant help</p>
-          <h1>Find an assistant <em>who fits your workday.</em></h1>
+          <h1>Find an assistant who fits your workday.</h1>
           <p className="hero-deck">Keep in-person work with your local team. Move repeat online work to a Filipino assistant hired for your hours, tools, and task list.</p>
           <div className="hero-actions">
             <a className="btn primary" href="/contact-us" id="cta-page-action-1">Build my role brief</a>

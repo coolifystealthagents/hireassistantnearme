@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "test:h1": "node --test tests/homepage-h1-contract.test.mjs",
+    "build": "npm run test:h1 && next build",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint"
   },

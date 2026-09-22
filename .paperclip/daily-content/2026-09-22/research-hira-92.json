@@ -1,0 +1,20 @@
+{
+  "run": "HIRA-92",
+  "family": "research",
+  "required": 5,
+  "repository": "https://github.com/coolifystealthagents/hireassistantnearme.git",
+  "productionBranch": "main",
+  "startingRemoteSha": "353d0a46d41e45a96a223d4b411c5586ce0a6d7c",
+  "contentCommit": "30a648a58c842fd8b87662a121eabb9366cefb49",
+  "publicationDate": "2026-09-22",
+  "sourceCheckedDate": "2026-09-22",
+  "timezoneBasis": "UTC runtime and public verification date; no separate site timezone is configured",
+  "build": "passed: Next.js production build, 630 static pages",
+  "articles": [
+    {"family":"research","topic":"Executive inbox account-recovery boundary","slug":"executive-assistant-inbox-account-recovery-boundary","sources":["NIST Multi-Factor Authentication for Small Business","CISA Recognize and Report Phishing","NIST SP 800-53 AC-6"],"contentHash":"86bc7cc3a030b37299127b364a8746092db3aeed7f50356b59077da84c66674d","publicationDate":"2026-09-22","commit":"30a648a58c842fd8b87662a121eabb9366cefb49","liveUrl":"https://hireassistantnearme.com/research/executive-assistant-inbox-account-recovery-boundary","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Calendar booking-authority record","slug":"calendar-assistant-booking-authority-record","sources":["IANA Time Zone Database","NIST SP 800-92","NIST Privacy Framework"],"contentHash":"5bd42b5b67007b4ce1cc72b359c56b92ec8cb2dfbf94dfa65e6e6d9ed1ce3e4d","publicationDate":"2026-09-22","commit":"30a648a58c842fd8b87662a121eabb9366cefb49","liveUrl":"https://hireassistantnearme.com/research/calendar-assistant-booking-authority-record","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Customer-support complaint evidence handoff","slug":"customer-support-complaint-evidence-handoff","sources":["FTC Featuring Online Customer Reviews","NIST Privacy Framework","NIST SP 800-61 Rev. 3"],"contentHash":"5483334464c7afe608482a74dc5d3675c73c1ca10ffb900f80abb866b7e4ea31","publicationDate":"2026-09-22","commit":"30a648a58c842fd8b87662a121eabb9366cefb49","liveUrl":"https://hireassistantnearme.com/research/customer-support-complaint-evidence-handoff","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Real-estate listing-data source control","slug":"real-estate-assistant-listing-data-source-control","sources":["HUD Fair Housing Act Overview","NARA Bulletin 2015-01 Appendix B","FTC Advertising and Marketing Basics"],"contentHash":"9d698a0f30f97e4e668eea752e435728b9c71edca2e149590347c5270ee053a6","publicationDate":"2026-09-22","commit":"30a648a58c842fd8b87662a121eabb9366cefb49","liveUrl":"https://hireassistantnearme.com/research/real-estate-assistant-listing-data-source-control","verificationTime":null,"deploymentEvidence":null},
+    {"family":"research","topic":"Marketing testimonial substantiation handoff","slug":"marketing-assistant-testimonial-substantiation-handoff","sources":["FTC Endorsement Guides","FTC Featuring Online Customer Reviews","FTC Advertising and Marketing Basics"],"contentHash":"1b0f7bb83c23c59bb1521d5348be01185a9e473ef40f5c9e3c9a36df8b026311","publicationDate":"2026-09-22","commit":"30a648a58c842fd8b87662a121eabb9366cefb49","liveUrl":"https://hireassistantnearme.com/research/marketing-assistant-testimonial-substantiation-handoff","verificationTime":null,"deploymentEvidence":null}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "issue": "HIRA-91",
+  "family": "Blog",
+  "required": 12,
+  "publicationDate": "2026-09-22",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "preRunProductionSha": "353d0a46d41e45a96a223d4b411c5586ce0a6d7c",
+  "deploymentResource": "jg2o6hoya80t16km9likeoim",
+  "status": "prepared",
+  "sources": [
+    {"url":"https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide","httpStatus":200},
+    {"url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business","httpStatus":403,"note":"Authoritative page; automated request denied."},
+    {"url":"https://www.cisa.gov/secure-our-world/require-multifactor-authentication","httpStatus":200},
+    {"url":"https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined","httpStatus":200}
+  ],
+  "articles": [
+    {"topic":"social media virtual assistant job description","slug":"social-media-virtual-assistant-job-description","contentHash":"fdabe19b091de9e490356af360353842f54a4cdba8211a869f8a759dc8d52672"},
+    {"topic":"virtual assistant for marketing agency","slug":"virtual-assistant-for-marketing-agency-hiring-guide","contentHash":"4988f481560033e82c9c1d72ec81d93cced35f635232f721ae7af1b701dfd758"},
+    {"topic":"appointment setting virtual assistant small business","slug":"appointment-setting-virtual-assistant-small-business","contentHash":"48bfcfee5cf3f6136dc1893d7c1afbd653cab042be9599f66cf61cc1122a23a3"},
+    {"topic":"project coordinator virtual assistant","slug":"project-coordinator-virtual-assistant-hiring-guide","contentHash":"9b5a14635e926ef21fe343b1c8babc8c0e5142df49574c03a5873367b73f6fb4"},
+    {"topic":"recruiting virtual assistant job description","slug":"recruiting-virtual-assistant-job-description","contentHash":"2ad15049be44d3fffe0db63a680da1700cf5068a34c3f0044ab3f8fd7cf97ddf"},
+    {"topic":"podcast virtual assistant hiring guide","slug":"podcast-virtual-assistant-hiring-guide","contentHash":"9e9869740d3aaa425de6c9aa6cdf56fb9716e36d25f25555db9324cb7ee50d9c"},
+    {"topic":"remote sales administrative assistant","slug":"sales-administrative-assistant-remote-role-guide","contentHash":"5244bd89c36a1c0411e36b5aed8e3880351550384d1d7514fb19aaf4c739fe5f"},
+    {"topic":"property management virtual assistant hiring guide","slug":"property-management-virtual-assistant-hiring-guide","contentHash":"19afb22ad313754379b52c9f86b498ca98130512c11dcfe4ab2bc8dab4ab763d"},
+    {"topic":"insurance agency virtual assistant administrative scope","slug":"insurance-agency-virtual-assistant-administrative-scope","contentHash":"4e0696a1b09685f08595cfdc7ba0240c91461bf9a80991817313d2508af59400"},
+    {"topic":"online course virtual assistant hiring guide","slug":"online-course-virtual-assistant-hiring-guide","contentHash":"043489038b9c1bf821a1dcf086379639535d33142c40e5ed50ab2d0b29feff6a"},
+    {"topic":"construction administrative virtual assistant","slug":"construction-administrative-virtual-assistant-role","contentHash":"495ca6a22da57302b8916f3b4c5834a31c12dfafaa32e3626f6cdc29b309b412"},
+    {"topic":"content operations virtual assistant job description","slug":"content-operations-virtual-assistant-job-description","contentHash":"2aeef1b4158838ad4901e1779cbc3d9ccd05445625b5d30d58ea2153a21fa60f"}
+  ]
+}

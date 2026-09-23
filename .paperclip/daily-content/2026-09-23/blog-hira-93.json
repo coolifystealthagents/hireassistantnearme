@@ -8,7 +8,11 @@
   "productionBranch": "main",
   "preRunProductionSha": "bd33d92877d7b46de67f704c69a317392c9035e7",
   "deploymentResource": "jg2o6hoya80t16km9likeoim",
-  "status": "prepared",
+  "status": "live_verified",
+  "contentCommit": "3af4c8b0f8a23a5aee14d039932ff3ee015c9a2e",
+  "deploymentUuid": "zal4otqj4orhktqkf4vi7qim",
+  "verificationTime": "2026-09-23T16:34:43Z",
+  "verified": 12,
   "sources": [
     {"url":"https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide"},
     {"url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"},

@@ -1,0 +1,32 @@
+{
+  "issue": "HIRA-93",
+  "family": "Blog",
+  "required": 12,
+  "publicationDate": "2026-09-23",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "preRunProductionSha": "bd33d92877d7b46de67f704c69a317392c9035e7",
+  "deploymentResource": "jg2o6hoya80t16km9likeoim",
+  "status": "prepared",
+  "sources": [
+    {"url":"https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide"},
+    {"url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"},
+    {"url":"https://www.cisa.gov/secure-our-world/require-multifactor-authentication"},
+    {"url":"https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined"}
+  ],
+  "articles": [
+    {"topic":"virtual assistant for accounting firm","slug":"virtual-assistant-for-accounting-firm-administrative-work","contentHash":"92f796c016abd1f85220b2aded219e4568a41df065cd0f6c595d006d800a6d8e"},
+    {"topic":"event planning virtual assistant","slug":"event-planning-virtual-assistant-coordination-guide","contentHash":"85a7deba556754808fc3f470573c7d3269c557d83531ae68139a0a7605239d2b"},
+    {"topic":"architecture firm virtual assistant","slug":"architecture-firm-virtual-assistant-project-administration","contentHash":"db577c4e52017e061b49d9e6fd4b12ed800a2cd07de8986e52d6277be51a1d66"},
+    {"topic":"wholesale order virtual assistant","slug":"wholesale-order-virtual-assistant-administration","contentHash":"c064f0700d63bfa3b00530e1c721684fac5908f8aa18b4437f77aaf6bdf1c146"},
+    {"topic":"executive assistant inbox management","slug":"executive-assistant-inbox-management-workflow","contentHash":"fb982c89a8b4b57315e8a8154cf252938c76bb9fc98cb8927b6e0a67178d19a9"},
+    {"topic":"procurement virtual assistant vendor administration","slug":"procurement-virtual-assistant-vendor-administration","contentHash":"17c798bb34eead85bfa7c627836f76989ba2169fb8e18eedbbb912efe17b61cd"},
+    {"topic":"nonprofit virtual assistant donor administration","slug":"nonprofit-virtual-assistant-donor-administration","contentHash":"12dbba7e85b44db07f5f552968aad9c17cc26e6246a9b290b0b7d05c46a95660"},
+    {"topic":"travel planning virtual assistant business trips","slug":"travel-planning-virtual-assistant-business-trips","contentHash":"6a6f3fe1da27243842ac5187914d56142bdb854b1e1ab99f6d6e18315c50cd4e"},
+    {"topic":"virtual assistant for SaaS customer success","slug":"virtual-assistant-for-saas-customer-success-operations","contentHash":"a884c355888b737f1e6689c787b82ac5f848d66323f0995450472bc38faefaa7"},
+    {"topic":"home services virtual assistant dispatch support","slug":"home-services-virtual-assistant-dispatch-support","contentHash":"64fadeb243fba37de3b13ed220a7c5b14c294bb322032b61f40560cb50bf0309"},
+    {"topic":"virtual assistant for consultants","slug":"virtual-assistant-for-consultants-client-operations","contentHash":"cd4894bf0a14427462835e16ba017f5dfb42647d5c3fd40f927edc74dfeb006b"},
+    {"topic":"membership community virtual assistant","slug":"membership-community-virtual-assistant-operations-guide","contentHash":"28b13c0941e90a7090f3bb41344b043bdc072b5ae3d16ec7c4ce219890452e5f"}
+  ]
+}

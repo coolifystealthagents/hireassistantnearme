@@ -40,6 +40,7 @@ import { sep16ResearchPosts } from './research-sep16';
 import { sep18Hira89ResearchPosts } from './research-sep18-hira89';
 import { sep22Hira92ResearchPosts } from './research-sep22-hira92';
 import { sep23Hira94ResearchPosts } from './research-sep23-hira94';
+import { sep24Hira96ResearchPosts } from './research-sep24-hira96';
 
 export const fleetServices: readonly FleetService[] = [
   { slug: 'executive-assistance', title: 'Executive Assistance', desc: 'Hire a Filipino executive assistant for calendar, inbox, meeting, and follow-up work with clear access limits and daily review.', tasks: ['Sort the executive inbox and flag messages that need a personal reply', 'Prepare meeting briefs, agendas, notes, and follow-up lists', 'Coordinate calendars, travel research, and routine document updates'], controls: ['Keep final replies, purchases, and business promises with the executive', 'Use a separate account with only the calendar, inbox, and files the role needs', 'Set a same-day escalation rule for urgent, private, or unclear requests'], firstWeek: ['Choose the hours that overlap with your workday and confirm the Philippines-based schedule', 'Practice inbox labels and meeting prep with past examples', 'Review each completed batch before adding travel or document work'], image: '/images/assistant-maya.jpg', imageAlt: 'Friendly executive assistant role illustration at a desk' },
@@ -177,6 +178,7 @@ const aug17ResearchPostsBase: ResearchPost[] = [
 const aug17ResearchPosts: ResearchPost[] = aug17ResearchPostsBase;
 
 export const researchPosts: readonly ResearchPost[] = [
+  ...sep24Hira96ResearchPosts,
   ...sep23Hira94ResearchPosts,
   ...sep22Hira92ResearchPosts,
   ...sep1ResearchPosts,

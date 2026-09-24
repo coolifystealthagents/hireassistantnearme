@@ -1,0 +1,27 @@
+{
+  "issue":"HIRA-95","family":"Blog","required":12,"verified":0,"publicationDate":null,"timezone":"UTC",
+  "repository":"coolifystealthagents/hireassistantnearme","productionBranch":"main",
+  "preRunProductionSha":"c7940ea04333e581cb8403fa207bed8e668b448b","prePushProductionSha":"f66fbc93fae0bd8cfd295d518131f48b23429d6e",
+  "contentCommit":"839131ed068a6b9c11a38620d495dae91f549cd1","deploymentResource":"jg2o6hoya80t16km9likeoim",
+  "deploymentUuid":null,"deploymentEvidence":"Coolify API returned HTTP 401; GitHub main matched content commit; public URLs remained HTTP 404 through bounded transition checks.",
+  "status":"pushed_not_live","sources":[
+    {"url":"https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide"},
+    {"url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"},
+    {"url":"https://www.cisa.gov/secure-our-world/require-multifactor-authentication"},
+    {"url":"https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined"}
+  ],
+  "articles":[
+    {"topic":"coworking space virtual assistant","slug":"coworking-space-virtual-assistant-member-operations","contentHash":"40dfa03cb3b9c57c9fba596bd0aa47e065007fdf6467a44c7a02667be8157c1a","liveUrl":"https://hireassistantnearme.com/blog/coworking-space-virtual-assistant-member-operations","status":"pending_live"},
+    {"topic":"equipment rental virtual assistant","slug":"equipment-rental-virtual-assistant-reservation-administration","contentHash":"0f3122579cbcf2721daddc8cacb6627d7262e489cbbea02fe680202184a139c9","liveUrl":"https://hireassistantnearme.com/blog/equipment-rental-virtual-assistant-reservation-administration","status":"pending_live"},
+    {"topic":"waste management virtual assistant","slug":"waste-management-virtual-assistant-service-coordination","contentHash":"a4765e7a8581b924c09b9475a252e024085aff0a4775b22b8053ba0098f09252","liveUrl":"https://hireassistantnearme.com/blog/waste-management-virtual-assistant-service-coordination","status":"pending_live"},
+    {"topic":"food distributor virtual assistant","slug":"food-distributor-virtual-assistant-order-desk-support","contentHash":"17c9189c82bda1155d4e2cf48f9b8dd9f747e22728302bc42887c43c3d429a3e","liveUrl":"https://hireassistantnearme.com/blog/food-distributor-virtual-assistant-order-desk-support","status":"pending_live"},
+    {"topic":"pest control virtual assistant","slug":"pest-control-virtual-assistant-scheduling-intake","contentHash":"e1421cb75fd8bb16cfd3e58483cfc5bd926f3b270cc14bcd6ad3bcca677931ed","liveUrl":"https://hireassistantnearme.com/blog/pest-control-virtual-assistant-scheduling-intake","status":"pending_live"},
+    {"topic":"property restoration virtual assistant","slug":"property-restoration-virtual-assistant-job-intake","contentHash":"d3088a56dbb156299df4851da0f63207151354ef66be4a62e9186bba672c8a37","liveUrl":"https://hireassistantnearme.com/blog/property-restoration-virtual-assistant-job-intake","status":"pending_live"},
+    {"topic":"pool service virtual assistant","slug":"pool-service-virtual-assistant-customer-coordination","contentHash":"e4795c1aceab5e8a12f64796f7a307ca08b76a1d570fb26e897175ed19a55209","liveUrl":"https://hireassistantnearme.com/blog/pool-service-virtual-assistant-customer-coordination","status":"pending_live"},
+    {"topic":"locksmith virtual assistant","slug":"locksmith-virtual-assistant-call-intake-boundaries","contentHash":"65b329ae262c42b55062f6659a04b77f92e2da0fc556a9f0ec1b17cf79dd9942","liveUrl":"https://hireassistantnearme.com/blog/locksmith-virtual-assistant-call-intake-boundaries","status":"pending_live"},
+    {"topic":"sign company virtual assistant","slug":"sign-company-virtual-assistant-project-administration","contentHash":"354a10a7796dd8b84e771e226f3de60414187909b54cd409cd0a31c685eeb959","liveUrl":"https://hireassistantnearme.com/blog/sign-company-virtual-assistant-project-administration","status":"pending_live"},
+    {"topic":"moving company virtual assistant","slug":"moving-company-virtual-assistant-estimate-intake","contentHash":"7db3601f9ea325d63b7da49714a0a649e0b74a5fee1e3facb51832fe472c92ae","liveUrl":"https://hireassistantnearme.com/blog/moving-company-virtual-assistant-estimate-intake","status":"pending_live"},
+    {"topic":"self storage virtual assistant","slug":"self-storage-virtual-assistant-rental-administration","contentHash":"ade128b15f329e560474dc4ecf2046753d4f6cc1ebbb0104a204afe15ffc6368","liveUrl":"https://hireassistantnearme.com/blog/self-storage-virtual-assistant-rental-administration","status":"pending_live"},
+    {"topic":"managed IT services virtual assistant","slug":"managed-it-services-virtual-assistant-service-desk-administration","contentHash":"4688cdd98b7c3b8b40c80e46e4c9e352364e4032b7f45b858df9f0cecaa80114","liveUrl":"https://hireassistantnearme.com/blog/managed-it-services-virtual-assistant-service-desk-administration","status":"pending_live"}
+  ]
+}

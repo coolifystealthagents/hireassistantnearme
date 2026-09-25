@@ -1,0 +1,31 @@
+{
+  "run": "HIRA-98",
+  "family": "Blog",
+  "required": 12,
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "branch": "main",
+  "startingSha": "cf7022c53898976d0c752a5842651ac790660b6d",
+  "publicationDate": "2026-09-25",
+  "sources": [
+    "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide",
+    "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined"
+  ],
+  "contentCommit": "PENDING",
+  "deploymentEvidence": "PENDING",
+  "articles": [
+    {"topic":"Appliance repair service intake","slug":"appliance-repair-virtual-assistant-service-intake","contentHash":"09d5b25301cbc01f7295da035f0b60cacd2ca7ab2155c73e28fa608bbc5715de","liveUrl":"https://hireassistantnearme.com/blog/appliance-repair-virtual-assistant-service-intake","verifiedAt":null},
+    {"topic":"Roofing lead intake","slug":"roofing-company-virtual-assistant-lead-intake","contentHash":"61d8252f5fdc776ca7572823ae61b30f5408f98c62653916365b8b759ba6f868","liveUrl":"https://hireassistantnearme.com/blog/roofing-company-virtual-assistant-lead-intake","verifiedAt":null},
+    {"topic":"Auto repair appointment intake","slug":"auto-repair-shop-virtual-assistant-appointment-intake","contentHash":"783b6e796e1c89b8dbd8c697fd0a56b4d6cea4d28c535bf7e67a4ae329e961a3","liveUrl":"https://hireassistantnearme.com/blog/auto-repair-shop-virtual-assistant-appointment-intake","verifiedAt":null},
+    {"topic":"Cleaning company booking coordination","slug":"cleaning-company-virtual-assistant-booking-coordination","contentHash":"16f8dd6fa0a835f0b61b39ab4d8d3a639f3d3c7356668df002e67b68a630e0da","liveUrl":"https://hireassistantnearme.com/blog/cleaning-company-virtual-assistant-booking-coordination","verifiedAt":null},
+    {"topic":"Garage door call intake","slug":"garage-door-company-virtual-assistant-call-intake","contentHash":"5748c9e250eb378fbb87f39d59f491eb4c19ca03bc155587b85c6e09f5f3a41f","liveUrl":"https://hireassistantnearme.com/blog/garage-door-company-virtual-assistant-call-intake","verifiedAt":null},
+    {"topic":"Solar consultation intake","slug":"solar-installer-virtual-assistant-consultation-intake","contentHash":"01f2f8c1a9d77a2765ac64efc73da0e42b5cd1cdbe359549c742da89673f50ec","liveUrl":"https://hireassistantnearme.com/blog/solar-installer-virtual-assistant-consultation-intake","verifiedAt":null},
+    {"topic":"Chimney service scheduling","slug":"chimney-service-virtual-assistant-scheduling-intake","contentHash":"49575ebdcda5da11f7822a62c551da4cfee096675cd299d679f42ad7f588d83e","liveUrl":"https://hireassistantnearme.com/blog/chimney-service-virtual-assistant-scheduling-intake","verifiedAt":null},
+    {"topic":"Septic service customer intake","slug":"septic-service-virtual-assistant-customer-intake","contentHash":"c7cbd4e1b972302e400dcc7c22399ca4b7a446be3450120f128b38c0b72177af","liveUrl":"https://hireassistantnearme.com/blog/septic-service-virtual-assistant-customer-intake","verifiedAt":null},
+    {"topic":"Tree care estimate intake","slug":"tree-care-company-virtual-assistant-estimate-intake","contentHash":"11bc76bde87a658aabde2942fb1c480800b0de4ef0d37e95f48029ff809cb125","liveUrl":"https://hireassistantnearme.com/blog/tree-care-company-virtual-assistant-estimate-intake","verifiedAt":null},
+    {"topic":"Glass repair job intake","slug":"glass-repair-company-virtual-assistant-job-intake","contentHash":"21bcf4228bd98b8d4885ce21a4a6b906bd92f4ab501630cba81324fc1ebcc41d","liveUrl":"https://hireassistantnearme.com/blog/glass-repair-company-virtual-assistant-job-intake","verifiedAt":null},
+    {"topic":"Paving estimate coordination","slug":"paving-contractor-virtual-assistant-estimate-coordination","contentHash":"d225e6e648faaecb317d6bd6b6bbac8970a1eafe1a3deba9c0d9d5cd156fa1bc","liveUrl":"https://hireassistantnearme.com/blog/paving-contractor-virtual-assistant-estimate-coordination","verifiedAt":null},
+    {"topic":"Irrigation service coordination","slug":"irrigation-company-virtual-assistant-service-coordination","contentHash":"53b929bb2f0d42cb0140659d4c915249bd67ddd8b01326794aa4503863b61871","liveUrl":"https://hireassistantnearme.com/blog/irrigation-company-virtual-assistant-service-coordination","verifiedAt":null}
+  ]
+}

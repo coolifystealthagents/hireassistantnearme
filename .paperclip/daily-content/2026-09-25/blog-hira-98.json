@@ -12,7 +12,7 @@
     "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
     "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined"
   ],
-  "contentCommit": "PENDING",
+  "contentCommit": "673e3c1420447511864fd8c34b2cc236f4e84701",
   "deploymentEvidence": "PENDING",
   "articles": [
     {"topic":"Appliance repair service intake","slug":"appliance-repair-virtual-assistant-service-intake","contentHash":"09d5b25301cbc01f7295da035f0b60cacd2ca7ab2155c73e28fa608bbc5715de","liveUrl":"https://hireassistantnearme.com/blog/appliance-repair-virtual-assistant-service-intake","verifiedAt":null},

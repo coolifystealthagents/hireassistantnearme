@@ -13,7 +13,7 @@
     "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-defined"
   ],
   "contentCommit": "673e3c1420447511864fd8c34b2cc236f4e84701",
-  "deploymentEvidence": "PENDING",
+  "deploymentEvidence": "GitHub main reached 62767dc5d7585d4792f08e2a4b78adb8f243c564; Coolify API returned HTTP 401; three bounded public checks returned 0/12 routes and 0/12 sitemap entries",
   "articles": [
     {"topic":"Appliance repair service intake","slug":"appliance-repair-virtual-assistant-service-intake","contentHash":"09d5b25301cbc01f7295da035f0b60cacd2ca7ab2155c73e28fa608bbc5715de","liveUrl":"https://hireassistantnearme.com/blog/appliance-repair-virtual-assistant-service-intake","verifiedAt":null},
     {"topic":"Roofing lead intake","slug":"roofing-company-virtual-assistant-lead-intake","contentHash":"61d8252f5fdc776ca7572823ae61b30f5408f98c62653916365b8b759ba6f868","liveUrl":"https://hireassistantnearme.com/blog/roofing-company-virtual-assistant-lead-intake","verifiedAt":null},

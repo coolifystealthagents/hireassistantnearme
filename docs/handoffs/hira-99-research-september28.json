@@ -1,0 +1,39 @@
+{
+  "taskId": "HIRA-99",
+  "cycle": "September28",
+  "category": "Research",
+  "requiredCount": 5,
+  "localValidatedCount": 5,
+  "publicationStatus": "local_handoff_not_published",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "baselineSha": "6661258fc03afea79d1e70dac3999b924022e8e4",
+  "handoffBranch": "hira-99-research-sep28",
+  "siteTimezone": "UTC",
+  "proposedPublicationDate": "2026-09-28",
+  "dateReconciliationRequiredBeforeCombinedPush": true,
+  "deploymentOwner": "BROWSER OPERATOR",
+  "researchMustNotPushOrDeploy": true,
+  "articles": [
+    {"slug":"sales-assistant-quote-version-approval-handoff","bodyWords":1273,"contentHash":"54e67d5a0bd7dff5136fdf84a50c8dc292daa4d2286ddb9497508bb54870ca3b"},
+    {"slug":"ecommerce-assistant-stockout-customer-promise-handoff","bodyWords":1232,"contentHash":"efbc8cbb3ae001d3d11be97554fc7680c5d3a2e0e7ee24e7fe81b4513d556088"},
+    {"slug":"marketing-assistant-testimonial-claim-evidence-review","bodyWords":1247,"contentHash":"8ff721e334b983630d1a6a778998dd3c0ba913a6b333cae85bf1e0131737d6c5"},
+    {"slug":"executive-assistant-confidential-meeting-pre-read-access","bodyWords":1229,"contentHash":"f4152eea700e165c62cb813cb3aa36656223587e403228430d1c05692155236f"},
+    {"slug":"project-coordinator-dependency-change-control-handoff","bodyWords":1234,"contentHash":"79b1add0f1b950236a28fea8930224f3c37495957d2fd20150d23e31e3f8cadb"}
+  ],
+  "maximumPairwiseFiveWordShingleJaccard": 0.4071,
+  "validation": {
+    "bodyDepth": "pass",
+    "distinctness": "pass",
+    "renderedRoutes": "pass",
+    "canonicals": "pass",
+    "structuredDates": "pass",
+    "visibleDates": "pass",
+    "assets": "pass_existing_repository_images",
+    "researchIndex": "pass",
+    "sitemap": "pass",
+    "cleanProductionBuild": "pass"
+  },
+  "publishingLedgerState": "not_applicable_until_first_public_verification",
+  "notes": "Blog integrator must reconcile proposed dates to each article's truthful first-public date before the sole combined push. User owns article-by-article public verification."
+}

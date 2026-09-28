@@ -1,0 +1,51 @@
+{
+  "cycle": "September28",
+  "task": "HIRA-100",
+  "baselineSha": "6661258fc03afea79d1e70dac3999b924022e8e4",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "worktree": "/paperclip/instances/default/workspaces/b66dfdbe-d9f2-4e7c-91c5-a390c4ab7c5c/hira-100-blog",
+  "branch": "hira-100-blog-sep28",
+  "publicationTimezone": "UTC",
+  "provisionalPublicationDate": "2026-09-28",
+  "status": "local-draft-rewrite-required",
+  "required": 12,
+  "drafted": 12,
+  "verified": 0,
+  "validation": {
+    "typecheck": "pass",
+    "homepageH1Test": "pass",
+    "cleanProductionBuild": "pass: 708 static pages",
+    "renderedBodyWordRange": "2388-2666",
+    "maximumFiveWordShingleJaccard": 0.6755813953488372,
+    "overlapGate": "fail: must be below 0.50 before integration",
+    "highestOverlapPair": [
+      "solar-installer-virtual-assistant-project-coordination",
+      "translation-agency-virtual-assistant-project-intake"
+    ]
+  },
+  "researchHandoff": {
+    "task": "HIRA-99",
+    "status": "pending",
+    "commitSha": null
+  },
+  "deployment": {
+    "resource": "jg2o6hoya80t16km9likeoim",
+    "submitted": false,
+    "owner": "BROWSER OPERATOR"
+  },
+  "articles": [
+    {"slug":"staffing-agency-virtual-assistant-candidate-coordination","renderedWords":2436,"renderedHash":"9b6457d455d6d867c36833466ff3c3fc52df73d6504c900153e145be3e34f918"},
+    {"slug":"mortgage-broker-virtual-assistant-document-intake","renderedWords":2388,"renderedHash":"87e9713aa3f699a9edbeb74c4451012b110662cd3ea3acc5805850bdb76edb3b"},
+    {"slug":"solar-installer-virtual-assistant-project-coordination","renderedWords":2545,"renderedHash":"21a010c7257be6be9464274d22dc994599dfcde2f4be31a566ed3b1f8c0a9f9d"},
+    {"slug":"freight-broker-virtual-assistant-load-administration","renderedWords":2457,"renderedHash":"552bbae873d41bad4ff1628652999cadf4f3d52266abab606190e01e4d046b0c"},
+    {"slug":"commercial-laundry-virtual-assistant-route-support","renderedWords":2453,"renderedHash":"1a26fac2dc2f4b4b9aae11c0ff281d843d269c7194ed92f0f2248e3541c7502b"},
+    {"slug":"event-venue-virtual-assistant-inquiry-coordination","renderedWords":2538,"renderedHash":"9dd75c6b6a4bfabf5050dc760c683db92dea3b56efa26bac2c579170e52d0899"},
+    {"slug":"tutoring-center-virtual-assistant-family-intake","renderedWords":2435,"renderedHash":"742061e46f37c1ca18bd62dbab16ef3be72481414bf801a155aed132a69fc0c6"},
+    {"slug":"translation-agency-virtual-assistant-project-intake","renderedWords":2500,"renderedHash":"6814977c241f1d7446641e09854eb4323c9defe2082b2fc8d8b27449b30aed0f"},
+    {"slug":"photography-studio-virtual-assistant-client-workflow","renderedWords":2534,"renderedHash":"4cf52e74198cc82a108d8fefe9806127698ba4edae2143804241f4561a2b36ba"},
+    {"slug":"wholesale-distributor-virtual-assistant-order-administration","renderedWords":2528,"renderedHash":"2e0bf1534d552d0d6e926d2d4a4e6b0b02c54a3d2662df432a4fdb169ec91877"},
+    {"slug":"saas-company-virtual-assistant-customer-operations","renderedWords":2666,"renderedHash":"66653350dde879f6c701fd9d21b7e9526b64b6ccceabbcf4ba29b83853cfe0b5"},
+    {"slug":"franchise-system-virtual-assistant-operations-support","renderedWords":2573,"renderedHash":"9f13b06f3d564e357249b8e1c8c930119c8f52e90b44d4fadc2a13928c5da137"}
+  ]
+}

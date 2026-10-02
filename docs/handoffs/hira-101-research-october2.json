@@ -1,0 +1,29 @@
+{
+  "cycleLabel": "2026-10-02",
+  "task": "HIRA-101",
+  "family": "research",
+  "required": 5,
+  "staged": 5,
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "baselineRemoteSha": "c76ed2a3d44bb761216caa5bbf8b70d8743fc561",
+  "researchBranch": "hira-101-research-oct2-2026",
+  "worktree": "/paperclip/instances/default/workspaces/b66dfdbe-d9f2-4e7c-91c5-a390c4ab7c5c/hira-100-blog",
+  "siteTimezone": "UTC",
+  "provisionalPublicationDate": "2026-10-02",
+  "publicationDateRule": "Blog integrator must reconcile every date field to the actual first-publication date before the sole combined push; Research has not published or deployed.",
+  "validation": {
+    "typecheck": "passed",
+    "productionBuild": "passed; 718 static pages",
+    "renderedRoutes": "passed locally: HTTP 200, title, canonical, visible date, datePublished, image, index, and sitemap",
+    "maximumPairwiseFiveWordShingleJaccard": "32.83%"
+  },
+  "articles": [
+    {"slug":"inbox-assistant-business-email-compromise-payment-change","bodyWords":1223,"contentHash":"c402fde35265e9f162c6af6bc07b8ff03e3f7e1b8d842b8a9b47910755137489"},
+    {"slug":"customer-support-assistant-account-recovery-identity-boundary","bodyWords":1233,"contentHash":"df344900b599552bedc8bcbe9158b0e8cfb72f0ebe44fc36a3d754dfa82d969a"},
+    {"slug":"recruitment-assistant-background-check-consent-handoff","bodyWords":1201,"contentHash":"a9a8feb11b8bf79f8d4f5886669625a3911e535d65aff0fad841a03e41cb4e07"},
+    {"slug":"social-media-assistant-comment-moderation-record","bodyWords":1208,"contentHash":"6276b49912c92bd8d1cd88c4f46e046ff0eb503f96bfda79ce8d41589716412b"},
+    {"slug":"real-estate-assistant-lead-fair-housing-routing","bodyWords":1213,"contentHash":"54d02e4e698f403a726fa264726a6c85f9720daf792f3c4adaed8932099eabb1"}
+  ],
+  "integration": "Cherry-pick the Research commit into this cycle's Blog branch. Research must not push production or deploy."
+}

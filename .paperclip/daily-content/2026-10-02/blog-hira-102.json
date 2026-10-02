@@ -1,0 +1,52 @@
+{
+  "cycle": "2026-10-02",
+  "task": "HIRA-102",
+  "baselineSha": "c76ed2a3d44bb761216caa5bbf8b70d8743fc561",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "branch": "hira-102-blog-oct02",
+  "publicationTimezone": "UTC",
+  "provisionalPublicationDate": "2026-10-02",
+  "status": "blog-draft-validated-awaiting-research-handoff",
+  "required": 12,
+  "drafted": 12,
+  "verified": 0,
+  "validation": {
+    "typecheck": "pass",
+    "homepageH1Test": "pass",
+    "productionBuild": "pass: 726 static pages",
+    "sourceBodyWordRange": "1187-1235",
+    "renderedPageWordRange": "2297-2398",
+    "maximumFiveWordShingleJaccard": 0.42882991556091676,
+    "highestOverlapPair": [
+      "optometry-practice-virtual-assistant-appointment-recall-workflow",
+      "occupational-therapy-practice-virtual-assistant-referral-intake"
+    ],
+    "overlapGate": "pass: below 0.50",
+    "renderedChecks": "12/12 title, canonical, datePublished, and image reference pass"
+  },
+  "researchHandoff": {
+    "task": "HIRA-101",
+    "run": "5b03516c-6e72-48e4-99c2-75962b1d8f08",
+    "status": "pending"
+  },
+  "deployment": {
+    "resource": "jg2o6hoya80t16km9likeoim",
+    "submitted": false,
+    "owner": "BROWSER OPERATOR"
+  },
+  "articles": [
+    {"slug":"hoa-management-virtual-assistant-architectural-request-intake","sourceWords":1195,"renderedWords":2319,"contentHash":"889e55f01e99fd425a8144596035b43aa685a3b6dd97a0c14e67dab95c9222be"},
+    {"slug":"funeral-home-virtual-assistant-family-inquiry-administration","sourceWords":1215,"renderedWords":2346,"contentHash":"0451a682310729aa8a7e748766fc181359f8d5068560715b3ecda95765dc8bf1"},
+    {"slug":"optometry-practice-virtual-assistant-appointment-recall-workflow","sourceWords":1200,"renderedWords":2321,"contentHash":"8f49dc2da63b29bdc7e733848602381bbb07e3227f8e78f44b4f4ccdd447d526"},
+    {"slug":"wedding-planner-virtual-assistant-vendor-document-coordination","sourceWords":1208,"renderedWords":2334,"contentHash":"21a355af4be8ffd7e6bad6a9c44f95e23f8e0b675954f71bf8f7823b3ed114fb"},
+    {"slug":"self-storage-virtual-assistant-rental-inquiry-administration","sourceWords":1214,"renderedWords":2344,"contentHash":"434be04c167d8df80de69747bcfedf8c5d0af94e710403b961e38cc27ffa5c6e"},
+    {"slug":"commercial-property-manager-virtual-assistant-vendor-certificate-tracking","sourceWords":1216,"renderedWords":2329,"contentHash":"f9db36e01b6c31159b74580103e46a4cf099e5e02118cf4198471a38f8669761"},
+    {"slug":"home-inspection-company-virtual-assistant-report-delivery-coordination","sourceWords":1187,"renderedWords":2297,"contentHash":"be017fcdfbbffbbb5db4ec6a45feea660d8833aec18232cb990a3ad8c77bb3bf"},
+    {"slug":"managed-it-provider-virtual-assistant-ticket-intake-boundaries","sourceWords":1231,"renderedWords":2398,"contentHash":"bae4f109a7cc1f07acff74ec5228c8b264cb160c929fee6b29e3d65005403d2d"},
+    {"slug":"occupational-therapy-practice-virtual-assistant-referral-intake","sourceWords":1211,"renderedWords":2330,"contentHash":"a9b0e477ec21de25ff60d1396b14ea288c0c89bdf69b22acaafe405e7a054993"},
+    {"slug":"music-school-virtual-assistant-lesson-scheduling-administration","sourceWords":1219,"renderedWords":2350,"contentHash":"f3db1bf5dbc46a1eb4332f1b3bd0b01a40e2b3d6d90a5ea4deecc2dcab82b3d4"},
+    {"slug":"equipment-rental-company-virtual-assistant-reservation-intake","sourceWords":1208,"renderedWords":2354,"contentHash":"b962167a8ddc765673e1a6ac6225e40c0278eb7bb2679b681938a666a6e40706"},
+    {"slug":"surveying-firm-virtual-assistant-project-intake-coordination","sourceWords":1235,"renderedWords":2380,"contentHash":"660c8533aa5c89d3e4f881c0997f5bf8a581d6951cced36d1f43103c124bfebb"}
+  ]
+}

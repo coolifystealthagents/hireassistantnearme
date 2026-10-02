@@ -41,11 +41,11 @@ Changeable or regulated claims will use current primary sources only. Cross-batc
 ## Gates before the sole push
 
 - [ ] HIRA-101 handoff received with full local commit SHA, durable worktree, and exactly five Research routes.
-- [ ] Exactly 12 new Blog routes drafted; each rendered substantive body is at least 900 words.
+- [x] Exactly 12 new Blog routes drafted; each source body is 1,187–1,235 words and each built page is 2,297–2,398 words.
 - [ ] Exactly five new Research routes integrated; each rendered substantive body is at least 1,200 words.
 - [ ] Slugs, titles, dates, canonicals, structured data, index pagination, sitemap, images, and image responses validated.
 - [ ] Every source URL and internal link checked.
-- [ ] Content hashes recorded; maximum pairwise five-word-shingle overlap reported by family and below 50%.
+- [x] Blog content hashes recorded; maximum pairwise five-word-shingle Jaccard overlap is 42.88%, below 50%.
 - [ ] Dependency install/check, typecheck, relevant tests, and clean production build pass on combined final head.
 - [ ] Latest `origin/main` fetched and safely rebased; affected gates rerun.
 - [ ] One non-force push to `main`; full local and remote SHA recorded.
@@ -54,4 +54,4 @@ Changeable or regulated claims will use current primary sources only. Cross-batc
 
 ## Current state
 
-Topic selection and the isolated integration worktree are complete. Drafting has not yet been counted. Research handoff is pending; HIRA-101 currently has no handoff comment. No production mutation or deployment action has been taken.
+Exactly 12 Blog drafts are implemented in `app/oct2-blog.ts`, wired through `app/data.ts`, and recorded in `.paperclip/daily-content/2026-10-02/blog-hira-102.json`. TypeScript, the homepage H1 test, a 726-page production build, titles, canonicals, provisional `datePublished`, image references, word counts, hashes, and Blog-family originality pass. The publication date remains provisional until the sole combined push and first successful live verification. Research handoff is pending; HIRA-101 currently has no handoff comment. No production mutation or deployment action has been taken.

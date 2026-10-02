@@ -55,7 +55,7 @@ const voices = [
 
 const personalize = (text:string,index:number) => {
   const [assistant,owner,record,queue,review,source,system,request,task,work,business,access,decision] = voices[index];
-  return text
+  const result = text
     .replace(/\bassistant\b/gi, assistant)
     .replace(/\bowner\b/gi, owner)
     .replace(/\brecord\b/gi, record)
@@ -69,6 +69,8 @@ const personalize = (text:string,index:number) => {
     .replace(/\bbusiness\b/gi, business)
     .replace(/\baccess\b/gi, access)
     .replace(/\bdecision\b/gi, decision);
+  if (index === 3 && result.startsWith('Include one ordinary case')) return 'Give the wedding-planning candidate a complete florist packet, an unsigned caterer form, two versions of a photographer certificate, and a venue question that the planner must answer. Ask for a vendor register and a short handoff note. The useful evidence is not how quickly the folders look tidy. It is whether the candidate keeps versions straight, leaves approval blank, and makes the planner\'s next decision easy to find.';
+  return result;
 };
 
 const sectionPlans = [

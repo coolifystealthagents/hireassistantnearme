@@ -1,5 +1,5 @@
 import {createHash} from 'node:crypto';
-import {oct2Hira101ResearchPosts as posts} from '../app/research-oct2-hira101.ts';
+import {oct2Hira101ResearchPosts as posts} from '../app/research-oct2-independent-posts.ts';
 
 const expectedDate=process.env.EXPECTED_PUBLICATION_DATE||'2026-10-02';
 const base=process.env.VALIDATION_BASE_URL;

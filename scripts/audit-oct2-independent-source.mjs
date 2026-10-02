@@ -1,13 +1,13 @@
 import fs from 'node:fs';
-import { oct2BlogPosts as blogs } from '../app/oct2-blog.ts';
-import { oct2Hira101ResearchPosts as research } from '../app/research-oct2-hira101.ts';
+import { oct2BlogPosts as blogs } from '../app/oct2-blog-independent-posts.ts';
+import { oct2Hira101ResearchPosts as research } from '../app/research-oct2-independent-posts.ts';
 import { oct2IndependentBlogContent } from '../app/oct2-blog-independent-content.ts';
 import { oct2IndependentResearchContent } from '../app/research-oct2-independent-content.ts';
 
 const failures = [];
 const inspected = [
-  'app/oct2-blog.ts',
-  'app/research-oct2-hira101.ts',
+  'app/oct2-blog-independent-posts.ts',
+  'app/research-oct2-independent-posts.ts',
   'app/oct2-blog-independent-content.ts',
   'app/research-oct2-independent-content.ts',
 ];

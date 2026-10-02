@@ -27,6 +27,7 @@ Final `npm audit`: 0 total vulnerabilities. Final locked install: PASS.
 - `git diff --check`: PASS
 - Clean Next.js 15.5.27 production build: PASS, 731 static pages
 - Generated October route validation after the final build: 17/17 PASS
+- Local Next.js HTTP route, image, index, sitemap, canonical, date, schema, and copy-hygiene verification: required again on the final rebased release candidate before push
 
 ## Actual production HTTP evidence
 
@@ -60,4 +61,6 @@ The original first-publication date remains October 2, 2026 in visible dates and
 
 ## Remaining finding
 
-The local correction is technically ready, but production still serves the original deployed articles. A production push and deployment remain expressly unauthorized. Any release requires the separate user exception, a truthful dateModified reconciliation at the moment of release, and a fresh final SHA after that date-only change if the release occurs after October 2.
+The local correction is technically ready, but production still serves the original deployed articles. At the time of the initial readiness review, a production push and deployment were expressly unauthorized. Any release requires a separate user exception, a truthful dateModified reconciliation at the moment of release, and a fresh final SHA after that date-only change if the release occurs after October 2.
+
+The scoped corrective-push exception was received later on October 2, 2026 UTC. Because the configured site timezone is UTC and the repair is being prepared on the same calendar date as first publication, the existing October 2 `datePublished` and October 2 `dateModified` values remain truthful. The browser operator must not deploy this candidate after the UTC date changes without first returning it for a truthful `dateModified` update and new validation.

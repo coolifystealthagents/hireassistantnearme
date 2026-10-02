@@ -1,7 +1,8 @@
 import { oct2BlogPosts } from '../app/oct2-blog-independent-posts.ts';
 import { oct2Hira101ResearchPosts } from '../app/research-oct2-independent-posts.ts';
 
-const origin = 'https://hireassistantnearme.com';
+const origin = process.env.VERIFY_ORIGIN || 'https://hireassistantnearme.com';
+const canonicalOrigin = process.env.VERIFY_CANONICAL_ORIGIN || 'https://hireassistantnearme.com';
 const items = [
   ...oct2BlogPosts.map(post => ({family:'blog', ...post})),
   ...oct2Hira101ResearchPosts.map(post => ({family:'research', ...post})),
@@ -35,13 +36,13 @@ for (const item of items) {
     exactH1: h1 === item.title,
     publicationDate: html.includes('October 2, 2026') && html.includes('2026-10-02'),
     schema: html.includes('datePublished') && html.includes('2026-10-02'),
-    canonical: canonical === url,
+    canonical: canonical === `${canonicalOrigin}/${item.family}/${item.slug}`,
     imageReferenced: html.includes(imagePath),
     imageStatus: imageResponse.status === 200,
     imageMime: contentType.startsWith('image/'),
     imageNonempty: imageBytes.byteLength > 100,
     indexEntry: indexHtml[item.family].status === 200 && indexHtml[item.family].body.includes(`/${item.family}/${item.slug}`),
-    sitemapEntry: sitemap.status === 200 && sitemap.body.includes(url),
+    sitemapEntry: sitemap.status === 200 && sitemap.body.includes(`${canonicalOrigin}/${item.family}/${item.slug}`),
     copyHygiene: hygieneHits.length === 0,
   };
   results.push({family:item.family,slug:item.slug,url,checkedAt:new Date().toISOString(),status:response.status,title,h1,canonical,image:{url:imageUrl,status:imageResponse.status,contentType,bytes:imageBytes.byteLength},hygieneHits,checks});

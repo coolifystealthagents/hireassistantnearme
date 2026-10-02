@@ -1,0 +1,56 @@
+{
+  "cycleLabel": "2026-10-02",
+  "integratorTask": "HIRA-102",
+  "researchTask": "HIRA-101",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "baselineRemoteSha": "c76ed2a3d44bb761216caa5bbf8b70d8743fc561",
+  "integrationBranch": "hira-102-blog-oct02",
+  "siteTimezone": "UTC",
+  "publicationDate": "2026-10-02",
+  "publicationDateState": "reconciled immediately before the sole push; final live verification must confirm the same UTC date",
+  "commitRef": "FINAL_COMBINED_HEAD_REPORTED_ON_HIRA_102",
+  "required": {"blog": 12, "research": 5},
+  "staged": {"blog": 12, "research": 5},
+  "liveVerified": {"blog": 0, "research": 0},
+  "qualitativeOriginalityAudit": {
+    "method": "Reviewed substantive paragraphs, heading sequences, argument order, examples, analysis, and outcomes after the numeric shingle audit.",
+    "result": "pass",
+    "blog": "12 of 12 unique heading sequences; zero repeated substantive paragraphs after rewriting the remaining vendor-document duplicate. Each article uses a niche-specific work sample, authority boundary, local handoff, scorecard, and outcome.",
+    "research": "5 of 5 unique heading sequences; zero repeated substantive paragraphs. Each study uses a distinct constructed case set, source analysis, operating record, stop conditions, pilot, limitations, and conclusion.",
+    "humanizerReview": "Removed the shared heading/argument sequence, repeated boilerplate endings, and the final repeated paragraph; no em or en dashes remain in either October 2 source file."
+  },
+  "validation": {
+    "dependencyInstall": "pass",
+    "typecheck": "pass",
+    "homepageH1Test": "pass",
+    "productionBuild": "pass: 731 static pages",
+    "blogWordRange": "996-1034",
+    "researchWordRange": "1294-1347",
+    "blogMaximumFiveWordShingleJaccard": "44.43%",
+    "researchMaximumFiveWordShingleJaccard": "28.04%",
+    "localRouteChecks": "17/17 HTTP 200, title, canonical, visible date, datePublished, image markup, actual image response, family index, and sitemap"
+  },
+  "deployment": {"resource":"jg2o6hoya80t16km9likeoim","owner":"browser operator","submitted":false},
+  "blog": [
+    {"slug":"hoa-management-virtual-assistant-architectural-request-intake","bodyWords":1005,"contentHash":"06dcac64d2f95439ec38648dc88c76489be483563477efae5e4237e74aa03f2a"},
+    {"slug":"funeral-home-virtual-assistant-family-inquiry-administration","bodyWords":1009,"contentHash":"8ee58d35ff3cf3bebae8761cb6424dea13c2175bdc1adda8b03b2e70ff4f9bb9"},
+    {"slug":"optometry-practice-virtual-assistant-appointment-recall-workflow","bodyWords":1007,"contentHash":"9d45bff674e1648b46704bbf1e4a1f386e5e96a640f34c07196ca8dc795a16d2"},
+    {"slug":"wedding-planner-virtual-assistant-vendor-document-coordination","bodyWords":1019,"contentHash":"ca1c559d69943ac77c77579fd24d8ac9689bc496392a7c9f8b5bba9572e2a6b9"},
+    {"slug":"self-storage-virtual-assistant-rental-inquiry-administration","bodyWords":1016,"contentHash":"e2404369bc35e6bb399a1fbc628e7d3595bffc0b26bdede17fa9ba1057ca6284"},
+    {"slug":"commercial-property-manager-virtual-assistant-vendor-certificate-tracking","bodyWords":1017,"contentHash":"e64624d6e2b32b08de70062bf431ea96bef23eb2d74ed1918c497f2bf9bb19fa"},
+    {"slug":"home-inspection-company-virtual-assistant-report-delivery-coordination","bodyWords":996,"contentHash":"26263e10287994ab9944be3c6f056d7f8a4d7bee2c01975cfd634bf88761b334"},
+    {"slug":"managed-it-provider-virtual-assistant-ticket-intake-boundaries","bodyWords":1022,"contentHash":"54c0f2185292e49381e0c46a86bf8f36adb04218d8c3129f5f23d89c6468e673"},
+    {"slug":"occupational-therapy-practice-virtual-assistant-referral-intake","bodyWords":1012,"contentHash":"f070d5bcc30d614087fe5ccaeeaa21f74dd707e512e0449e1fd34f1d58b82b22"},
+    {"slug":"music-school-virtual-assistant-lesson-scheduling-administration","bodyWords":1013,"contentHash":"734de0cfb37a0dcdf25875b517aa9b3ba4719d709ea0765e7595b77f51f82f94"},
+    {"slug":"equipment-rental-company-virtual-assistant-reservation-intake","bodyWords":1009,"contentHash":"d8030a673dab6d9d007ddc1e7b51ac49aedacdd163dd140b3db19fd003f1f9c0"},
+    {"slug":"surveying-firm-virtual-assistant-project-intake-coordination","bodyWords":1034,"contentHash":"03041ee212d0dd769d9cce0b2f609426c1f7ba282fd6563ab9519721f6e653aa"}
+  ],
+  "research": [
+    {"slug":"inbox-assistant-business-email-compromise-payment-change","bodyWords":1346,"contentHash":"acdd329781aeec0727ecdf4b502b7522462751be9e97ffd30eb30695c6b15316"},
+    {"slug":"customer-support-assistant-account-recovery-identity-boundary","bodyWords":1347,"contentHash":"f6abae943ddfdc2fd88df07bb7bcd65f100e0a69f7ccea426be5d4609003e106"},
+    {"slug":"recruitment-assistant-background-check-consent-handoff","bodyWords":1294,"contentHash":"6b1a5c2a5ea4e77ac2cfbf0af844c66185b85dffdd47e2bba32ce965bcf75626"},
+    {"slug":"social-media-assistant-comment-moderation-record","bodyWords":1314,"contentHash":"056591828f3ce2fddc95db7a794d8ba02f0f927fabb6cbe9c17a3dc64200b668"},
+    {"slug":"real-estate-assistant-lead-fair-housing-routing","bodyWords":1310,"contentHash":"f58016caa5431349c29b32af9d82264a8d9f46ad69761de895b1b3cd553b2f0b"}
+  ]
+}

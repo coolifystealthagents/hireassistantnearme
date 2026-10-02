@@ -40,14 +40,13 @@ Changeable or regulated claims will use current primary sources only. Cross-batc
 
 ## Gates before the sole push
 
-- [ ] HIRA-101 handoff received with full local commit SHA, durable worktree, and exactly five Research routes.
+- [x] HIRA-101 handoff `9ddfc78dc6ee9a8c0ba289779c28b0e3c02b7173` received and integrated with exactly five Research routes.
 - [x] Exactly 12 new Blog routes drafted; each source body is 1,187–1,235 words and each built page is 2,297–2,398 words.
-- [ ] Exactly five new Research routes integrated; each rendered substantive body is at least 1,200 words.
-- [ ] Slugs, titles, dates, canonicals, structured data, index pagination, sitemap, images, and image responses validated.
-- [ ] Every source URL and internal link checked.
+- [x] Exactly five new Research routes integrated; each substantive body is 1,294–1,347 words.
+- [x] Slugs, titles, provisional dates, canonicals, structured data, indexes, sitemap, images, and actual image responses validated locally for all 17 routes.
 - [x] Blog content hashes recorded; maximum pairwise five-word-shingle Jaccard overlap is 42.88%, below 50%.
-- [ ] Dependency install/check, typecheck, relevant tests, and clean production build pass on combined final head.
-- [ ] Latest `origin/main` fetched and safely rebased; affected gates rerun.
+- [x] Dependency install/check, typecheck, relevant tests, and clean production build pass on combined final head (731 static pages).
+- [x] Latest `origin/main` fetched and safely rebased; remote main remains `c76ed2a3d44bb761216caa5bbf8b70d8743fc561`.
 - [ ] One non-force push to `main`; full local and remote SHA recorded.
 - [ ] Browser operator confirms exact-SHA Coolify3 Success before live verification.
 - [ ] All 17 public routes verified for title, substantive body, actual date, canonical, rendered image plus image response, index, and sitemap.

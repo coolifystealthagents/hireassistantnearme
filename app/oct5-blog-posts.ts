@@ -106,7 +106,7 @@ const articles: readonly Article[] = [
     ],
     sources:[
       {name:'CDC, Home Pool and Hot Tub Water Treatment and Testing',url:'https://www.cdc.gov/healthy-swimming/about/home-pool-and-hot-tub-water-treatment-and-testing.html',note:'Public health context for testing and treatment; not a remote diagnosis guide.'},
-      {name:'EPA, Pool Chemicals',url:'https://www.epa.gov/pesticide-safety-and-protection/pool-chemicals',note:'Safety context for pool chemical storage and handling.'},
+      {name:'EPA, Chemical Safety Alert: Safe Storage and Handling of Swimming Pool Chemicals',url:'https://www.epa.gov/rmp/chemical-safety-alert-safe-storage-and-handling-swimming-pool-chemicals',note:'Safety context for pool chemical storage and handling.'},
     ],
   },
   {
@@ -161,7 +161,7 @@ const articles: readonly Article[] = [
     ],
     sources:[
       {name:'USCIS, Tips for Filing Forms by Mail',url:'https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail',note:'Official filing guidance; the supervising lawyer controls case-specific preparation.'},
-      {name:'ABA, Formal Opinion 495',url:'https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/aba-formal-opinion-495.pdf',note:'Lawyer responsibility context for remote practice and supervision.'},
+      {name:'ABA, Formal Opinion 495',url:'https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-495.pdf',note:'Lawyer responsibility context for remote practice and supervision.'},
     ],
   },
   {
@@ -188,7 +188,7 @@ const articles: readonly Article[] = [
     ],
     sources:[
       {name:'EPA, Choosing a Pest Control Company',url:'https://www.epa.gov/safepestcontrol/choosing-pest-control-company',note:'Consumer and professional context for qualified pest-control decisions.'},
-      {name:'EPA, Pesticide Poisoning',url:'https://www.epa.gov/pesticide-incidents/how-report-pesticide-incident',note:'Official incident-reporting context; not medical diagnosis.'},
+      {name:'EPA, Pesticide Incidents',url:'https://www.epa.gov/pesticide-incidents',note:'Official incident-reporting context; not medical diagnosis.'},
     ],
   },
   {
@@ -321,7 +321,7 @@ const articles: readonly Article[] = [
       { heading: 'Transfer open files without losing responsibility', paragraphs: ['When coverage changes, create a handoff that identifies active files, time-sensitive events, unresolved conflicts, latest source checks, security escalations, and the owner who accepted each item. Do not transfer responsibility through a private chat that the next shift cannot audit. The outgoing assistant should not mark an item complete merely because it was mentioned. Access to files outside the new assignment should be removed, while the company-controlled tracker remains the continuing record under the title company’s retention rules. Confirm the receiving person can open each cited source before the outgoing coverage ends.'] },
     ],
     sources: [
-      { name: 'FBI, Business Email Compromise', url: 'https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise', note: 'Official context for recognizing and reporting business email compromise.' },
+      { name: 'FBI, Business Email Compromise', url: 'https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise', note: 'Official context for recognizing and reporting business email compromise.' },
       { name: 'FTC, Protecting Personal Information', url: 'https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business', note: 'General guidance for limiting and protecting sensitive business information.' },
     ],
   },

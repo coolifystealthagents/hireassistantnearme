@@ -1,0 +1,7 @@
+bookkeeping-assistant-duplicate-invoice-control-study	1279 body words	14290c1ed8b1913569ec44955ac03ddbc741b68adfc8ea33295fd07aeb82dbc7
+calendar-assistant-recurring-meeting-time-zone-study	1287 body words	b132b0e9ed19b84d051471f4e63ecdb03ec918341dd68b223efcdee1a4161f1c
+sales-assistant-crm-lead-merge-provenance-study	1474 body words	5d5906705f6c7fce88b30685a17194a8d962f8395447e9ceb03bb0e2ce726333
+ecommerce-assistant-return-request-evidence-study	1384 body words	41b8a5f7d827d7a02d730de884ae5c79f89887f8f47e22aea68aba0dcb4be763
+project-coordinator-change-request-decision-log-study	1376 body words	2db5cddddc06eb660a924da4b7fa8df2b020215d9bca1c1765db697ad2cf9f1a
+maximum pairwise five-word-shingle Jaccard	0.22%	ecommerce-assistant-return-request-evidence-study <> project-coordinator-change-request-decision-log-study
+Validated exactly 5 October 5 Research handoff articles.

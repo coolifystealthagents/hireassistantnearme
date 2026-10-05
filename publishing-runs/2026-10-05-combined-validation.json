@@ -1,0 +1,330 @@
+{
+  "expectedPublicationDate": "2026-10-05",
+  "count": 17,
+  "failures": [],
+  "report": [
+    {
+      "family": "blog",
+      "slug": "chiropractic-practice-virtual-assistant-new-patient-intake",
+      "sourceWords": 938,
+      "contentHash": "c41c6f9ba09016685896512946e9e044993e1c9d6e8652b422377ebfb96f8ae3",
+      "renderedHash": "da0f9cd62ebd2e83994fd50b3aea2a999bf6816846395cc069356a20c0b77950",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-maya.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "mobile-locksmith-virtual-assistant-service-call-intake",
+      "sourceWords": 963,
+      "contentHash": "893adaf95d92e41579b44d929d3f6e8769998cfe93c47a7326a445e142cdc415",
+      "renderedHash": "16685e19ee7242e6605a15f39ac9854b1f22448e606ca71e46f05705c78da6e6",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/calendar-assistant.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "pool-service-company-virtual-assistant-route-exception-desk",
+      "sourceWords": 939,
+      "contentHash": "2b75336158645f00cd537e2c84c0bf3ccfe31bc40037e8c4b715e3220394f0cf",
+      "renderedHash": "cae695d8abcb89431b9a56c32994eb97f6c8f9c1a592d13ab6118c90b0d623d3",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-maya.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "appliance-repair-virtual-assistant-warranty-intake",
+      "sourceWords": 989,
+      "contentHash": "dbb161c5f95a7c17f7c1fda69e060323c075bcc2632cfe03bbb716657f02494e",
+      "renderedHash": "706230eb699224376dabca242f776f01f6d014a941daeb8d6a6537fd2ce9a18b",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-daniel.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "immigration-law-office-virtual-assistant-document-collection",
+      "sourceWords": 934,
+      "contentHash": "90e6c72d45fb91e54cb36dc2f2ea7c1bdb11dba49a42e36b7a95408d95f574c9",
+      "renderedHash": "5168ee29f3438772deeeb24418b3f5284fe10285fb3156d76178619dbfb45310",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-elena.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "pest-control-company-virtual-assistant-quote-request-intake",
+      "sourceWords": 900,
+      "contentHash": "babfcbb844cdedda39cc9faecdd46e217f4a218abd9750cb5d861345b30f6819",
+      "renderedHash": "53b51a548b39efed4ca6433028e64b2bd8de2e03e5651b1326e08a66749d02da",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-maya.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "auto-repair-shop-virtual-assistant-estimate-follow-up",
+      "sourceWords": 908,
+      "contentHash": "8ccfd748a1b8b81bcd6cee4825d24043ec4dbee5a80a4d8affee67888d7777b3",
+      "renderedHash": "3f76bf722bfecd796230e36f70a75432428d850b35e3460a2800016eda6885a1",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-daniel.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "commercial-cleaning-company-virtual-assistant-quality-issue-routing",
+      "sourceWords": 900,
+      "contentHash": "ae9e1d815bcc60ad09993d5e6711c760e979025ed7ffc4db263c87ada112fef6",
+      "renderedHash": "f563053c1fdf7c6ee51f06746568d381ddfc12530ad97b6b33d0a51ed54f15cf",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/calendar-assistant.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "veterinary-practice-virtual-assistant-record-request-coordination",
+      "sourceWords": 904,
+      "contentHash": "2af82427b039169ccafbc0dd764b1c9f83cc080d83e31b94c5f664ae1e3979ea",
+      "renderedHash": "b18f25969d9723852fd5c2b0808b73261af01a1acf27a19d01121ce174cf70e2",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-maya.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "catering-company-virtual-assistant-event-inquiry-qualification",
+      "sourceWords": 900,
+      "contentHash": "4c6e9f8f36daf56da068c912157213c60d8e08dc25607054deccdd5ad55a1754",
+      "renderedHash": "3868301cf77786b95cc58ef5d68e87ea96c71523b66414c4edbc183020a3d197",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-daniel.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "title-company-virtual-assistant-closing-document-tracker",
+      "sourceWords": 909,
+      "contentHash": "dd7b88469561912f59563f0d2b98d0a66fc2d1e5eff36ce8408315761dbd07a7",
+      "renderedHash": "fdb637223e894ef319284937d0f397818ca4b1c103aa5d0d5cd98a0f20850614",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-daniel.jpg"
+    },
+    {
+      "family": "blog",
+      "slug": "senior-home-care-virtual-assistant-caregiver-schedule-coordination",
+      "sourceWords": 904,
+      "contentHash": "49203b8e88dfe00a91273bd896efe87bc9dd409964774edc5463236e1f4a1973",
+      "renderedHash": "8cb807e96ebc7a8ee13b81bab9a99413fe505e1c63901e1fdb2eeae05711d1b6",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-elena.jpg"
+    },
+    {
+      "family": "research",
+      "slug": "bookkeeping-assistant-duplicate-invoice-control-study",
+      "sourceWords": 1206,
+      "contentHash": "c2ba336b2c9df0936e83d1a93146575ee3f2908f9a107c0c6658e9edcd8ea6ed",
+      "renderedHash": "d56561fa64da2a3af358ded5ad95d00b790e873f19958c7f3563368e9419b095",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-elena.jpg"
+    },
+    {
+      "family": "research",
+      "slug": "calendar-assistant-recurring-meeting-time-zone-study",
+      "sourceWords": 1202,
+      "contentHash": "82254c19fa7febf36e32e3bc715875455c9ae4356188b02ba8f73fe80d97751f",
+      "renderedHash": "877782102d8dff2c5c7edd5c8e347b41d76053cec2cb7a310ab839a09e7fa255",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/calendar-assistant.jpg"
+    },
+    {
+      "family": "research",
+      "slug": "sales-assistant-crm-lead-merge-provenance-study",
+      "sourceWords": 1353,
+      "contentHash": "d7c4c9afd22734a469046dc1638b5d7e14ffd16376a8b3d9a72e6003745322ec",
+      "renderedHash": "8665469b2e5759c0985ac918d69a56c2446c8b30aca65884520fd56e73efdca8",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-daniel.jpg"
+    },
+    {
+      "family": "research",
+      "slug": "ecommerce-assistant-return-request-evidence-study",
+      "sourceWords": 1271,
+      "contentHash": "2fcb760b8b36d14e03f5515461e79173d6ae5cf0085229f2c032addf6b77c221",
+      "renderedHash": "9cca8517c0994b41ea1d397a6ba0e3ede851ae3b950c4df18a65df2e1f747754",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/assistant-maya.jpg"
+    },
+    {
+      "family": "research",
+      "slug": "project-coordinator-change-request-decision-log-study",
+      "sourceWords": 1261,
+      "contentHash": "3a8340ff065b390e6cbcdc8421703560f7835f5be9aadaae9809fb495180106e",
+      "renderedHash": "4b3bc96ad139ec7507ea9862ec6c3b64042038e38f0415f30348355b64b9053d",
+      "missingParagraphs": 0,
+      "checks": {
+        "title": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true,
+        "index": true,
+        "sitemap": true,
+        "completeBody": true
+      },
+      "image": "/images/local-team.jpg"
+    }
+  ]
+}

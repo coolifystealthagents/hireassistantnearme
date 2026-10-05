@@ -1071,8 +1071,9 @@ import { sep23BlogPosts } from './sep23-blog';
 import { sep24BlogPosts, sep25BlogPosts } from './sep24-blog';
 import { sep28BlogPosts } from './sep28-blog';
 import { oct2BlogPosts } from './oct2-blog-independent-posts';
+import { oct5BlogPosts } from './oct5-blog-posts';
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts, ...sep10BlogPosts, ...sep11BlogPosts, ...sep16BlogPosts, ...sep18BlogPosts, ...sep22BlogPosts, ...sep23BlogPosts, ...sep24BlogPosts, ...sep25BlogPosts, ...sep28BlogPosts, ...oct2BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts, ...sep10BlogPosts, ...sep11BlogPosts, ...sep16BlogPosts, ...sep18BlogPosts, ...sep22BlogPosts, ...sep23BlogPosts, ...sep24BlogPosts, ...sep25BlogPosts, ...sep28BlogPosts, ...oct2BlogPosts, ...oct5BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
 
 export const routes = [
   '/',

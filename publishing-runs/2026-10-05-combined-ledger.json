@@ -1,0 +1,279 @@
+{
+  "cycle": "2026-10-05",
+  "publicationTimezone": "UTC",
+  "publicationDate": "2026-10-05",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "productionBranch": "main",
+  "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+  "status": "validated-awaiting-push-and-operator-deployment",
+  "required": {
+    "blog": 12,
+    "research": 5
+  },
+  "verified": {
+    "blog": 0,
+    "research": 0
+  },
+  "entries": [
+    {
+      "family": "blog",
+      "topic": "Chiropractic practice virtual assistant: new-patient intake without clinical screening",
+      "slug": "chiropractic-practice-virtual-assistant-new-patient-intake",
+      "sources": [
+        "https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide"
+      ],
+      "contentHash": "c41c6f9ba09016685896512946e9e044993e1c9d6e8652b422377ebfb96f8ae3",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/chiropractic-practice-virtual-assistant-new-patient-intake",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Mobile locksmith virtual assistant: service-call intake without access authorization",
+      "slug": "mobile-locksmith-virtual-assistant-service-call-intake",
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide"
+      ],
+      "contentHash": "893adaf95d92e41579b44d929d3f6e8769998cfe93c47a7326a445e142cdc415",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/mobile-locksmith-virtual-assistant-service-call-intake",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Pool service virtual assistant: route exceptions without chemical or field decisions",
+      "slug": "pool-service-company-virtual-assistant-route-exception-desk",
+      "sources": [
+        "https://www.cdc.gov/healthy-swimming/about/home-pool-and-hot-tub-water-treatment-and-testing.html",
+        "https://www.epa.gov/pesticide-safety-and-protection/pool-chemicals"
+      ],
+      "contentHash": "2b75336158645f00cd537e2c84c0bf3ccfe31bc40037e8c4b715e3220394f0cf",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/pool-service-company-virtual-assistant-route-exception-desk",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Appliance repair virtual assistant: warranty intake without diagnosis or coverage promises",
+      "slug": "appliance-repair-virtual-assistant-warranty-intake",
+      "sources": [
+        "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance",
+        "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law"
+      ],
+      "contentHash": "dbb161c5f95a7c17f7c1fda69e060323c075bcc2632cfe03bbb716657f02494e",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/appliance-repair-virtual-assistant-warranty-intake",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Immigration law virtual assistant: document collection without legal advice",
+      "slug": "immigration-law-office-virtual-assistant-document-collection",
+      "sources": [
+        "https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail",
+        "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/aba-formal-opinion-495.pdf"
+      ],
+      "contentHash": "90e6c72d45fb91e54cb36dc2f2ea7c1bdb11dba49a42e36b7a95408d95f574c9",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/immigration-law-office-virtual-assistant-document-collection",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Pest control virtual assistant: quote intake without treatment recommendations",
+      "slug": "pest-control-company-virtual-assistant-quote-request-intake",
+      "sources": [
+        "https://www.epa.gov/safepestcontrol/choosing-pest-control-company",
+        "https://www.epa.gov/pesticide-incidents/how-report-pesticide-incident"
+      ],
+      "contentHash": "babfcbb844cdedda39cc9faecdd46e217f4a218abd9750cb5d861345b30f6819",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/pest-control-company-virtual-assistant-quote-request-intake",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Auto repair virtual assistant: estimate follow-up without repair or safety approval",
+      "slug": "auto-repair-shop-virtual-assistant-estimate-follow-up",
+      "sources": [
+        "https://consumer.ftc.gov/articles/auto-repair-basics",
+        "https://www.nhtsa.gov/recalls"
+      ],
+      "contentHash": "8ccfd748a1b8b81bcd6cee4825d24043ec4dbee5a80a4d8affee67888d7777b3",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/auto-repair-shop-virtual-assistant-estimate-follow-up",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Commercial cleaning virtual assistant: quality issue routing without site inspection",
+      "slug": "commercial-cleaning-company-virtual-assistant-quality-issue-routing",
+      "sources": [
+        "https://www.osha.gov/hazcom",
+        "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html"
+      ],
+      "contentHash": "ae9e1d815bcc60ad09993d5e6711c760e979025ed7ffc4db263c87ada112fef6",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/commercial-cleaning-company-virtual-assistant-quality-issue-routing",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Veterinary practice virtual assistant: record requests without medical triage",
+      "slug": "veterinary-practice-virtual-assistant-record-request-coordination",
+      "sources": [
+        "https://www.avma.org/resources-tools/avma-policies/veterinary-medical-records",
+        "https://www.aspca.org/pet-care/animal-poison-control"
+      ],
+      "contentHash": "2af82427b039169ccafbc0dd764b1c9f83cc080d83e31b94c5f664ae1e3979ea",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/veterinary-practice-virtual-assistant-record-request-coordination",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Catering virtual assistant: event inquiry qualification without menu or contract promises",
+      "slug": "catering-company-virtual-assistant-event-inquiry-qualification",
+      "sources": [
+        "https://www.fda.gov/food/food-labeling-nutrition/food-allergies",
+        "https://www.fda.gov/food/retail-food-protection/fda-food-code"
+      ],
+      "contentHash": "4c6e9f8f36daf56da068c912157213c60d8e08dc25607054deccdd5ad55a1754",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/catering-company-virtual-assistant-event-inquiry-qualification",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Title company virtual assistant: closing-document tracking without title or escrow judgment",
+      "slug": "title-company-virtual-assistant-closing-document-tracker",
+      "sources": [
+        "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"
+      ],
+      "contentHash": "dd7b88469561912f59563f0d2b98d0a66fc2d1e5eff36ce8408315761dbd07a7",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/title-company-virtual-assistant-closing-document-tracker",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Senior home care virtual assistant: caregiver scheduling without care or safety decisions",
+      "slug": "senior-home-care-virtual-assistant-caregiver-schedule-coordination",
+      "sources": [
+        "https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "contentHash": "49203b8e88dfe00a91273bd896efe87bc9dd409964774edc5463236e1f4a1973",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/blog/senior-home-care-virtual-assistant-caregiver-schedule-coordination",
+      "verifiedAt": null
+    },
+    {
+      "family": "research",
+      "topic": "Duplicate invoices: what should a bookkeeping assistant check before entry?",
+      "slug": "bookkeeping-assistant-duplicate-invoice-control-study",
+      "sources": [
+        "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+        "https://www.gao.gov/products/gao-14-704g",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ],
+      "contentHash": "c2ba336b2c9df0936e83d1a93146575ee3f2908f9a107c0c6658e9edcd8ea6ed",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/research/bookkeeping-assistant-duplicate-invoice-control-study",
+      "verifiedAt": null
+    },
+    {
+      "family": "research",
+      "topic": "Recurring meetings across time zones: what should a calendar assistant verify?",
+      "slug": "calendar-assistant-recurring-meeting-time-zone-study",
+      "sources": [
+        "https://www.iana.org/time-zones",
+        "https://www.rfc-editor.org/rfc/rfc5545",
+        "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst"
+      ],
+      "contentHash": "82254c19fa7febf36e32e3bc715875455c9ae4356188b02ba8f73fe80d97751f",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/research/calendar-assistant-recurring-meeting-time-zone-study",
+      "verifiedAt": null
+    },
+    {
+      "family": "research",
+      "topic": "Duplicate CRM leads: when should a sales assistant merge, link, or stop?",
+      "slug": "sales-assistant-crm-lead-merge-provenance-study",
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.archives.gov/research/electronic-records/info-for-researchers/data-quality"
+      ],
+      "contentHash": "d7c4c9afd22734a469046dc1638b5d7e14ffd16376a8b3d9a72e6003745322ec",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/research/sales-assistant-crm-lead-merge-provenance-study",
+      "verifiedAt": null
+    },
+    {
+      "family": "research",
+      "topic": "Return requests: what can an ecommerce assistant prepare before approving a remedy?",
+      "slug": "ecommerce-assistant-return-request-evidence-study",
+      "sources": [
+        "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+        "https://www.ftc.gov/business-guidance/industry/online-commerce",
+        "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance"
+      ],
+      "contentHash": "2fcb760b8b36d14e03f5515461e79173d6ae5cf0085229f2c032addf6b77c221",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/research/ecommerce-assistant-return-request-evidence-study",
+      "verifiedAt": null
+    },
+    {
+      "family": "research",
+      "topic": "Change requests: what should a project coordinator record before work shifts?",
+      "slug": "project-coordinator-change-request-decision-log-study",
+      "sources": [
+        "https://www.gao.gov/products/gao-16-89g",
+        "https://csrc.nist.gov/pubs/sp/800/128/final",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ],
+      "contentHash": "3a8340ff065b390e6cbcdc8421703560f7835f5be9aadaae9809fb495180106e",
+      "publicationDate": "2026-10-05",
+      "contentCommit": "2f746571a8c5e18cbeaf0feab566be3ca693f64b",
+      "deploymentEvidence": null,
+      "liveUrl": "https://hireassistantnearme.com/research/project-coordinator-change-request-decision-log-study",
+      "verifiedAt": null
+    }
+  ]
+}

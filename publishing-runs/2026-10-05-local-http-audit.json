@@ -1,0 +1,686 @@
+{
+  "auditedAt": "2026-10-05T15:24:57.468Z",
+  "base": "http://127.0.0.1:3000",
+  "expectedDate": "2026-10-05",
+  "counts": {
+    "routes": 17,
+    "internal": 9,
+    "images": 5,
+    "authority": 33,
+    "authority200": 31,
+    "authority403": 2
+  },
+  "failures": [],
+  "routes": [
+    {
+      "path": "/blog/chiropractic-practice-virtual-assistant-new-patient-intake",
+      "status": 200,
+      "title": "Chiropractic practice virtual assistant: new-patient intake without clinical screening",
+      "sourceWords": 938,
+      "paragraphCount": 12,
+      "missingParagraphs": 0,
+      "sourceHash": "c41c6f9ba09016685896512946e9e044993e1c9d6e8652b422377ebfb96f8ae3",
+      "matchedBodyHash": "c41c6f9ba09016685896512946e9e044993e1c9d6e8652b422377ebfb96f8ae3",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/mobile-locksmith-virtual-assistant-service-call-intake",
+      "status": 200,
+      "title": "Mobile locksmith virtual assistant: service-call intake without access authorization",
+      "sourceWords": 963,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "893adaf95d92e41579b44d929d3f6e8769998cfe93c47a7326a445e142cdc415",
+      "matchedBodyHash": "893adaf95d92e41579b44d929d3f6e8769998cfe93c47a7326a445e142cdc415",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/pool-service-company-virtual-assistant-route-exception-desk",
+      "status": 200,
+      "title": "Pool service virtual assistant: route exceptions without chemical or field decisions",
+      "sourceWords": 939,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "2b75336158645f00cd537e2c84c0bf3ccfe31bc40037e8c4b715e3220394f0cf",
+      "matchedBodyHash": "2b75336158645f00cd537e2c84c0bf3ccfe31bc40037e8c4b715e3220394f0cf",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/appliance-repair-virtual-assistant-warranty-intake",
+      "status": 200,
+      "title": "Appliance repair virtual assistant: warranty intake without diagnosis or coverage promises",
+      "sourceWords": 989,
+      "paragraphCount": 14,
+      "missingParagraphs": 0,
+      "sourceHash": "dbb161c5f95a7c17f7c1fda69e060323c075bcc2632cfe03bbb716657f02494e",
+      "matchedBodyHash": "dbb161c5f95a7c17f7c1fda69e060323c075bcc2632cfe03bbb716657f02494e",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/immigration-law-office-virtual-assistant-document-collection",
+      "status": 200,
+      "title": "Immigration law virtual assistant: document collection without legal advice",
+      "sourceWords": 934,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "90e6c72d45fb91e54cb36dc2f2ea7c1bdb11dba49a42e36b7a95408d95f574c9",
+      "matchedBodyHash": "90e6c72d45fb91e54cb36dc2f2ea7c1bdb11dba49a42e36b7a95408d95f574c9",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/pest-control-company-virtual-assistant-quote-request-intake",
+      "status": 200,
+      "title": "Pest control virtual assistant: quote intake without treatment recommendations",
+      "sourceWords": 900,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "babfcbb844cdedda39cc9faecdd46e217f4a218abd9750cb5d861345b30f6819",
+      "matchedBodyHash": "babfcbb844cdedda39cc9faecdd46e217f4a218abd9750cb5d861345b30f6819",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/auto-repair-shop-virtual-assistant-estimate-follow-up",
+      "status": 200,
+      "title": "Auto repair virtual assistant: estimate follow-up without repair or safety approval",
+      "sourceWords": 908,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "8ccfd748a1b8b81bcd6cee4825d24043ec4dbee5a80a4d8affee67888d7777b3",
+      "matchedBodyHash": "8ccfd748a1b8b81bcd6cee4825d24043ec4dbee5a80a4d8affee67888d7777b3",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/commercial-cleaning-company-virtual-assistant-quality-issue-routing",
+      "status": 200,
+      "title": "Commercial cleaning virtual assistant: quality issue routing without site inspection",
+      "sourceWords": 900,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "ae9e1d815bcc60ad09993d5e6711c760e979025ed7ffc4db263c87ada112fef6",
+      "matchedBodyHash": "ae9e1d815bcc60ad09993d5e6711c760e979025ed7ffc4db263c87ada112fef6",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/veterinary-practice-virtual-assistant-record-request-coordination",
+      "status": 200,
+      "title": "Veterinary practice virtual assistant: record requests without medical triage",
+      "sourceWords": 904,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "2af82427b039169ccafbc0dd764b1c9f83cc080d83e31b94c5f664ae1e3979ea",
+      "matchedBodyHash": "2af82427b039169ccafbc0dd764b1c9f83cc080d83e31b94c5f664ae1e3979ea",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/catering-company-virtual-assistant-event-inquiry-qualification",
+      "status": 200,
+      "title": "Catering virtual assistant: event inquiry qualification without menu or contract promises",
+      "sourceWords": 900,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "4c6e9f8f36daf56da068c912157213c60d8e08dc25607054deccdd5ad55a1754",
+      "matchedBodyHash": "4c6e9f8f36daf56da068c912157213c60d8e08dc25607054deccdd5ad55a1754",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/title-company-virtual-assistant-closing-document-tracker",
+      "status": 200,
+      "title": "Title company virtual assistant: closing-document tracking without title or escrow judgment",
+      "sourceWords": 909,
+      "paragraphCount": 12,
+      "missingParagraphs": 0,
+      "sourceHash": "dd7b88469561912f59563f0d2b98d0a66fc2d1e5eff36ce8408315761dbd07a7",
+      "matchedBodyHash": "dd7b88469561912f59563f0d2b98d0a66fc2d1e5eff36ce8408315761dbd07a7",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/blog/senior-home-care-virtual-assistant-caregiver-schedule-coordination",
+      "status": 200,
+      "title": "Senior home care virtual assistant: caregiver scheduling without care or safety decisions",
+      "sourceWords": 904,
+      "paragraphCount": 12,
+      "missingParagraphs": 0,
+      "sourceHash": "49203b8e88dfe00a91273bd896efe87bc9dd409964774edc5463236e1f4a1973",
+      "matchedBodyHash": "49203b8e88dfe00a91273bd896efe87bc9dd409964774edc5463236e1f4a1973",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/research/bookkeeping-assistant-duplicate-invoice-control-study",
+      "status": 200,
+      "title": "Duplicate invoices: what should a bookkeeping assistant check before entry?",
+      "sourceWords": 1206,
+      "paragraphCount": 13,
+      "missingParagraphs": 0,
+      "sourceHash": "c2ba336b2c9df0936e83d1a93146575ee3f2908f9a107c0c6658e9edcd8ea6ed",
+      "matchedBodyHash": "c2ba336b2c9df0936e83d1a93146575ee3f2908f9a107c0c6658e9edcd8ea6ed",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/research/calendar-assistant-recurring-meeting-time-zone-study",
+      "status": 200,
+      "title": "Recurring meetings across time zones: what should a calendar assistant verify?",
+      "sourceWords": 1202,
+      "paragraphCount": 14,
+      "missingParagraphs": 0,
+      "sourceHash": "82254c19fa7febf36e32e3bc715875455c9ae4356188b02ba8f73fe80d97751f",
+      "matchedBodyHash": "82254c19fa7febf36e32e3bc715875455c9ae4356188b02ba8f73fe80d97751f",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/research/sales-assistant-crm-lead-merge-provenance-study",
+      "status": 200,
+      "title": "Duplicate CRM leads: when should a sales assistant merge, link, or stop?",
+      "sourceWords": 1353,
+      "paragraphCount": 19,
+      "missingParagraphs": 0,
+      "sourceHash": "d7c4c9afd22734a469046dc1638b5d7e14ffd16376a8b3d9a72e6003745322ec",
+      "matchedBodyHash": "d7c4c9afd22734a469046dc1638b5d7e14ffd16376a8b3d9a72e6003745322ec",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/research/ecommerce-assistant-return-request-evidence-study",
+      "status": 200,
+      "title": "Return requests: what can an ecommerce assistant prepare before approving a remedy?",
+      "sourceWords": 1271,
+      "paragraphCount": 19,
+      "missingParagraphs": 0,
+      "sourceHash": "2fcb760b8b36d14e03f5515461e79173d6ae5cf0085229f2c032addf6b77c221",
+      "matchedBodyHash": "2fcb760b8b36d14e03f5515461e79173d6ae5cf0085229f2c032addf6b77c221",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    },
+    {
+      "path": "/research/project-coordinator-change-request-decision-log-study",
+      "status": 200,
+      "title": "Change requests: what should a project coordinator record before work shifts?",
+      "sourceWords": 1261,
+      "paragraphCount": 19,
+      "missingParagraphs": 0,
+      "sourceHash": "3a8340ff065b390e6cbcdc8421703560f7835f5be9aadaae9809fb495180106e",
+      "matchedBodyHash": "3a8340ff065b390e6cbcdc8421703560f7835f5be9aadaae9809fb495180106e",
+      "checks": {
+        "http": true,
+        "title": true,
+        "completeBody": true,
+        "canonical": true,
+        "datePublished": true,
+        "visibleDate": true,
+        "image": true
+      }
+    }
+  ],
+  "indexes": {
+    "blog": {
+      "status": 200,
+      "missing": []
+    },
+    "research": {
+      "status": 200,
+      "missing": []
+    }
+  },
+  "sitemap": {
+    "status": 200,
+    "missing": []
+  },
+  "internal": [
+    {
+      "path": "/compare/local-vs-remote-assistant",
+      "status": 200
+    },
+    {
+      "path": "/contact-us",
+      "status": 200
+    },
+    {
+      "path": "/research",
+      "status": 200
+    },
+    {
+      "path": "/services",
+      "status": 200
+    },
+    {
+      "path": "/services/bookkeeping-administration",
+      "status": 200
+    },
+    {
+      "path": "/services/calendar-and-inbox-support",
+      "status": 200
+    },
+    {
+      "path": "/services/ecommerce-assistance",
+      "status": 200
+    },
+    {
+      "path": "/services/project-coordination",
+      "status": 200
+    },
+    {
+      "path": "/services/sales-administrative-support",
+      "status": 200
+    }
+  ],
+  "images": [
+    {
+      "path": "/images/assistant-daniel.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "signature": "ffd8ffe000104a4649460001",
+      "decoded": {
+        "format": "jpeg",
+        "width": 800,
+        "height": 1200
+      },
+      "valid": true
+    },
+    {
+      "path": "/images/assistant-elena.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "signature": "ffd8ffe000104a4649460001",
+      "decoded": {
+        "format": "jpeg",
+        "width": 800,
+        "height": 1200
+      },
+      "valid": true
+    },
+    {
+      "path": "/images/assistant-maya.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "signature": "ffd8ffe000104a4649460001",
+      "decoded": {
+        "format": "jpeg",
+        "width": 800,
+        "height": 1200
+      },
+      "valid": true
+    },
+    {
+      "path": "/images/calendar-assistant.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "signature": "ffd8ffe000104a4649460001",
+      "decoded": {
+        "format": "jpeg",
+        "width": 1400,
+        "height": 933
+      },
+      "valid": true
+    },
+    {
+      "path": "/images/local-team.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "signature": "ffd8ffe000104a4649460001",
+      "decoded": {
+        "format": "jpeg",
+        "width": 1600,
+        "height": 1067
+      },
+      "valid": true
+    }
+  ],
+  "authority": [
+    {
+      "url": "https://consumer.ftc.gov/articles/auto-repair-basics",
+      "status": 200,
+      "finalUrl": "https://consumer.ftc.gov/articles/0211-auto-repair-basics",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/128/final",
+      "status": 200,
+      "finalUrl": "https://csrc.nist.gov/pubs/sp/800/128/final",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "status": 200,
+      "finalUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-495.pdf",
+      "status": 403,
+      "finalUrl": "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-495.pdf",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": "Official ABA search result exposes Formal Opinion 495, dated December 16, 2020, titled Lawyers Working Remotely, and its remote-practice analysis."
+    },
+    {
+      "url": "https://www.archives.gov/about/info-qual",
+      "status": 200,
+      "finalUrl": "https://www.archives.gov/about/info-qual",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.aspca.org/pet-care/animal-poison-control",
+      "status": 200,
+      "finalUrl": "https://www.aspca.org/pet-care/aspca-poison-control",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.avma.org/resources-tools/avma-policies/veterinary-medical-records",
+      "status": 200,
+      "finalUrl": "https://www.avma.org/resources-tools/avma-policies/veterinary-medical-records",
+      "mime": "text/html",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.cdc.gov/healthy-swimming/about/home-pool-and-hot-tub-water-treatment-and-testing.html",
+      "status": 200,
+      "finalUrl": "https://www.cdc.gov/healthy-swimming/about/home-pool-and-hot-tub-water-treatment-and-testing.html",
+      "mime": "text/html",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+      "status": 200,
+      "finalUrl": "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+      "mime": "text/html",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance",
+      "status": 200,
+      "finalUrl": "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.epa.gov/pesticide-incidents",
+      "status": 200,
+      "finalUrl": "https://www.epa.gov/pesticide-incidents",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.epa.gov/rmp/chemical-safety-alert-safe-storage-and-handling-swimming-pool-chemicals",
+      "status": 200,
+      "finalUrl": "https://www.epa.gov/rmp/chemical-safety-alert-safe-storage-and-handling-swimming-pool-chemicals",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.epa.gov/safepestcontrol/choosing-pest-control-company",
+      "status": 200,
+      "finalUrl": "https://www.epa.gov/safepestcontrol/choosing-pest-control-company",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise",
+      "status": 403,
+      "finalUrl": "https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": "Official FBI search result exposes the current BEC page, examples, reporting route, and advice to verify payment or account changes through a known channel."
+    },
+    {
+      "url": "https://www.fda.gov/food/food-labeling-nutrition/food-allergies",
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+      "status": 200,
+      "finalUrl": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "status": 200,
+      "finalUrl": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+      "status": 200,
+      "finalUrl": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.ftc.gov/business-guidance/resources/selling-internet-prompt-delivery-rules",
+      "status": 200,
+      "finalUrl": "https://www.ftc.gov/business-guidance/resources/selling-internet-prompt-delivery-rules",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+      "status": 200,
+      "finalUrl": "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.gao.gov/products/gao-14-704g",
+      "status": 200,
+      "finalUrl": "https://www.gao.gov/products/gao-14-704g",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.gao.gov/products/gao-16-89g",
+      "status": 200,
+      "finalUrl": "https://www.gao.gov/products/gao-16-89g",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html",
+      "status": 200,
+      "finalUrl": "https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.iana.org/time-zones",
+      "status": 200,
+      "finalUrl": "https://www.iana.org/time-zones",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+      "status": 200,
+      "finalUrl": "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.nhtsa.gov/recalls",
+      "status": 200,
+      "finalUrl": "https://www.nhtsa.gov/recalls",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.nist.gov/privacy-framework",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/privacy-framework",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.osha.gov/hazcom",
+      "status": 200,
+      "finalUrl": "https://www.osha.gov/hazcom",
+      "mime": "text/html; charset=UTF-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc5545",
+      "status": 200,
+      "finalUrl": "https://www.rfc-editor.org/info/rfc5545/",
+      "mime": "text/html;charset=utf-8",
+      "browserEvidence": null
+    },
+    {
+      "url": "https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail",
+      "status": 200,
+      "finalUrl": "https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail",
+      "mime": "text/html; charset=utf-8",
+      "browserEvidence": null
+    }
+  ]
+}

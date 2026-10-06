@@ -1,7 +1,7 @@
 {
-  "auditedAt": "2026-10-05T20:56:24.118Z",
-  "base": "http://127.0.0.1:3001",
-  "expectedDate": "2026-10-05",
+  "auditedAt": "2026-10-06T08:13:18.266Z",
+  "base": "http://127.0.0.1:3002",
+  "expectedDate": "2026-10-06",
   "counts": {
     "routes": 17,
     "internal": 9,

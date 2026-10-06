@@ -1,5 +1,5 @@
 {
-  "expectedPublicationDate": "2026-10-05",
+  "expectedPublicationDate": "2026-10-06",
   "count": 17,
   "failures": [],
   "report": [
@@ -8,7 +8,7 @@
       "slug": "chiropractic-practice-virtual-assistant-new-patient-intake",
       "sourceWords": 938,
       "contentHash": "c41c6f9ba09016685896512946e9e044993e1c9d6e8652b422377ebfb96f8ae3",
-      "renderedHash": "4c27df8cad000afc6e6e9d43040ebdad3acdc3759674f3629bb40614783cef52",
+      "renderedHash": "0e0a2080e5ed4045a0c9cf03b7a59023ac59d96ee2d5815aaa20670c336fdaaa",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -27,7 +27,7 @@
       "slug": "mobile-locksmith-virtual-assistant-service-call-intake",
       "sourceWords": 963,
       "contentHash": "893adaf95d92e41579b44d929d3f6e8769998cfe93c47a7326a445e142cdc415",
-      "renderedHash": "83d2134557e77d5109dd4c22a1e14356c8b4554c856248aae7214f1b1c36a555",
+      "renderedHash": "79cdcf550e5ba38c6f1850b72884ee8ad86b31dfca73c0542b7a705efe4f5e55",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -46,7 +46,7 @@
       "slug": "pool-service-company-virtual-assistant-route-exception-desk",
       "sourceWords": 939,
       "contentHash": "2b75336158645f00cd537e2c84c0bf3ccfe31bc40037e8c4b715e3220394f0cf",
-      "renderedHash": "c334e5b8f82c292538f217c47c142c97248b4c4ab0d2f0c8a52420b81336fbf3",
+      "renderedHash": "0234e2bb90ad87c95c5bfb57aa3fb3d3b32e2af4f89cb6376ecb9eebc5535001",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -65,7 +65,7 @@
       "slug": "appliance-repair-virtual-assistant-warranty-intake",
       "sourceWords": 989,
       "contentHash": "dbb161c5f95a7c17f7c1fda69e060323c075bcc2632cfe03bbb716657f02494e",
-      "renderedHash": "6f69bb4d1b0c5dcd8ea95ef37fd31191bf257edc643946f695a50f2171e00653",
+      "renderedHash": "73d23908bac9449adc286369c309ed4a2cb7e7db2c254bd42ae4f87e6c9c8c9d",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -84,7 +84,7 @@
       "slug": "immigration-law-office-virtual-assistant-document-collection",
       "sourceWords": 934,
       "contentHash": "90e6c72d45fb91e54cb36dc2f2ea7c1bdb11dba49a42e36b7a95408d95f574c9",
-      "renderedHash": "2da444c69604f6e87e78f61552c75fe6078da9c51e66dc2bf5ed92c66aeb40c4",
+      "renderedHash": "0f37f70e44eb43be650dd6dd880529a7d609150c0d8881a6ec1f800e1e516322",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -103,7 +103,7 @@
       "slug": "pest-control-company-virtual-assistant-quote-request-intake",
       "sourceWords": 900,
       "contentHash": "babfcbb844cdedda39cc9faecdd46e217f4a218abd9750cb5d861345b30f6819",
-      "renderedHash": "e911e4b644768a8987cd88f2bcefe7245edbb33c3d4baf4134d288fcca8b0a92",
+      "renderedHash": "fb69f392e9e35b2192c1f2848f2bf578ec2d47f77453911809f81240ebc5f2ef",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -122,7 +122,7 @@
       "slug": "auto-repair-shop-virtual-assistant-estimate-follow-up",
       "sourceWords": 908,
       "contentHash": "8ccfd748a1b8b81bcd6cee4825d24043ec4dbee5a80a4d8affee67888d7777b3",
-      "renderedHash": "fe96bf42cb7dfaf9891a6e9e9c0f8801b5b09d7bbf74872d3c6ebdab5297b520",
+      "renderedHash": "93e3b95a48bc5c3bc97ff262550d2beda222abcb0db3c772a11c8f1c650f19e4",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -141,7 +141,7 @@
       "slug": "commercial-cleaning-company-virtual-assistant-quality-issue-routing",
       "sourceWords": 900,
       "contentHash": "ae9e1d815bcc60ad09993d5e6711c760e979025ed7ffc4db263c87ada112fef6",
-      "renderedHash": "87b9923935fb6f8909c7b0197f2b2329412ac84467b153c5cf66454e2997f244",
+      "renderedHash": "7274edd7d886cf2be7c260c387b4cb155173d4c42e20ce5dfdb44e95ad795813",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -160,7 +160,7 @@
       "slug": "veterinary-practice-virtual-assistant-record-request-coordination",
       "sourceWords": 904,
       "contentHash": "2af82427b039169ccafbc0dd764b1c9f83cc080d83e31b94c5f664ae1e3979ea",
-      "renderedHash": "e6d6f2f64910ceafea2a7d22c11597aa8dd1b5c68d998f3d6809e86598c715c9",
+      "renderedHash": "ea4cc6213cb0965944407d9ca1e7d74a655333144c22cfef28e6b5821cd0b725",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -179,7 +179,7 @@
       "slug": "catering-company-virtual-assistant-event-inquiry-qualification",
       "sourceWords": 900,
       "contentHash": "4c6e9f8f36daf56da068c912157213c60d8e08dc25607054deccdd5ad55a1754",
-      "renderedHash": "68a79bbc959ce97172d200753a159ef7bc68805772a5b30afe2876b408f48e9c",
+      "renderedHash": "f0cba0e7bf774758c54f0801a48dc3de477f83cb096f1fc64ecccb4da309d8e6",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -198,7 +198,7 @@
       "slug": "title-company-virtual-assistant-closing-document-tracker",
       "sourceWords": 909,
       "contentHash": "dd7b88469561912f59563f0d2b98d0a66fc2d1e5eff36ce8408315761dbd07a7",
-      "renderedHash": "738de5b8abd2be8024e85903373726eaf7b328d856701fd1f81ef0de593f0f6a",
+      "renderedHash": "9930e79698c6726e1369547cb519f7855d7c67c6b939c44cab69bad33b4022e9",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -217,7 +217,7 @@
       "slug": "senior-home-care-virtual-assistant-caregiver-schedule-coordination",
       "sourceWords": 904,
       "contentHash": "49203b8e88dfe00a91273bd896efe87bc9dd409964774edc5463236e1f4a1973",
-      "renderedHash": "f951ba3fc57b8bf59ee994cacc32a81104498d711075de19b5eba7b3760875dc",
+      "renderedHash": "063c845c1acfa81867c9e5f2f50a160b5142433eb092a739db8e11f8305e4578",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -236,7 +236,7 @@
       "slug": "bookkeeping-assistant-duplicate-invoice-control-study",
       "sourceWords": 1206,
       "contentHash": "c2ba336b2c9df0936e83d1a93146575ee3f2908f9a107c0c6658e9edcd8ea6ed",
-      "renderedHash": "d9347d2e7421b058a26f9173e78e9dd10459c347513aeb2a7141bd248ece5f9a",
+      "renderedHash": "e7c71f107a77816675225f3c9ff90099564777ca3d3038625059cd93b21327c0",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -255,7 +255,7 @@
       "slug": "calendar-assistant-recurring-meeting-time-zone-study",
       "sourceWords": 1202,
       "contentHash": "82254c19fa7febf36e32e3bc715875455c9ae4356188b02ba8f73fe80d97751f",
-      "renderedHash": "5d5e21f816fc2ac463e5aa3da689628ac41a19a9b242c2973cf904c5354e7814",
+      "renderedHash": "40c8e3a2b6b58bf7af5e4ec9fdd13f2ddc548cb8a6ea6cdbf19c8b8bca2f925b",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -274,7 +274,7 @@
       "slug": "sales-assistant-crm-lead-merge-provenance-study",
       "sourceWords": 1353,
       "contentHash": "d7c4c9afd22734a469046dc1638b5d7e14ffd16376a8b3d9a72e6003745322ec",
-      "renderedHash": "477f3473ecdb89d0294229b6b7a207cf54151d0117ec470c3e6bfdb8a30d8c65",
+      "renderedHash": "5f483e993d4bd2b28a291e063cfafee298f50fced835272ee9efcde0bab8750a",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -293,7 +293,7 @@
       "slug": "ecommerce-assistant-return-request-evidence-study",
       "sourceWords": 1271,
       "contentHash": "2fcb760b8b36d14e03f5515461e79173d6ae5cf0085229f2c032addf6b77c221",
-      "renderedHash": "4847734596f9656ffe1bff59d9e7290264c130ec2f319ae2e04de9f4a31782c1",
+      "renderedHash": "e347e252b5508ae3c190d27d46166b65e118d8c7512ba78ef66737c8e39ad84d",
       "missingParagraphs": 0,
       "checks": {
         "title": true,
@@ -312,7 +312,7 @@
       "slug": "project-coordinator-change-request-decision-log-study",
       "sourceWords": 1261,
       "contentHash": "3a8340ff065b390e6cbcdc8421703560f7835f5be9aadaae9809fb495180106e",
-      "renderedHash": "693725518289e54277145eb31fd3c2388bf63868361f26743c2e66ba6b8c47a8",
+      "renderedHash": "b74bce8270c09d9cfc95ca9af3cb642bc8382a20e75cb97cb0f895b2162eb943",
       "missingParagraphs": 0,
       "checks": {
         "title": true,

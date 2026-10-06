@@ -2,7 +2,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync,readdirSync} from 'node:fs';
 import {oct5Hira104ResearchPosts as posts} from '../app/research-oct5-hira104.ts';
 
-const expected=process.env.EXPECTED_PUBLICATION_DATE||'2026-10-05';
+const expected=process.env.EXPECTED_PUBLICATION_DATE||'2026-10-06';
 const failures=[];
 const words=p=>p.sections.map(s=>`${s.heading} ${s.body}`).join(' ').split(/\s+/).filter(Boolean).length;
 const body=p=>p.sections.map(s=>`${s.heading} ${s.body}`).join(' ');

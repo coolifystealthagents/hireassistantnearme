@@ -1,7 +1,7 @@
 import type { ResearchPost } from './fleet-data';
 
-const published='2026-10-05';
-const checked='October 5, 2026';
+const published='2026-10-06';
+const checked='October 6, 2026';
 type Topic={slug:string;title:string;excerpt:string;service:string;image:string;alt:string;question:string;boundary:string;cases:string;record:string;analysis:string;exceptions:string;pilot:string;limitations:string;sources:readonly (readonly [string,string])[]};
 
 const topics:readonly Topic[]=[

@@ -5,7 +5,7 @@ import { oct5BlogPosts as blogs } from '../app/oct5-blog-posts.ts';
 import { oct5Hira104ResearchPosts as research } from '../app/research-oct5-hira104.ts';
 
 const base = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:3000';
-const expectedDate = process.env.EXPECTED_PUBLICATION_DATE || '2026-10-05';
+const expectedDate = process.env.EXPECTED_PUBLICATION_DATE || '2026-10-06';
 const normalize = (value) => value.replace(/<[^>]+>/g, ' ').replace(/&(?:#\d+|#x[\da-f]+|\w+);/gi, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex');
 const failures = [];

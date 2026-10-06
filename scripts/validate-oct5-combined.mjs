@@ -4,7 +4,7 @@ import sharp from 'sharp';
 import {oct5BlogPosts as blogs} from '../app/oct5-blog-posts.ts';
 import {oct5Hira104ResearchPosts as research} from '../app/research-oct5-hira104.ts';
 
-const expected=process.env.EXPECTED_PUBLICATION_DATE||'2026-10-05';
+const expected=process.env.EXPECTED_PUBLICATION_DATE||'2026-10-06';
 const norm=s=>s.replace(/<[^>]+>/g,' ').replace(/&(?:#\d+|#x[\da-f]+|\w+);/gi,' ').replace(/\s+/g,' ').trim().toLowerCase();
 const words=s=>norm(s).split(' ').filter(Boolean);
 const sha=s=>crypto.createHash('sha256').update(s).digest('hex');

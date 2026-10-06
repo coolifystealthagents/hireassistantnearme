@@ -1,4 +1,4 @@
-const published = '2026-10-05'; // provisional; reconcile to the UTC live-verification date before the sole push
+const published = '2026-10-06';
 
 type Article = {
   slug: string; title: string; keyword: string; image: string; imageAlt: string;

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "kind": "research",
+  "count": 5,
+  "publicationDateVisible": true,
+  "items": [
+    {
+      "slug": "hireassistantnearme-queue-wait-state-evidence-study",
+      "title": "Assistant Hiring Queue Wait-State Evidence Study",
+      "excerpt": "A source-backed study of whether waiting reasons explain queue age.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/hireassistantnearme-queue-wait-state-evidence-study"
+    },
+    {
+      "slug": "hireassistantnearme-reviewer-agreement-reliability-study",
+      "title": "Assistant Hiring Reviewer Agreement Reliability Study",
+      "excerpt": "A source-backed study of whether reviewers reproduce the same conclusion.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/hireassistantnearme-reviewer-agreement-reliability-study"
+    },
+    {
+      "slug": "hireassistantnearme-minimum-access-effectiveness-study",
+      "title": "Assistant Hiring Minimum Access Effectiveness Study",
+      "excerpt": "A source-backed study of whether permissions are sufficient but bounded.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/hireassistantnearme-minimum-access-effectiveness-study"
+    },
+    {
+      "slug": "hireassistantnearme-handoff-completeness-observation",
+      "title": "Assistant Hiring Handoff Completeness Observation",
+      "excerpt": "A source-backed study of whether a receiving team can continue without private clarification.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/hireassistantnearme-handoff-completeness-observation"
+    },
+    {
+      "slug": "hireassistantnearme-control-change-traceability-research",
+      "title": "Assistant Hiring Control Change Traceability Research",
+      "excerpt": "A source-backed study of whether operating changes remain attributable and reversible.",
+      "publishedAt": "2026-10-09",
+      "route": "/research/hireassistantnearme-control-change-traceability-research"
+    }
+  ]
+}

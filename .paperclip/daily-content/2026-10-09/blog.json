@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-09",
+  "kind": "blog",
+  "count": 12,
+  "publicationDateVisible": true,
+  "items": [
+    {
+      "slug": "hireassistantnearme-priority-intake-triage",
+      "title": "Assistant Hiring Priority Intake Triage",
+      "excerpt": "A practical guide to sequence new requests by evidence, impact, and accepted ownership.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-priority-intake-triage"
+    },
+    {
+      "slug": "hireassistantnearme-exception-owner-map",
+      "title": "Assistant Hiring Exception Owner Map",
+      "excerpt": "A practical guide to route ambiguous work to an authorized decision owner.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-exception-owner-map"
+    },
+    {
+      "slug": "hireassistantnearme-source-record-verification",
+      "title": "Assistant Hiring Source Record Verification",
+      "excerpt": "A practical guide to confirm the governing record before work begins.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-source-record-verification"
+    },
+    {
+      "slug": "hireassistantnearme-handoff-acceptance-receipt",
+      "title": "Assistant Hiring Handoff Acceptance Receipt",
+      "excerpt": "A practical guide to prove the receiving team accepted the next action.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-handoff-acceptance-receipt"
+    },
+    {
+      "slug": "hireassistantnearme-backlog-aging-review",
+      "title": "Assistant Hiring Backlog Aging Review",
+      "excerpt": "A practical guide to separate active handling from documented waiting states.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-backlog-aging-review"
+    },
+    {
+      "slug": "hireassistantnearme-quality-sample-calibration",
+      "title": "Assistant Hiring Quality Sample Calibration",
+      "excerpt": "A practical guide to align reviewers on observable acceptance evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-quality-sample-calibration"
+    },
+    {
+      "slug": "hireassistantnearme-access-scope-recertification",
+      "title": "Assistant Hiring Access Scope Recertification",
+      "excerpt": "A practical guide to keep permissions aligned with current duties.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-access-scope-recertification"
+    },
+    {
+      "slug": "hireassistantnearme-change-control-release-note",
+      "title": "Assistant Hiring Change Control Release Note",
+      "excerpt": "A practical guide to publish a dated rule change with rollback context.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-change-control-release-note"
+    },
+    {
+      "slug": "hireassistantnearme-capacity-overflow-trigger",
+      "title": "Assistant Hiring Capacity Overflow Trigger",
+      "excerpt": "A practical guide to surface demand that exceeds the safe service window.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-capacity-overflow-trigger"
+    },
+    {
+      "slug": "hireassistantnearme-client-decision-packet",
+      "title": "Assistant Hiring Client Decision Packet",
+      "excerpt": "A practical guide to prepare facts without transferring client authority.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-client-decision-packet"
+    },
+    {
+      "slug": "hireassistantnearme-correction-propagation-check",
+      "title": "Assistant Hiring Correction Propagation Check",
+      "excerpt": "A practical guide to reconcile corrected facts across dependent systems.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-correction-propagation-check"
+    },
+    {
+      "slug": "hireassistantnearme-monthly-control-closeout",
+      "title": "Assistant Hiring Monthly Control Closeout",
+      "excerpt": "A practical guide to close open exceptions and preserve review evidence.",
+      "publishedAt": "2026-10-09",
+      "route": "/blog/hireassistantnearme-monthly-control-closeout"
+    }
+  ]
+}

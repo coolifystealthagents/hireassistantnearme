@@ -1,3 +1,53 @@
-import {Header,Footer} from '../components'; import {blogPosts,site} from '../data'; import {postsPerPage} from '../fleet-data';
-export const metadata={title:`Blog | ${site.brand}`,description:`Philippines-based ${site.primary} planning guides.`};
-export default function Blog(){const pages=Math.max(1,Math.ceil(blogPosts.length/postsPerPage));const posts=blogPosts.slice(0,postsPerPage);return <><Header/><main><section className="fleet-hero variant-1"><div className="container"><p className="eyebrow">Blog</p><h1>Hire Assistant Near Me guides</h1><p className="lead">Practical planning for Philippines-based remote assistant roles, workflows, and manager handoffs.</p></div></section><section className="section"><div className="container fleet-service-grid">{posts.map(p=><a className="card" href={`/blog/${p.slug}`} key={p.slug}><h2>{p.title}</h2><p>{p.excerpt}</p><b>Read article →</b></a>)}</div><nav className="pagination" aria-label="Blog pages">{Array.from({length:pages},(_,i)=><a aria-current={i===0?'page':undefined} href={i===0?'/blog':`/blog/page/${i+1}`} key={i}>{i+1}</a>)}</nav></section></main><Footer/></>}
+import { Header, Footer } from "../components";
+import { blogPosts, site } from "../data";
+import { postsPerPage } from "../fleet-data";
+const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
+export const metadata = {
+  title: `Blog | ${site.brand}`,
+  description: `Philippines-based ${site.primary} planning guides.`,
+};
+export default function Blog() {
+  const pages = Math.max(1, Math.ceil(blogPosts.length / postsPerPage));
+  const posts = blogPosts.slice(0, postsPerPage);
+  return (
+    <>
+      <Header />
+      <main>
+        <section className="fleet-hero variant-1">
+          <div className="container">
+            <p className="eyebrow">Blog</p>
+            <h1>Hire Assistant Near Me guides</h1>
+            <p className="lead">
+              Practical planning for Philippines-based remote assistant roles,
+              workflows, and manager handoffs.
+            </p>
+          </div>
+        </section>
+        <section className="section">
+          <div className="container fleet-service-grid">
+            {posts.map((p) => (
+              <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
+                <h2>{p.title}</h2>
+                <p>{p.excerpt}</p>
+                {"published" in p && p.published && <time dateTime={p.published}>Published {formatDate(p.published)}</time>}
+                <b>Read article →</b>
+              </a>
+            ))}
+          </div>
+          <nav className="pagination" aria-label="Blog pages">
+            {Array.from({ length: pages }, (_, i) => (
+              <a
+                aria-current={i === 0 ? "page" : undefined}
+                href={i === 0 ? "/blog" : `/blog/page/${i + 1}`}
+                key={i}
+              >
+                {i + 1}
+              </a>
+            ))}
+          </nav>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

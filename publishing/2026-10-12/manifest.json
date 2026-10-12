@@ -1,0 +1,115 @@
+{
+  "site": "HireAssistantNearMe.com",
+  "date": "2026-10-12",
+  "blog": [
+    {
+      "slug": "assistant-role-scorecard-small-business",
+      "title": "Build an Assistant Role Scorecard Before You Start Recruiting",
+      "route": "/blog/assistant-role-scorecard-small-business",
+      "thumbnail": "/images/oct12-assistant-role-scorecard-small-business.png"
+    },
+    {
+      "slug": "first-week-feedback-loop-remote-assistant",
+      "title": "Design a First-Week Feedback Loop for a Remote Assistant",
+      "route": "/blog/first-week-feedback-loop-remote-assistant",
+      "thumbnail": "/images/oct12-first-week-feedback-loop-remote-assistant.png"
+    },
+    {
+      "slug": "timezone-overlap-service-map",
+      "title": "Map Time-Zone Overlap Around Customer Service Commitments",
+      "route": "/blog/timezone-overlap-service-map",
+      "thumbnail": "/images/oct12-timezone-overlap-service-map.png"
+    },
+    {
+      "slug": "executive-inbox-decision-rights-matrix",
+      "title": "Use a Decision-Rights Matrix for Executive Inbox Delegation",
+      "route": "/blog/executive-inbox-decision-rights-matrix",
+      "thumbnail": "/images/oct12-executive-inbox-decision-rights-matrix.png"
+    },
+    {
+      "slug": "crm-field-ownership-handoff",
+      "title": "Assign CRM Field Ownership Before Delegating Data Cleanup",
+      "route": "/blog/crm-field-ownership-handoff",
+      "thumbnail": "/images/oct12-crm-field-ownership-handoff.png"
+    },
+    {
+      "slug": "vendor-quote-comparison-assistant-workflow",
+      "title": "Structure a Vendor Quote Comparison Without Delegating the Purchase",
+      "route": "/blog/vendor-quote-comparison-assistant-workflow",
+      "thumbnail": "/images/oct12-vendor-quote-comparison-assistant-workflow.png"
+    },
+    {
+      "slug": "appointment-no-show-recovery-queue",
+      "title": "Create an Appointment No-Show Recovery Queue With Clear Limits",
+      "route": "/blog/appointment-no-show-recovery-queue",
+      "thumbnail": "/images/oct12-appointment-no-show-recovery-queue.png"
+    },
+    {
+      "slug": "ecommerce-return-exception-handoff",
+      "title": "Route Ecommerce Return Exceptions Without Inventing Remedies",
+      "route": "/blog/ecommerce-return-exception-handoff",
+      "thumbnail": "/images/oct12-ecommerce-return-exception-handoff.png"
+    },
+    {
+      "slug": "real-estate-listing-data-qa-check",
+      "title": "Run a Listing Data QA Check Before Real Estate Updates Go Live",
+      "route": "/blog/real-estate-listing-data-qa-check",
+      "thumbnail": "/images/oct12-real-estate-listing-data-qa-check.png"
+    },
+    {
+      "slug": "bookkeeping-document-request-calendar",
+      "title": "Build a Bookkeeping Document Request Calendar That Owners Will Use",
+      "route": "/blog/bookkeeping-document-request-calendar",
+      "thumbnail": "/images/oct12-bookkeeping-document-request-calendar.png"
+    },
+    {
+      "slug": "recruiting-interview-schedule-control",
+      "title": "Control Interview Scheduling Without Losing Candidate Context",
+      "route": "/blog/recruiting-interview-schedule-control",
+      "thumbnail": "/images/oct12-recruiting-interview-schedule-control.png"
+    },
+    {
+      "slug": "assistant-access-change-request-log",
+      "title": "Keep an Access Change Log for Every Assistant Role",
+      "route": "/blog/assistant-access-change-request-log",
+      "thumbnail": "/images/oct12-assistant-access-change-request-log.png"
+    }
+  ],
+  "research": [
+    {
+      "slug": "administrative-task-interruption-cost-study",
+      "title": "Administrative Task Interruptions: A Measurement Protocol for Small Teams",
+      "route": "/research/administrative-task-interruption-cost-study",
+      "thumbnail": "/images/oct12-administrative-task-interruption-cost-study.png"
+    },
+    {
+      "slug": "remote-assistant-quality-sampling-design",
+      "title": "Quality Sampling for Remote Assistant Work: A Risk-Based Study Design",
+      "route": "/research/remote-assistant-quality-sampling-design",
+      "thumbnail": "/images/oct12-remote-assistant-quality-sampling-design.png"
+    },
+    {
+      "slug": "timezone-overlap-response-window-analysis",
+      "title": "Time-Zone Overlap and Response Windows: An Operations Analysis",
+      "route": "/research/timezone-overlap-response-window-analysis",
+      "thumbnail": "/images/oct12-timezone-overlap-response-window-analysis.png"
+    },
+    {
+      "slug": "delegated-access-review-cadence-study",
+      "title": "Delegated Access Reviews: Testing Cadence Against Role Change",
+      "route": "/research/delegated-access-review-cadence-study",
+      "thumbnail": "/images/oct12-delegated-access-review-cadence-study.png"
+    },
+    {
+      "slug": "role-scope-change-failure-mode-analysis",
+      "title": "Assistant Role Scope Changes: A Failure-Mode Analysis",
+      "route": "/research/role-scope-change-failure-mode-analysis",
+      "thumbnail": "/images/oct12-role-scope-change-failure-mode-analysis.png"
+    }
+  ],
+  "expected": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  }
+}

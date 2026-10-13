@@ -1,0 +1,118 @@
+{
+  "site": "HireAssistantNearMe.com",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "branch": "main",
+  "baseSha": "74bccea4e8aa94de02b9137278c21849f49cba38",
+  "date": "2026-10-13",
+  "blog": [
+    {
+      "slug": "delegation-acceptance-criteria-register",
+      "title": "Build Acceptance Criteria Before Delegating Assistant Work",
+      "route": "/blog/delegation-acceptance-criteria-register",
+      "thumbnail": "/images/oct13-delegation-acceptance-criteria-register.png"
+    },
+    {
+      "slug": "business-owner-approval-backlog-control",
+      "title": "Control a Business Owner Approval Backlog Without Silent Decisions",
+      "route": "/blog/business-owner-approval-backlog-control",
+      "thumbnail": "/images/oct13-business-owner-approval-backlog-control.png"
+    },
+    {
+      "slug": "assistant-task-instruction-expiry-control",
+      "title": "Set Expiry Rules for Assistant Task Instructions",
+      "route": "/blog/assistant-task-instruction-expiry-control",
+      "thumbnail": "/images/oct13-assistant-task-instruction-expiry-control.png"
+    },
+    {
+      "slug": "shared-calendar-external-guest-review",
+      "title": "Review External Guests Before Delegating Shared Calendar Work",
+      "route": "/blog/shared-calendar-external-guest-review",
+      "thumbnail": "/images/oct13-shared-calendar-external-guest-review.png"
+    },
+    {
+      "slug": "vendor-portal-session-custody",
+      "title": "Keep Vendor Portal Sessions Under Named Assistant Custody",
+      "route": "/blog/vendor-portal-session-custody",
+      "thumbnail": "/images/oct13-vendor-portal-session-custody.png"
+    },
+    {
+      "slug": "customer-refund-evidence-packet",
+      "title": "Prepare a Customer Refund Evidence Packet Without Promising the Outcome",
+      "route": "/blog/customer-refund-evidence-packet",
+      "thumbnail": "/images/oct13-customer-refund-evidence-packet.png"
+    },
+    {
+      "slug": "executive-travel-preference-version-control",
+      "title": "Version Executive Travel Preferences Before Assistant Booking Research",
+      "route": "/blog/executive-travel-preference-version-control",
+      "thumbnail": "/images/oct13-executive-travel-preference-version-control.png"
+    },
+    {
+      "slug": "crm-suppression-list-update-control",
+      "title": "Control CRM Suppression List Updates With Reversible Evidence",
+      "route": "/blog/crm-suppression-list-update-control",
+      "thumbnail": "/images/oct13-crm-suppression-list-update-control.png"
+    },
+    {
+      "slug": "signature-request-reminder-boundary",
+      "title": "Set a Boundary for Assistant Signature Request Reminders",
+      "route": "/blog/signature-request-reminder-boundary",
+      "thumbnail": "/images/oct13-signature-request-reminder-boundary.png"
+    },
+    {
+      "slug": "multi-brand-inbox-routing-map",
+      "title": "Map a Multi-Brand Inbox Before Delegating Customer Replies",
+      "route": "/blog/multi-brand-inbox-routing-map",
+      "thumbnail": "/images/oct13-multi-brand-inbox-routing-map.png"
+    },
+    {
+      "slug": "month-end-evidence-handoff-assistant",
+      "title": "Create a Month-End Evidence Handoff for an Administrative Assistant",
+      "route": "/blog/month-end-evidence-handoff-assistant",
+      "thumbnail": "/images/oct13-month-end-evidence-handoff-assistant.png"
+    },
+    {
+      "slug": "assistant-coverage-absence-plan",
+      "title": "Build an Assistant Coverage Plan for Planned and Unplanned Absences",
+      "route": "/blog/assistant-coverage-absence-plan",
+      "thumbnail": "/images/oct13-assistant-coverage-absence-plan.png"
+    }
+  ],
+  "research": [
+    {
+      "slug": "owner-approval-latency-analysis",
+      "title": "Business Owner Approval Latency: A Bounded Queue Analysis",
+      "route": "/research/owner-approval-latency-analysis",
+      "thumbnail": "/images/oct13-owner-approval-latency-analysis.png"
+    },
+    {
+      "slug": "instruction-version-defect-study",
+      "title": "Assistant Instruction Version Defects: A Reproducible Study",
+      "route": "/research/instruction-version-defect-study",
+      "thumbnail": "/images/oct13-instruction-version-defect-study.png"
+    },
+    {
+      "slug": "external-calendar-guest-privacy-analysis",
+      "title": "External Calendar Guest Privacy: An Evidence Review Protocol",
+      "route": "/research/external-calendar-guest-privacy-analysis",
+      "thumbnail": "/images/oct13-external-calendar-guest-privacy-analysis.png"
+    },
+    {
+      "slug": "delegated-session-expiry-reliability",
+      "title": "Delegated Portal Session Expiry Reliability Study",
+      "route": "/research/delegated-session-expiry-reliability",
+      "thumbnail": "/images/oct13-delegated-session-expiry-reliability.png"
+    },
+    {
+      "slug": "assistant-absence-continuity-evidence",
+      "title": "Assistant Absence Continuity: A Handoff Completeness Protocol",
+      "route": "/research/assistant-absence-continuity-evidence",
+      "thumbnail": "/images/oct13-assistant-absence-continuity-evidence.png"
+    }
+  ],
+  "expected": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  }
+}

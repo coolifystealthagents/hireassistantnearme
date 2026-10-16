@@ -40,13 +40,12 @@ export default async function BlogPage({
           </div>
         </section>
         <section className="section">
-          <div className="container fleet-service-grid">
+          <div className="container editorial-grid">
             {posts.map((p) => (
-              <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
-                <h2>{p.title}</h2>
-                <p>{p.excerpt}</p>
-                <b>Read article →</b>
-              </a>
+              <article className="editorial-card" key={p.slug}>
+                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={'image' in p && typeof p.image === 'string' ? p.image : '/images/calendar-assistant.jpg'} alt={'imageAlt' in p && typeof p.imageAlt === 'string' ? p.imageAlt : ''} loading="lazy" /></a>
+                <div><h2><a href={`/blog/${p.slug}`}>{p.title}</a></h2><p>{p.excerpt}</p><a className="text-link" href={`/blog/${p.slug}`}>Read the guide →</a></div>
+              </article>
             ))}
           </div>
           <nav className="pagination" aria-label="Blog pages">

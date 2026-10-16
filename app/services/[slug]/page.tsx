@@ -1,128 +1,69 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Header, Footer, CTA, JsonLd } from '../../components';
-import { fleetServices } from '../../fleet-data';
+import { CTA, Footer, Header, JsonLd } from '../../components';
 import { site } from '../../data';
+import { fleetServices } from '../../fleet-data';
+import { serviceDetails } from '../../service-content';
 
-const base = `https://${site.domain.toLowerCase()}`;
+const serviceImages: Record<string, { src: string; alt: string }> = {
+  'executive-assistance': { src: '/images/assistant-maya.jpg', alt: 'Executive assistant preparing a daily work brief' },
+  'calendar-and-inbox-support': { src: '/images/calendar-assistant.jpg', alt: 'Assistant reviewing a calendar and inbox workflow' },
+  'customer-service-assistance': { src: '/images/assistant-elena.jpg', alt: 'Customer support assistant preparing a documented response' },
+  'sales-administrative-support': { src: '/images/assistant-daniel.jpg', alt: 'Sales administrative assistant reviewing CRM records' },
+  'ecommerce-assistance': { src: '/images/local-team.jpg', alt: 'Remote support team reviewing an ecommerce workflow' },
+  'real-estate-assistance': { src: '/images/assistant-maya.jpg', alt: 'Real estate assistant organizing transaction records' },
+  'marketing-coordination': { src: '/images/assistant-elena.jpg', alt: 'Marketing coordinator preparing an editorial workflow' },
+  'bookkeeping-administration': { src: '/images/assistant-daniel.jpg', alt: 'Bookkeeping support assistant organizing source documents' },
+  'recruitment-assistance': { src: '/images/local-team.jpg', alt: 'Recruitment support team coordinating candidate records' },
+  'project-coordination': { src: '/images/calendar-assistant.jpg', alt: 'Project coordinator reviewing tasks and deadlines' },
+};
 
-export function generateStaticParams() {
-  return fleetServices.map((service) => ({ slug: service.slug }));
-}
+export function generateStaticParams() { return fleetServices.map((service) => ({ slug: service.slug })); }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = fleetServices.find((item) => item.slug === slug);
-  if (!service) return { title: 'Not found' };
-
+  if (!service) return {};
   return {
     title: service.title,
     description: service.desc,
-    alternates: { canonical: `/services/${slug}` },
-    openGraph: {
-      title: `${service.title} | ${site.brand}`,
-      description: service.desc,
-      url: `/services/${slug}`,
-      images: service.image ? [{ url: service.image, alt: service.imageAlt }] : undefined,
-    },
+    alternates: { canonical: `${site.url}/services/${slug}` },
+    openGraph: { title: service.title, description: service.desc, url: `${site.url}/services/${slug}`, images: [serviceImages[slug]?.src || '/images/local-team.jpg'] },
   };
 }
 
-export default async function Service({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = fleetServices.find((item) => item.slug === slug);
-  if (!service) notFound();
-
-  const url = `${base}/services/${service.slug}`;
+  const detail = serviceDetails[slug];
+  if (!service || !detail) notFound();
+  const image = serviceImages[slug];
+  const related = fleetServices.filter((item) => item.slug !== slug).slice(0, 3);
   const schema = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': `${url}/#service`,
-      name: service.title,
-      description: service.desc,
-      url,
-      serviceOutput: 'Remote assistant support from talent recruited and hired in the Philippines',
-      provider: { '@type': 'Organization', '@id': `${base}/#organization`, name: site.brand },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      '@id': `${url}/#first-week`,
-      name: `How to start ${service.title.toLowerCase()} support`,
-      step: service.firstWeek.map((text, index) => ({
-        '@type': 'HowToStep',
-        position: index + 1,
-        name: `Step ${index + 1}`,
-        text,
-      })),
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: base },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/services` },
-        { '@type': 'ListItem', position: 3, name: service.title, item: url },
-      ],
-    },
-    ...(service.faqs ? [{
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: service.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-      })),
-    }] : []),
+    { '@context': 'https://schema.org', '@type': 'Service', name: service.title, description: service.desc, url: `${site.url}/services/${slug}`, provider: { '@type': 'Organization', name: 'StealthAgents', url: 'https://stealthagents.com/' }, areaServed: 'Remote' },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: detail.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Services', item: `${site.url}/services` }, { '@type': 'ListItem', position: 2, name: service.title, item: `${site.url}/services/${slug}` }] },
   ];
 
-  return <>
-    <Header />
-    <main>
-      <JsonLd data={schema} />
-      <section className={`fleet-hero variant-1 ${service.image ? 'service-image-hero' : ''}`}>
-        <div className="container service-hero-grid">
-          <div>
-            <p className="eyebrow">Filipino remote assistant support</p>
-            <h1>{service.title}</h1>
-            <p className="lead">{service.desc}</p>
-            <a className="btn primary" href="/contact-us" id="cta-services-slug-action-1">Discuss this service</a>
-          </div>
-          {service.image && <figure className="service-hero-photo">
-            <img src={service.image} alt={service.imageAlt ?? `${service.title} role illustration`} />
-            <figcaption>Role illustration. Candidates for this service are recruited and hired only in the Philippines.</figcaption>
-          </figure>}
-        </div>
-      </section>
-      <section className="section">
-        <div className="container fleet-detail-grid">
-          <div className="card"><h2>Work to include</h2><ul>{service.tasks.map((task) => <li key={task}>{task}</li>)}</ul></div>
-          <div className="card"><h2>Controls to retain</h2><ul>{service.controls.map((control) => <li key={control}>{control}</li>)}</ul></div>
-          <div className="card" id="first-week"><h2>First-week plan</h2><ol>{service.firstWeek.map((step) => <li key={step}>{step}</li>)}</ol></div>
-        </div>
-      </section>
-      {service.bestFor && service.keepLocal && <section className="service-fit-section">
-        <div className="container service-fit-grid">
-          <div className="service-fit-copy">
-            <p className="eyebrow light">Check the fit before hiring</p>
-            <h2>Remote inbox help works best when the rules are easy to see.</h2>
-            <p>A Filipino assistant can keep routine messages and meetings moving. Your local team should keep physical work and decisions that need an owner or qualified professional.</p>
-            <a className="btn cream" href="/contact-us" id="cta-services-slug-action-2">Build a calendar and inbox brief</a>
-          </div>
-          <div className="service-fit-board">
-            <article><span>Good remote fit</span><ul>{service.bestFor.map((item) => <li key={item}>{item}</li>)}</ul></article>
-            <article><span>Keep with your local team</span><ul>{service.keepLocal.map((item) => <li key={item}>{item}</li>)}</ul></article>
-          </div>
-        </div>
-      </section>}
-      {service.faqs && <section className="section service-faq-section">
-        <div className="container service-faq-shell">
-          <div><p className="eyebrow">Calendar and inbox questions</p><h2>What owners ask before sharing access</h2></div>
-          <div className="service-faq-list">{service.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
-        </div>
-      </section>}
-      <CTA />
-    </main>
-    <Footer />
-  </>;
+  return <><Header /><main>
+    <JsonLd data={schema} />
+    <section className="fleet-hero service-detail-hero"><div className="container service-hero-grid"><div><p className="fleet-kicker">Philippines-based remote support</p><h1>{service.title}</h1><p>{service.desc}</p><p className="service-audience">{detail.audience}</p><div className="button-row"><a className="btn primary" href="/contact-us">Discuss this role</a><a className="btn secondary" href="/services">Compare all services</a></div></div><figure className="service-hero-photo"><img src={image.src} alt={image.alt} width="1400" height="933" /><figcaption>Illustrative role view. Hire Assistant Near Me recruits remote assistants in the Philippines; it does not provide local or in-person workers.</figcaption></figure></div></section>
+
+    <section className="section"><div className="container"><div className="section-heading"><div><p className="eyebrow">A usable role brief</p><h2>Inputs, outputs, and review rules.</h2></div><p>This scope separates work the assistant can prepare from decisions the accountable client-side owner retains.</p></div><div className="service-evidence-grid">
+      <article><span>01</span><h3>Inputs the role needs</h3><ul>{detail.inputs.map((item) => <li key={item}>{item}</li>)}</ul></article>
+      <article><span>02</span><h3>Outputs to expect</h3><ul>{detail.outputs.map((item) => <li key={item}>{item}</li>)}</ul></article>
+      <article><span>03</span><h3>Quality checks</h3><ul>{detail.quality.map((item) => <li key={item}>{item}</li>)}</ul></article>
+    </div></div></section>
+
+    <section className="service-fit-section"><div className="container service-fit-grid"><div className="service-fit-copy"><p className="eyebrow light">Remote versus local</p><h2>Use remote support for tool-based preparation.</h2><p>Keep physical work, licensed judgment, sensitive decisions, and final business authority with your local or accountable team.</p><a className="text-link light-link" href="/compare/local-vs-remote-assistant">Read the local versus remote comparison →</a></div><div className="service-fit-board"><article><span>Good remote lane</span><ul>{service.tasks.map((item) => <li key={item}>{item}</li>)}</ul></article><article><span>Owner controls</span><ul>{service.controls.map((item) => <li key={item}>{item}</li>)}</ul></article></div></div></section>
+
+    <section className="section service-scenarios"><div className="container"><div className="section-heading"><div><p className="eyebrow">Real workflow examples</p><h2>What the handoff looks like.</h2></div><p>Each scenario names what is prepared and where the work stops for accountable review.</p></div><div className="scenario-grid">{detail.scenarios.map((scenario, index) => <article key={scenario.title}><span>Scenario {index + 1}</span><h3>{scenario.title}</h3><p>{scenario.body}</p></article>)}</div></div></section>
+
+    <section className="section muted-section"><div className="container"><div className="section-heading"><div><p className="eyebrow">First-week rollout</p><h2>Start narrow enough to review daily.</h2></div><p>Access grows only after the owner can see the source, output, correction, and exception path.</p></div><ol className="rollout-list">{service.firstWeek.map((item, index) => <li key={item}><span>{index + 1}</span><p>{item}</p></li>)}</ol></div></section>
+
+    <section className="section"><div className="container faq-layout"><div><p className="eyebrow">Common questions</p><h2>{service.title} questions</h2></div><div>{detail.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div></div></section>
+
+    <section className="section related-services"><div className="container"><p className="eyebrow">Related role plans</p><h2>Compare adjacent support lanes.</h2><div className="related-service-links">{related.map((item) => <a href={`/services/${item.slug}`} key={item.slug}><span>{item.title}</span><small>{item.desc}</small></a>)}</div></div></section>
+    <CTA />
+  </main><Footer /></>;
 }

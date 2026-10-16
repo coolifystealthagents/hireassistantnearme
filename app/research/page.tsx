@@ -83,6 +83,7 @@ export default function Research() {
                     href={`/research/${p.slug}`}
                     key={p.slug}
                   >
+                    <span className="research-card-image"><img src={p.image} alt={p.imageAlt} loading="lazy" /></span>
                     <span className="research-card-badge">
                       {clusters[(i % 3) + 1]}
                     </span>

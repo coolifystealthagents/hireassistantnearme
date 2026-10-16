@@ -122,3 +122,38 @@ test('confirmation routes stay outside the sitemap and official assets exist', (
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-team.webp')));
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-logo-black.png')));
 });
+
+test('service system contains ten specific role plans and no generic placeholder copy', () => {
+  const fleet = read('app/fleet-data.ts');
+  const detail = read('app/service-content.ts');
+  const page = read('app/services/[slug]/page.tsx');
+  const slugs = [...detail.matchAll(/^  '([^']+)': \{/gm)].map((match) => match[1]);
+  assert.equal(slugs.length, 10);
+  assert.equal(new Set(slugs).size, 10);
+  assert.doesNotMatch(fleet, /Document the recurring remote assistant work|Complete approved tasks in the client workflow/);
+  for (const heading of ['Inputs the role needs', 'Outputs to expect', 'Quality checks', 'Real workflow examples', 'First-week rollout', 'Common questions', 'Related role plans']) {
+    assert.match(page, new RegExp(heading));
+  }
+  assert.doesNotMatch(page, /Remote inbox help|Calendar and inbox questions/);
+});
+
+test('editorial indexes render content thumbnails and booking has no self-attested bypass', () => {
+  const blog = read('app/blog/page.tsx');
+  const pagination = read('app/blog/page/[page]/page.tsx');
+  const research = read('app/research/page.tsx');
+  const booking = read('app/thank-you/page.tsx');
+  assert.match(blog, /editorial-image-link[\s\S]*<img/);
+  assert.match(pagination, /editorial-image-link[\s\S]*<img/);
+  assert.match(research, /research-card-image[\s\S]*<img/);
+  assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
+  assert.match(booking, /scheduler itself confirms the booking/);
+});
+
+test('desktop opening composition has a bounded 768px height budget', () => {
+  const css = read('app/release-v2.css');
+  assert.match(css, /@media \(min-width: 1060px\)/);
+  assert.match(css, /\.nav-inner\{min-height:68px\}/);
+  assert.match(css, /\.finder-hero\{padding-top:18px\}/);
+  assert.match(css, /\.hero-visual\{height:505px\}/);
+  assert.match(css, /\.task-strip>\*\{min-height:72px/);
+});

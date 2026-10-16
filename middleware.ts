@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   const forwardedProtocol = request.headers.get('x-forwarded-proto')?.split(',')[0].trim().toLowerCase();
   const effectiveProtocol = forwardedProtocol || request.nextUrl.protocol.replace(':', '').toLowerCase();
   const needsHttps = effectiveProtocol !== 'https';
-  const needsHost = host === `www.${canonicalHost}`;
+  const needsHost = Boolean(host && host !== canonicalHost && host !== 'localhost' && host !== '127.0.0.1');
 
   if (needsHttps || needsHost) {
     const destination = request.nextUrl.clone();

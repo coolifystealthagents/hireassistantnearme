@@ -1,46 +1,24 @@
 import { blogPosts } from './data';
 import { researchPosts } from './fleet-data';
 
-type UnknownRecord = Record<string, unknown>;
+// Explicit editorial release manifest. These five cornerstone guides were retained
+// after source and claim review. Date-generated article batches are deliberately
+// excluded rather than cosmetically rewritten or scored by mutable similarity rules.
+export const approvedBlogSlugs = new Set([
+  'local-vs-remote-administrative-assistant-benchmark-2026',
+  'administrative-assistant-benchmarks-small-business-2026',
+  'hire-filipino-virtual-assistant',
+  'virtual-assistant-security-checklist',
+  'general-office-clerk-outlook-task-design-2026',
+]);
 
-const wordCount = (value: string) => (value.match(/\b[\w'-]+\b/g) || []).length;
+export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug));
+export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlogSlugs.has(post.slug)).map((post) => post.slug));
 
-function narrativeStrings(value: unknown, out = new Set<string>()): Set<string> {
-  if (typeof value === 'string') {
-    const text = value.replace(/\s+/g, ' ').trim();
-    if (text.length >= 100 && !/^https?:\/\//.test(text)) out.add(text);
-    return out;
-  }
-  if (Array.isArray(value)) {
-    value.forEach((item) => narrativeStrings(item, out));
-    return out;
-  }
-  if (value && typeof value === 'object') {
-    Object.entries(value as UnknownRecord).forEach(([key, item]) => {
-      if (!['title', 'imageAlt', 'revision', 'slug', 'url', 'href', 'label', 'name'].includes(key)) narrativeStrings(item, out);
-    });
-  }
-  return out;
-}
-
-function substantiveSet<T extends { slug: string }>(posts: readonly T[]) {
-  const byPost = new Map(posts.map((post) => [post.slug, narrativeStrings(post)]));
-  const frequency = new Map<string, number>();
-  byPost.forEach((strings) => strings.forEach((text) => frequency.set(text, (frequency.get(text) || 0) + 1)));
-  return new Set(posts.filter((post) => {
-    const strings = byPost.get(post.slug) || new Set<string>();
-    const distinctWords = [...strings].filter((text) => (frequency.get(text) || 0) < 3).reduce((sum, text) => sum + wordCount(text), 0);
-    return distinctWords >= 300;
-  }).map((post) => post.slug));
-}
-
-const substantiveBlogSlugs = substantiveSet(blogPosts);
-const substantiveResearchSlugs = substantiveSet(researchPosts);
-
-export const publishedBlogPosts = blogPosts.filter((post) => substantiveBlogSlugs.has(post.slug));
-export const publishedResearchPosts = researchPosts.filter((post) => substantiveResearchSlugs.has(post.slug));
-export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !substantiveBlogSlugs.has(post.slug)).map((post) => post.slug));
-export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !substantiveResearchSlugs.has(post.slug)).map((post) => post.slug));
+// The former research collection consisted of repeated date-batch templates.
+// Preserve its URLs through redirects, but do not advertise those pages as research.
+export const publishedResearchPosts = researchPosts.filter(() => false);
+export const retiredResearchSlugs = new Set(researchPosts.map((post) => post.slug));
 
 function topicTarget(slug: string) {
   if (/(security|access|permission|privacy|mfa|phishing|credential|incident|offboard|retention)/.test(slug)) return '/blog/virtual-assistant-security-checklist';
@@ -58,10 +36,11 @@ function topicTarget(slug: string) {
 
 export function consolidationTarget(slug: string, family: 'blog' | 'research') {
   const target = topicTarget(slug);
-  return target === '/services' && family === 'research' ? '/research' : target;
+  return target === '/services' && family === 'research' ? '/blog' : target;
 }
 
 export function canonicalContentHref(href: string) {
+  if (href === '/research' || href.startsWith('/research?') || href.startsWith('/research#')) return '/blog';
   const blog = href.match(/^\/blog\/([^/?#]+)/);
   if (blog && retiredBlogSlugs.has(blog[1])) return consolidationTarget(blog[1], 'blog');
   const research = href.match(/^\/research\/([^/?#]+)/);

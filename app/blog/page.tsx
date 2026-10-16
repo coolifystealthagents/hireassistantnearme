@@ -2,7 +2,6 @@ import { Header, Footer } from "../components";
 import { site } from "../data";
 import { publishedBlogPosts } from "../content-policy";
 import { postsPerPage } from "../fleet-data";
-import { editorialImage } from "../editorial-images";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: 'Blog',
@@ -30,7 +29,7 @@ export default function Blog() {
           <div className="container editorial-grid">
             {posts.map((p) => (
               <article className="editorial-card" key={p.slug}>
-                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={editorialImage(p.slug)} alt={`Editorial illustration for ${p.title}`} loading="lazy" /></a>
+                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={'image' in p && typeof p.image === 'string' ? p.image : '/images/local-team.jpg'} alt={'imageAlt' in p && typeof p.imageAlt === 'string' ? p.imageAlt : `Illustration for ${p.title}`} loading="lazy" /></a>
                 <div><p className="editorial-meta">{"published" in p && typeof p.published === "string" ? <time dateTime={p.published}>Published {formatDate(p.published)}</time> : null}</p><h2><a href={`/blog/${p.slug}`}>{p.title}</a></h2><p>{p.excerpt}</p><a className="text-link" href={`/blog/${p.slug}`}>Read the guide →</a></div>
               </article>
             ))}

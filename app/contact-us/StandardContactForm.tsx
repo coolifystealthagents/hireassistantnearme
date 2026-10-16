@@ -38,7 +38,8 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
       const response = await fetch(endpoint, encoding === "json" ? { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) } : { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" }, body: new URLSearchParams(payload).toString() });
       if (!response.ok) throw new Error("submission rejected");
       accepted = true;
-      tracker.trackLead({ ...payload, source: "standard_contact_form", formId: "standard-contact" });
+      tracker.trackLead({ ...payload, name: `${payload.firstName || ''} ${payload.lastName || ''}`.trim(), source: "standard_contact_form", formId: "standard-contact" });
+      tracker.flush();
       window.location.assign("/thank-you");
     } catch {
       setBusy(false);

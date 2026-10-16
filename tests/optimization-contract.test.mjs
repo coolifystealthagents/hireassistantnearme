@@ -137,15 +137,16 @@ test('service system contains ten specific role plans and no generic placeholder
   assert.doesNotMatch(page, /Remote inbox help|Calendar and inbox questions/);
 });
 
-test('editorial indexes render content thumbnails and booking has no self-attested bypass', () => {
+test('curated editorial index uses article-owned thumbnails and retired research redirects', () => {
   const blog = read('app/blog/page.tsx');
   const pagination = read('app/blog/page/[page]/page.tsx');
   const research = read('app/research/page.tsx');
   const booking = read('app/thank-you/page.tsx');
   assert.match(blog, /editorial-image-link[\s\S]*<img/);
+  assert.match(blog, /'image' in p[\s\S]*p\.imageAlt/);
   assert.match(pagination, /editorial-image-link[\s\S]*<img/);
   assert.match(pagination, /<time dateTime=/);
-  assert.match(research, /research-card-image[\s\S]*<img/);
+  assert.match(research, /permanentRedirect\('\/blog'\)/);
   assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
   assert.match(booking, /scheduler itself confirms the booking/);
 });
@@ -164,20 +165,52 @@ test('contact form classes are styled and service hero images are unique with in
   assert.match(servicePage, /width=\{image\.width\} height=\{image\.height\}/);
 });
 
-test('editorial consolidation removes formulaic routes from discovery and preserves permanent topic redirects', () => {
+test('editorial consolidation uses an explicit manifest and preserves permanent topic redirects', () => {
   const policy = read('app/content-policy.ts');
   const sitemap = read('app/sitemap.xml/route.ts');
   const blogDetail = read('app/blog/[slug]/page.tsx');
   const researchDetail = read('app/research/[slug]/page.tsx');
   const pagination = read('app/blog/page/[page]/page.tsx');
-  assert.match(policy, /distinctWords >= 300/);
-  assert.match(policy, /publishedBlogPosts/);
-  assert.match(policy, /publishedResearchPosts/);
+  const retiredRanking = read('app/blog/top-25-virtual-assistant-companies-small-business/page.tsx');
+  const homepage = read('app/page.tsx');
+  const approved = [...policy.matchAll(/^  '([^']+)',$/gm)].map((match) => match[1]);
+  assert.equal(approved.length, 5);
+  assert.match(policy, /approvedBlogSlugs\.has\(post\.slug\)/);
+  assert.match(policy, /publishedResearchPosts = researchPosts\.filter\(\(\) => false\)/);
+  assert.doesNotMatch(policy, /distinctWords|narrativeStrings|frequency/);
   assert.match(sitemap, /publishedBlogPosts\.map/);
-  assert.match(sitemap, /publishedResearchPosts\.map/);
+  assert.doesNotMatch(sitemap, /['"]\/research['"]/);
   assert.match(blogDetail, /permanentRedirect\(consolidationTarget\(slug, 'blog'\)\)/);
   assert.match(researchDetail, /permanentRedirect\(consolidationTarget\(slug, 'research'\)\)/);
   assert.match(pagination, /if \(n === 1\) permanentRedirect\('\/blog'\)/);
+  assert.match(pagination, /!\/\^\[1-9\]\\d\*\$\/\.test\(page\)/);
+  assert.match(retiredRanking, /permanentRedirect\('\/compare\/local-vs-remote-assistant'\)/);
+  assert.doesNotMatch(retiredRanking, /const companies|editor pick|Top 25/);
+  assert.match(homepage, /publishedBlogPosts\.slice\(0,3\)/);
+  assert.doesNotMatch(homepage, /blogPosts\.slice\(0,3\)/);
+});
+
+test('contact ingestion preserves required fields, consent, and measured limits', () => {
+  const api = read('app/api/contact/route.ts');
+  const form = read('app/contact-us/StandardContactForm.tsx');
+  const tracker = read('app/ingest/track/route.ts');
+  assert.match(api, /text\(form, 'consent', 10\) !== 'yes'/);
+  assert.match(api, /text\(form, 'teamSize'/);
+  assert.match(api, /text\(form, 'supportArea'/);
+  assert.match(api, /new TextEncoder\(\)\.encode\(body\)\.byteLength > MAX_BODY_BYTES/);
+  assert.match(form, /tracker\.trackLead[\s\S]*tracker\.flush\(\)[\s\S]*window\.location\.assign/);
+  assert.match(tracker, /value\.site_id !== SITE_ID/);
+  assert.match(tracker, /value\.events\.length > MAX_EVENTS/);
+  assert.match(tracker, /limited\(clientKey\(request\), 120\)/);
+});
+
+test('contact guidance remains visible and readable without unsupported reviews', () => {
+  const rail = read('app/booking-components.tsx');
+  const css = read('app/globals.css');
+  assert.doesNotMatch(rail, /Erika Giron|Owen Hone|McKay Jaeckel|2,500 hours|24-hour VA placement/);
+  assert.match(rail, /What to expect from the staffing team/);
+  assert.match(css, /\.contact-copy \.sa-testimonials\{display:block\}/);
+  assert.match(css, /\.contact-copy \.sa-testimonials-contact\{padding:0;border:0;background:transparent\}/);
 });
 
 test('desktop opening composition has a bounded 768px height budget', () => {

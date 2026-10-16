@@ -1,7 +1,8 @@
 import { notFound, permanentRedirect } from 'next/navigation';
 import { Header, Footer, CTA } from '../../components';
 import { blogPosts, site, publicSources } from '../../data';
-import { canonicalContentHref, consolidationTarget, publishedBlogPosts, retiredBlogSlugs } from '../../content-policy';
+import { canonicalContentHref, consolidationTarget, editorialCard, publishedBlogPosts, retiredBlogSlugs } from '../../content-policy';
+import { ArticleSidebar } from '../../article-sidebar';
 
 const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
   year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
@@ -134,11 +135,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <article className="container article-shell">
+        <div className="container article-layout"><ArticleSidebar title={post.title} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
           <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {formatPublicationDate(published)}.</p>
+          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
@@ -259,7 +261,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-3">{source.name}</a>: {source.note}
             </li>)}</ol>
           </section>
-        </article>
+        </article></div>
       </main>
       <Footer />
     </>;
@@ -308,11 +310,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <article className="container article-shell">
+        <div className="container article-layout"><ArticleSidebar title={post.title} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
-          {richPost.image && <figure className="article-hero-image"><img src={richPost.image} alt={richPost.imageAlt || ''} width="1200" height="675" /></figure>}
+          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
           <div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Consolidated planning tables</span></div>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
@@ -333,7 +335,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block" aria-labelledby="decision-table">
             <h2 id="decision-table">Choose the hiring route that fits</h2>
-            <p>Each route below can lead to Filipino talent, but the owner workload is different. Hire Assistant Near Me offers the managed staffing route only.</p>
+            <p>For {post.title.toLowerCase()}, compare each route by the owner workload in the final column. Hire Assistant Near Me offers the managed staffing route only.</p>
             <p className="table-scroll-cue" id="table-scroll-cue">Swipe to compare all columns.</p>
             <div className="article-table-wrap" role="region" aria-labelledby="decision-table" aria-describedby="table-scroll-cue" tabIndex={0}>
               <table className="article-table">
@@ -345,7 +347,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block" aria-labelledby="planning-numbers">
             <h2 id="planning-numbers">Key stats and a 30-day scorecard</h2>
-            <p>These are planning examples, not terms, results, or industry statistics. Change each number to match the role, risk, and review time in your business.</p>
+            <p>The scorecard is a planning model for {detail.scenario.title.toLowerCase()}, not a promise or industry statistic. Replace each number with the review standard for your own workflow.</p>
             <div className="number-grid">{detail.planningNumbers.map((item) => <div className="number-card" key={item.value}>
               <span>{item.label}</span><strong>{item.value}</strong><small>{item.note}</small>
             </div>)}</div>
@@ -370,7 +372,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block script-grid" aria-labelledby="copy-scripts">
             <h2 id="copy-scripts">Scripts you can copy</h2>
-            <p>Use these scripts for a provider call and the first day of work. Replace the task names and approval rules before you send them.</p>
+            <p>Start with the {detail.scripts[0].title.toLowerCase()} script, then replace its task names and approval rules with the evidence this guide asks you to collect.</p>
             <div className="two">{detail.scripts.map((script) => <blockquote className="script-card" key={script.title}>
               <h3>{script.title}</h3><div className="script-copy">"{script.text}"</div>
             </blockquote>)}</div>
@@ -398,13 +400,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block card" aria-labelledby="related-guides">
             <h2 id="related-guides">Keep planning</h2>
-            <p>Pick the next guide that matches the choice in front of you. Each path helps you prepare a clear Philippines-only staffing brief.</p>
+            <p>Continue with {detail.relatedLinks[0].label.toLowerCase()} when that is the next unresolved part of the role. The remaining links cover adjacent decisions in the same Philippines-only staffing path.</p>
             <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
           </section>
 
           <section className="article-block sources-card" aria-labelledby="sources-heading">
             <h2 id="sources-heading">Sources</h2>
-            <p>These official sources support the access, sign-in, worker setup, and privacy notes in this guide. They do not set a terms or promise a business result.</p>
+            <p>{detail.sources[0].name} is one of the primary references behind this guide. The sources support the cited facts, but they do not set staffing terms or promise a business result.</p>
             <ul className="list">{detail.sources.map((source) => <li key={source.url}>
               <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-6">{source.name}</a>: {source.note}
             </li>)}</ul>
@@ -413,10 +415,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="managed-cta" aria-labelledby="managed-cta-heading">
             <p className="eyebrow light">Managed staffing from the Philippines</p>
             <h2 id="managed-cta-heading">Bring one clear role to the hiring call.</h2>
-            <p>Send the task list, tools, work hours, and approval limits. A staffing team can help shape the role and match a candidate recruited and hired in the Philippines.</p>
+            <p>Bring the task and approval rules developed in {post.title.toLowerCase()}. A staffing specialist can use that evidence to shape a role and discuss a candidate recruited in the Philippines.</p>
             <a className="btn coral" href="/contact-us" id="cta-blog-slug-action-7">Build my Philippines role brief</a>
           </section>
-        </article>
+        </article></div>
       </main>
       <Footer />
     </>;
@@ -437,12 +439,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     <Header />
     <main className="section">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <article className="container article-shell">
+      <div className="container article-layout"><ArticleSidebar title={post.title} /><article className="article-shell" data-article-body>
         <p className="eyebrow">{site.brand} guide</p>
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p>
+        <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
         <section className="card"><h2>Start with a defined workflow</h2><p>For Philippines-based staffing, document the work, tools, schedule, and desired outcome before candidate matching. Keep business judgment and final approvals with a named manager. <a href="https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm" target="_blank" rel="noopener noreferrer">International Labour Organization guidance on remote work arrangements</a> reinforces the need for clear expectations, communication rhythms, and accountable handoffs.</p><aside className='article-rotation-banner article-rotation-banner-middle' data-article-banner='true'><p className='eyebrow'>Midpoint planning check</p><h2>Compare providers against one written workflow</h2><p>Use one task lane, one reviewer, and one quality check so each provider conversation is easier to judge.</p><a className='btn' href='/contact-us'>Contact Us</a></aside><h2>Prepare representative examples</h2><p>Use real, appropriately redacted examples to explain quality. Review early work together and update the written process when an exception appears.</p><h2>Plan access and handoffs</h2><p>Provide only the access needed for the position and use named accounts where possible. Write down which questions must be escalated and who receives them.</p></section>
-      </article>
+      </article></div>
       <CTA />
     </main>
     <Footer />

@@ -38,6 +38,7 @@ export function HeaderClient({ brand }: { brand: string }) {
     <header className="nav">
       <div className="nav-inner">
         <a className="logo" href="/" aria-label={`${brand} home`}><span className="logo-mark-wrap"><img className="logo-img" src="/logo.svg?v=20261016" alt="" width="43" height="43" /><span className="logo-name">{brand}</span></span></a>
+        <a className="header-parent-brand" href="https://stealthagents.com/" aria-label="Powered by StealthAgents"><span>Powered by StealthAgents</span><img src="/images/stealth-agents-logo-black.png" alt="" width="149" height="50" /></a>
         <button ref={buttonRef} className="menu-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}><span aria-hidden="true">{open ? 'Close' : 'Menu'}</span><span className="sa-sr-only">Toggle navigation</span></button>
         <nav ref={navRef} id="primary-navigation" className={`links fleet-nav${open ? ' is-open' : ''}`} aria-label="Main navigation">
           <a href="/" onClick={() => setOpen(false)}>Home</a>

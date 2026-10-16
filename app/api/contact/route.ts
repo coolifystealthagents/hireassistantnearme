@@ -5,6 +5,8 @@ const MAX_BODY_BYTES = 64_000;
 const MAX_FIELD_LENGTH = 4_000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const WINDOW_MS = 15 * 60_000;
+const MAX_RATE_KEYS = 5_000;
+const CANONICAL_ORIGIN = 'https://hireassistantnearme.com';
 const attempts = new Map<string, number[]>();
 
 function text(form: URLSearchParams, key: string, max = MAX_FIELD_LENGTH) {
@@ -19,18 +21,33 @@ function errorPage(status: number) {
 }
 
 function clientKey(request: NextRequest) {
-  return request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || 'unknown';
+  return request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || null;
 }
 
-function limited(key: string, max: number) {
+function expectedOrigin(request: NextRequest) {
+  const host = (request.headers.get('x-forwarded-host') || request.headers.get('host') || '').split(',')[0].trim();
+  const protocol = (request.headers.get('x-forwarded-proto') || request.nextUrl.protocol.replace(':', '')).split(',')[0].trim();
+  return host ? `${protocol}://${host}` : request.nextUrl.origin;
+}
+
+function hasSameOrigin(request: NextRequest) {
+  const origin = request.headers.get('origin');
+  if (!origin) return false;
+  const expected = expectedOrigin(request);
+  return origin === expected && (origin === CANONICAL_ORIGIN || process.env.NODE_ENV !== 'production');
+}
+
+function limited(key: string | null, max: number) {
+  if (!key) return false;
   const now = Date.now();
   const recent = (attempts.get(key) || []).filter((time) => now - time < WINDOW_MS);
   recent.push(now);
   attempts.set(key, recent);
-  if (attempts.size > 5_000) {
+  if (attempts.size > MAX_RATE_KEYS) {
     for (const [candidate, times] of attempts) {
       if (!times.some((time) => now - time < WINDOW_MS)) attempts.delete(candidate);
     }
+    while (attempts.size > MAX_RATE_KEYS) attempts.delete(attempts.keys().next().value as string);
   }
   return recent.length > max;
 }
@@ -38,14 +55,11 @@ function limited(key: string, max: number) {
 export async function POST(request: NextRequest) {
   const contentType = request.headers.get('content-type') || '';
   const declaredLength = Number(request.headers.get('content-length') || 0);
-  const origin = request.headers.get('origin');
-  if (
-    (origin && origin !== request.nextUrl.origin) ||
-    !Number.isFinite(declaredLength) ||
-    declaredLength > MAX_BODY_BYTES ||
-    !contentType.includes('application/x-www-form-urlencoded')
-  ) return errorPage(400);
-  if (limited(`ip:${clientKey(request)}`, 10)) return errorPage(429);
+  if (!hasSameOrigin(request)) return errorPage(403);
+  if (!Number.isFinite(declaredLength) || !contentType.includes('application/x-www-form-urlencoded')) return errorPage(400);
+  if (declaredLength > MAX_BODY_BYTES) return errorPage(413);
+  const ip = clientKey(request);
+  if (limited(ip ? `ip:${ip}` : null, 10)) return errorPage(429);
 
   let body = '';
   try {

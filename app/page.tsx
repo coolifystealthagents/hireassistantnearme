@@ -31,7 +31,7 @@ export default function Home() {
           <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
         </div>
         <div className="hero-visual">
-          <img src="/illustrations/getillustrations/goodle-business-illustrations-svg/remote-filipino-assistant.svg" alt="Illustration of a remote Filipino assistant approved for clearly scoped online work"/>
+          <img src="/illustrations/getillustrations/goodle-business-illustrations-svg/remote-filipino-assistant.svg" alt="Illustration of a remote Filipino assistant approved for clearly scoped online work" width="600" height="600"/>
           <div className="location-card">
             <div className="location-top"><span>Role brief</span><b>Location check</b></div>
             <h2>Where should the work happen?</h2>
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the work, then the person</p><h2>Start with a role that has edges.</h2></div><p>An assistant can do a lot. That does not mean one person should do everything. A tighter brief makes screening, onboarding, and review much easier.</p></div>
         <div className="role-grid">
           {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
-            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? 'Assistant and manager collaborating on role priorities' : `${role.title} support role example`}/></div>
+            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? 'Assistant and manager collaborating on role priorities' : `${role.title} support role example`} width={index === 0 ? 750 : 800} height={index === 0 ? 750 : 1200}/></div>
             <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this to my brief <span>→</span></a></div>
           </article>)}
         </div>

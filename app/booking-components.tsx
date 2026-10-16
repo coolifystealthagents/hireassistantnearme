@@ -1,22 +1,66 @@
 'use client';
-import { useState } from 'react';
 
-const commitments = [
-  { headline: 'A scoped first conversation', body: 'The staffing discussion starts with recurring work, systems, working hours, and the decisions that stay with your team.' },
-  { headline: 'A bounded role brief', body: 'Candidate matching uses the support area, schedule, tools, and review boundaries you provide rather than an all-purpose assistant label.' },
-  { headline: 'A controlled first handoff', body: 'The initial plan uses examples, limited access, named reviewers, and a clear route for exceptions before the work expands.' },
-];
+import { useEffect, useRef } from 'react';
+import reviewProvenance from './review-provenance.json';
+
+const stealthAgentsReviewSource = reviewProvenance.source;
+const stealthAgentsReviews = reviewProvenance.records;
 
 export function TestimonialsRail({ contact = false }: { contact?: boolean }) {
-  const [paused, setPaused] = useState(false);
-  const repeated = [...commitments, ...commitments];
-  const headingId = contact ? 'contact-process-commitments' : 'booking-process-commitments';
-  return <section className={`sa-testimonials${contact ? ' sa-testimonials-contact' : ''}${paused ? ' is-paused' : ''}`} aria-labelledby={headingId}>
-    <div className="sa-testimonial-heading"><h2 id={headingId}>What to expect from the staffing team</h2></div>
-    <button className="sa-testimonial-toggle" type="button" aria-pressed={paused} onClick={() => setPaused((value) => !value)}>{paused ? 'Play guidance' : 'Pause guidance'}</button>
-    <div className="sa-testimonial-viewport" tabIndex={0} aria-label="Staffing process guidance">
-      <div className="sa-testimonial-track">
-        {repeated.map((item, index) => <article className="sa-testimonial-card" key={`${item.headline}-${index}`} aria-hidden={index >= commitments.length ? true : undefined}><h3>{item.headline}</h3><p>{item.body}</p></article>)}
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const headingId = contact ? 'contact-stealth-agents-reviews' : 'booking-stealth-agents-reviews';
+
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    const track = trackRef.current;
+    if (!viewport || !track || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let frame = 0;
+    let previous = performance.now();
+    let offset = 0;
+    let paused = false;
+    const tick = (now: number) => {
+      const elapsed = Math.min(now - previous, 50);
+      previous = now;
+      if (!paused) {
+        offset += elapsed * 0.026;
+        const first = track.firstElementChild as HTMLElement | null;
+        if (first) {
+          const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0');
+          const width = first.getBoundingClientRect().width + gap;
+          if (offset >= width) {
+            track.append(first);
+            offset -= width;
+          }
+        }
+        track.style.transform = `translate3d(${-offset}px,0,0)`;
+      }
+      frame = requestAnimationFrame(tick);
+    };
+    const pause = () => { paused = true; };
+    const resume = () => { paused = false; previous = performance.now(); };
+    viewport.addEventListener('pointerenter', pause);
+    viewport.addEventListener('pointerleave', resume);
+    viewport.addEventListener('focusin', pause);
+    viewport.addEventListener('focusout', resume);
+    frame = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(frame);
+      viewport.removeEventListener('pointerenter', pause);
+      viewport.removeEventListener('pointerleave', resume);
+      viewport.removeEventListener('focusin', pause);
+      viewport.removeEventListener('focusout', resume);
+    };
+  }, []);
+
+  return <section className={`sa-testimonials${contact ? ' sa-testimonials-contact' : ''}`} aria-labelledby={headingId}>
+    <div className="sa-testimonial-heading"><div><p>Verified first-party collection</p><h2 id={headingId}>StealthAgents reviews</h2></div><a href={stealthAgentsReviewSource} rel="noreferrer">Source</a></div>
+    <div ref={viewportRef} className="sa-testimonial-viewport" tabIndex={0} aria-label="Ten StealthAgents client reviews">
+      <div ref={trackRef} className="sa-testimonial-track">
+        {stealthAgentsReviews.map((item) => <article className="sa-testimonial-card" key={item.name}>
+          <div className="sa-testimonial-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+          <h3>{item.headline}</h3><blockquote>“{item.body}”</blockquote><p>{item.name}</p><span className="sa-testimonial-source">{item.detail}</span>
+        </article>)}
       </div>
     </div>
   </section>;

@@ -50,9 +50,11 @@ test('component-managed form has one accepted-response lead event and no native 
   assert.match(form, /onKeyDown=\{handleKeyDown\}/);
   assert.doesNotMatch(form, /onSubmit=/);
   assert.doesNotMatch(form, /type=["']submit["']/);
-  assert.match(form, /const tracker = window\.acrTracker;[\s\S]*if \(!tracker\?\.trackLead\)[\s\S]*return;[\s\S]*fetch\(/);
-  assert.match(form, /if \(!response\.ok\)[\s\S]*accepted = true;[\s\S]*tracker\.trackLead\([\s\S]*location\.assign/);
-  assert.match(form, /disabled=\{busy \|\| !trackerReady\}/);
+  assert.equal((form.match(/tracker\.trackLead\(/g) || []).length, 1);
+  assert.match(form, /if \(!response\.ok\)[\s\S]*accepted = true;[\s\S]*await emitAcceptedLead\(payload\)[\s\S]*location\.assign/);
+  assert.match(form, /if \(tracker\?\.trackLead\)[\s\S]*tracker\.trackLead[\s\S]*return;[\s\S]*fetch\('\/ingest\/track'/);
+  assert.match(form, /disabled=\{busy\}/);
+  assert.doesNotMatch(form, /trackerReady|Preparing secure form/);
   assert.doesNotMatch(layout, /funnel_form_submitted|funnel_booking_confirmed/);
   assert.match(form, /role=["']status["']/);
 });
@@ -141,11 +143,16 @@ test('curated editorial index uses article-owned thumbnails and retired research
   const blog = read('app/blog/page.tsx');
   const pagination = read('app/blog/page/[page]/page.tsx');
   const research = read('app/research/page.tsx');
+  const policy = read('app/content-policy.ts');
   const booking = read('app/thank-you/page.tsx');
   assert.match(blog, /editorial-image-link[\s\S]*<img/);
-  assert.match(blog, /'image' in p[\s\S]*p\.imageAlt/);
+  assert.match(blog, /editorialCard\(p\.slug\)\.src[\s\S]*editorialCard\(p\.slug\)\.alt/);
   assert.match(pagination, /editorial-image-link[\s\S]*<img/);
   assert.match(pagination, /<time dateTime=/);
+  const cardImages = [...policy.matchAll(/src: '([^']+\.webp)'/g)].map((match) => match[1]);
+  assert.equal(cardImages.length, 5);
+  assert.equal(new Set(cardImages).size, 5);
+  assert.doesNotMatch(policy, /local-team\.jpg/);
   assert.match(research, /permanentRedirect\('\/blog'\)/);
   assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
   assert.match(booking, /scheduler itself confirms the booking/);
@@ -163,6 +170,10 @@ test('contact form classes are styled and service hero images are unique with in
   assert.equal(imagePaths.length, 10);
   assert.equal(new Set(imagePaths).size, 10);
   assert.match(servicePage, /width=\{image\.width\} height=\{image\.height\}/);
+  assert.equal((servicePage.match(/^  '[^']+': \[[^\n]+\],$/gm) || []).length, 10);
+  assert.match(servicePage, /relatedServiceSlugs\[slug\]/);
+  assert.doesNotMatch(servicePage, /filter\(\(item\) => item\.slug !== slug\)\.slice/);
+  for (const size of ['font-size:13px', 'font-size:12px']) assert.match(css, new RegExp(size));
 });
 
 test('editorial consolidation uses an explicit manifest and preserves permanent topic redirects', () => {
@@ -199,18 +210,72 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.match(api, /text\(form, 'supportArea'/);
   assert.match(api, /new TextEncoder\(\)\.encode\(body\)\.byteLength > MAX_BODY_BYTES/);
   assert.match(form, /tracker\.trackLead[\s\S]*tracker\.flush\(\)[\s\S]*window\.location\.assign/);
-  assert.match(tracker, /value\.site_id !== SITE_ID/);
-  assert.match(tracker, /value\.events\.length > MAX_EVENTS/);
+  assert.match(tracker, /value\.site_id === SITE_ID/);
+  assert.match(tracker, /value\.events\.length <= MAX_EVENTS/);
   assert.match(tracker, /limited\(clientKey\(request\), 120\)/);
+  assert.match(tracker, /if \(!origin\) return false/);
+  assert.match(tracker, /ALLOWED_EVENT_TYPES\.has/);
+  assert.match(tracker, /Object\.keys\(value\)\.some\(\(key\) => !ALLOWED_EVENT_KEYS\.has\(key\)\)/);
+  assert.match(tracker, /Date\.parse\(value\.timestamp/);
 });
 
-test('contact guidance remains visible and readable without unsupported reviews', () => {
+test('contact marquee uses ten sourced reviews, horizontal recycling, and no playback controls', () => {
   const rail = read('app/booking-components.tsx');
-  const css = read('app/globals.css');
-  assert.doesNotMatch(rail, /Erika Giron|Owen Hone|McKay Jaeckel|2,500 hours|24-hour VA placement/);
-  assert.match(rail, /What to expect from the staffing team/);
-  assert.match(css, /\.contact-copy \.sa-testimonials\{display:block\}/);
-  assert.match(css, /\.contact-copy \.sa-testimonials-contact\{padding:0;border:0;background:transparent\}/);
+  const provenance = JSON.parse(read('app/review-provenance.json'));
+  const css = read('app/release-v3.css');
+  assert.equal(provenance.source, 'https://stealthagents.com/');
+  assert.equal(provenance.records.length, 10);
+  assert.equal(new Set(provenance.records.map((item) => item.name)).size, 10);
+  assert.match(rail, /StealthAgents reviews/);
+  assert.match(rail, /requestAnimationFrame/);
+  assert.match(rail, /track\.append\(first\)/);
+  assert.doesNotMatch(rail, /Pause|Play|Previous|Next|\.\.\.stealthAgentsReviews/);
+  assert.match(css, /\.sa-testimonial-track\{display:flex/);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
+});
+
+test('V3 route, parent-brand, hero, and article utility contracts are present', () => {
+  const header = read('app/header-client.tsx');
+  const shared = read('app/components.tsx');
+  const sitemap = read('app/sitemap.xml/route.ts');
+  const article = read('app/blog/[slug]/page.tsx');
+  const sidebar = read('app/article-sidebar.tsx');
+  const about = read('app/about/page.tsx');
+  const services = read('app/services/page.tsx');
+  const blog = read('app/blog/page.tsx');
+  const comparison = read('app/compare/local-vs-remote-assistant/page.tsx');
+  assert.match(header, /Powered by StealthAgents/);
+  assert.match(shared, /Powered by StealthAgents/);
+  assert.match(sitemap, /'\/about'/);
+  assert.match(about, /<h1>[\s\S]*stealth-agents-team\.webp/);
+  assert.match(services, /index-hero-visual/);
+  assert.match(blog, /blog-index-hero-grid/);
+  assert.match(comparison, /comparison-hero-grid/);
+  assert.match(comparison, /<ArticleSidebar title=\{title\}/);
+  assert.match(comparison, /<table><caption>/);
+  assert.equal((article.match(/<ArticleSidebar title=\{post\.title\}/g) || []).length, 3);
+  assert.match(article, /editorialCard\(post\.slug\)\.width/);
+  assert.match(sidebar, /IntersectionObserver/);
+  assert.match(sidebar, /aria-current=\{active === item\.id \? 'location'/);
+});
+
+test('V3 long-form routes do not repeat the retired template paragraphs', () => {
+  const service = read('app/services/[slug]/page.tsx');
+  const article = read('app/blog/[slug]/page.tsx');
+  for (const phrase of [
+    'This scope separates work the assistant can prepare',
+    'Keep physical work, licensed judgment',
+    'Each scenario names what is prepared',
+    'Access grows only after the owner can see',
+  ]) assert.doesNotMatch(service, new RegExp(phrase));
+  for (const phrase of [
+    'Each route below can lead to Filipino talent',
+    'These are planning examples, not terms',
+    'Use these scripts for a provider call',
+    'Pick the next guide that matches',
+    'These official sources support',
+    'Send the task list, tools, work hours',
+  ]) assert.doesNotMatch(article, new RegExp(phrase));
 });
 
 test('desktop opening composition has a bounded 768px height budget', () => {

@@ -3,8 +3,9 @@
     "dev": "next dev",
     "test:h1": "node --test tests/homepage-h1-contract.test.mjs",
     "test:optimization": "node --test tests/optimization-contract.test.mjs",
+    "test:artifact": "node tests/artifact-contract.mjs",
     "test": "npm run test:h1 && npm run test:optimization",
-    "build": "npm test && next build",
+    "build": "npm test && next build && npm run test:artifact",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint"
   },

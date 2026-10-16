@@ -6,7 +6,7 @@ export function GET() {
   const base = `https://${site.domain.toLowerCase()}`;
   const pages = Math.max(1, Math.ceil(publishedBlogPosts.length / postsPerPage));
   const paths = [...new Set([
-    '', '/services', '/blog',
+    '', '/about', '/services', '/blog',
     '/compare/local-vs-remote-assistant', '/contact-us', '/privacy', '/terms', '/cancellation-policy',
     ...fleetServices.map((service) => `/services/${service.slug}`),
     ...publishedBlogPosts.map((post) => `/blog/${post.slug}`),

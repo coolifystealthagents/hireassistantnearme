@@ -69,17 +69,17 @@
 .form-heading{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:4px 12px}
 .form-heading .contact-kicker{margin:0;color:#9c3e2e;font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
 .form-heading h2{grid-row:2;margin:0;font:600 25px/1.05 var(--serif)}
-.form-heading>p:last-child{grid-column:2;grid-row:1/3;align-self:end;margin:0;color:#6b756f;font-size:10px;line-height:1.4}
+.form-heading>p:last-child{grid-column:2;grid-row:1/3;align-self:end;margin:0;color:#53625a;font-size:13px;line-height:1.4}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 10px}
-.standard-contact-form label{display:grid;gap:3px;min-width:0;color:#32443b;font-size:11px;font-weight:800}
+.standard-contact-form label{display:grid;gap:3px;min-width:0;color:#32443b;font-size:13px;font-weight:800}
 .standard-contact-form label.wide{grid-column:1/-1}
 .standard-contact-form input,.standard-contact-form select,.standard-contact-form textarea{width:100%;min-width:0;min-height:38px;padding:8px 10px;border:1px solid #bdc8c1;border-radius:8px;background:#fff;color:#18241e;font:14px var(--font)}
 .standard-contact-form textarea{min-height:64px;resize:vertical}
 .standard-contact-form input:focus,.standard-contact-form select:focus,.standard-contact-form textarea:focus{outline:3px solid #bde6dc;outline-offset:1px;border-color:#0f766e}
-.standard-contact-form .consent-row{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start;font-size:10px;line-height:1.4;font-weight:600}
+.standard-contact-form .consent-row{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start;font-size:12px;line-height:1.45;font-weight:600}
 .standard-contact-form .consent-row input{width:16px;min-height:16px;margin-top:1px}
 .form-action{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
-.form-action p{margin:0;color:#67736c;font-size:10px;line-height:1.35}
+.form-action p{margin:0;color:#53625a;font-size:12px;line-height:1.4}
 .submit-button{min-height:42px;padding:10px 17px;border:0;border-radius:9px;background:var(--coral);color:#fff;font-weight:850;cursor:pointer}
 .submit-button:focus-visible{outline:3px solid #0f766e;outline-offset:3px}.submit-button:disabled{opacity:.65;cursor:wait}
 

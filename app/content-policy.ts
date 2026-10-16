@@ -13,6 +13,41 @@ export const approvedBlogSlugs = new Set([
 ]);
 
 export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug));
+
+const editorialCards: Record<string, { src: string; alt: string; width: number; height: number }> = {
+  'local-vs-remote-administrative-assistant-benchmark-2026': {
+    src: '/images/local-vs-remote-admin-benchmark-2026.webp',
+    alt: 'Editorial comparison of local and remote administrative support',
+    width: 1672, height: 941,
+  },
+  'administrative-assistant-benchmarks-small-business-2026': {
+    src: '/images/administrative-assistant-benchmarks-2026.webp',
+    alt: 'Editorial chart for administrative assistant workload benchmarks',
+    width: 1672, height: 941,
+  },
+  'hire-filipino-virtual-assistant': {
+    src: '/images/aug21-blog-role-briefs.webp',
+    alt: 'Editorial illustration of a structured assistant role brief',
+    width: 1536, height: 1024,
+  },
+  'virtual-assistant-security-checklist': {
+    src: '/images/sep3-research-least-privilege.webp',
+    alt: 'Editorial illustration of least-privilege access controls',
+    width: 1536, height: 1024,
+  },
+  'general-office-clerk-outlook-task-design-2026': {
+    src: '/images/aug20-blog-meeting-notes.webp',
+    alt: 'Editorial illustration of office notes and assigned follow-up tasks',
+    width: 1024, height: 1024,
+  },
+};
+
+export function editorialCard(slug: string) {
+  const card = editorialCards[slug];
+  if (!card) throw new Error(`Missing approved editorial card for ${slug}`);
+  return card;
+}
+
 export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlogSlugs.has(post.slug)).map((post) => post.slug));
 
 // The former research collection consisted of repeated date-batch templates.

@@ -1,33 +1,69 @@
 "use client";
 
-import { useEffect, useState, type KeyboardEvent } from "react";
+import { useState, type KeyboardEvent } from "react";
 
 type Props = { endpoint?: string; encoding?: "json" | "form" };
 type LeadPayload = Record<string, string>;
 
+async function waitForTracker(timeoutMs = 1_500) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    if (window.acrTracker?.trackLead) return window.acrTracker;
+    await new Promise((resolve) => window.setTimeout(resolve, 100));
+  }
+  return window.acrTracker?.trackLead ? window.acrTracker : null;
+}
+
+async function emitAcceptedLead(payload: LeadPayload) {
+  const tracker = await waitForTracker();
+  const trackedPayload = {
+    ...payload,
+    name: `${payload.firstName || ''} ${payload.lastName || ''}`.trim(),
+    source: "standard_contact_form",
+    formId: "standard-contact",
+  };
+  if (tracker?.trackLead) {
+    tracker.trackLead(trackedPayload);
+    tracker.flush();
+    return;
+  }
+
+  // The core form remains usable if the external SDK is delayed or blocked.
+  // This same-origin fallback emits the one accepted lead event directly.
+  const now = new Date().toISOString();
+  await fetch('/ingest/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    keepalive: true,
+    body: JSON.stringify({
+      site_id: 'hire-assistant-near-me',
+      events: [{
+        client_event_id: crypto.randomUUID(),
+        event_type: 'lead_submit',
+        timestamp: now,
+        session_id: crypto.randomUUID(),
+        anonymous_id: crypto.randomUUID(),
+        page_url: window.location.href,
+        page_path: window.location.pathname,
+        page_title: document.title,
+        referrer: document.referrer,
+        screen_width: window.screen.width,
+        screen_height: window.screen.height,
+        scroll_depth: 0,
+        time_on_page: Math.round(performance.now()),
+        event_value: 'standard_contact_form',
+        event_metadata: JSON.stringify(trackedPayload),
+      }],
+    }),
+  });
+}
+
 export default function StandardContactForm({ endpoint = "/api/contact", encoding = "form" }: Props) {
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
-  const [trackerReady, setTrackerReady] = useState(false);
-
-  useEffect(() => {
-    const check = () => setTrackerReady(Boolean(window.acrTracker?.trackLead));
-    check();
-    const timer = window.setInterval(check, 250);
-    return () => window.clearInterval(timer);
-  }, []);
 
   async function submit(form: HTMLFormElement) {
     if (busy || !form.reportValidity()) return;
-
-    // Capture a stable tracker reference before ingesting. If attribution is not
-    // available, do not create a lead that could navigate without its ACR event.
-    const tracker = window.acrTracker;
-    if (!tracker?.trackLead) {
-      setTrackerReady(false);
-      setStatus("The secure form is still preparing. Please wait a moment and try again.");
-      return;
-    }
 
     setBusy(true);
     setStatus("Sending your request...");
@@ -38,8 +74,8 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
       const response = await fetch(endpoint, encoding === "json" ? { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) } : { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" }, body: new URLSearchParams(payload).toString() });
       if (!response.ok) throw new Error("submission rejected");
       accepted = true;
-      tracker.trackLead({ ...payload, name: `${payload.firstName || ''} ${payload.lastName || ''}`.trim(), source: "standard_contact_form", formId: "standard-contact" });
-      tracker.flush();
+      setStatus("Request received. Preparing your next step...");
+      await emitAcceptedLead(payload).catch(() => undefined);
       window.location.assign("/thank-you");
     } catch {
       setBusy(false);
@@ -68,6 +104,6 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
       <label className="wide"><span>What would you like the assistant to own?</span><textarea name="message" rows={5} required placeholder="Describe the recurring work, systems, schedule, and approval points." /></label>
     </div>
     <label className="consent-row"><input type="checkbox" name="consent" value="yes" required /><span>I agree to be contacted about this request. I understand this is a remote staffing conversation, not a local job application.</span></label>
-    <div className="form-action"><button type="button" className="submit-button" disabled={busy || !trackerReady} onClick={(event) => void submit(event.currentTarget.form!)}>{busy ? "Sending..." : trackerReady ? "Continue to scheduling" : "Preparing secure form..."}</button><p aria-live="polite" role="status">{status}</p></div>
+    <div className="form-action"><button type="button" className="submit-button" disabled={busy} onClick={(event) => void submit(event.currentTarget.form!)}>{busy ? "Sending..." : "Continue to scheduling"}</button><p aria-live="polite" role="status">{status}</p></div>
   </form>;
 }

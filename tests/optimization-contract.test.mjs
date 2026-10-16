@@ -111,6 +111,8 @@ test('security policy and canonical host middleware cover production gates', () 
   assert.match(middleware, /request\.nextUrl\.clone\(\)/);
   assert.match(middleware, /destination\.hostname = canonicalHost/);
   assert.match(middleware, /forwardedProtocol \|\| request\.nextUrl\.protocol/);
+  assert.match(middleware, /originalVisitorProtocol\(request\.headers\.get\('cf-visitor'\)\)/);
+  assert.match(middleware, /visitorProtocol \|\| forwardedProtocol \|\| request\.nextUrl\.protocol/);
   assert.match(middleware, /process\.env\.NODE_ENV !== 'production'/);
   assert.match(middleware, /process\.env\.ALLOW_LOCAL_PREVIEW === '1'/);
   assert.doesNotMatch(middleware, /new URL\(`\$\{request\.nextUrl\.pathname/);

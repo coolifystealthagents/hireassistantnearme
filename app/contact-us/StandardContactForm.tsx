@@ -1,59 +1,72 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useEffect, useState, type KeyboardEvent } from "react";
 
 type Props = { endpoint?: string; encoding?: "json" | "form" };
 type LeadPayload = Record<string, string>;
 
-async function waitForTracker(timeoutMs = 1600) {
-  const started = Date.now();
-  while (!window.acrTracker && Date.now() - started < timeoutMs) await new Promise((resolve) => setTimeout(resolve, 80));
-}
-
 export default function StandardContactForm({ endpoint = "/api/contact", encoding = "form" }: Props) {
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
+  const [status, setStatus] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [trackerReady, setTrackerReady] = useState(false);
+
+  useEffect(() => {
+    const check = () => setTrackerReady(Boolean(window.acrTracker?.trackLead));
+    check();
+    const timer = window.setInterval(check, 250);
+    return () => window.clearInterval(timer);
+  }, []);
 
   async function submit(form: HTMLFormElement) {
-    if (submitting || !form.reportValidity()) return;
-    const data = new FormData(form);
-    if (String(data.get("website_url") || "").trim()) return;
-    setSubmitting(true);
-    setError("");
+    if (busy || !form.reportValidity()) return;
+
+    // Capture a stable tracker reference before ingesting. If attribution is not
+    // available, do not create a lead that could navigate without its ACR event.
+    const tracker = window.acrTracker;
+    if (!tracker?.trackLead) {
+      setTrackerReady(false);
+      setStatus("The secure form is still preparing. Please wait a moment and try again.");
+      return;
+    }
+
+    setBusy(true);
+    setStatus("Sending your request...");
+    let accepted = false;
     try {
-      const payload = Object.fromEntries(data.entries()) as LeadPayload;
-      const request = encoding === "form"
-        ? { method: "POST", body: new URLSearchParams(payload) }
-        : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
-      const response = await fetch(endpoint, request);
-      if (!response.ok) throw new Error("Lead request was not accepted");
-      await waitForTracker();
-      window.acrTracker?.trackLead({ ...payload, name: `${payload.firstName || ''} ${payload.lastName || ''}`.trim(), source: "contact-page-intake", formId: form.id, pageUrl: window.location.href });
+      const data = new FormData(form);
+      const payload = Object.fromEntries(Array.from(data.entries()).map(([key, value]) => [key, String(value)])) as LeadPayload;
+      const response = await fetch(endpoint, encoding === "json" ? { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) } : { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" }, body: new URLSearchParams(payload).toString() });
+      if (!response.ok) throw new Error("submission rejected");
+      accepted = true;
+      tracker.trackLead({ ...payload, source: "standard_contact_form", formId: "standard-contact" });
       window.location.assign("/thank-you");
     } catch {
-      setError("We could not submit your request. Please check the fields and try again.");
-      setSubmitting(false);
+      setBusy(false);
+      setStatus(accepted
+        ? "Your request was received, but the next step could not open. Please do not resubmit; use the Contact link if you need help."
+        : "We couldn't send your request. Please review the form and try again.");
     }
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLFormElement>) {
-    if (event.key !== "Enter" || event.shiftKey || event.target instanceof HTMLTextAreaElement) return;
+    if (event.key !== "Enter" || event.shiftKey || event.nativeEvent.isComposing || event.target instanceof HTMLTextAreaElement) return;
     event.preventDefault();
     void submit(event.currentTarget);
   }
 
-  return <aside className="saForm" aria-labelledby="contact-form-title">
-    <div className="formHeading"><p className="formKick">Free consultation request</p><h2 id="contact-form-title">Tell us what support you need</h2><p>Required fields are marked with an asterisk.</p></div>
-    <form id="consultation-form" data-acr-managed="react" action={endpoint} method="post" onKeyDown={handleKeyDown}>
-      <input id="contact-website-url-check" className="hp" name="website_url" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-      <div className="formGrid"><label htmlFor="contact-first-name">First name *<input id="contact-first-name" name="firstName" required autoComplete="given-name" /></label><label htmlFor="contact-last-name">Last name *<input id="contact-last-name" name="lastName" required autoComplete="family-name" /></label></div>
-      <div className="formGrid"><label htmlFor="contact-email">Business email *<input id="contact-email" name="email" type="email" required autoComplete="email" /></label><label htmlFor="contact-phone">Phone number *<input id="contact-phone" name="phone" type="tel" required autoComplete="tel" /></label></div>
-      <div className="formGrid"><label htmlFor="contact-company">Company name *<input id="contact-company" name="company" required autoComplete="organization" /></label><label htmlFor="contact-website">Website / URL<input id="contact-website" name="website" type="url" placeholder="https://example.com" autoComplete="url" /></label></div>
-      <div className="formGrid"><label htmlFor="contact-role">Service or role needed *<input id="contact-role" name="role" required placeholder="Executive assistant" /></label><label htmlFor="contact-company-size">Company size *<select id="contact-company-size" name="companySize" required defaultValue=""><option value="" disabled>Select</option><option>1 to 10</option><option>11 to 50</option><option>51 to 250</option><option>251+</option></select></label></div>
-      <div className="formGrid"><label htmlFor="contact-method">Preferred contact method *<select id="contact-method" name="contactMethod" required defaultValue=""><option value="" disabled>Select</option><option>Email</option><option>Phone</option></select></label><label htmlFor="contact-time">Preferred contact time *<input id="contact-time" name="contactTime" required placeholder="Time and time zone" /></label></div>
-      <label htmlFor="contact-message">Work, tools, and desired outcome *<textarea id="contact-message" name="message" required rows={2} placeholder="Describe the work and decisions that stay with your team." /></label>
-      {error ? <p className="formError" role="alert">{error}</p> : null}
-      <div className="formSubmit"><p>By submitting, you agree that the staffing team may contact you about this request. Read our <a href="/privacy">privacy policy</a>.</p><button type="button" onClick={(event) => void submit(event.currentTarget.form!)} disabled={submitting} aria-busy={submitting}>{submitting ? "Submitting..." : "Send my role brief"}</button></div>
-    </form>
-  </aside>;
+  return <form id="standard-contact" className="standard-contact-form" data-acr-managed="react" onKeyDown={handleKeyDown}>
+    <div className="form-heading"><p className="contact-kicker">Start with the work</p><h2>Tell us what support would move work forward.</h2><p>Share practical context. A staffing specialist can use it to prepare a focused role conversation.</p></div>
+    <div className="form-grid">
+      <label><span>First name</span><input name="firstName" autoComplete="given-name" required /></label>
+      <label><span>Last name</span><input name="lastName" autoComplete="family-name" required /></label>
+      <label><span>Work email</span><input type="email" name="email" autoComplete="email" required /></label>
+      <label><span>Phone</span><input type="tel" name="phone" autoComplete="tel" required /></label>
+      <label className="wide"><span>Company</span><input name="company" autoComplete="organization" /></label>
+      <label><span>Team size</span><select name="teamSize" required defaultValue=""><option value="" disabled>Select one</option><option>Just me</option><option>2 to 10</option><option>11 to 50</option><option>51 or more</option></select></label>
+      <label><span>Primary support area</span><select name="supportArea" required defaultValue=""><option value="" disabled>Select one</option><option>Executive and administrative</option><option>Customer support</option><option>Sales and CRM operations</option><option>Research and content support</option><option>Other recurring operations</option></select></label>
+      <label className="wide"><span>What would you like the assistant to own?</span><textarea name="message" rows={5} required placeholder="Describe the recurring work, systems, schedule, and approval points." /></label>
+    </div>
+    <label className="consent-row"><input type="checkbox" name="consent" value="yes" required /><span>I agree to be contacted about this request. I understand this is a remote staffing conversation, not a local job application.</span></label>
+    <div className="form-action"><button type="button" className="submit-button" disabled={busy || !trackerReady} onClick={(event) => void submit(event.currentTarget.form!)}>{busy ? "Sending..." : trackerReady ? "Continue to scheduling" : "Preparing secure form..."}</button><p aria-live="polite" role="status">{status}</p></div>
+  </form>;
 }

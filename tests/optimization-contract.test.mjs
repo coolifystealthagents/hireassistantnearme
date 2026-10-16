@@ -50,11 +50,11 @@ test('component-managed form has one accepted-response lead event and no native 
   assert.match(form, /onKeyDown=\{handleKeyDown\}/);
   assert.doesNotMatch(form, /onSubmit=/);
   assert.doesNotMatch(form, /type=["']submit["']/);
-  assert.match(form, /trackLead/);
-  assert.ok(form.indexOf('response.ok') < form.indexOf('trackLead'));
-  assert.ok(form.indexOf('trackLead') < form.indexOf('location.assign'));
+  assert.match(form, /const tracker = window\.acrTracker;[\s\S]*if \(!tracker\?\.trackLead\)[\s\S]*return;[\s\S]*fetch\(/);
+  assert.match(form, /if \(!response\.ok\)[\s\S]*accepted = true;[\s\S]*tracker\.trackLead\([\s\S]*location\.assign/);
+  assert.match(form, /disabled=\{busy \|\| !trackerReady\}/);
   assert.doesNotMatch(layout, /funnel_form_submitted|funnel_booking_confirmed/);
-  assert.match(form, /role=["']alert["']/);
+  assert.match(form, /role=["']status["']/);
 });
 
 test('shared content remains server-side and the interactive header has a narrow client boundary', () => {
@@ -64,6 +64,8 @@ test('shared content remains server-side and the interactive header has a narrow
   assert.match(header, /['"]use client['"]/);
   assert.doesNotMatch(header, /\.\/data|fleet-data/);
   assert.match(header, /id=["']main-content["']/);
+  assert.doesNotMatch(header, /id=["']main-content["'][^>]*aria-hidden/);
+  assert.match(header, /Page content begins/);
 });
 
 test('global navigation is persistent, compact, and keyboard operable', () => {
@@ -103,13 +105,20 @@ test('security policy and canonical host middleware cover production gates', () 
   }
   assert.match(middleware, /canonicalHost = ['"]hireassistantnearme\.com['"]/);
   assert.match(middleware, /request\.nextUrl\.clone\(\)/);
-  assert.match(middleware, /target\.hostname = canonicalHost/);
+  assert.match(middleware, /destination\.hostname = canonicalHost/);
+  assert.match(middleware, /forwardedProtocol \|\| request\.nextUrl\.protocol/);
   assert.doesNotMatch(middleware, /new URL\(`\$\{request\.nextUrl\.pathname/);
 });
 
 test('confirmation routes stay outside the sitemap and official assets exist', () => {
   const sitemap = read('app/sitemap.xml/route.ts');
+  const cancellation = read('app/cancellation/page.tsx');
+  const contact = read('app/contact-us/page.tsx');
   assert.doesNotMatch(sitemap, /thank-you|thanks-whats-next/);
+  assert.match(sitemap, /\/compare\/local-vs-remote-assistant/);
+  assert.match(cancellation, /permanentRedirect\(['"]\/cancellation-policy['"]\)/);
+  assert.match(contact, /stealth-agents-team\.webp['"] width=["']1600["'] height=["']1067["']/);
+  assert.match(contact, /stealth-agents-logo-black\.png['"] width=["']149["'] height=["']50["']/);
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-team.webp')));
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-logo-black.png')));
 });

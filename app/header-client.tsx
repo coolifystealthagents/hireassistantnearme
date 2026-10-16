@@ -46,6 +46,6 @@ export function HeaderClient({ brand }: { brand: string }) {
         </nav>
       </div>
     </header>
-    <span id="main-content" tabIndex={-1} className="main-focus-target" aria-hidden="true" />
+    <span id="main-content" tabIndex={-1} className="main-focus-target"><span className="sa-sr-only">Page content begins</span></span>
   </>;
 }

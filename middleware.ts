@@ -3,19 +3,23 @@ import { NextRequest, NextResponse } from 'next/server';
 const canonicalHost = 'hireassistantnearme.com';
 
 export function middleware(request: NextRequest) {
-  const host = request.headers.get('host')?.toLowerCase();
-  const forwardedProtocol = request.headers.get('x-forwarded-proto')?.split(',')[0]?.trim();
-  const isProductionHost = host === canonicalHost || host === `www.${canonicalHost}`;
-  const needsCanonicalHost = host === `www.${canonicalHost}`;
-  const needsHttps = isProductionHost && forwardedProtocol === 'http';
-  if (needsCanonicalHost || needsHttps) {
-    const target = request.nextUrl.clone();
-    target.protocol = 'https:';
-    target.hostname = canonicalHost;
-    target.port = '';
-    return NextResponse.redirect(target, 308);
+  const host = request.headers.get('host')?.split(':')[0].toLowerCase();
+  const forwardedProtocol = request.headers.get('x-forwarded-proto')?.split(',')[0].trim().toLowerCase();
+  const effectiveProtocol = forwardedProtocol || request.nextUrl.protocol.replace(':', '').toLowerCase();
+  const needsHttps = effectiveProtocol !== 'https';
+  const needsHost = host === `www.${canonicalHost}`;
+
+  if (needsHttps || needsHost) {
+    const destination = request.nextUrl.clone();
+    destination.protocol = 'https:';
+    destination.hostname = canonicalHost;
+    destination.port = '';
+    return NextResponse.redirect(destination, 308);
   }
+
   return NextResponse.next();
 }
 
-export const config = { matcher: ['/((?!_next/static|_next/image).*)'] };
+export const config = {
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+};

@@ -3,9 +3,10 @@ import { researchPosts } from "../fleet-data";
 import { site } from "../data";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
-  title: `Research | ${site.brand}`,
+  title: 'Research',
   description:
     "Original research and source-backed analysis for planning Philippines-based support.",
+  alternates: { canonical: '/research' },
 };
 export default function Research() {
   const clusters = [
@@ -39,15 +40,15 @@ export default function Research() {
               aria-label="Research quality signals"
             >
               <div>
-                <strong>01</strong>
+                <strong>1</strong>
                 <span>Benchmarks and operating context</span>
               </div>
               <div>
-                <strong>02</strong>
+                <strong>2</strong>
                 <span>Practical screening questions</span>
               </div>
               <div>
-                <strong>03</strong>
+                <strong>3</strong>
                 <span>Implementation checks</span>
               </div>
             </aside>

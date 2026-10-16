@@ -111,7 +111,7 @@ const baseBlogPosts = [
     published: '2026-08-04',
     richPublished: true,
     minutes: 12,
-    image: '/images/local-vs-remote-admin-benchmark-2026.png',
+    image: '/images/local-vs-remote-admin-benchmark-2026.webp',
     imageAlt: 'Two administrative workspaces compared side by side, one local desk and one remote laptop setup',
     takeaways: [
       'The BLS median annual wage for secretaries and administrative assistants was $47,460 in May 2024.',
@@ -226,7 +226,7 @@ const baseBlogPosts = [
     excerpt: 'Use current wage, outlook, and business-condition data to decide which administrative work belongs in a clear assistant role, then measure the handoff with a simple weekly scorecard.',
     published: '2026-08-03',
     richPublished: true,
-    image: '/images/administrative-assistant-benchmarks-2026.png',
+    image: '/images/administrative-assistant-benchmarks-2026.webp',
     imageAlt: 'Desk workspace with a laptop chart and notebook for administrative work benchmarks',
     minutes: 11,
     takeaways: [
@@ -640,7 +640,7 @@ const baseBlogPosts = [
     published: '2026-08-05',
     richPublished: true,
     minutes: 10,
-    image: '/images/local-vs-remote-admin-benchmark-2026.png',
+    image: '/images/local-vs-remote-admin-benchmark-2026.webp',
     imageAlt: 'Local and remote administrative workspaces compared for task planning',
     takeaways: [
       'BLS projects general office clerk employment to fall 7 percent from 2024 to 2034.',

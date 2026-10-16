@@ -2,7 +2,9 @@
   "scripts": {
     "dev": "next dev",
     "test:h1": "node --test tests/homepage-h1-contract.test.mjs",
-    "build": "npm run test:h1 && next build",
+    "test:optimization": "node --test tests/optimization-contract.test.mjs",
+    "test": "npm run test:h1 && npm run test:optimization",
+    "build": "npm test && next build",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint"
   },

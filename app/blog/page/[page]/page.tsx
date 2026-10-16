@@ -3,6 +3,15 @@ import { Header, Footer } from "../../../components";
 import { blogPosts, site } from "../../../data";
 import { postsPerPage } from "../../../fleet-data";
 import { FeaturedComparison } from "../../FeaturedComparison";
+export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
+  const { page } = await params;
+  const n = Number(page);
+  return {
+    title: `Blog page ${n}`,
+    description: `Browse page ${n} of Philippines-based staffing and workflow articles.`,
+    alternates: { canonical: n === 1 ? '/blog' : `/blog/page/${n}` },
+  };
+}
 export function generateStaticParams() {
   const pages = Math.max(1, Math.ceil(blogPosts.length / postsPerPage));
   return Array.from({ length: pages }, (_, i) => ({ page: String(i + 1) }));

@@ -1,7 +1,7 @@
 import type { ResearchPost } from './fleet-data';
 
 const published = '2026-09-01';
-const image = '/images/aug21-research-evidence-map.png';
+const image = '/images/aug21-research-evidence-map.webp';
 const related = [{label:'Research library',href:'/research'},{label:'Executive assistance',href:'/services/executive-assistance'}];
 const commonSources = [
   {name:'W3C PROV Overview',url:'https://www.w3.org/TR/prov-overview/'},

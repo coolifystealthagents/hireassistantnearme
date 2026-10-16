@@ -463,7 +463,7 @@ export const aug23BlogPosts = specs.slice(0, 12).map((spec) => {
       relatedLinks: [
         { href: '/blog/local-vs-remote-administrative-assistant-benchmark-2026', label: 'Compare local and remote task fit' },
         { href: '/blog/virtual-assistant-security-checklist', label: 'Review access boundaries' },
-        { href: '/services/content-research', label: 'Plan content research support' },
+        { href: '/services/marketing-coordination', label: 'Plan content research support' },
         { href: '/contact-us', label: 'Prepare a role brief' }
       ],
       sources: commonSources

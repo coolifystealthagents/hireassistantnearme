@@ -2,43 +2,8 @@ import type { Metadata } from 'next';
 import { Header, Footer } from '../components';
 import { TestimonialsRail } from '../booking-components';
 
-export const metadata: Metadata = {
-  title: 'Thank You - Book A Meeting',
-  description: 'Choose a convenient time to speak with the Stealth Agents team.',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = { title: 'Choose a Consultation Time', description: 'Open the StealthAgents scheduler to choose a consultation time.', robots: { index: false, follow: false } };
 
 export default function ThankYouPage() {
-  return (
-    <>
-      <Header />
-      <main className="sa-booking-page">
-        <div className="container sa-booking-grid">
-          <div className="sa-booking-left">
-            <p className="sa-booking-kicker">You’re one step away.</p>
-            <h1>Step 2 - Book A Meeting</h1>
-            <p className="sa-booking-lead">No commitment. No risk. Just expert guidance.</p>
-            <img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready to help" width="619" height="402" />
-            <TestimonialsRail />
-          </div>
-          <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title" data-acr-track="contact-booking-iframe">
-            <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>
-            <iframe
-              src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1"
-              id="SOI_StealthAgentsTeam"
-              name="ScheduleOnceIframe"
-              title="Schedule a meeting with Stealth Agents"
-              scrolling="yes"
-              frameBorder="0"
-              height="850"
-              width="100%"
-              className="sa-oncehub-frame"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  return <><Header /><main className="sa-booking-page"><div className="container sa-booking-grid"><div className="sa-booking-left"><p className="sa-booking-kicker">Consultation scheduling</p><h1>Choose a time for the role conversation.</h1><p className="sa-booking-lead">If you arrived here after submitting the form, use the scheduler to choose an available time. Opening this page directly does not confirm that a request was delivered.</p><img className="sa-booking-image" src="/thank-you-hero.png" alt="StealthAgents team ready for a role-planning consultation" width="619" height="402" /><TestimonialsRail /></div><section className="sa-booking-calendar" aria-labelledby="booking-calendar-title" data-acr-track="contact-booking-iframe"><h2 id="booking-calendar-title">Available consultation times</h2><iframe src="https://go.oncehub.com/StealthAgentsTeam?brdr=1pxd8d8d8&amp;dt=&amp;em=1&amp;Si=1" id="SOI_StealthAgentsTeam" name="ScheduleOnceIframe" title="Schedule a meeting with StealthAgents" scrolling="yes" frameBorder="0" height="850" width="100%" className="sa-oncehub-frame" referrerPolicy="strict-origin-when-cross-origin" /><p className="scheduler-fallback">Scheduler not visible? <a href="https://go.oncehub.com/StealthAgentsTeam" target="_blank" rel="noopener noreferrer">Open the secure booking page</a>.</p><a className="btn primary booking-continue" href="/thanks-whats-next">I booked a time: what comes next?</a></section></div></main><Footer /></>;
 }

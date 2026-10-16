@@ -1,0 +1,8 @@
+import type { Metadata } from 'next';
+import { Footer, Header } from '../components';
+
+export const metadata: Metadata = { title: 'What Happens Next', description: 'Preparation guidance for a StealthAgents consultation.', robots: { index: false, follow: false } };
+
+export default function ThanksWhatsNextPage() {
+  return <><Header /><main className="confirmation-page"><section className="confirmation-hero"><div className="container confirmation-grid"><div><p className="eyebrow">Consultation preparation</p><h1>Bring one workflow you want to make easier.</h1><p className="lead">If your scheduler showed a confirmation, your consultation time is reserved. If you opened this page directly, check your calendar or email before assuming a booking was completed.</p><div className="button-row"><a className="btn primary" href="/services">Review assistant services</a><a className="btn secondary" href="/contact-us">Return to Contact Us</a></div></div><aside><h2>Useful details to bring</h2><ul><li>A repeated task and a finished example</li><li>The systems and accounts involved</li><li>Your business hours and overlap needs</li><li>The decisions that remain with your team</li></ul></aside></div></section><section className="section"><div className="container"><div className="section-heading"><div><p className="eyebrow">A practical first conversation</p><h2>Scope, boundaries, and fit come first.</h2></div><p>The staffing conversation should clarify what enters the workflow, what the assistant prepares, who reviews it, and when the work must stop for approval.</p></div></div></section></main><Footer /></>;
+}

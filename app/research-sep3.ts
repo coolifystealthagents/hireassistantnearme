@@ -7,7 +7,7 @@ export const sep3ResearchPosts: ResearchPost[] = [
     slug: 'source-change-signals-for-recurring-hiring-research', published: '2026-09-03',
     title: 'Source change signals for recurring hiring research: when should an assistant reopen a claim?',
     excerpt: 'A study of revision signals, claim sensitivity, and review ownership in a daily research library about remote assistant work.',
-    image: '/images/sep3-research-source-change.png', imageAlt: 'Research assistant comparing dated source versions and claim notes',
+    image: '/images/sep3-research-source-change.webp', imageAlt: 'Research assistant comparing dated source versions and claim notes',
     keyStats: [{ value: '4', label: 'Change signals compared', source: 'Study design' }, { value: '3', label: 'Source classes reviewed', source: 'Evidence scope' }, { value: '1', label: 'Named claim owner', source: 'Review boundary' }],
     takeaways: ['A newer page date is a signal to inspect a claim, not proof that the claim changed.', 'The review interval should follow claim sensitivity and source behavior.', 'An assistant can detect changes while an editor decides whether public meaning changed.'],
     sections: [
@@ -27,7 +27,7 @@ export const sep3ResearchPosts: ResearchPost[] = [
     slug: 'correction-reasons-as-role-design-evidence', published: '2026-09-03',
     title: 'Correction reasons as role-design evidence: what can daily research rework reveal?',
     excerpt: 'A bounded analysis of editorial corrections as evidence for improving a remote research assistant brief.',
-    image: '/images/sep3-research-correction-reasons.png', imageAlt: 'Editor and research assistant sorting correction notes by cause',
+    image: '/images/sep3-research-correction-reasons.webp', imageAlt: 'Editor and research assistant sorting correction notes by cause',
     keyStats: [{ value: '5', label: 'Correction classes tested', source: 'Study method' }, { value: '2', label: 'Decision layers separated', source: 'Analysis' }, { value: '0', label: 'Edits treated as performance verdicts', source: 'Boundary' }],
     takeaways: ['A correction count has little meaning without its cause and decision owner.', 'Repeated scope repairs may point to a weak brief rather than careless execution.', 'Samples should include accepted work and silent errors, not only returned drafts.'],
     sections: [
@@ -47,7 +47,7 @@ export const sep3ResearchPosts: ResearchPost[] = [
     slug: 'least-privilege-for-web-based-research-support', published: '2026-09-03',
     title: 'Least privilege for web-based research support: which access belongs in the role?',
     excerpt: 'A research review of access boundaries for assistants collecting public evidence and preparing daily articles.',
-    image: '/images/sep3-research-least-privilege.png', imageAlt: 'Remote researcher working with separated public and private access lanes',
+    image: '/images/sep3-research-least-privilege.webp', imageAlt: 'Remote researcher working with separated public and private access lanes',
     keyStats: [{ value: '4', label: 'Access lanes compared', source: 'Study scope' }, { value: '3', label: 'Control sources reviewed', source: 'Evidence set' }, { value: '1', label: 'Accountable access owner', source: 'Boundary' }],
     takeaways: ['Public-source research does not automatically require broad company-system access.', 'Access should follow the smallest observable work unit.', 'Account recovery, permission grants, and publication authority stay with named owners.'],
     sections: [
@@ -67,7 +67,7 @@ export const sep3ResearchPosts: ResearchPost[] = [
     slug: 'counterevidence-in-remote-assistant-hiring-research', published: '2026-09-03',
     title: 'Counterevidence in remote assistant hiring research: how should a brief record disagreement?',
     excerpt: 'A study of conflicting sources, rejected explanations, and editorial ownership in research about remote support roles.',
-    image: '/images/sep3-research-counterevidence.png', imageAlt: 'Researcher balancing conflicting evidence cards before drafting a conclusion',
+    image: '/images/sep3-research-counterevidence.webp', imageAlt: 'Researcher balancing conflicting evidence cards before drafting a conclusion',
     keyStats: [{ value: '4', label: 'Disagreement patterns tested', source: 'Method' }, { value: '3', label: 'Evidence uses separated', source: 'Analysis' }, { value: '1', label: 'Conclusion owner', source: 'Boundary' }],
     takeaways: ['A credible brief records evidence that narrows or challenges its preferred answer.', 'Disagreement must be explained by scope, method, or definition where possible.', 'An assistant can map conflict without choosing the company position.'],
     sections: [
@@ -87,7 +87,7 @@ export const sep3ResearchPosts: ResearchPost[] = [
     slug: 'topic-distance-in-a-daily-research-queue', published: '2026-09-03',
     title: 'Topic distance in a daily research queue: when are two hiring studies too similar?',
     excerpt: 'A qualitative test for distinguishing a genuinely new remote-assistant research question from a renamed article.',
-    image: '/images/sep3-research-topic-distance.png', imageAlt: 'Editor mapping distinct research questions across a daily topic board',
+    image: '/images/sep3-research-topic-distance.webp', imageAlt: 'Editor mapping distinct research questions across a daily topic board',
     keyStats: [{ value: '5', label: 'Identity fields compared', source: 'Study design' }, { value: '4', label: 'Near-duplicate cases tested', source: 'Method' }, { value: '1', label: 'Editorial acceptance decision', source: 'Boundary' }],
     takeaways: ['Different nouns do not create a new study when the decision and reasoning stay the same.', 'Question, unit, evidence, method, and conclusion should change together.', 'Rejected near-duplicates belong in the queue record.'],
     sections: [

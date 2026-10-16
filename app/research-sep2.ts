@@ -1,7 +1,7 @@
 import type { ResearchPost } from './fleet-data';
 
 const published = '2026-09-02';
-const image = '/images/aug21-research-evidence-map.png';
+const image = '/images/aug21-research-evidence-map.webp';
 const related = [{label:'Research library',href:'/research'},{label:'Executive assistance',href:'/services/executive-assistance'}];
 const commonSources = [{name:'W3C PROV Overview',url:'https://www.w3.org/TR/prov-overview/'},{name:'NIST SP 800-53 Rev. 5',url:'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final'}];
 type Study = {slug:string;title:string;excerpt:string;question:string;unit:string;signal:string;risk:string;method:string;finding:string;boundary:string;rows:string[][]};

@@ -23,7 +23,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     slug: 'daily-article-question-selection-study', published: '2026-08-23',
     title: 'Daily article question selection: which research prompts fit remote assistant support?',
     excerpt: 'A study of how a small business can turn a broad hiring or workflow topic into a bounded, sourceable question for daily research publishing.',
-    image: '/images/aug23-research-question-selection.png', imageAlt: 'Remote assistant turning a broad topic into a focused research question',
+    image: '/images/aug23-research-question-selection.webp', imageAlt: 'Remote assistant turning a broad topic into a focused research question',
     keyStats: [{ value: '5', label: 'Question shapes compared', source: 'Study method' }, { value: '3', label: 'Evidence boundaries tested', source: 'Research analysis' }, { value: '1', label: 'Named editorial decision owner', source: 'Role boundary' }],
     takeaways: ['A publishable question names the decision, audience, and evidence boundary.', 'A remote assistant can narrow and source a question without deciding the company’s position.', 'Daily volume is safer when rejected questions remain visible instead of becoming unsupported copy.'],
     sections: [
@@ -41,7 +41,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     slug: 'research-claim-provenance-for-hiring-guides', published: '2026-08-23',
     title: 'Research claim provenance for hiring guides: can a remote assistant preserve the evidence chain?',
     excerpt: 'A source-backed study of claim records, definitions, and review ownership when daily articles explain remote assistant roles.',
-    image: '/images/aug23-research-claim-provenance.png', imageAlt: 'Research assistant tracing a hiring claim back to its public source',
+    image: '/images/aug23-research-claim-provenance.webp', imageAlt: 'Research assistant tracing a hiring claim back to its public source',
     keyStats: [{ value: '4', label: 'Provenance fields tested', source: 'Study method' }, { value: '3', label: 'Source types compared', source: 'Evidence scope' }, { value: '0', label: 'Claims accepted without scope notes', source: 'Editorial control' }],
     takeaways: ['A URL alone does not show what a source supports.', 'Definitions, population, date, and intended use should travel with every material claim.', 'The assistant can preserve provenance while the editor decides whether the claim belongs in public copy.'],
     sections: [
@@ -59,7 +59,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     slug: 'daily-research-handoff-time-zone-review', published: '2026-08-23',
     title: 'Daily research handoffs across time zones: what context must reach the editor?',
     excerpt: 'A study of handoff timing, source context, and escalation ownership for a remote assistant supporting a daily article routine.',
-    image: '/images/aug23-research-timezone-handoff.png', imageAlt: 'Editor and remote assistant reviewing a time-zone-aware research handoff',
+    image: '/images/aug23-research-timezone-handoff.webp', imageAlt: 'Editor and remote assistant reviewing a time-zone-aware research handoff',
     keyStats: [{ value: '6', label: 'Handoff fields examined', source: 'Study method' }, { value: '3', label: 'Timing states separated', source: 'Research analysis' }, { value: '1', label: 'Owner for publication judgment', source: 'Boundary rule' }],
     takeaways: ['A finished handoff carries decisions and uncertainty, not merely a file link.', 'Time-zone coverage helps only when the next reviewer knows what is blocked and why.', 'An assistant can prepare a queue while the editor retains publication authority.'],
     sections: [
@@ -77,7 +77,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     slug: 'source-scope-limits-daily-research', published: '2026-08-23',
     title: 'Source scope limits in daily research: when should an assistant reject a near-match?',
     excerpt: 'A research study of population, date, authority, and purpose as stop rules for sourcing articles about remote assistant work.',
-    image: '/images/aug23-research-source-scope.png', imageAlt: 'Remote assistant comparing source scope and a proposed research claim',
+    image: '/images/aug23-research-source-scope.webp', imageAlt: 'Remote assistant comparing source scope and a proposed research claim',
     keyStats: [{ value: '4', label: 'Near-match risks tested', source: 'Study method' }, { value: '3', label: 'Scope dimensions retained', source: 'Evidence analysis' }, { value: '0', label: 'Adjacent sources treated as proof', source: 'Editorial control' }],
     takeaways: ['A reputable source can still be the wrong source for a particular claim.', 'Population, purpose, date, and definition should be checked before a link enters a draft.', 'Rejecting a near-match is productive research work, not a failure to fill the queue.'],
     sections: [
@@ -95,7 +95,7 @@ export const aug23ResearchPosts: ResearchPost[] = [
     slug: 'research-editor-review-boundary-study', published: '2026-08-23',
     title: 'Research editor review boundaries: what can a remote assistant prepare before publication?',
     excerpt: 'A study separating collection, verification, analysis, and approval in a daily article workflow for remote assistant hiring research.',
-    image: '/images/aug23-research-editor-boundary.png', imageAlt: 'Editor reviewing a sourced research article with clear approval boundaries',
+    image: '/images/aug23-research-editor-boundary.webp', imageAlt: 'Editor reviewing a sourced research article with clear approval boundaries',
     keyStats: [{ value: '4', label: 'Editorial lanes separated', source: 'Study method' }, { value: '3', label: 'Review risks compared', source: 'Research analysis' }, { value: '1', label: 'Final publication owner', source: 'Boundary rule' }],
     takeaways: ['Collection and verification are not the same as editorial approval.', 'A clear stop rule makes the assistant’s contribution more useful and fair.', 'A publication gate should inspect sources, dates, originality, and prohibited claims before release.'],
     sections: [

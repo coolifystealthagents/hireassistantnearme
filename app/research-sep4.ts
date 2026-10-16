@@ -1,7 +1,7 @@
 import type { ResearchPost } from './fleet-data';
 
-const image = '/images/aug23-research-claim-provenance.png';
-const related = [{label:'Research library',href:'/research'},{label:'Daily content operations',href:'/services/content-support'}];
+const image = '/images/aug23-research-claim-provenance.webp';
+const related = [{label:'Research library',href:'/research'},{label:'Daily content operations',href:'/services/marketing-coordination'}];
 
 export const sep4ResearchPosts: ResearchPost[] = [
   {
@@ -25,7 +25,7 @@ export const sep4ResearchPosts: ResearchPost[] = [
   {
     slug:'exception-language-in-remote-assistant-handoffs', published:'2026-09-04',
     title:'Exception language in remote-assistant handoffs: which notes are easiest to resume?',
-    excerpt:'A qualitative comparison of vague, procedural, and evidence-linked exception notes in daily administrative work.', image:'/images/aug20-research-dispatch-exception-queue.png', imageAlt:'Assistant comparing exception notes in a handoff queue',
+    excerpt:'A qualitative comparison of vague, procedural, and evidence-linked exception notes in daily administrative work.', image:'/images/aug20-research-dispatch-exception-queue.webp', imageAlt:'Assistant comparing exception notes in a handoff queue',
     keyStats:[{value:'3',label:'Note styles compared',source:'Study design'},{value:'4',label:'Resume questions tested',source:'Method'},{value:'0',label:'Private records required',source:'Scope'}],
     takeaways:['A useful exception says what was checked.','The next owner and unresolved question belong in the note.','Urgent is not a complete status.'],
     sections:[
@@ -43,7 +43,7 @@ export const sep4ResearchPosts: ResearchPost[] = [
   {
     slug:'task-sample-composition-before-remote-assistant-access-expands', published:'2026-09-04',
     title:'Task-sample composition before remote-assistant access expands',
-    excerpt:'Why a clean batch of ordinary work is weak evidence for granting broader system permissions.', image:'/images/sep3-research-least-privilege.png', imageAlt:'Manager reviewing ordinary and exception tasks before access approval',
+    excerpt:'Why a clean batch of ordinary work is weak evidence for granting broader system permissions.', image:'/images/sep3-research-least-privilege.webp', imageAlt:'Manager reviewing ordinary and exception tasks before access approval',
     keyStats:[{value:'3',label:'Case types in the sample',source:'Study design'},{value:'2',label:'Access states compared',source:'Method'},{value:'1',label:'Owner approval gate',source:'Boundary'}],
     takeaways:['Ordinary items do not test stop rules.','Incomplete and sensitive cases belong in training samples.','Access decisions need their own approval record.'],
     sections:[
@@ -61,7 +61,7 @@ export const sep4ResearchPosts: ResearchPost[] = [
   {
     slug:'publication-cutoff-times-across-editorial-time-zones', published:'2026-09-04',
     title:'Publication cutoff times across editorial time zones: a handoff study',
-    excerpt:'A small analysis of whether one named instant reduces ambiguity in distributed daily publishing.', image:'/images/aug23-research-timezone-handoff.png', imageAlt:'Distributed editorial team comparing publication cutoffs across time zones',
+    excerpt:'A small analysis of whether one named instant reduces ambiguity in distributed daily publishing.', image:'/images/aug23-research-timezone-handoff.webp', imageAlt:'Distributed editorial team comparing publication cutoffs across time zones',
     keyStats:[{value:'3',label:'Time expressions compared',source:'Study design'},{value:'2',label:'Working zones used',source:'Method'},{value:'1',label:'Canonical cutoff instant',source:'Acceptance rule'}],
     takeaways:['A zone belongs beside every cutoff.','One canonical instant can have local display times.','Calendar dates alone do not define a distributed deadline.'],
     sections:[
@@ -79,7 +79,7 @@ export const sep4ResearchPosts: ResearchPost[] = [
   {
     slug:'correction-sampling-after-daily-content-publication', published:'2026-09-04',
     title:'Correction sampling after daily content publication: what should an editor recheck?',
-    excerpt:'A post-publication sampling model for finding quiet failures without rereading every article from scratch.', image:'/images/sep3-research-correction-reasons.png', imageAlt:'Editor sampling published pages and sorting correction reasons',
+    excerpt:'A post-publication sampling model for finding quiet failures without rereading every article from scratch.', image:'/images/sep3-research-correction-reasons.webp', imageAlt:'Editor sampling published pages and sorting correction reasons',
     keyStats:[{value:'5',label:'Publication gates sampled',source:'Study design'},{value:'2',label:'Sampling approaches compared',source:'Method'},{value:'1',label:'Named correction owner',source:'Boundary'}],
     takeaways:['A live page can pass HTTP and still have a content error.','Sample both routine and high-risk gates.','Correction reasons should feed the next publishing checklist.'],
     sections:[

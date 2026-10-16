@@ -3,7 +3,7 @@ import { CTA, Footer, Header, JsonLd } from '../components';
 import { site } from '../data';
 
 export const metadata: Metadata = {
-  title: 'About Hire Assistant Near Me',
+  title: { absolute: 'About Hire Assistant Near Me' },
   description: 'Learn how Hire Assistant Near Me defines remote roles and routes qualified inquiries to the StealthAgents staffing team in the Philippines.',
   alternates: { canonical: `${site.url}/about` },
 };

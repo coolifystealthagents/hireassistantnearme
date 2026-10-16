@@ -42,7 +42,7 @@ test('contact page follows the conversion-first parent-brand contract', () => {
   assert.doesNotMatch(contact, /\[\["0[1-9]"/);
 });
 
-test('component-managed form has one accepted-response lead event and no native submit event', () => {
+test('component-managed form waits for a truthful accepted response and emits no client lead event', () => {
   const form = read('app/contact-us/StandardContactForm.tsx');
   const layout = read('app/layout.tsx');
   assert.match(form, /data-acr-managed=["']react["']/);
@@ -50,9 +50,8 @@ test('component-managed form has one accepted-response lead event and no native 
   assert.match(form, /onKeyDown=\{handleKeyDown\}/);
   assert.doesNotMatch(form, /onSubmit=/);
   assert.doesNotMatch(form, /type=["']submit["']/);
-  assert.equal((form.match(/tracker\.trackLead\(/g) || []).length, 1);
-  assert.match(form, /if \(!response\.ok\)[\s\S]*accepted = true;[\s\S]*await emitAcceptedLead\(payload\)[\s\S]*location\.assign/);
-  assert.match(form, /if \(tracker\?\.trackLead\)[\s\S]*tracker\.trackLead[\s\S]*return;[\s\S]*fetch\('\/ingest\/track'/);
+  assert.doesNotMatch(form, /trackLead|lead_submit|\/ingest\/track/);
+  assert.match(form, /redirect: "manual"[\s\S]*if \(!response\.ok\)[\s\S]*result\.ok !== true \|\| result\.redirect !== "\/thank-you"[\s\S]*accepted = true;[\s\S]*location\.assign\(result\.redirect\)/);
   assert.match(form, /disabled=\{busy\}/);
   assert.doesNotMatch(form, /trackerReady|Preparing secure form/);
   assert.doesNotMatch(layout, /funnel_form_submitted|funnel_booking_confirmed/);
@@ -74,7 +73,10 @@ test('global navigation is persistent, compact, and keyboard operable', () => {
   const header = read('app/header-client.tsx');
   const css = read('app/globals.css');
   assert.match(header, /skip-link/);
-  assert.match(header, /Home[\s\S]*Services[\s\S]*Contact Us/);
+  const navigation = header.match(/<nav[^>]*aria-label="Main navigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1] || '';
+  assert.deepEqual([...navigation.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]), ['/', '/services', '/contact-us']);
+  assert.equal((navigation.match(/<a /g) || []).length, 3);
+  assert.match(navigation, />Home<\/a>[\s\S]*>Services<\/a>[\s\S]*>Contact Us<\/a>/);
   assert.match(header, /aria-expanded/);
   assert.match(header, /aria-controls/);
   assert.match(header, /Escape/);
@@ -207,29 +209,31 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   const api = read('app/api/contact/route.ts');
   const form = read('app/contact-us/StandardContactForm.tsx');
   const tracker = read('app/ingest/track/route.ts');
-  const acceptance = read('app/lib/lead-acceptance-token.ts');
   assert.match(api, /text\(form, 'consent', 10\) !== 'yes'/);
   assert.match(api, /text\(form, 'teamSize'/);
   assert.match(api, /text\(form, 'supportArea'/);
   assert.match(api, /new TextEncoder\(\)\.encode\(body\)\.byteLength > MAX_BODY_BYTES/);
-  assert.match(form, /tracker\.trackLead[\s\S]*tracker\.flush\(\)[\s\S]*window\.location\.assign/);
+  assert.doesNotMatch(form, /tracker\.trackLead|lead_submit|\/ingest\/track/);
   assert.match(tracker, /value\.site_id === SITE_ID/);
   assert.match(tracker, /value\.events\.length <= MAX_EVENTS/);
-  assert.match(tracker, /limited\(clientKey\(request\), 120\)/);
+  assert.match(tracker, /limited\(clientKey\(request\), 600\)/);
   assert.match(tracker, /if \(!origin\) return false/);
   assert.match(tracker, /ALLOWED_EVENT_TYPES\.has/);
   assert.match(tracker, /Object\.keys\(value\)\.some\(\(key\) => !ALLOWED_EVENT_KEYS\.has\(key\)\)/);
   assert.match(tracker, /Date\.parse\(value\.timestamp/);
-  assert.match(api, /createLeadAcceptanceToken\(token\)/);
-  assert.match(api, /httpOnly: true/);
-  assert.match(tracker, /verifyLeadAcceptanceToken\(acceptanceToken, secret\)/);
-  assert.match(tracker, /leadEvents\.length > 1/);
+  assert.equal((api.match(/event_type: 'lead_submit'/g) || []).length, 1);
+  assert.match(api, /if \(!upstream\.ok \|\| result\?\.ok !== true\) return errorPage\(502\);[\s\S]*await attemptAcceptedLeadEvent\(clientEventId/);
+  assert.match(api, /Analytics is deliberately nonblocking after accepted lead ingestion/);
+  assert.match(api, /return NextResponse\.json\(\{ ok: true, redirect: '\/thank-you' \}/);
+  assert.doesNotMatch(tracker, /'lead_submit',/);
+  assert.match(api, /return 'global-contact'/);
+  assert.match(tracker, /return 'global-tracking'/);
+  assert.doesNotMatch(api, /cf-connecting-ip|x-real-ip|x-forwarded-for/);
+  assert.doesNotMatch(tracker, /cf-connecting-ip|x-real-ip|x-forwarded-for/);
+  assert.match(api, /declaredLength <= 0 \|\| request\.headers\.has\('transfer-encoding'\)/);
+  assert.match(tracker, /declaredLength <= 0 \|\| request\.headers\.has\('transfer-encoding'\)/);
   assert.doesNotMatch(tracker, /await upstream\.text\(\)/);
   assert.match(tracker, /status: upstream\.ok \? 200 : 502/);
-  assert.match(acceptance, /createHmac\('sha256'/);
-  assert.match(acceptance, /timingSafeEqual/);
-  assert.match(api, /\|\| 'unknown-client'/);
-  assert.match(tracker, /\|\| 'unknown-client'/);
 });
 
 test('contact marquee uses ten sourced reviews, horizontal recycling, and no playback controls', () => {
@@ -282,6 +286,7 @@ test('V3 route, parent-brand, hero, and article utility contracts are present', 
   assert.match(about, /From workload to role brief/);
   assert.match(about, /Quality and accountability/);
   assert.match(about, /Fit boundaries/);
+  assert.match(about, /title: \{ absolute: 'About Hire Assistant Near Me' \}/);
 });
 
 test('V3 long-form routes do not repeat the retired template paragraphs', () => {

@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isIP } from 'node:net';
 import { sendLeadFallbackToMattermost } from '../../lib/lead-fallback-mattermost';
-import { createLeadAcceptanceToken } from '../../lib/lead-acceptance-token';
 
 const MAX_BODY_BYTES = 64_000;
 const MAX_FIELD_LENGTH = 4_000;
@@ -23,9 +21,32 @@ function errorPage(status: number) {
 }
 
 function clientKey(request: NextRequest) {
-  const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
-  const candidates = [request.headers.get('cf-connecting-ip'), request.headers.get('x-real-ip'), forwarded];
-  return candidates.find((value): value is string => Boolean(value && isIP(value))) || 'unknown-client';
+  void request;
+  return 'global-contact';
+}
+
+async function attemptAcceptedLeadEvent(clientEventId: string, userAgent: string) {
+  const timestamp = new Date().toISOString();
+  try {
+    await fetch('https://acrtracking.stealthagents.us/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'User-Agent': userAgent },
+      body: JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{
+        client_event_id: clientEventId,
+        event_type: 'lead_submit',
+        timestamp,
+        page_url: `${CANONICAL_ORIGIN}/contact-us`,
+        page_path: '/contact-us',
+        page_title: 'Contact Hire Assistant Near Me',
+        event_value: 'standard_contact_form',
+        event_metadata: JSON.stringify({ source: 'standard_contact_form', ingestion: 'accepted' }),
+      }] }),
+      cache: 'no-store',
+      signal: AbortSignal.timeout(10_000),
+    });
+  } catch {
+    // Analytics is deliberately nonblocking after accepted lead ingestion.
+  }
 }
 
 function expectedOrigin(request: NextRequest) {
@@ -59,10 +80,10 @@ export async function POST(request: NextRequest) {
   const contentType = request.headers.get('content-type') || '';
   const declaredLength = Number(request.headers.get('content-length') || 0);
   if (!hasSameOrigin(request)) return errorPage(403);
-  if (!Number.isFinite(declaredLength) || !contentType.includes('application/x-www-form-urlencoded')) return errorPage(400);
+  if (!Number.isFinite(declaredLength) || declaredLength <= 0 || request.headers.has('transfer-encoding') || !contentType.includes('application/x-www-form-urlencoded')) return errorPage(400);
   if (declaredLength > MAX_BODY_BYTES) return errorPage(413);
   const ip = clientKey(request);
-  if (limited(`ip:${ip}`, 10)) return errorPage(429);
+  if (limited(`ip:${ip}`, 60)) return errorPage(429);
 
   let body = '';
   try {
@@ -94,6 +115,7 @@ export async function POST(request: NextRequest) {
     `Primary support area: ${supportArea}`,
     requestMessage,
   ].join('\n');
+  const clientEventId = crypto.randomUUID();
   const payload = {
     full_name: name,
     email,
@@ -101,7 +123,7 @@ export async function POST(request: NextRequest) {
     company_name: business,
     message,
     how_they_heard: 'Website contact form',
-    client_event_id: crypto.randomUUID(),
+    client_event_id: clientEventId,
     attribution: {
       source_page: pageUrl,
       landing_page: pageUrl,
@@ -139,13 +161,6 @@ export async function POST(request: NextRequest) {
     pageUrl,
     userAgent: request.headers.get('user-agent') || '',
   });
-  const response = NextResponse.redirect(new URL('/thank-you?lead=accepted', request.url), 303);
-  response.cookies.set('han_lead_accept', createLeadAcceptanceToken(token), {
-    httpOnly: true,
-    sameSite: 'strict',
-    secure: process.env.NODE_ENV === 'production',
-    maxAge: 10 * 60,
-    path: '/ingest/track',
-  });
-  return response;
+  await attemptAcceptedLeadEvent(clientEventId, request.headers.get('user-agent') || '');
+  return NextResponse.json({ ok: true, redirect: '/thank-you' }, { headers: { 'Cache-Control': 'no-store' } });
 }

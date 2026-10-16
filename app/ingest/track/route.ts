@@ -1,6 +1,4 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { isIP } from 'node:net';
-import { verifyLeadAcceptanceToken } from '../../lib/lead-acceptance-token';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const SITE_ID = 'hire-assistant-near-me';
@@ -15,7 +13,7 @@ export const runtime = 'nodejs';
 const ALLOWED_EVENT_TYPES = new Set([
   'pageview', 'scroll_depth', 'cwv', 'cta_view', 'cta_click', 'outbound_click',
   'download_click', 'mailto_click', 'tel_click', 'form_view', 'form_submit',
-  'lead_submit', 'empty_form_submit', 'lead_submit_blocked_blank',
+  'empty_form_submit', 'lead_submit_blocked_blank',
   'lead_submit_error', 'js_error', 'unhandled_rejection', 'booking_form_open',
 ]);
 const ALLOWED_EVENT_KEYS = new Set([
@@ -43,9 +41,8 @@ function hasSameOrigin(request: NextRequest) {
 }
 
 function clientKey(request: NextRequest) {
-  const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
-  const candidates = [request.headers.get('cf-connecting-ip'), request.headers.get('x-real-ip'), forwarded];
-  return candidates.find((value): value is string => Boolean(value && isIP(value))) || 'unknown-client';
+  void request;
+  return 'global-tracking';
 }
 
 function limited(key: string, max: number) {
@@ -110,24 +107,15 @@ export async function POST(request: NextRequest) {
     if (!hasSameOrigin(request)) return Response.json({ status: 'error' }, { status: 403 });
     const contentType = request.headers.get('content-type') || '';
     const declaredLength = Number(request.headers.get('content-length') || '0');
-    if (!contentType.toLowerCase().startsWith('application/json') || !Number.isFinite(declaredLength) || declaredLength > MAX_BODY_BYTES) {
+    if (!contentType.toLowerCase().startsWith('application/json') || !Number.isFinite(declaredLength) || declaredLength <= 0 || request.headers.has('transfer-encoding') || declaredLength > MAX_BODY_BYTES) {
       return Response.json({ status: 'error' }, { status: declaredLength > MAX_BODY_BYTES ? 413 : 400 });
     }
-    if (limited(clientKey(request), 120)) return Response.json({ status: 'error' }, { status: 429 });
+    if (limited(clientKey(request), 600)) return Response.json({ status: 'error' }, { status: 429 });
 
     const body = await request.text();
     if (new TextEncoder().encode(body).byteLength > MAX_BODY_BYTES) return Response.json({ status: 'error' }, { status: 413 });
     const payload = JSON.parse(body) as TrackingPayload;
     if (!validPayload(payload)) return Response.json({ status: 'error' }, { status: 422 });
-    const leadEvents = (payload.events as TrackingEvent[]).filter((event) => event.event_type === 'lead_submit');
-    if (leadEvents.length > 1) return Response.json({ status: 'error' }, { status: 422 });
-    if (leadEvents.length === 1) {
-      const secret = process.env.LEAD_AUTH_TOKEN;
-      const acceptanceToken = request.cookies.get('han_lead_accept')?.value;
-      if (!secret || !verifyLeadAcceptanceToken(acceptanceToken, secret)) {
-        return Response.json({ status: 'error' }, { status: 403 });
-      }
-    }
 
     const upstream = await fetch(TRACKING_API, {
       method: 'POST',
@@ -144,7 +132,6 @@ export async function POST(request: NextRequest) {
       { status: upstream.ok ? 'ok' : 'error' },
       { status: upstream.ok ? 200 : 502, headers: { 'Cache-Control': 'no-store' } },
     );
-    if (leadEvents.length === 1) response.cookies.set('han_lead_accept', '', { maxAge: 0, path: '/ingest/track' });
     return response;
   } catch {
     return Response.json({ status: 'error' }, { status: 502 });

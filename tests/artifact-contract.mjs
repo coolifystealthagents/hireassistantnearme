@@ -33,16 +33,17 @@ async function waitUntilReady(base) {
   throw new Error('Built artifact did not become ready');
 }
 
-async function request(base, path, { method, body, origin, type } = {}) {
+async function request(base, path, { method, body, origin, type, headers: extraHeaders } = {}) {
   const target = new URL(base);
-  const headers = { ...hostHeaders };
+  const headers = { ...hostHeaders, ...extraHeaders };
   if (type) headers['Content-Type'] = type;
   if (origin) headers.Origin = origin;
   if (body !== undefined) headers['Content-Length'] = Buffer.byteLength(body);
   return await new Promise((resolve, reject) => {
     const call = http.request({ hostname: target.hostname, port: target.port, path, method, headers }, (response) => {
-      response.resume();
-      response.on('end', () => resolve({ status: response.statusCode, headers: response.headers }));
+      const chunks = [];
+      response.on('data', (chunk) => chunks.push(chunk));
+      response.on('end', () => resolve({ status: response.statusCode, headers: response.headers, body: Buffer.concat(chunks).toString('utf8') }));
     });
     call.on('error', reject);
     if (body !== undefined) call.write(body);
@@ -78,6 +79,16 @@ child.stderr.on('data', (chunk) => { logs += chunk; });
 try {
   await waitUntilReady(base);
 
+  const canonicalRedirect = await request(base, '/about?probe=1', { method: 'GET', headers: { Host: 'www.hireassistantnearme.com', 'X-Forwarded-Host': 'www.hireassistantnearme.com', 'X-Forwarded-Proto': 'http' } });
+  assert.equal(canonicalRedirect.status, 308, 'noncanonical production host and protocol redirect permanently');
+  assert.equal(canonicalRedirect.headers.location, 'https://hireassistantnearme.com/about?probe=1', 'canonical redirect preserves path and query');
+  const about = await request(base, '/about', { method: 'GET' });
+  assert.equal(about.status, 200);
+  assert.match(about.body, /<title>About Hire Assistant Near Me<\/title>/, 'absolute About title is not duplicated by the global template');
+  const sitemap = await request(base, '/sitemap.xml', { method: 'GET' });
+  assert.equal(sitemap.status, 200);
+  assert.doesNotMatch(sitemap.body, /thank-you|thanks-whats-next|\/research(?:<|\/)/, 'sitemap excludes confirmations and retired research');
+
   const emptyForm = 'firstName=&lastName=&email=&phone=&teamSize=&supportArea=&message=';
   assert.equal((await post(base, '/api/contact', emptyForm, { type: 'application/x-www-form-urlencoded' })).status, 403, 'contact rejects a missing Origin');
   assert.equal((await post(base, '/api/contact', emptyForm, { origin: 'https://attacker.invalid', type: 'application/x-www-form-urlencoded' })).status, 403, 'contact rejects a hostile Origin');
@@ -93,13 +104,13 @@ try {
   const forgedType = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, event_type: 'forged_conversion' }] });
   assert.equal((await post(base, '/ingest/track', forgedType, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects unknown event types');
   const forgedLead = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, event_type: 'lead_submit' }] });
-  assert.equal((await post(base, '/ingest/track', forgedLead, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 403, 'tracking rejects lead events without a contact-acceptance token');
+  assert.equal((await post(base, '/ingest/track', forgedLead, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'public tracking rejects lead events entirely');
   const extraField = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, admin_override: true }] });
   assert.equal((await post(base, '/ingest/track', extraField, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects unknown event fields');
   const oversizedId = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, client_event_id: 'x'.repeat(201) }] });
   assert.equal((await post(base, '/ingest/track', oversizedId, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects oversized event IDs');
 
-  console.log('Artifact API contract: 11/11 rejection and validation probes passed; no lead or valid analytics event was submitted.');
+  console.log('Artifact contract: 16/16 routing, SEO, sitemap, rejection, and validation probes passed; no lead or valid analytics event was submitted.');
 } finally {
   child.kill('SIGTERM');
   await Promise.race([

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isIP } from 'node:net';
 import { sendLeadFallbackToMattermost } from '../../lib/lead-fallback-mattermost';
+import { createLeadAcceptanceToken } from '../../lib/lead-acceptance-token';
 
 const MAX_BODY_BYTES = 64_000;
 const MAX_FIELD_LENGTH = 4_000;
@@ -21,7 +23,9 @@ function errorPage(status: number) {
 }
 
 function clientKey(request: NextRequest) {
-  return request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || null;
+  const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
+  const candidates = [request.headers.get('cf-connecting-ip'), request.headers.get('x-real-ip'), forwarded];
+  return candidates.find((value): value is string => Boolean(value && isIP(value))) || 'unknown-client';
 }
 
 function expectedOrigin(request: NextRequest) {
@@ -37,8 +41,7 @@ function hasSameOrigin(request: NextRequest) {
   return origin === expected && (origin === CANONICAL_ORIGIN || process.env.NODE_ENV !== 'production');
 }
 
-function limited(key: string | null, max: number) {
-  if (!key) return false;
+function limited(key: string, max: number) {
   const now = Date.now();
   const recent = (attempts.get(key) || []).filter((time) => now - time < WINDOW_MS);
   recent.push(now);
@@ -59,7 +62,7 @@ export async function POST(request: NextRequest) {
   if (!Number.isFinite(declaredLength) || !contentType.includes('application/x-www-form-urlencoded')) return errorPage(400);
   if (declaredLength > MAX_BODY_BYTES) return errorPage(413);
   const ip = clientKey(request);
-  if (limited(ip ? `ip:${ip}` : null, 10)) return errorPage(429);
+  if (limited(`ip:${ip}`, 10)) return errorPage(429);
 
   let body = '';
   try {
@@ -136,5 +139,13 @@ export async function POST(request: NextRequest) {
     pageUrl,
     userAgent: request.headers.get('user-agent') || '',
   });
-  return NextResponse.redirect(new URL('/thank-you?lead=accepted', request.url), 303);
+  const response = NextResponse.redirect(new URL('/thank-you?lead=accepted', request.url), 303);
+  response.cookies.set('han_lead_accept', createLeadAcceptanceToken(token), {
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 10 * 60,
+    path: '/ingest/track',
+  });
+  return response;
 }

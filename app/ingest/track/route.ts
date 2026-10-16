@@ -1,4 +1,6 @@
-import { type NextRequest } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
+import { isIP } from 'node:net';
+import { verifyLeadAcceptanceToken } from '../../lib/lead-acceptance-token';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const SITE_ID = 'hire-assistant-near-me';
@@ -41,11 +43,12 @@ function hasSameOrigin(request: NextRequest) {
 }
 
 function clientKey(request: NextRequest) {
-  return request.headers.get('cf-connecting-ip') || request.headers.get('x-real-ip') || null;
+  const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
+  const candidates = [request.headers.get('cf-connecting-ip'), request.headers.get('x-real-ip'), forwarded];
+  return candidates.find((value): value is string => Boolean(value && isIP(value))) || 'unknown-client';
 }
 
-function limited(key: string | null, max: number) {
-  if (!key) return false;
+function limited(key: string, max: number) {
   const now = Date.now();
   const recent = (attempts.get(key) || []).filter((time) => now - time < WINDOW_MS);
   recent.push(now);
@@ -116,6 +119,15 @@ export async function POST(request: NextRequest) {
     if (new TextEncoder().encode(body).byteLength > MAX_BODY_BYTES) return Response.json({ status: 'error' }, { status: 413 });
     const payload = JSON.parse(body) as TrackingPayload;
     if (!validPayload(payload)) return Response.json({ status: 'error' }, { status: 422 });
+    const leadEvents = (payload.events as TrackingEvent[]).filter((event) => event.event_type === 'lead_submit');
+    if (leadEvents.length > 1) return Response.json({ status: 'error' }, { status: 422 });
+    if (leadEvents.length === 1) {
+      const secret = process.env.LEAD_AUTH_TOKEN;
+      const acceptanceToken = request.cookies.get('han_lead_accept')?.value;
+      if (!secret || !verifyLeadAcceptanceToken(acceptanceToken, secret)) {
+        return Response.json({ status: 'error' }, { status: 403 });
+      }
+    }
 
     const upstream = await fetch(TRACKING_API, {
       method: 'POST',
@@ -128,11 +140,12 @@ export async function POST(request: NextRequest) {
       cache: 'no-store',
       signal: AbortSignal.timeout(10_000),
     });
-    const upstreamBody = [204, 205, 304].includes(upstream.status) ? null : await upstream.text();
-    return new Response(upstreamBody, {
-      status: upstream.status,
-      headers: { 'Content-Type': upstream.headers.get('content-type') || 'application/json', 'Cache-Control': 'no-store' },
-    });
+    const response = NextResponse.json(
+      { status: upstream.ok ? 'ok' : 'error' },
+      { status: upstream.ok ? 200 : 502, headers: { 'Cache-Control': 'no-store' } },
+    );
+    if (leadEvents.length === 1) response.cookies.set('han_lead_accept', '', { maxAge: 0, path: '/ingest/track' });
+    return response;
   } catch {
     return Response.json({ status: 'error' }, { status: 502 });
   }

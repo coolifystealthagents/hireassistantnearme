@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import net from 'node:net';
+import http from 'node:http';
 import process from 'node:process';
 
 const hostHeaders = {
@@ -24,18 +25,33 @@ async function freePort() {
 async function waitUntilReady(base) {
   for (let attempt = 0; attempt < 60; attempt += 1) {
     try {
-      const response = await fetch(`${base}/services`, { headers: hostHeaders });
-      if (response.ok) return;
+      const response = await request(base, '/services', { method: 'GET' });
+      if (response.status === 200) return;
     } catch {}
     await new Promise((resolve) => setTimeout(resolve, 250));
   }
   throw new Error('Built artifact did not become ready');
 }
 
-async function post(base, path, body, { origin, type }) {
-  const headers = { ...hostHeaders, 'Content-Type': type };
+async function request(base, path, { method, body, origin, type } = {}) {
+  const target = new URL(base);
+  const headers = { ...hostHeaders };
+  if (type) headers['Content-Type'] = type;
   if (origin) headers.Origin = origin;
-  return fetch(`${base}${path}`, { method: 'POST', headers, body, redirect: 'manual' });
+  if (body !== undefined) headers['Content-Length'] = Buffer.byteLength(body);
+  return await new Promise((resolve, reject) => {
+    const call = http.request({ hostname: target.hostname, port: target.port, path, method, headers }, (response) => {
+      response.resume();
+      response.on('end', () => resolve({ status: response.statusCode, headers: response.headers }));
+    });
+    call.on('error', reject);
+    if (body !== undefined) call.write(body);
+    call.end();
+  });
+}
+
+async function post(base, path, body, { origin, type }) {
+  return request(base, path, { method: 'POST', body, origin, type });
 }
 
 const validEvent = {
@@ -76,12 +92,14 @@ try {
   assert.equal((await post(base, '/ingest/track', invalidTimestamp, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects invalid timestamps');
   const forgedType = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, event_type: 'forged_conversion' }] });
   assert.equal((await post(base, '/ingest/track', forgedType, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects unknown event types');
+  const forgedLead = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, event_type: 'lead_submit' }] });
+  assert.equal((await post(base, '/ingest/track', forgedLead, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 403, 'tracking rejects lead events without a contact-acceptance token');
   const extraField = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, admin_override: true }] });
   assert.equal((await post(base, '/ingest/track', extraField, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects unknown event fields');
   const oversizedId = JSON.stringify({ site_id: 'hire-assistant-near-me', events: [{ ...validEvent, client_event_id: 'x'.repeat(201) }] });
   assert.equal((await post(base, '/ingest/track', oversizedId, { origin: 'https://hireassistantnearme.com', type: 'application/json' })).status, 422, 'tracking rejects oversized event IDs');
 
-  console.log('Artifact API contract: 10/10 rejection and validation probes passed; no lead or valid analytics event was submitted.');
+  console.log('Artifact API contract: 11/11 rejection and validation probes passed; no lead or valid analytics event was submitted.');
 } finally {
   child.kill('SIGTERM');
   await Promise.race([

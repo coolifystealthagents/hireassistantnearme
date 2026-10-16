@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get('host')?.split(':')[0].toLowerCase();
   const forwardedProtocol = request.headers.get('x-forwarded-proto')?.split(',')[0].trim().toLowerCase();
   const effectiveProtocol = forwardedProtocol || request.nextUrl.protocol.replace(':', '').toLowerCase();
-  const isLocalPreview = host === 'localhost' || host === '127.0.0.1';
+  const isLocalPreview = process.env.ALLOW_LOCAL_PREVIEW === '1' && process.env.NODE_ENV !== 'production' && (host === 'localhost' || host === '127.0.0.1');
   const needsHttps = !isLocalPreview && effectiveProtocol !== 'https';
   const needsHost = Boolean(host && host !== canonicalHost && !isLocalPreview);
 

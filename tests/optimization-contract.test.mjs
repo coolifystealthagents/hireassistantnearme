@@ -109,6 +109,8 @@ test('security policy and canonical host middleware cover production gates', () 
   assert.match(middleware, /request\.nextUrl\.clone\(\)/);
   assert.match(middleware, /destination\.hostname = canonicalHost/);
   assert.match(middleware, /forwardedProtocol \|\| request\.nextUrl\.protocol/);
+  assert.match(middleware, /process\.env\.NODE_ENV !== 'production'/);
+  assert.match(middleware, /process\.env\.ALLOW_LOCAL_PREVIEW === '1'/);
   assert.doesNotMatch(middleware, /new URL\(`\$\{request\.nextUrl\.pathname/);
 });
 
@@ -205,6 +207,7 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   const api = read('app/api/contact/route.ts');
   const form = read('app/contact-us/StandardContactForm.tsx');
   const tracker = read('app/ingest/track/route.ts');
+  const acceptance = read('app/lib/lead-acceptance-token.ts');
   assert.match(api, /text\(form, 'consent', 10\) !== 'yes'/);
   assert.match(api, /text\(form, 'teamSize'/);
   assert.match(api, /text\(form, 'supportArea'/);
@@ -217,12 +220,23 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.match(tracker, /ALLOWED_EVENT_TYPES\.has/);
   assert.match(tracker, /Object\.keys\(value\)\.some\(\(key\) => !ALLOWED_EVENT_KEYS\.has\(key\)\)/);
   assert.match(tracker, /Date\.parse\(value\.timestamp/);
+  assert.match(api, /createLeadAcceptanceToken\(token\)/);
+  assert.match(api, /httpOnly: true/);
+  assert.match(tracker, /verifyLeadAcceptanceToken\(acceptanceToken, secret\)/);
+  assert.match(tracker, /leadEvents\.length > 1/);
+  assert.doesNotMatch(tracker, /await upstream\.text\(\)/);
+  assert.match(tracker, /status: upstream\.ok \? 200 : 502/);
+  assert.match(acceptance, /createHmac\('sha256'/);
+  assert.match(acceptance, /timingSafeEqual/);
+  assert.match(api, /\|\| 'unknown-client'/);
+  assert.match(tracker, /\|\| 'unknown-client'/);
 });
 
 test('contact marquee uses ten sourced reviews, horizontal recycling, and no playback controls', () => {
   const rail = read('app/booking-components.tsx');
   const provenance = JSON.parse(read('app/review-provenance.json'));
   const css = read('app/release-v3.css');
+  const legacyCss = read('app/globals.css');
   assert.equal(provenance.source, 'https://stealthagents.com/');
   assert.equal(provenance.records.length, 10);
   assert.equal(new Set(provenance.records.map((item) => item.name)).size, 10);
@@ -231,6 +245,9 @@ test('contact marquee uses ten sourced reviews, horizontal recycling, and no pla
   assert.match(rail, /track\.append\(first\)/);
   assert.doesNotMatch(rail, /Pause|Play|Previous|Next|\.\.\.stealthAgentsReviews/);
   assert.match(css, /\.sa-testimonial-track\{display:flex/);
+  assert.match(css, /animation:none/);
+  assert.match(css, /\.sa-testimonial-card\{display:block!important/);
+  assert.doesNotMatch(legacyCss, /contact-review-scroll|sa-testimonial-scroll|nth-child\(n\+4\)/);
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
 });
 
@@ -256,7 +273,15 @@ test('V3 route, parent-brand, hero, and article utility contracts are present', 
   assert.equal((article.match(/<ArticleSidebar title=\{post\.title\}/g) || []).length, 3);
   assert.match(article, /editorialCard\(post\.slug\)\.width/);
   assert.match(sidebar, /IntersectionObserver/);
+  assert.match(sidebar, /querySelectorAll<HTMLHeadingElement>\('h2, h3'\)/);
+  assert.match(sidebar, /toc-level-\$\{item\.level\}/);
   assert.match(sidebar, /aria-current=\{active === item\.id \? 'location'/);
+  const v3Css = read('app/release-v3.css');
+  assert.match(v3Css, /max-height:calc\(100vh - 128px\);overflow-y:auto/);
+  assert.match(v3Css, /position:relative;top:auto;max-height:none;overflow:visible/);
+  assert.match(about, /From workload to role brief/);
+  assert.match(about, /Quality and accountability/);
+  assert.match(about, /Fit boundaries/);
 });
 
 test('V3 long-form routes do not repeat the retired template paragraphs', () => {

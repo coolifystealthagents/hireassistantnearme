@@ -1,2 +1,18 @@
-import * as data from '../data'; import {fleetServices,researchPosts,postsPerPage} from '../fleet-data';
-export function GET(){const d=data as any;const base=`https://${d.site.domain.toLowerCase()}`;const blogs=d.blogPosts||[];const pages=Math.max(1,Math.ceil(blogs.length/postsPerPage));const paths=[...new Set(['','/services','/blog','/blog/top-25-virtual-assistant-companies-small-business','/research','/compare/local-vs-remote-assistant','/contact-us','/privacy','/terms','/cancellation-policy',...fleetServices.map(s=>`/services/${s.slug}`),...blogs.map((b:any)=>`/blog/${b.slug}`),...Array.from({length:Math.max(0,pages-1)},(_,i)=>`/blog/page/${i+2}`),...researchPosts.map(r=>`/research/${r.slug}`)])];const body=paths.map(path=>`<url><loc>${base}${path}</loc></url>`).join('');return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`,{headers:{'content-type':'application/xml'}})}
+import { site } from '../data';
+import { fleetServices, postsPerPage } from '../fleet-data';
+import { publishedBlogPosts, publishedResearchPosts } from '../content-policy';
+
+export function GET() {
+  const base = `https://${site.domain.toLowerCase()}`;
+  const pages = Math.max(1, Math.ceil(publishedBlogPosts.length / postsPerPage));
+  const paths = [...new Set([
+    '', '/services', '/blog', '/blog/top-25-virtual-assistant-companies-small-business', '/research',
+    '/compare/local-vs-remote-assistant', '/contact-us', '/privacy', '/terms', '/cancellation-policy',
+    ...fleetServices.map((service) => `/services/${service.slug}`),
+    ...publishedBlogPosts.map((post) => `/blog/${post.slug}`),
+    ...Array.from({ length: Math.max(0, pages - 1) }, (_, index) => `/blog/page/${index + 2}`),
+    ...publishedResearchPosts.map((post) => `/research/${post.slug}`),
+  ])];
+  const body = paths.map((path) => `<url><loc>${base}${path}</loc></url>`).join('');
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${body}</urlset>`, { headers: { 'content-type': 'application/xml' } });
+}

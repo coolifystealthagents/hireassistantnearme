@@ -81,7 +81,7 @@ test('global navigation is persistent, compact, and keyboard operable', () => {
 });
 
 test('commercial layouts contain no decorative zero-padding system', () => {
-  for (const path of ['app/page.tsx', 'app/services/page.tsx', 'app/contact-us/page.tsx']) {
+  for (const path of ['app/page.tsx', 'app/services/page.tsx', 'app/services/[slug]/page.tsx', 'app/contact-us/page.tsx']) {
     const source = read(path);
     assert.doesNotMatch(source, /padStart\(2/);
     assert.doesNotMatch(source, /["'`]0[1-9]["'`]/);
@@ -144,9 +144,40 @@ test('editorial indexes render content thumbnails and booking has no self-attest
   const booking = read('app/thank-you/page.tsx');
   assert.match(blog, /editorial-image-link[\s\S]*<img/);
   assert.match(pagination, /editorial-image-link[\s\S]*<img/);
+  assert.match(pagination, /<time dateTime=/);
   assert.match(research, /research-card-image[\s\S]*<img/);
   assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
   assert.match(booking, /scheduler itself confirms the booking/);
+});
+
+test('contact form classes are styled and service hero images are unique with intrinsic dimensions', () => {
+  const form = read('app/contact-us/StandardContactForm.tsx');
+  const css = read('app/release-v2.css');
+  for (const className of ['standard-contact-form', 'form-heading', 'form-grid', 'consent-row', 'form-action', 'submit-button']) {
+    assert.match(form, new RegExp(`className=["'][^"']*${className}`));
+    assert.match(css, new RegExp(`\\.${className}(?:[,{.:])`));
+  }
+  const servicePage = read('app/services/[slug]/page.tsx');
+  const imagePaths = [...servicePage.matchAll(/src: '([^']+)'/g)].map((match) => match[1]);
+  assert.equal(imagePaths.length, 10);
+  assert.equal(new Set(imagePaths).size, 10);
+  assert.match(servicePage, /width=\{image\.width\} height=\{image\.height\}/);
+});
+
+test('editorial consolidation removes formulaic routes from discovery and preserves permanent topic redirects', () => {
+  const policy = read('app/content-policy.ts');
+  const sitemap = read('app/sitemap.xml/route.ts');
+  const blogDetail = read('app/blog/[slug]/page.tsx');
+  const researchDetail = read('app/research/[slug]/page.tsx');
+  const pagination = read('app/blog/page/[page]/page.tsx');
+  assert.match(policy, /distinctWords >= 300/);
+  assert.match(policy, /publishedBlogPosts/);
+  assert.match(policy, /publishedResearchPosts/);
+  assert.match(sitemap, /publishedBlogPosts\.map/);
+  assert.match(sitemap, /publishedResearchPosts\.map/);
+  assert.match(blogDetail, /permanentRedirect\(consolidationTarget\(slug, 'blog'\)\)/);
+  assert.match(researchDetail, /permanentRedirect\(consolidationTarget\(slug, 'research'\)\)/);
+  assert.match(pagination, /if \(n === 1\) permanentRedirect\('\/blog'\)/);
 });
 
 test('desktop opening composition has a bounded 768px height budget', () => {

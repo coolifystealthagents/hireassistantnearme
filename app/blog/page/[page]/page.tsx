@@ -1,8 +1,11 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Header, Footer } from "../../../components";
-import { blogPosts, site } from "../../../data";
+import { site } from "../../../data";
+import { publishedBlogPosts } from "../../../content-policy";
 import { postsPerPage } from "../../../fleet-data";
 import { FeaturedComparison } from "../../FeaturedComparison";
+import { editorialImage } from "../../../editorial-images";
+const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
   const n = Number(page);
@@ -13,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
   };
 }
 export function generateStaticParams() {
-  const pages = Math.max(1, Math.ceil(blogPosts.length / postsPerPage));
-  return Array.from({ length: pages }, (_, i) => ({ page: String(i + 1) }));
+  const pages = Math.max(1, Math.ceil(publishedBlogPosts.length / postsPerPage));
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, i) => ({ page: String(i + 2) }));
 }
 export default async function BlogPage({
   params,
@@ -23,9 +26,10 @@ export default async function BlogPage({
 }) {
   const { page } = await params;
   const n = Number(page);
-  const pages = Math.max(1, Math.ceil(blogPosts.length / postsPerPage));
+  if (n === 1) permanentRedirect('/blog');
+  const pages = Math.max(1, Math.ceil(publishedBlogPosts.length / postsPerPage));
   if (!Number.isInteger(n) || n < 1 || n > pages) notFound();
-  const posts = blogPosts.slice((n - 1) * postsPerPage, n * postsPerPage);
+  const posts = publishedBlogPosts.slice((n - 1) * postsPerPage, n * postsPerPage);
   return (
     <>
       <Header />
@@ -43,8 +47,8 @@ export default async function BlogPage({
           <div className="container editorial-grid">
             {posts.map((p) => (
               <article className="editorial-card" key={p.slug}>
-                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={'image' in p && typeof p.image === 'string' ? p.image : '/images/calendar-assistant.jpg'} alt={'imageAlt' in p && typeof p.imageAlt === 'string' ? p.imageAlt : ''} loading="lazy" /></a>
-                <div><h2><a href={`/blog/${p.slug}`}>{p.title}</a></h2><p>{p.excerpt}</p><a className="text-link" href={`/blog/${p.slug}`}>Read the guide →</a></div>
+                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={editorialImage(p.slug)} alt={`Editorial illustration for ${p.title}`} loading="lazy" /></a>
+                <div><p className="editorial-meta">{'published' in p && typeof p.published === 'string' ? <time dateTime={p.published}>Published {formatDate(p.published)}</time> : null}</p><h2><a href={`/blog/${p.slug}`}>{p.title}</a></h2><p>{p.excerpt}</p><a className="text-link" href={`/blog/${p.slug}`}>Read the guide →</a></div>
               </article>
             ))}
           </div>

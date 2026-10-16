@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { Header, Footer, CTA } from '../../components';
 import { blogPosts, site, publicSources } from '../../data';
+import { canonicalContentHref, consolidationTarget, publishedBlogPosts, retiredBlogSlugs } from '../../content-policy';
 
 const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
   year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
@@ -8,11 +9,12 @@ const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
 const formatPublicationDate = (value: string) => publicationDateFormatter.format(new Date(`${value}T00:00:00Z`));
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return publishedBlogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (retiredBlogSlugs.has(slug)) return { robots: { index: false, follow: true } };
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return {};
   return {
@@ -63,6 +65,7 @@ type RichDetail = {
 
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (retiredBlogSlugs.has(slug)) permanentRedirect(consolidationTarget(slug, 'blog'));
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
 
@@ -246,7 +249,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block card" aria-labelledby="related-guides">
             <h2 id="related-guides">Keep planning the role</h2>
             <p data-narrative="true">Pick the next page that matches the work you want to hand over. Each link stays inside the Philippines-only hiring path on this site.</p>
-            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={link.href}>{link.label}</a></li>)}</ul>
+            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
           </section>
 
           <section className="article-block sources-card" data-source-list aria-labelledby="sources-heading">
@@ -315,7 +318,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
             {detail.directAnswer.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            {detail.bodyLinks?.length ? <p className="article-context-links">Continue with the <>{detail.bodyLinks.map((link, index) => <span key={link.href}>{index ? index === detail.bodyLinks!.length - 1 ? ' and ' : ', ' : null}<a className="text-link" href={link.href} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>{link.label}</a></span>)}</>.</p> : null}
+            {detail.bodyLinks?.length ? <p className="article-context-links">Continue with the <>{detail.bodyLinks.map((link, index) => <span key={link.href}>{index ? index === detail.bodyLinks!.length - 1 ? ' and ' : ', ' : null}<a className="text-link" href={canonicalContentHref(link.href)} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>{link.label}</a></span>)}</>.</p> : null}
           </section>
 
           <section className="article-block card">
@@ -396,7 +399,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block card" aria-labelledby="related-guides">
             <h2 id="related-guides">Keep planning</h2>
             <p>Pick the next guide that matches the choice in front of you. Each path helps you prepare a clear Philippines-only staffing brief.</p>
-            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={link.href}>{link.label}</a></li>)}</ul>
+            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
           </section>
 
           <section className="article-block sources-card" aria-labelledby="sources-heading">

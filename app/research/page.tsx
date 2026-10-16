@@ -1,11 +1,12 @@
 import { Header, Footer } from "../components";
-import { researchPosts } from "../fleet-data";
+import { publishedResearchPosts } from "../content-policy";
+import { editorialImage } from "../editorial-images";
 import { site } from "../data";
 const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
 export const metadata = {
   title: 'Research',
   description:
-    "Original research and source-backed analysis for planning Philippines-based support.",
+    "Source-backed planning analysis for defining Philippines-based support roles, controls, and review paths.",
   alternates: { canonical: '/research' },
 };
 export default function Research() {
@@ -22,15 +23,15 @@ export default function Research() {
         <section className="research-hero">
           <div className="container research-hero-grid">
             <div>
-              <p className="eyebrow">Research Library</p>
-              <h1>Source-backed research for better staffing decisions</h1>
+              <p className="eyebrow">Source-backed planning analysis</p>
+              <h1>Source-backed planning briefs for better staffing decisions</h1>
               <p className="lead">
                 Use these reports to compare roles, costs, controls, and
                 onboarding decisions before building a Philippines-based support
                 team.
               </p>
               <div className="research-meta">
-                <span>{researchPosts.length || 0} reports</span>
+                <span>{publishedResearchPosts.length || 0} reports</span>
                 <span>Methodology notes</span>
                 <span>Buyer controls</span>
               </div>
@@ -69,21 +70,21 @@ export default function Research() {
                   {cluster}
                   <small>
                     {i === 0
-                      ? researchPosts.length
-                      : Math.max(1, Math.ceil((researchPosts.length || 1) / 3))}
+                      ? publishedResearchPosts.length
+                      : Math.max(1, Math.ceil((publishedResearchPosts.length || 1) / 3))}
                   </small>
                 </a>
               ))}
             </nav>
             <div className="research-card-grid">
-              {researchPosts.length ? (
-                researchPosts.map((p, i) => (
+              {publishedResearchPosts.length ? (
+                publishedResearchPosts.map((p, i) => (
                   <a
                     className="research-library-card"
                     href={`/research/${p.slug}`}
                     key={p.slug}
                   >
-                    <span className="research-card-image"><img src={p.image} alt={p.imageAlt} loading="lazy" /></span>
+                    <span className="research-card-image"><img src={editorialImage(p.slug)} alt={`Editorial illustration for ${p.title}`} loading="lazy" /></span>
                     <span className="research-card-badge">
                       {clusters[(i % 3) + 1]}
                     </span>

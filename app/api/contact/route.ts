@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { after, NextRequest, NextResponse } from 'next/server';
+import { isIP } from 'node:net';
 import { sendLeadFallbackToMattermost } from '../../lib/lead-fallback-mattermost';
 
 const MAX_BODY_BYTES = 64_000;
@@ -21,8 +22,11 @@ function errorPage(status: number) {
 }
 
 function clientKey(request: NextRequest) {
-  void request;
-  return 'global-contact';
+  if (process.env.TRUST_PROXY_HEADERS === '1') {
+    const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
+    if (forwarded && isIP(forwarded)) return { key: `proxy:${forwarded}`, max: 10 };
+  }
+  return { key: 'validated-global-contact', max: 300 };
 }
 
 async function attemptAcceptedLeadEvent(clientEventId: string, userAgent: string) {
@@ -82,9 +86,6 @@ export async function POST(request: NextRequest) {
   if (!hasSameOrigin(request)) return errorPage(403);
   if (!Number.isFinite(declaredLength) || declaredLength <= 0 || request.headers.has('transfer-encoding') || !contentType.includes('application/x-www-form-urlencoded')) return errorPage(400);
   if (declaredLength > MAX_BODY_BYTES) return errorPage(413);
-  const ip = clientKey(request);
-  if (limited(`ip:${ip}`, 60)) return errorPage(429);
-
   let body = '';
   try {
     body = await request.text();
@@ -108,6 +109,8 @@ export async function POST(request: NextRequest) {
   const requestMessage = text(form, 'message');
   if (!name || !email || !EMAIL_RE.test(email) || !phone || !teamSize || !supportArea || !requestMessage) return errorPage(422);
   if (limited(`email:${email}`, 3)) return errorPage(429);
+  const clientLimit = clientKey(request);
+  if (limited(clientLimit.key, clientLimit.max)) return errorPage(429);
 
   const pageUrl = request.headers.get('referer') || new URL('/contact-us', request.url).toString();
   const message = [
@@ -161,6 +164,6 @@ export async function POST(request: NextRequest) {
     pageUrl,
     userAgent: request.headers.get('user-agent') || '',
   });
-  await attemptAcceptedLeadEvent(clientEventId, request.headers.get('user-agent') || '');
+  after(() => attemptAcceptedLeadEvent(clientEventId, request.headers.get('user-agent') || ''));
   return NextResponse.json({ ok: true, redirect: '/thank-you' }, { headers: { 'Cache-Control': 'no-store' } });
 }

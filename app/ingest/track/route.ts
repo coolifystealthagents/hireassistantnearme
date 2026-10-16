@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { isIP } from 'node:net';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const SITE_ID = 'hire-assistant-near-me';
@@ -41,8 +42,11 @@ function hasSameOrigin(request: NextRequest) {
 }
 
 function clientKey(request: NextRequest) {
-  void request;
-  return 'global-tracking';
+  if (process.env.TRUST_PROXY_HEADERS === '1') {
+    const forwarded = request.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim();
+    if (forwarded && isIP(forwarded)) return { key: `proxy:${forwarded}`, max: 120 };
+  }
+  return { key: 'validated-global-tracking', max: 10_000 };
 }
 
 function limited(key: string, max: number) {
@@ -110,12 +114,12 @@ export async function POST(request: NextRequest) {
     if (!contentType.toLowerCase().startsWith('application/json') || !Number.isFinite(declaredLength) || declaredLength <= 0 || request.headers.has('transfer-encoding') || declaredLength > MAX_BODY_BYTES) {
       return Response.json({ status: 'error' }, { status: declaredLength > MAX_BODY_BYTES ? 413 : 400 });
     }
-    if (limited(clientKey(request), 600)) return Response.json({ status: 'error' }, { status: 429 });
-
     const body = await request.text();
     if (new TextEncoder().encode(body).byteLength > MAX_BODY_BYTES) return Response.json({ status: 'error' }, { status: 413 });
     const payload = JSON.parse(body) as TrackingPayload;
     if (!validPayload(payload)) return Response.json({ status: 'error' }, { status: 422 });
+    const clientLimit = clientKey(request);
+    if (limited(clientLimit.key, clientLimit.max)) return Response.json({ status: 'error' }, { status: 429 });
 
     const upstream = await fetch(TRACKING_API, {
       method: 'POST',

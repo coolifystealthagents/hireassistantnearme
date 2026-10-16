@@ -216,20 +216,22 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.doesNotMatch(form, /tracker\.trackLead|lead_submit|\/ingest\/track/);
   assert.match(tracker, /value\.site_id === SITE_ID/);
   assert.match(tracker, /value\.events\.length <= MAX_EVENTS/);
-  assert.match(tracker, /limited\(clientKey\(request\), 600\)/);
+
   assert.match(tracker, /if \(!origin\) return false/);
   assert.match(tracker, /ALLOWED_EVENT_TYPES\.has/);
   assert.match(tracker, /Object\.keys\(value\)\.some\(\(key\) => !ALLOWED_EVENT_KEYS\.has\(key\)\)/);
   assert.match(tracker, /Date\.parse\(value\.timestamp/);
   assert.equal((api.match(/event_type: 'lead_submit'/g) || []).length, 1);
-  assert.match(api, /if \(!upstream\.ok \|\| result\?\.ok !== true\) return errorPage\(502\);[\s\S]*await attemptAcceptedLeadEvent\(clientEventId/);
+  assert.match(api, /if \(!upstream\.ok \|\| result\?\.ok !== true\) return errorPage\(502\);[\s\S]*after\(\(\) => attemptAcceptedLeadEvent\(clientEventId/);
   assert.match(api, /Analytics is deliberately nonblocking after accepted lead ingestion/);
   assert.match(api, /return NextResponse\.json\(\{ ok: true, redirect: '\/thank-you' \}/);
   assert.doesNotMatch(tracker, /'lead_submit',/);
-  assert.match(api, /return 'global-contact'/);
-  assert.match(tracker, /return 'global-tracking'/);
-  assert.doesNotMatch(api, /cf-connecting-ip|x-real-ip|x-forwarded-for/);
-  assert.doesNotMatch(tracker, /cf-connecting-ip|x-real-ip|x-forwarded-for/);
+  assert.match(api, /TRUST_PROXY_HEADERS === '1'[\s\S]*x-forwarded-for[\s\S]*\.at\(-1\)[\s\S]*isIP\(forwarded\)/);
+  assert.match(tracker, /TRUST_PROXY_HEADERS === '1'[\s\S]*x-forwarded-for[\s\S]*\.at\(-1\)[\s\S]*isIP\(forwarded\)/);
+  assert.match(api, /validated-global-contact', max: 300/);
+  assert.match(tracker, /validated-global-tracking', max: 10_000/);
+  assert.ok(api.indexOf("if (!name || !email") < api.indexOf('const clientLimit = clientKey(request)'), 'contact limiter must run only after schema validation');
+  assert.ok(tracker.indexOf('if (!validPayload(payload))') < tracker.indexOf('const clientLimit = clientKey(request)'), 'tracking limiter must run only after event validation');
   assert.match(api, /declaredLength <= 0 \|\| request\.headers\.has\('transfer-encoding'\)/);
   assert.match(tracker, /declaredLength <= 0 \|\| request\.headers\.has\('transfer-encoding'\)/);
   assert.doesNotMatch(tracker, /await upstream\.text\(\)/);

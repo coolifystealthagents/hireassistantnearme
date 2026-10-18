@@ -7,7 +7,7 @@
     "test": "npm run test:h1 && npm run test:optimization",
     "build": "npm test && next build && npm run test:artifact",
     "start": "next start -H 0.0.0.0 -p 3000",
-    "lint": "next lint"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",

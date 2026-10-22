@@ -1,23 +1,22 @@
 # Service-led research link ledger
 
-Updated: 2026-08-24
+Updated: 2026-10-22
 
-This is an execution ledger, not a published page or a claim about rankings. It maps already-rendered research questions to the Philippines-only service pages that answer the next practical question. The reader should see the link only when the research page has established the boundary for that task lane.
+This is an execution ledger, not a published page or a claim about rankings. It records whether an existing reader path can be changed safely. It does not create a new reader-facing link when the proposed source no longer renders as a page.
 
-## Confirmed routes
+## Reconciled retired research routes
 
-| Research source | Reader question answered by the source | Service destination | Destination intent | Current relationship | Next safe edit |
-| --- | --- | --- | --- | --- | --- |
-| `/research/bookkeeping-source-records-boundary` | What work can be prepared after source records are complete, and what must remain with the owner or bookkeeper? | `/services/bookkeeping-administration` | Philippines-based bookkeeping administration with record, approval, and review boundaries | The research route currently links only to `/research`; its source data has no `/services/bookkeeping-administration` href. | Add one related-service link after the source list. Label it around planning bookkeeping administration, not tax, reconciliation, payments, or filing. |
-| `/research/ecommerce-order-exception-ownership` | Which order-status tasks can be prepared without granting refund or customer-remedy authority? | `/services/ecommerce-assistance` | Philippines-based ecommerce support with documented responsibilities and manager review | The research route currently links only to `/research`; its source data has no `/services/ecommerce-assistance` href. | Add one related-service link after the source list. Keep refunds, substitutions, disputes, and customer promises with the owner. |
+| Former research source | Intended service destination | Artifact result | Current relationship | Next safe action |
+| --- | --- | --- | --- | --- |
+| `/research/bookkeeping-source-records-boundary` | `/services/bookkeeping-administration` | The former research URL returns a local `308` to the service route. The service route renders the H1 `Bookkeeping Administration`, has its self-canonical, and is in the generated sitemap. | The source has no route-local `<main>` where a contextual link can render. It is not a valid handoff source and is non-duplicable. | Do not add a link to the retired source. Select a published blog or another generated route only after it has a self-canonical artifact. |
+| `/research/ecommerce-order-exception-ownership` | `/services/ecommerce-assistance` | The former research URL returns a local `308` to the service route. The service route renders the H1 `Ecommerce Assistance`, has its self-canonical, and is in the generated sitemap. | The source has no route-local `<main>` where a contextual link can render. It is not a valid handoff source and is non-duplicable. | Do not add a link to the retired source. Select a published blog or another generated route only after it has a self-canonical artifact. |
 
-## Already connected control pair
+## Existing connected control pair
 
-`/research/lead-follow-up-consent-records` already points to `/services/sales-administrative-support`. Do not add a second service link to that route unless the existing handoff is replaced after an editorial review.
+`/research/lead-follow-up-consent-records` is also retired by the current content policy. Do not use it as an active source or add a second service link.
 
-## Release checks for either candidate
+## Verification record
 
-1. Confirm the route data still contains the research question, its listed sources, and no existing destination href.
-2. Confirm the service remains in `fleetServices`, then build and inspect both generated routes for their expected H1 values and the new source-side label/href.
-3. Confirm both routes remain in the generated sitemap. The current sitemap has no `<lastmod>` fields, so route inclusion rather than an invented freshness date is the contract.
-4. Run the repository build. Commit, push, use the established deployment workflow only if its required environment is present, and verify the exact marker, H1, and canonical on apex and `www` before calling a public change complete.
+- Fresh local build on 2026-10-22 passed the declared test, type, build, and artifact gates.
+- Both former research URLs redirect under the local production server, and both intended service routes have a self-canonical, expected H1, and sitemap inclusion.
+- The sitemap deliberately has no `<lastmod>` fields. This is a source-only ledger reconciliation, so no deployment or public-route claim is made.

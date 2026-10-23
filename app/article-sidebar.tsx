@@ -8,8 +8,8 @@ function slugify(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'section';
 }
 
-export function ArticleSidebar({ title }: { title: string }) {
-  const [items, setItems] = useState<TocItem[]>([]);
+export function ArticleSidebar({ title, headings = [] }: { title: string; headings?: TocItem[] }) {
+  const [items, setItems] = useState<TocItem[]>(headings);
   const [active, setActive] = useState('');
 
   useEffect(() => {

@@ -10,13 +10,13 @@ const publicationDateFormatter = new Intl.DateTimeFormat('en-US', {
 const formatPublicationDate = (value: string) => publicationDateFormatter.format(new Date(`${value}T00:00:00Z`));
 
 export function generateStaticParams() {
-  return publishedBlogPosts.map((post) => ({ slug: post.slug }));
+  return publishedBlogPosts.map((post: any) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (retiredBlogSlugs.has(slug)) return { robots: { index: false, follow: true } };
-  const post = blogPosts.find((item) => item.slug === slug);
+  const post = blogPosts.find((item: any) => item.slug === slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -67,7 +67,7 @@ type RichDetail = {
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (retiredBlogSlugs.has(slug)) permanentRedirect(consolidationTarget(slug, 'blog'));
-  const post = blogPosts.find((item) => item.slug === slug);
+  const post = blogPosts.find((item: any) => item.slug === slug);
   if (!post) notFound();
 
   const richPost = post as typeof post & {
@@ -82,7 +82,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   };
 
   if (richPost.strictPublished && richPost.strictDetail) {
-    const detail = richPost.strictDetail;
+    const detail: any = richPost.strictDetail;
     const canonical = `${site.url}/blog/${post.slug}`;
     const published = richPost.published || '2026-07-25';
     const articleSchema = {
@@ -98,13 +98,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       keywords: richPost.mainKeyword,
       author: { '@id': `${site.url}/#organization` },
       publisher: { '@id': `${site.url}/#organization` },
-      citation: detail.sources.map((source) => source.url),
+      citation: detail.sources.map((source: { url: string }) => source.url),
     };
     const faqSchema = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       '@id': `${canonical}#faq`,
-      mainEntity: detail.faqs.map((faq) => ({
+      mainEntity: detail.faqs.map((faq: { question: string; answer: string }) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -119,12 +119,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         { '@type': 'ListItem', position: 3, name: post.title, item: canonical },
       ],
     };
-    const maxChartValue = Math.max(...detail.chartRows.map((row) => row.value));
+    const maxChartValue = Math.max(...detail.chartRows.map((row: { value: number }) => row.value));
     const renderParagraph = (paragraph: { text: string; sourceLabel?: string; sourceUrl?: string }) => <p data-narrative="true" key={paragraph.text}>
       {paragraph.text}{paragraph.sourceUrl && paragraph.sourceLabel ? <> <a className="inline-source" href={paragraph.sourceUrl} rel="noreferrer">{paragraph.sourceLabel}</a>.</> : null}
     </p>;
     const renderBanner = (slot: string) => {
-      const banner = detail.ctas.find((item) => item.slot === slot);
+      const banner = detail.ctas.find((item: { slot: string }) => item.slot === slot);
       return banner ? <aside className="article-banner" data-article-banner={slot} aria-label={`${slot} article action`}>
         <div><p className="eyebrow light">{banner.eyebrow}</p><h2>{banner.heading}</h2><p>{banner.body}</p></div>
         <a className="btn coral" href={banner.href} id="cta-blog-slug-action-1">{banner.label}</a>
@@ -135,7 +135,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <div className="container article-layout"><ArticleSidebar title={post.title} /><article className="article-shell" data-article-body>
+        <div className="container article-layout"><details className="mobile-toc"><summary>On this page</summary><ol>{[{id:"direct-answer",label:"Direct answer"},...detail.sections.slice(0,6).map((s: any,i:number)=>({id:`section-${i+1}`,label:s.heading}))].map((x:any)=><li key={x.id}><a href={`#${x.id}`}>{x.label}</a></li>)}</ol></details><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
@@ -149,13 +149,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block card">
             <h2>First rules to write down</h2>
-            <ul className="list">{post.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="list">{post.takeaways.map((item: string) => <li key={item}>{item}</li>)}</ul>
           </section>
 
           {renderBanner('top')}
 
-          {detail.sections.slice(0, 3).map((section) => <section className="article-block" key={section.heading}>
-            <h2>{section.heading}</h2>
+          {detail.sections.slice(0, 3).map((section: any, si: number) => <section className="article-block" key={section.heading}>
+            <h2 id={`section-${si+1}`}>{section.heading}</h2>
             {section.paragraphs.map(renderParagraph)}
           </section>)}
 
@@ -165,7 +165,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="article-table-wrap" role="region" aria-labelledby="security-statistics" tabIndex={0}>
               <table className="article-table"><caption>Published online crime complaint figures</caption>
                 <thead><tr><th scope="col">Measure</th><th scope="col">Published value</th><th scope="col">Period</th><th scope="col">What it means</th></tr></thead>
-                <tbody>{detail.statisticRows.map((row) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.value}</td><td>{row.period}</td><td>{row.meaning}</td></tr>)}</tbody>
+                <tbody>{detail.statisticRows.map((row: { measure: string; value: string; period: string; meaning: string }) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.value}</td><td>{row.period}</td><td>{row.meaning}</td></tr>)}</tbody>
               </table>
             </div>
             <p className="module-source"><a className="inline-source" href={detail.sources[0].url} rel="noreferrer">Source: FBI 2024 IC3 Annual Report</a></p>
@@ -176,7 +176,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <svg className="security-chart" viewBox="0 0 760 260" role="img" aria-labelledby="chart-title chart-desc">
               <title id="chart-title">FBI IC3 complaints in 2024</title>
               <desc id="chart-desc">Horizontal bars compare all 859,532 complaints with 256,256 complaints that reported an actual loss.</desc>
-              {detail.chartRows.map((row, index) => {
+              {detail.chartRows.map((row: { label: string; value: number }, index: number) => {
                 const y = 54 + index * 92;
                 const width = Math.round((row.value / maxChartValue) * 500);
                 return <g key={row.label}>
@@ -190,8 +190,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <figcaption>{detail.chartNote} <a className="inline-source" href={detail.sources[0].url} rel="noreferrer">Open the FBI report</a>.</figcaption>
           </figure>
 
-          {detail.sections.slice(3, 6).map((section) => <section className="article-block" key={section.heading}>
-            <h2>{section.heading}</h2>
+          {detail.sections.slice(3, 6).map((section: any, si: number) => <section className="article-block" key={section.heading}>
+            <h2 id={`section-${si+4}`}>{section.heading}</h2>
             {section.paragraphs.map(renderParagraph)}
           </section>)}
 
@@ -210,7 +210,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="article-table-wrap" role="region" aria-labelledby="access-boundaries" aria-describedby="access-table-cue" tabIndex={0}>
               <table className="article-table"><caption>Suggested first-access boundaries</caption>
                 <thead><tr><th scope="col">Work area</th><th scope="col">Start with</th><th scope="col">Owner or manager keeps</th></tr></thead>
-                <tbody>{detail.accessRows.map((row) => <tr key={row.area}><th scope="row">{row.area}</th><td>{row.firstAccess}</td><td>{row.ownerKeeps}</td></tr>)}</tbody>
+                <tbody>{detail.accessRows.map((row: any) => <tr key={row.area}><th scope="row">{row.area}</th><td>{row.firstAccess}</td><td>{row.ownerKeeps}</td></tr>)}</tbody>
               </table>
             </div>
           </section>
@@ -221,7 +221,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <title id="process-title">Five-step virtual assistant security process</title>
               <desc id="process-desc">Map the task, limit access, test safely, check the work, and close access.</desc>
               <path d="M92 92 H848" className="process-line" />
-              {detail.processSteps.map((step, index) => {
+              {detail.processSteps.map((step: any, index: number) => {
                 const x = 92 + index * 189;
                 return <g key={step.short}>
                   <circle cx={x} cy="92" r="38" className="process-dot" />
@@ -234,7 +234,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <figcaption>This process is a planning aid. The business should adjust it for its systems, contracts, data, and legal duties.</figcaption>
           </figure>
 
-          {detail.sections.slice(6).map((section) => <section className="article-block" key={section.heading}>
+          {detail.sections.slice(6).map((section: any) => <section className="article-block" key={section.heading}>
             <h2>{section.heading}</h2>
             {section.paragraphs.map(renderParagraph)}
           </section>)}
@@ -243,7 +243,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block" aria-labelledby="faq-heading">
             <h2 id="faq-heading">Questions about virtual assistant security</h2>
-            <div className="faq-stack">{detail.faqs.map((faq) => <details key={faq.question} open>
+            <div className="faq-stack">{detail.faqs.map((faq: any) => <details key={faq.question} open>
               <summary>{faq.question}</summary><p>{faq.answer}</p>
             </details>)}</div>
           </section>
@@ -251,13 +251,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block card" aria-labelledby="related-guides">
             <h2 id="related-guides">Keep planning the role</h2>
             <p data-narrative="true">Pick the next page that matches the work you want to hand over. Each link stays inside the Philippines-only hiring path on this site.</p>
-            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
+            <ul className="list">{detail.relatedLinks.map((link: any) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
           </section>
 
           <section className="article-block sources-card" data-source-list aria-labelledby="sources-heading">
             <h2 id="sources-heading">Sources</h2>
             <p data-narrative="true">These primary sources support the figures, quote, account guidance, access guidance, and Philippine privacy notes above. We checked each link before publication and kept the source wording separate from our planning advice.</p>
-            <ol className="list">{detail.sources.map((source) => <li key={source.url}>
+            <ol className="list">{detail.sources.map((source: any) => <li key={source.url}>
               <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-3">{source.name}</a>: {source.note}
             </li>)}</ol>
           </section>
@@ -268,7 +268,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   }
 
   if (richPost.richPublished && richPost.detail) {
-    const detail = richPost.detail;
+    const detail: any = richPost.detail;
     const canonical = `${site.url}/blog/${post.slug}`;
     const published = richPost.published || '2026-07-24';
     const articleSchema = {
@@ -284,13 +284,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       keywords: richPost.mainKeyword,
       author: { '@id': `${site.url}/#organization` },
       publisher: { '@id': `${site.url}/#organization` },
-      citation: detail.sources.map((source) => source.url),
+      citation: detail.sources.map((source: { url: string }) => source.url),
     };
     const faqSchema = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       '@id': `${canonical}#faq`,
-      mainEntity: detail.faqs.map((faq) => ({
+      mainEntity: detail.faqs.map((faq: { question: string; answer: string }) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -310,7 +310,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <div className="container article-layout"><ArticleSidebar title={post.title} /><article className="article-shell" data-article-body>
+        <div className="container article-layout"><details className="mobile-toc"><summary>On this page</summary><ol>{[{id:"direct-answer",label:"Direct answer"},...detail.sections.slice(0,6).map((s: any,i:number)=>({id:`section-${i+1}`,label:s.heading}))].map((x:any)=><li key={x.id}><a href={`#${x.id}`}>{x.label}</a></li>)}</ol></details><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
@@ -319,18 +319,18 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
-            {detail.directAnswer.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            {detail.bodyLinks?.length ? <p className="article-context-links">Continue with the <>{detail.bodyLinks.map((link, index) => <span key={link.href}>{index ? index === detail.bodyLinks!.length - 1 ? ' and ' : ', ' : null}<a className="text-link" href={canonicalContentHref(link.href)} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>{link.label}</a></span>)}</>.</p> : null}
+            {detail.directAnswer.map((paragraph: any) => <p key={paragraph}>{paragraph}</p>)}
+            {detail.bodyLinks?.length ? <p className="article-context-links">Continue with the <>{detail.bodyLinks.map((link: any, index: number) => <span key={link.href}>{index ? index === detail.bodyLinks!.length - 1 ? ' and ' : ', ' : null}<a className="text-link" href={canonicalContentHref(link.href)} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>{link.label}</a></span>)}</>.</p> : null}
           </section>
 
           <section className="article-block card">
             <h2>Key takeaways</h2>
-            <ul className="list">{post.takeaways.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="list">{post.takeaways.map((item: string) => <li key={item}>{item}</li>)}</ul>
           </section>
 
-          {detail.sections.slice(0, 3).map((section) => <section className="article-block" key={section.heading}>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {detail.sections.slice(0, 3).map((section: any, si: number) => <section className="article-block" key={section.heading}>
+            <h2 id={`section-${si+1}`}>{section.heading}</h2>
+            {section.paragraphs.map((paragraph: any) => <p key={paragraph}>{paragraph}</p>)}
           </section>)}
 
           <section className="article-block" aria-labelledby="decision-table">
@@ -340,7 +340,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="article-table-wrap" role="region" aria-labelledby="decision-table" aria-describedby="table-scroll-cue" tabIndex={0}>
               <table className="article-table">
                 <thead><tr><th scope="col">If you need</th><th scope="col">Use this route</th><th scope="col">Owner workload</th></tr></thead>
-                <tbody>{detail.decisionRows.map((row) => <tr key={row.need}><th scope="row">{row.need}</th><td>{row.fit}</td><td>{row.reason}</td></tr>)}</tbody>
+                <tbody>{detail.decisionRows.map((row: any) => <tr key={row.need}><th scope="row">{row.need}</th><td>{row.fit}</td><td>{row.reason}</td></tr>)}</tbody>
               </table>
             </div>
           </section>
@@ -348,7 +348,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block" aria-labelledby="planning-numbers">
             <h2 id="planning-numbers">Key stats and a 30-day scorecard</h2>
             <p>The scorecard is a planning model for {detail.scenario.title.toLowerCase()}, not a promise or industry statistic. Replace each number with the review standard for your own workflow.</p>
-            <div className="number-grid">{detail.planningNumbers.map((item) => <div className="number-card" key={item.value}>
+            <div className="number-grid">{detail.planningNumbers.map((item: any) => <div className="number-card" key={item.value}>
               <span>{item.label}</span><strong>{item.value}</strong><small>{item.note}</small>
             </div>)}</div>
           </section>
@@ -360,20 +360,20 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="article-table-wrap" role="region" aria-labelledby="benchmark-table" aria-describedby="benchmark-table-cue" tabIndex={0}>
               <table className="article-table"><caption>Local administrative hire and Philippines-based remote assistant comparison</caption>
                 <thead><tr><th scope="col">Measure</th><th scope="col">Local U.S. hire</th><th scope="col">Philippines-based remote assistant</th><th scope="col">How to read it</th></tr></thead>
-                <tbody>{detail.benchmarkRows.map((row) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.local}</td><td>{row.remote}</td><td>{row.reading}</td></tr>)}</tbody>
+                <tbody>{detail.benchmarkRows.map((row: any) => <tr key={row.measure}><th scope="row">{row.measure}</th><td>{row.local}</td><td>{row.remote}</td><td>{row.reading}</td></tr>)}</tbody>
               </table>
             </div>
           </section> : null}
 
-          {detail.sections.slice(3, 6).map((section) => <section className="article-block" key={section.heading}>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {detail.sections.slice(3, 6).map((section: any, si: number) => <section className="article-block" key={section.heading}>
+            <h2 id={`section-${si+4}`}>{section.heading}</h2>
+            {section.paragraphs.map((paragraph: any) => <p key={paragraph}>{paragraph}</p>)}
           </section>)}
 
           <section className="article-block script-grid" aria-labelledby="copy-scripts">
             <h2 id="copy-scripts">Scripts you can copy</h2>
             <p>Start with the {detail.scripts[0].title.toLowerCase()} script, then replace its task names and approval rules with the evidence this guide asks you to collect.</p>
-            <div className="two">{detail.scripts.map((script) => <blockquote className="script-card" key={script.title}>
+            <div className="two">{detail.scripts.map((script: any) => <blockquote className="script-card" key={script.title}>
               <h3>{script.title}</h3><div className="script-copy">"{script.text}"</div>
             </blockquote>)}</div>
           </section>
@@ -381,19 +381,19 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block workflow-card" aria-labelledby="sample-workflow">
             <h2 id="sample-workflow">{detail.scenario.title}</h2>
             <p>{detail.scenario.intro}</p>
-            <ol className="workflow-list">{detail.scenario.steps.map((item) => <li key={item.step}>
+            <ol className="workflow-list">{detail.scenario.steps.map((item: any) => <li key={item.step}>
               <span>{item.step}</span><div><h3>{item.title}</h3><div className="workflow-copy">{item.body}</div></div>
             </li>)}</ol>
           </section>
 
-          {detail.sections.slice(6).map((section) => <section className="article-block" key={section.heading}>
+          {detail.sections.slice(6).map((section: any) => <section className="article-block" key={section.heading}>
             <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {section.paragraphs.map((paragraph: any) => <p key={paragraph}>{paragraph}</p>)}
           </section>)}
 
           <section className="article-block" aria-labelledby="faq-heading">
             <h2 id="faq-heading">Questions about hiring a Filipino assistant</h2>
-            <div className="faq-stack">{detail.faqs.map((faq) => <details key={faq.question} open>
+            <div className="faq-stack">{detail.faqs.map((faq: any) => <details key={faq.question} open>
               <summary>{faq.question}</summary><p>{faq.answer}</p>
             </details>)}</div>
           </section>
@@ -401,13 +401,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <section className="article-block card" aria-labelledby="related-guides">
             <h2 id="related-guides">Keep planning</h2>
             <p>Continue with {detail.relatedLinks[0].label.toLowerCase()} when that is the next unresolved part of the role. The remaining links cover adjacent decisions in the same Philippines-only staffing path.</p>
-            <ul className="list">{detail.relatedLinks.map((link) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
+            <ul className="list">{detail.relatedLinks.map((link: any) => <li key={link.href}><a className="text-link" href={canonicalContentHref(link.href)}>{link.label}</a></li>)}</ul>
           </section>
 
           <section className="article-block sources-card" aria-labelledby="sources-heading">
             <h2 id="sources-heading">Sources</h2>
             <p>{detail.sources[0].name} is one of the primary references behind this guide. The sources support the cited facts, but they do not set staffing terms or promise a business result.</p>
-            <ul className="list">{detail.sources.map((source) => <li key={source.url}>
+            <ul className="list">{detail.sources.map((source: any) => <li key={source.url}>
               <a className="text-link" href={source.url} rel="noreferrer" id="cta-blog-slug-action-6">{source.name}</a>: {source.note}
             </li>)}</ul>
           </section>
@@ -432,7 +432,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     mainEntityOfPage: `${site.url}/blog/${post.slug}`,
     author: { '@type': 'Organization', name: site.brand },
     publisher: { '@type': 'Organization', name: site.brand, url: site.url },
-    citation: publicSources.map((source) => source.url),
+    citation: publicSources.map((source: any) => source.url),
   };
 
   return <>

@@ -191,9 +191,9 @@ test('editorial consolidation uses an explicit manifest and preserves permanent 
   const retiredRanking = read('app/blog/top-25-virtual-assistant-companies-small-business/page.tsx');
   const homepage = read('app/page.tsx');
   const approved = [...policy.matchAll(/^  '([^']+)',$/gm)].map((match) => match[1]);
-  assert.equal(approved.length, 5);
+  assert.equal(approved.length, 17);
   assert.match(policy, /approvedBlogSlugs\.has\(post\.slug\)/);
-  assert.match(policy, /publishedResearchPosts = researchPosts\.filter\(\(\) => false\)/);
+  assert.match(policy, /publishedResearchPosts = researchPosts\.filter\(\(post\) => oct22ResearchSlugs\.has\(post\.slug\)\)/);
   assert.doesNotMatch(policy, /distinctWords|narrativeStrings|frequency/);
   assert.match(sitemap, /publishedBlogPosts\.map/);
   assert.doesNotMatch(sitemap, /['"]\/research['"]/);

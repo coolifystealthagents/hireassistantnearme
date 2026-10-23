@@ -87,7 +87,9 @@ try {
   assert.match(about.body, /<title>About Hire Assistant Near Me<\/title>/, 'absolute About title is not duplicated by the global template');
   const sitemap = await request(base, '/sitemap.xml', { method: 'GET' });
   assert.equal(sitemap.status, 200);
-  assert.doesNotMatch(sitemap.body, /thank-you|thanks-whats-next|\/research(?:<|\/)/, 'sitemap excludes confirmations and retired research');
+  assert.doesNotMatch(sitemap.body, /thank-you|thanks-whats-next/, 'sitemap excludes confirmation pages');
+  const researchUrls = [...sitemap.body.matchAll(/<loc>https:\/\/hireassistantnearme\.com\/research\/([^<]+)<\/loc>/g)].map((m) => m[1]);
+  assert.deepEqual(researchUrls.sort(), ['equipment-readiness-failure-study','interview-reschedule-impact-study','reference-check-latency-study','replacement-continuity-evidence-study','trial-task-evidence-completeness-study'].sort(), 'sitemap lists exactly the approved research batch');
 
   const emptyForm = 'firstName=&lastName=&email=&phone=&teamSize=&supportArea=&message=';
   assert.equal((await post(base, '/api/contact', emptyForm, { type: 'application/x-www-form-urlencoded' })).status, 403, 'contact rejects a missing Origin');

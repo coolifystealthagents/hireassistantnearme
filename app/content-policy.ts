@@ -10,6 +10,18 @@ export const approvedBlogSlugs = new Set([
   'hire-filipino-virtual-assistant',
   'virtual-assistant-security-checklist',
   'general-office-clerk-outlook-task-design-2026',
+  'assistant-trial-task-safety',
+  'assistant-reference-consent-control',
+  'interview-schedule-accommodation-route',
+  'candidate-equipment-readiness-check',
+  'availability-claim-verification',
+  'language-assessment-evidence',
+  'background-check-vendor-coordination',
+  'offer-letter-version-control',
+  'onboarding-buddy-assignment',
+  'probation-checkin-evidence',
+  'offboarding-knowledge-capture',
+  'provider-replacement-continuity',
 ]);
 
 export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug));
@@ -40,6 +52,18 @@ const editorialCards: Record<string, { src: string; alt: string; width: number; 
     alt: 'Editorial illustration of office notes and assigned follow-up tasks',
     width: 1024, height: 1024,
   },
+  'assistant-trial-task-safety': { src: '/images/oct22-assistant-trial-task-safety.png', alt: 'Assistant trial task safety illustrated workflow', width: 1200, height: 630 },
+  'assistant-reference-consent-control': { src: '/images/oct22-assistant-reference-consent-control.png', alt: 'Assistant reference consent control illustrated workflow', width: 1200, height: 630 },
+  'interview-schedule-accommodation-route': { src: '/images/oct22-interview-schedule-accommodation-route.png', alt: 'Interview schedule accommodation route illustrated workflow', width: 1200, height: 630 },
+  'candidate-equipment-readiness-check': { src: '/images/oct22-candidate-equipment-readiness-check.png', alt: 'Candidate equipment readiness check illustrated workflow', width: 1200, height: 630 },
+  'availability-claim-verification': { src: '/images/oct22-availability-claim-verification.png', alt: 'Availability claim verification illustrated workflow', width: 1200, height: 630 },
+  'language-assessment-evidence': { src: '/images/oct22-language-assessment-evidence.png', alt: 'Language assessment evidence illustrated workflow', width: 1200, height: 630 },
+  'background-check-vendor-coordination': { src: '/images/oct22-background-check-vendor-coordination.png', alt: 'Background check vendor coordination illustrated workflow', width: 1200, height: 630 },
+  'offer-letter-version-control': { src: '/images/oct22-offer-letter-version-control.png', alt: 'Offer letter version control illustrated workflow', width: 1200, height: 630 },
+  'onboarding-buddy-assignment': { src: '/images/oct22-onboarding-buddy-assignment.png', alt: 'Onboarding buddy assignment illustrated workflow', width: 1200, height: 630 },
+  'probation-checkin-evidence': { src: '/images/oct22-probation-checkin-evidence.png', alt: 'Probation checkin evidence illustrated workflow', width: 1200, height: 630 },
+  'offboarding-knowledge-capture': { src: '/images/oct22-offboarding-knowledge-capture.png', alt: 'Offboarding knowledge capture illustrated workflow', width: 1200, height: 630 },
+  'provider-replacement-continuity': { src: '/images/oct22-provider-replacement-continuity.png', alt: 'Provider replacement continuity illustrated workflow', width: 1200, height: 630 },
 };
 
 export function editorialCard(slug: string) {
@@ -52,8 +76,9 @@ export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlog
 
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.
-export const publishedResearchPosts = researchPosts.filter(() => false);
-export const retiredResearchSlugs = new Set(researchPosts.map((post) => post.slug));
+const oct22ResearchSlugs = new Set(['trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study']);
+export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug));
+export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug)).map((post) => post.slug));
 
 function topicTarget(slug: string) {
   if (/(security|access|permission|privacy|mfa|phishing|credential|incident|offboard|retention)/.test(slug)) return '/blog/virtual-assistant-security-checklist';

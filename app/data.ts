@@ -706,7 +706,7 @@ const baseBlogPosts = [
       ],
       relatedLinks: [
         { href: '/blog/administrative-assistant-benchmarks-small-business-2026', label: 'Read the administrative benchmark guide' },
-        { href: '/research/general-office-clerk-outlook-2024-2034', label: 'Open the supporting research report' },
+        { href: '/services/project-coordination', label: 'Plan a project coordination lane' },
         { href: '/blog/virtual-assistant-security-checklist', label: 'Set access rules before handoff' },
         { href: '/research', label: 'Browse the research hub' },
         { href: '/contact-us', label: 'Bring the role brief to a staffing call' }

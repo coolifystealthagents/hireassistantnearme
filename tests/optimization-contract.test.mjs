@@ -207,6 +207,17 @@ test('editorial consolidation uses an explicit manifest and preserves permanent 
   assert.doesNotMatch(homepage, /blogPosts\.slice\(0,3\)/);
 });
 
+test('the general-office clerk guide replaces its retired research path with a scoped project-coordination handoff', () => {
+  const data = read('app/data.ts');
+  const start = data.indexOf("slug: 'general-office-clerk-outlook-task-design-2026'");
+  const end = data.indexOf('\n  },];', start);
+  assert.ok(start >= 0 && end > start, 'the approved general-office clerk record must remain bounded');
+  const record = data.slice(start, end);
+  assert.match(record, /href: '\/services\/project-coordination', label: 'Plan a project coordination lane'/);
+  assert.doesNotMatch(record, /\/research\/general-office-clerk-outlook-2024-2034/);
+  assert.match(record, /Keep payments, account recovery, legal or medical judgment, sensitive exports, and final customer promises with the accountable owner/);
+});
+
 test('contact ingestion preserves required fields, consent, and measured limits', () => {
   const api = read('app/api/contact/route.ts');
   const form = read('app/contact-us/StandardContactForm.tsx');

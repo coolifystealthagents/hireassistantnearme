@@ -1,6 +1,6 @@
 # Service-led research link ledger
 
-Updated: 2026-10-22
+Updated: 2026-10-23
 
 This is an execution ledger, not a published page or a claim about rankings. It records whether an existing reader path can be changed safely. It does not create a new reader-facing link when the proposed source no longer renders as a page.
 
@@ -15,8 +15,14 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 
 `/research/lead-follow-up-consent-records` is also retired by the current content policy. Do not use it as an active source or add a second service link.
 
+## Published-cornerstone handoff — 2026-10-23
+
+| Published source | Replaced path | Reader-useful destination | Local artifact result | Decision boundary |
+| --- | --- | --- | --- | --- |
+| `/blog/general-office-clerk-outlook-task-design-2026` | Retired `/research/general-office-clerk-outlook-2024-2034` | `/services/project-coordination` | The fresh route artifact has one self-canonical, its expected H1, and one route-local `/services/project-coordination` anchor. The destination has its own expected H1, self-canonical, and generated-sitemap entry. | The guide keeps payments, account recovery, sensitive exports, final customer promises, and other listed decisions with the accountable owner. The service link prepares a coordination lane; it does not grant authority. |
+
 ## Verification record
 
-- Fresh local build on 2026-10-22 passed the declared test, type, build, and artifact gates.
-- Both former research URLs redirect under the local production server, and both intended service routes have a self-canonical, expected H1, and sitemap inclusion.
-- The sitemap deliberately has no `<lastmod>` fields. This is a source-only ledger reconciliation, so no deployment or public-route claim is made.
+- Fresh local build on 2026-10-23 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract.
+- A local production-server probe with the canonical host and HTTPS forwarding headers parsed the source and destination HTML independently. It found the source H1, its sole canonical, and the new service anchor in `<main>`; it also found the destination H1 and sole canonical.
+- Both canonical URLs are in the generated sitemap. The sitemap deliberately has no `<lastmod>` fields. This evidence is local source proof only and makes no deployment or public-route claim.

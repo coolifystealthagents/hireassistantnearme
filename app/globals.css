@@ -91,3 +91,6 @@ html{scroll-padding-top:92px}main[id],section[id]{scroll-margin-top:92px}.main-f
  .mobile-toc summary{cursor:pointer;font-weight:800;padding:6px 0}
  .mobile-toc ol{margin:8px 0 0;padding-left:18px}
 }
+
+/* Preserve the visible publication date in sentence case inside uppercase eyebrows. */
+time{text-transform:none}

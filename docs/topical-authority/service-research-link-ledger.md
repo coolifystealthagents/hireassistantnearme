@@ -31,7 +31,7 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 | What should the first month of assistant access protect? | `/services/executive-assistance`; `/services/calendar-and-inbox-support` | `/blog/virtual-assistant-security-checklist` has scoped service anchors inside its published route. | Do not add a security-themed link unless it gives a different, immediate reader decision. |
 | How can a team turn a general-office-clerk task list into a remote support brief? | `/services/project-coordination` | `/blog/general-office-clerk-outlook-task-design-2026` has one route-local service anchor. | Keep the existing coordination handoff. The accountable owner still decides on sensitive work and customer commitments. |
 
-All five active editorial routes already have a reader-useful service path. Their service links are rendered, so they are delivered and non-duplicable until a distinct reader question and destination are verified. This ledger does not claim a ranking effect or public rollout.
+The five inventoried cornerstone articles already have reader-useful service paths. Their service links are rendered, so they are delivered and non-duplicable until a distinct reader question and destination are verified. This ledger does not claim a ranking effect or public rollout.
 
 ## Verification record
 

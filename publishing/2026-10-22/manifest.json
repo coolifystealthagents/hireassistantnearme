@@ -1,0 +1,423 @@
+{
+  "site": "HireAssistantNearMe.com",
+  "domain": "https://hireassistantnearme.com",
+  "repository": "coolifystealthagents/hireassistantnearme",
+  "branch": "main",
+  "baseSha": "1da6ebaddbc96c48ba8cfff4791698958ac824f6",
+  "publicationDate": "2026-10-22",
+  "visibleDate": "October 22, 2026",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "app/data.ts",
+    "app/fleet-data.ts",
+    "app/content-policy.ts"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Run an Assistant Trial Task Without Exposing Real Data",
+      "slug": "assistant-trial-task-safety",
+      "route": "/blog/assistant-trial-task-safety",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-assistant-trial-task-safety.png",
+      "thumbnailSha256": "264b029358c21195b0874e8cf092af0cf576779a9ecaf8508014d7f4c6fcda0b",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/assistant-trial-task-safety-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/assistant-trial-task-safety-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/assistant-trial-task-safety-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/assistant-trial-task-safety-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/assistant-trial-task-safety-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Control Reference Checks With Clear Candidate Consent",
+      "slug": "assistant-reference-consent-control",
+      "route": "/blog/assistant-reference-consent-control",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-assistant-reference-consent-control.png",
+      "thumbnailSha256": "47fa58a66a3019df44df656e4e9d61de526e4cb5c8d56cec71aa7bc92f0864f0",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/assistant-reference-consent-control-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/assistant-reference-consent-control-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/assistant-reference-consent-control-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/assistant-reference-consent-control-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/assistant-reference-consent-control-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Route Interview Schedule Accommodations Without Judging the Candidate",
+      "slug": "interview-schedule-accommodation-route",
+      "route": "/blog/interview-schedule-accommodation-route",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-interview-schedule-accommodation-route.png",
+      "thumbnailSha256": "5e45fe669e13e6f537862caa2def1dd0f51b5bb93081665cfcb588362b446fb3",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/interview-schedule-accommodation-route-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/interview-schedule-accommodation-route-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/interview-schedule-accommodation-route-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/interview-schedule-accommodation-route-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/interview-schedule-accommodation-route-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Check Candidate Equipment Readiness Before the Start Date",
+      "slug": "candidate-equipment-readiness-check",
+      "route": "/blog/candidate-equipment-readiness-check",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-candidate-equipment-readiness-check.png",
+      "thumbnailSha256": "a165806d2e12038cddd60cb959dbb6aa2e74ef1542149f35ef0b37a90e88d094",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/candidate-equipment-readiness-check-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/candidate-equipment-readiness-check-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/candidate-equipment-readiness-check-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/candidate-equipment-readiness-check-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/candidate-equipment-readiness-check-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Verify Availability Claims Against the Approved Schedule",
+      "slug": "availability-claim-verification",
+      "route": "/blog/availability-claim-verification",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-availability-claim-verification.png",
+      "thumbnailSha256": "949a3402520b6eafc1109d94ce1e45b183c9b141a1291e2ead1ad16b80fb90f6",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/availability-claim-verification-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/availability-claim-verification-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/availability-claim-verification-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/availability-claim-verification-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/availability-claim-verification-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Assess Language Proficiency With Role-Relevant Evidence",
+      "slug": "language-assessment-evidence",
+      "route": "/blog/language-assessment-evidence",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-language-assessment-evidence.png",
+      "thumbnailSha256": "311aada969efae6702b537096e6f5dd7692e9bc9167c1db4f09797443b81ecb6",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/language-assessment-evidence-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/language-assessment-evidence-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/language-assessment-evidence-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/language-assessment-evidence-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/language-assessment-evidence-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Coordinate Background Checks Without Making the Adjudication",
+      "slug": "background-check-vendor-coordination",
+      "route": "/blog/background-check-vendor-coordination",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-background-check-vendor-coordination.png",
+      "thumbnailSha256": "6eb9a42868dd9bec83d3aeffd0cfa54bca64958ebf7cf5659708390f0a2026fd",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/background-check-vendor-coordination-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/background-check-vendor-coordination-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/background-check-vendor-coordination-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/background-check-vendor-coordination-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/background-check-vendor-coordination-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Version Offer Letters Before Any Commitment Is Sent",
+      "slug": "offer-letter-version-control",
+      "route": "/blog/offer-letter-version-control",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-offer-letter-version-control.png",
+      "thumbnailSha256": "ef6d41914aa11d5f1e7cbc7806a3e8de98539a17bd3543ce0565f4061440e46a",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/offer-letter-version-control-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/offer-letter-version-control-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/offer-letter-version-control-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/offer-letter-version-control-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/offer-letter-version-control-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Assign an Onboarding Buddy Without Blurring Manager Authority",
+      "slug": "onboarding-buddy-assignment",
+      "route": "/blog/onboarding-buddy-assignment",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-onboarding-buddy-assignment.png",
+      "thumbnailSha256": "7daf9a8d2a17d8ac27e8deb0b0799e26b79ddeff2cbc32816e14f2a4f4e9a1b6",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/onboarding-buddy-assignment-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/onboarding-buddy-assignment-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/onboarding-buddy-assignment-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/onboarding-buddy-assignment-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/onboarding-buddy-assignment-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Prepare Probation Check-Ins With Evidence, Not Surprises",
+      "slug": "probation-checkin-evidence",
+      "route": "/blog/probation-checkin-evidence",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-probation-checkin-evidence.png",
+      "thumbnailSha256": "6b698f21626e84eeb5a280e3f325459f3b08fce0ec9d5cacee5d9855c815ea46",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/probation-checkin-evidence-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/probation-checkin-evidence-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/probation-checkin-evidence-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/probation-checkin-evidence-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/probation-checkin-evidence-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Capture Assistant Job Knowledge Before Access Ends",
+      "slug": "offboarding-knowledge-capture",
+      "route": "/blog/offboarding-knowledge-capture",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-offboarding-knowledge-capture.png",
+      "thumbnailSha256": "8d97af12eaa2744eb9e5628bff48e1aeeade6fe0743fa9d956b122a5516ecd13",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/offboarding-knowledge-capture-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/offboarding-knowledge-capture-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/offboarding-knowledge-capture-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/offboarding-knowledge-capture-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/offboarding-knowledge-capture-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Blog",
+      "title": "Test Provider Replacement Continuity Before It Is Needed",
+      "slug": "provider-replacement-continuity",
+      "route": "/blog/provider-replacement-continuity",
+      "sourcePath": "app/oct22-blog-posts.ts",
+      "sourceSha256": "3b9f76290625f0b408f5fcf1e7d494ac3c2d0e7a6082f8e065fab65030407bce",
+      "thumbnailPath": "public/images/oct22-provider-replacement-continuity.png",
+      "thumbnailSha256": "d59b105b9a4f2721794b37ec4e7153534c160e9968a489ebcc5e592ed91c7ba3",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/provider-replacement-continuity-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/provider-replacement-continuity-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/provider-replacement-continuity-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/provider-replacement-continuity-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/provider-replacement-continuity-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Research",
+      "title": "Assistant Trial Task Evidence Completeness Study",
+      "slug": "trial-task-evidence-completeness-study",
+      "route": "/research/trial-task-evidence-completeness-study",
+      "sourcePath": "app/research-oct22.ts",
+      "sourceSha256": "943eb0acd47f679036ac2edf01d1af3efa6401ab90c0e6461186ccb6f99431a7",
+      "thumbnailPath": "public/images/oct22-trial-task-evidence-completeness-study.png",
+      "thumbnailSha256": "f829fad36dd04b19d813c4706947c8413fc5fed7d23f71041d1d6f16d5b1a84f",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/trial-task-evidence-completeness-study-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/trial-task-evidence-completeness-study-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/trial-task-evidence-completeness-study-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/trial-task-evidence-completeness-study-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/trial-task-evidence-completeness-study-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Research",
+      "title": "Reference Check Consent and Response Latency Study",
+      "slug": "reference-check-latency-study",
+      "route": "/research/reference-check-latency-study",
+      "sourcePath": "app/research-oct22.ts",
+      "sourceSha256": "943eb0acd47f679036ac2edf01d1af3efa6401ab90c0e6461186ccb6f99431a7",
+      "thumbnailPath": "public/images/oct22-reference-check-latency-study.png",
+      "thumbnailSha256": "d8688aa39e323672dd0df10747d473418af7297c6907365d68acf4409b3b2415",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/reference-check-latency-study-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/reference-check-latency-study-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/reference-check-latency-study-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/reference-check-latency-study-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/reference-check-latency-study-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Research",
+      "title": "Interview Reschedule and Accommodation Impact Study",
+      "slug": "interview-reschedule-impact-study",
+      "route": "/research/interview-reschedule-impact-study",
+      "sourcePath": "app/research-oct22.ts",
+      "sourceSha256": "943eb0acd47f679036ac2edf01d1af3efa6401ab90c0e6461186ccb6f99431a7",
+      "thumbnailPath": "public/images/oct22-interview-reschedule-impact-study.png",
+      "thumbnailSha256": "84980a1f4afb8309bf7d18feb3f57c24dd9c831ea0a32e2ed8a2e7161bf7d978",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/interview-reschedule-impact-study-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/interview-reschedule-impact-study-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/interview-reschedule-impact-study-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/interview-reschedule-impact-study-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/interview-reschedule-impact-study-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Research",
+      "title": "Remote Assistant Equipment Readiness Failure Study",
+      "slug": "equipment-readiness-failure-study",
+      "route": "/research/equipment-readiness-failure-study",
+      "sourcePath": "app/research-oct22.ts",
+      "sourceSha256": "943eb0acd47f679036ac2edf01d1af3efa6401ab90c0e6461186ccb6f99431a7",
+      "thumbnailPath": "public/images/oct22-equipment-readiness-failure-study.png",
+      "thumbnailSha256": "e003fa1ca5a5491a132c41d8eb56e6ff09611935aa2a78f393fcffc903086589",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/equipment-readiness-failure-study-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/equipment-readiness-failure-study-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/equipment-readiness-failure-study-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/equipment-readiness-failure-study-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/equipment-readiness-failure-study-mobile-toc.png"
+      }
+    },
+    {
+      "section": "Research",
+      "title": "Provider Replacement Continuity Evidence Study",
+      "slug": "replacement-continuity-evidence-study",
+      "route": "/research/replacement-continuity-evidence-study",
+      "sourcePath": "app/research-oct22.ts",
+      "sourceSha256": "943eb0acd47f679036ac2edf01d1af3efa6401ab90c0e6461186ccb6f99431a7",
+      "thumbnailPath": "public/images/oct22-replacement-continuity-evidence-study.png",
+      "thumbnailSha256": "31d451edde7e856a76e7d80d4dc4fe45029cdb25fb56adf716259a73377272db",
+      "thumbnailDimensions": [
+        1200,
+        630
+      ],
+      "publicationDate": "2026-10-22",
+      "screenshots": {
+        "desktop-top": "qa/coverage-hireassistantnearme/render/shots/replacement-continuity-evidence-study-desktop-top.png",
+        "mobile-top": "qa/coverage-hireassistantnearme/render/shots/replacement-continuity-evidence-study-mobile-top.png",
+        "desktop-mid": "qa/coverage-hireassistantnearme/render/shots/replacement-continuity-evidence-study-desktop-mid.png",
+        "mobile-mid": "qa/coverage-hireassistantnearme/render/shots/replacement-continuity-evidence-study-mobile-mid.png",
+        "mobile-toc": "qa/coverage-hireassistantnearme/render/shots/replacement-continuity-evidence-study-mobile-toc.png"
+      }
+    }
+  ],
+  "errors": [],
+  "generatedAt": "2026-10-25",
+  "coverageJob": "hireassistantnearme|2026-10-22|render_evidence",
+  "checks": {
+    "contentCounts": "12 blog + 5 research",
+    "publicationDate": "2026-10-22",
+    "thumbnailSize": "1200x630",
+    "uniqueSlugs": true,
+    "uniqueTitles": true,
+    "sourceHashes": "sha256 per source registry",
+    "thumbnailHashes": "sha256 per article",
+    "researchSources": "10 authoritative HTTPS sources in research registry",
+    "build": "pass (npm run build through safe_build.sh; artifact contract 16/16)",
+    "renderedAudit": "17/17 articles pass desktop+mobile",
+    "visibleDate": "October 22, 2026 observed",
+    "timeDatetime": "2026-10-22 observed",
+    "desktopStickyToc": "pass",
+    "mobileStickyToc": "pass",
+    "horizontalOverflow": "0",
+    "missingAnchors": "none",
+    "brokenImages": "none"
+  },
+  "evidence": {
+    "helperArtifact": "helper-2/qa/coverage-hireassistantnearme/render/qa.json",
+    "screenshots": "helper-2/qa/coverage-hireassistantnearme/render/shots",
+    "note": "Evidence generated from local production server at baseSha before this manifest-only commit. Local host-forwarding proxy used only for canonical-host middleware."
+  }
+}

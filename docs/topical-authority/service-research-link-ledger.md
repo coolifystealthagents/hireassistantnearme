@@ -21,6 +21,18 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 | --- | --- | --- | --- | --- |
 | `/blog/general-office-clerk-outlook-task-design-2026` | Retired `/research/general-office-clerk-outlook-2024-2034` | `/services/project-coordination` | The fresh route artifact has one self-canonical, its expected H1, and one route-local `/services/project-coordination` anchor. The destination has its own expected H1, self-canonical, and generated-sitemap entry. | The guide keeps payments, account recovery, sensitive exports, final customer promises, and other listed decisions with the accountable owner. The service link prepares a coordination lane; it does not grant authority. |
 
+## Active published-topic map — 2026-10-25
+
+| Published reader question | Existing service path | Current artifact state | Next safe action |
+| --- | --- | --- | --- |
+| Should a local administrative hire or a Philippines-based remote assistant handle this work? | `/services/calendar-and-inbox-support` | `/blog/local-vs-remote-administrative-assistant-benchmark-2026` has one route-local service anchor. | Keep the comparison focused on task location and review rules. Do not add a second generic service link. |
+| What do current administrative benchmarks mean for a small-business role brief? | `/services/project-coordination` | `/blog/administrative-assistant-benchmarks-small-business-2026` has one route-local service anchor. | Keep the next step tied to a written scope, evidence, and owner. |
+| How can an owner plan a Filipino virtual-assistant role? | `/services/executive-assistance`; `/services/calendar-and-inbox-support` | `/blog/hire-filipino-virtual-assistant` has one route-local anchor for each service. | Keep the two paths distinct: executive support for executive work and calendar support for routine scheduling or inbox work. |
+| What should the first month of assistant access protect? | `/services/executive-assistance`; `/services/calendar-and-inbox-support` | `/blog/virtual-assistant-security-checklist` has scoped service anchors inside its published route. | Do not add a security-themed link unless it gives a different, immediate reader decision. |
+| How can a team turn a general-office-clerk task list into a remote support brief? | `/services/project-coordination` | `/blog/general-office-clerk-outlook-task-design-2026` has one route-local service anchor. | Keep the existing coordination handoff. The accountable owner still decides on sensitive work and customer commitments. |
+
+All five active editorial routes already have a reader-useful service path. Their service links are rendered, so they are delivered and non-duplicable until a distinct reader question and destination are verified. This ledger does not claim a ranking effect or public rollout.
+
 ## Verification record
 
 - Fresh local build on 2026-10-23 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract.

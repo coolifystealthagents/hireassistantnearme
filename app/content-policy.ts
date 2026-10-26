@@ -27,6 +27,18 @@ export const approvedBlogSlugs = new Set([
 
 // Current date-batch release manifest. Kept separate from the retained cornerstone list.
 const publishedBatchBlogSlugs = new Set([
+    'hireassistantnearme-build-a-first-week-shadow-plan-for-role-scorecard',
+    'hireassistantnearme-build-a-two-person-verification-step-for-work-sample',
+    'hireassistantnearme-create-a-recovery-checklist-for-interview-panel',
+    'hireassistantnearme-define-a-stop-work-trigger-for-30-day-review',
+    'hireassistantnearme-define-the-minimum-evidence-for-work-sample',
+    'hireassistantnearme-design-a-daily-control-board-for-role-scorecard',
+    'hireassistantnearme-keep-a-correction-log-for-candidate-intake',
+    'hireassistantnearme-run-a-monthly-control-review-for-interview-panel',
+    'hireassistantnearme-run-a-surprise-sample-of-offer-packet',
+    'hireassistantnearme-set-a-stale-record-rule-for-reference-check',
+    'hireassistantnearme-write-a-customer-safe-status-note-for-trial-plan',
+    'hireassistantnearme-write-a-decision-rights-note-for-candidate-intake',
     'hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review',
     'hireassistantnearme-map-the-source-of-truth-for-candidate-intake',
     'hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week',
@@ -105,7 +117,7 @@ export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlog
 
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.
-const oct22ResearchSlugs = new Set(['trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
+const oct22ResearchSlugs = new Set(['hireassistantnearme-auditing-access-changes-around-offer-packet','hireassistantnearme-estimating-rework-cost-in-reference-check','hireassistantnearme-measuring-backlog-age-in-work-sample','hireassistantnearme-testing-handoff-completeness-in-interview-panel','hireassistantnearme-testing-monitoring-coverage-for-trial-plan','trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
 export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug));
 export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug)).map((post) => post.slug));
 

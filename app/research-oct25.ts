@@ -3,8 +3,8 @@ const published = '2026-10-25';
 export const oct25ResearchPosts: readonly ResearchPost[] = [
   {
     "slug": "hireassistantnearme-attributing-rework-in-reference-check",
-    "title": "Attributing rework in reference check",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: reference check without unsupported decisions.",
+    "title": "Attributing rework in a reference check",
+    "excerpt": "A bounded method for classifying why a reference-check record had to be reworked, with a frozen codebook and reviewer calibration.",
     "published": "2026-10-25",
     "image": "/images/oct25/hireassistantnearme-attributing-rework-in-reference-check.png",
     "imageAlt": "Attributing rework in reference check study diagram",
@@ -123,8 +123,8 @@ export const oct25ResearchPosts: readonly ResearchPost[] = [
   },
   {
     "slug": "hireassistantnearme-capacity-planning-for-offer-packet",
-    "title": "Capacity planning for offer packet",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: offer packet without unsupported decisions.",
+    "title": "Capacity planning for offer packets",
+    "excerpt": "A time-based capacity model for offer-packet preparation, review, rework, and the reviewer minutes a safe hiring lane consumes.",
     "published": "2026-10-25",
     "image": "/images/oct25/hireassistantnearme-capacity-planning-for-offer-packet.png",
     "imageAlt": "Capacity planning for offer packet study diagram",
@@ -243,8 +243,8 @@ export const oct25ResearchPosts: readonly ResearchPost[] = [
   },
   {
     "slug": "hireassistantnearme-early-warning-signals-in-trial-plan",
-    "title": "Early-warning signals in trial plan",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: trial plan without unsupported decisions.",
+    "title": "Early-warning signals in a trial plan",
+    "excerpt": "A bounded review of observable signals that a trial plan is drifting: missing evidence, unclear ownership, schedule gaps, and stale approvals.",
     "published": "2026-10-25",
     "image": "/images/oct25/hireassistantnearme-early-warning-signals-in-trial-plan.png",
     "imageAlt": "Early-warning signals in trial plan study diagram",
@@ -363,8 +363,8 @@ export const oct25ResearchPosts: readonly ResearchPost[] = [
   },
   {
     "slug": "hireassistantnearme-measuring-response-time-for-work-sample",
-    "title": "Measuring response time for work sample",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
+    "title": "Measuring response time for work samples",
+    "excerpt": "A reproducible interval study for work-sample review, with start and stop rules, pauses, cohorts, censoring, and unresolved cases.",
     "published": "2026-10-25",
     "image": "/images/oct25/hireassistantnearme-measuring-response-time-for-work-sample.png",
     "imageAlt": "Measuring response time for work sample study diagram",
@@ -483,8 +483,8 @@ export const oct25ResearchPosts: readonly ResearchPost[] = [
   },
   {
     "slug": "hireassistantnearme-testing-completeness-in-interview-panel",
-    "title": "Testing completeness in interview panel",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
+    "title": "Testing completeness in interview panels",
+    "excerpt": "A checklist-based completeness study for interview-panel records, with required fields, reviewer calibration, and explicit sample limits.",
     "published": "2026-10-25",
     "image": "/images/oct25/hireassistantnearme-testing-completeness-in-interview-panel.png",
     "imageAlt": "Testing completeness in interview panel study diagram",

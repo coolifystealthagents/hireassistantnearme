@@ -22,21 +22,26 @@ export const approvedBlogSlugs = new Set([
   'probation-checkin-evidence',
   'offboarding-knowledge-capture',
   'provider-replacement-continuity',
-  'hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review',
-  'hireassistantnearme-map-the-source-of-truth-for-candidate-intake',
-  'hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week',
-  'hireassistantnearme-report-interview-panel-without-vanity-metrics',
-  'hireassistantnearme-review-access-before-changing-trial-plan',
-  'hireassistantnearme-run-a-weekly-review-for-role-scorecard',
-  'hireassistantnearme-run-an-exception-queue-for-interview-panel',
-  'hireassistantnearme-sample-quality-for-offer-packet-without-guessing',
-  'hireassistantnearme-set-approval-boundaries-around-reference-check',
-  'hireassistantnearme-standardize-30-day-review-updates-across-the-team',
-  'hireassistantnearme-write-a-handoff-protocol-for-work-sample',
-  'hireassistantnearme-write-an-sop-for-work-sample-that-people-use',
 ]);
 
-export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug));
+
+// Current date-batch release manifest. Kept separate from the retained cornerstone list.
+const publishedBatchBlogSlugs = new Set([
+    'hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review',
+    'hireassistantnearme-map-the-source-of-truth-for-candidate-intake',
+    'hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week',
+    'hireassistantnearme-report-interview-panel-without-vanity-metrics',
+    'hireassistantnearme-review-access-before-changing-trial-plan',
+    'hireassistantnearme-run-a-weekly-review-for-role-scorecard',
+    'hireassistantnearme-run-an-exception-queue-for-interview-panel',
+    'hireassistantnearme-sample-quality-for-offer-packet-without-guessing',
+    'hireassistantnearme-set-approval-boundaries-around-reference-check',
+    'hireassistantnearme-standardize-30-day-review-updates-across-the-team',
+    'hireassistantnearme-write-a-handoff-protocol-for-work-sample',
+    'hireassistantnearme-write-an-sop-for-work-sample-that-people-use',
+]);
+
+export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug) || publishedBatchBlogSlugs.has(post.slug));
 
 const editorialCards: Record<string, { src: string; alt: string; width: number; height: number }> = {
   'local-vs-remote-administrative-assistant-benchmark-2026': {
@@ -96,7 +101,7 @@ export function editorialCard(slug: string) {
   return card;
 }
 
-export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlogSlugs.has(post.slug)).map((post) => post.slug));
+export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlogSlugs.has(post.slug) && !publishedBatchBlogSlugs.has(post.slug)).map((post) => post.slug));
 
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.

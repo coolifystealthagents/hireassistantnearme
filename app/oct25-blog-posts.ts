@@ -2,26 +2,25 @@ const published = '2026-10-25';
 export const oct25BlogPosts: any[] = [
   {
     "slug": "hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review",
-    "title": "Build a role scorecard intake record that survives review",
-    "mainKeyword": "role scorecard",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
+    "title": "Build a role-scorecard intake record that survives review",
+    "mainKeyword": "role-scorecard intake record",
+    "excerpt": "A practical hiring workflow for the role-scorecard intake record: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review.png",
     "imageAlt": "Build a role scorecard intake record that survives review illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the role-scorecard intake record: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the role-scorecard intake record unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the role-scorecard intake record: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -35,58 +34,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why role scorecard needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The role scorecard control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the role scorecard record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Record the exact role scorecard source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since.",
-            "If the role scorecard rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "The role-scorecard intake record should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs role scorecard. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Write the next action as a sentence with an owner and a time. \"Review the role scorecard exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do.",
+            "For role-scorecard intake record, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Keep the role scorecard queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "The assistant can prepare the role-scorecard intake record packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for role scorecard: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction.",
+            "Review the role-scorecard intake record queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for role scorecard: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Use a short reason code for every role scorecard exception. The code should describe the evidence problem, not the person who found it."
+            "Define reason codes for role-scorecard intake record: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close role scorecard only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Review one role scorecard case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score.",
+            "Close role-scorecard intake record only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -239,25 +225,24 @@ export const oct25BlogPosts: any[] = [
   {
     "slug": "hireassistantnearme-map-the-source-of-truth-for-candidate-intake",
     "title": "Map the source of truth for candidate intake",
-    "mainKeyword": "candidate intake",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
+    "mainKeyword": "candidate-intake source map",
+    "excerpt": "A practical hiring workflow for the candidate-intake source map: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-map-the-source-of-truth-for-candidate-intake.png",
     "imageAlt": "Map the source of truth for candidate intake illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the candidate-intake source map: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the candidate-intake source map unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the candidate-intake source map: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -271,59 +256,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why candidate intake needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The candidate intake control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the candidate intake record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Write the next action as a sentence with an owner and a time. \"Review the candidate intake exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is.",
-            "Keep a named backup for the candidate intake owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the candidate-intake source map lane, record this as a separate review checkpoint.",
+            "The candidate-intake source map should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs candidate intake. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Keep the candidate intake queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work.",
-            "Do not copy a value from a prior candidate intake record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "For candidate-intake source map, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the candidate-intake source map lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the candidate-intake source map lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the candidate-intake source map packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for candidate intake: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Use a short reason code for every candidate intake exception. The code should describe the evidence problem, not the person who found it."
+            "Review the candidate-intake source map queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the candidate-intake source map lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for candidate intake: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Review one candidate intake case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the candidate-intake source map lane, record this as a separate review checkpoint.",
+            "Define reason codes for candidate-intake source map: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close candidate intake only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "If the candidate intake rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "Close candidate-intake source map only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the candidate-intake source map lane, record this as a separate review checkpoint."
           ]
         }
       ],
@@ -476,25 +447,24 @@ export const oct25BlogPosts: any[] = [
   {
     "slug": "hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week",
     "title": "Onboard a VA into candidate intake in the first week",
-    "mainKeyword": "candidate intake",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
+    "mainKeyword": "candidate-intake onboarding",
+    "excerpt": "A practical hiring workflow for the candidate-intake onboarding: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week.png",
     "imageAlt": "Onboard a VA into candidate intake in the first week illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the candidate-intake onboarding: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the candidate-intake onboarding unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: candidate intake without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the candidate-intake onboarding: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -508,58 +478,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why candidate intake needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The candidate intake control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the candidate intake record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Close the loop with the person who raised the candidate intake issue. A record that is internally complete but never confirmed by the requester is only half closed.",
-            "Review one candidate intake case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "The candidate-intake onboarding should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the candidate-intake onboarding lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs candidate intake. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Record the exact candidate intake source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the candidate-intake onboarding lane, record this as a separate review checkpoint.",
+            "For candidate-intake onboarding, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Write the next action as a sentence with an owner and a time. \"Review the candidate intake exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "The assistant can prepare the candidate-intake onboarding packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the candidate-intake onboarding lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for candidate intake: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Keep the candidate intake queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the candidate-intake onboarding lane, record this as a separate review checkpoint.",
+            "Review the candidate-intake onboarding queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for candidate intake: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Define reason codes for candidate-intake onboarding: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the candidate-intake onboarding lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close candidate intake only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Use a short reason code for every candidate intake exception. The code should describe the evidence problem, not the person who found it."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the candidate-intake onboarding lane, record this as a separate review checkpoint.",
+            "Close candidate-intake onboarding only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -711,26 +668,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-report-interview-panel-without-vanity-metrics",
-    "title": "Report interview panel without vanity metrics",
-    "mainKeyword": "interview panel",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
+    "title": "Report interview-panel quality without vanity metrics",
+    "mainKeyword": "interview-panel report",
+    "excerpt": "A practical hiring workflow for the interview-panel report: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-report-interview-panel-without-vanity-metrics.png",
     "imageAlt": "Report interview panel without vanity metrics illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the interview-panel report: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the interview-panel report unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the interview-panel report: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -744,59 +700,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why interview panel needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The interview panel control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the interview panel record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Write the next action as a sentence with an owner and a time. \"Review the interview panel exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is.",
-            "Keep a named backup for the interview panel owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the interview-panel report lane, record this as a separate review checkpoint.",
+            "The interview-panel report should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs interview panel. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Keep the interview panel queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work.",
-            "Do not copy a value from a prior interview panel record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "For interview-panel report, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the interview-panel report lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the interview-panel report lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the interview-panel report packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for interview panel: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Use a short reason code for every interview panel exception. The code should describe the evidence problem, not the person who found it."
+            "Review the interview-panel report queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the interview-panel report lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for interview panel: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Review one interview panel case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the interview-panel report lane, record this as a separate review checkpoint.",
+            "Define reason codes for interview-panel report: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close interview panel only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "If the interview panel rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "Close interview-panel report only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the interview-panel report lane, record this as a separate review checkpoint."
           ]
         }
       ],
@@ -948,26 +890,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-review-access-before-changing-trial-plan",
-    "title": "Review access before changing trial plan",
-    "mainKeyword": "trial plan",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: trial plan without unsupported decisions.",
+    "title": "Review access before changing the trial plan",
+    "mainKeyword": "trial-plan access review",
+    "excerpt": "A practical hiring workflow for the trial-plan access review: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-review-access-before-changing-trial-plan.png",
     "imageAlt": "Review access before changing trial plan illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: trial plan without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the trial-plan access review: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the trial-plan access review unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: trial plan without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the trial-plan access review: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -981,58 +922,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why trial plan needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The trial plan control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the trial plan record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "If the trial plan rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable.",
-            "Keep the trial plan queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "The trial-plan access review should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the trial-plan access review lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs trial plan. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Keep a named backup for the trial plan owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the trial-plan access review lane, record this as a separate review checkpoint.",
+            "For trial-plan access review, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Do not copy a value from a prior trial plan record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "The assistant can prepare the trial-plan access review packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the trial-plan access review lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for trial plan: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Close the loop with the person who raised the trial plan issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the trial-plan access review lane, record this as a separate review checkpoint.",
+            "Review the trial-plan access review queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for trial plan: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Record the exact trial plan source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Define reason codes for trial-plan access review: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the trial-plan access review lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close trial plan only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Write the next action as a sentence with an owner and a time. \"Review the trial plan exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the trial-plan access review lane, record this as a separate review checkpoint.",
+            "Close trial-plan access review only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -1184,26 +1112,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-run-a-weekly-review-for-role-scorecard",
-    "title": "Run a weekly review for role scorecard",
-    "mainKeyword": "role scorecard",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
+    "title": "Run a weekly review for the role scorecard",
+    "mainKeyword": "role-scorecard review",
+    "excerpt": "A practical hiring workflow for the role-scorecard review: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-run-a-weekly-review-for-role-scorecard.png",
     "imageAlt": "Run a weekly review for role scorecard illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the role-scorecard review: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the role-scorecard review unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: role scorecard without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the role-scorecard review: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -1217,59 +1144,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why role scorecard needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The role scorecard control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the role scorecard record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Do not copy a value from a prior role scorecard record because it looks familiar. Reopen the source, confirm the version, and record what changed.",
-            "Use a short reason code for every role scorecard exception. The code should describe the evidence problem, not the person who found it."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the role-scorecard review lane, record this as a separate review checkpoint.",
+            "The role-scorecard review should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs role scorecard. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Close the loop with the person who raised the role scorecard issue. A record that is internally complete but never confirmed by the requester is only half closed.",
-            "Review one role scorecard case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "For role-scorecard review, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the role-scorecard review lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Record the exact role scorecard source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the role-scorecard review lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the role-scorecard review packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for role scorecard: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Write the next action as a sentence with an owner and a time. \"Review the role scorecard exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "Review the role-scorecard review queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the role-scorecard review lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for role scorecard: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Keep the role scorecard queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the role-scorecard review lane, record this as a separate review checkpoint.",
+            "Define reason codes for role-scorecard review: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close role scorecard only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Close role-scorecard review only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the role-scorecard review lane, record this as a separate review checkpoint."
           ]
         }
       ],
@@ -1421,26 +1334,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-run-an-exception-queue-for-interview-panel",
-    "title": "Run an exception queue for interview panel",
-    "mainKeyword": "interview panel",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
+    "title": "Run an exception queue for the interview panel",
+    "mainKeyword": "interview-panel exception queue",
+    "excerpt": "A practical hiring workflow for the interview-panel exception queue: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-run-an-exception-queue-for-interview-panel.png",
     "imageAlt": "Run an exception queue for interview panel illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the interview-panel exception queue: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the interview-panel exception queue unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: interview panel without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the interview-panel exception queue: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -1454,59 +1366,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why interview panel needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The interview panel control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the interview panel record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed.",
-            "Close the loop with the person who raised the interview panel issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "The interview-panel exception queue should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the interview-panel exception queue lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs interview panel. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Use a short reason code for every interview panel exception. The code should describe the evidence problem, not the person who found it.",
-            "Record the exact interview panel source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the interview-panel exception queue lane, record this as a separate review checkpoint.",
+            "For interview-panel exception queue, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Review one interview panel case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "The assistant can prepare the interview-panel exception queue packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the interview-panel exception queue lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for interview panel: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "If the interview panel rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the interview-panel exception queue lane, record this as a separate review checkpoint.",
+            "Review the interview-panel exception queue queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for interview panel: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Keep a named backup for the interview panel owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Define reason codes for interview-panel exception queue: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the interview-panel exception queue lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close interview panel only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Do not copy a value from a prior interview panel record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the interview-panel exception queue lane, record this as a separate review checkpoint.",
+            "Close interview-panel exception queue only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -1658,26 +1556,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-sample-quality-for-offer-packet-without-guessing",
-    "title": "Sample quality for offer packet without guessing",
-    "mainKeyword": "offer packet",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: offer packet without unsupported decisions.",
+    "title": "Sample offer-packet work without guessing",
+    "mainKeyword": "offer-packet sample",
+    "excerpt": "A practical hiring workflow for the offer-packet sample: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-sample-quality-for-offer-packet-without-guessing.png",
     "imageAlt": "Sample quality for offer packet without guessing illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: offer packet without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the offer-packet sample: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the offer-packet sample unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: offer packet without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the offer-packet sample: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -1691,58 +1588,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why offer packet needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The offer packet control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the offer packet record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Review one offer packet case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count.",
-            "Write the next action as a sentence with an owner and a time. \"Review the offer packet exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the offer-packet sample lane, record this as a separate review checkpoint.",
+            "The offer-packet sample should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs offer packet. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "If the offer packet rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "For offer-packet sample, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the offer-packet sample lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Keep a named backup for the offer packet owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the offer-packet sample lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the offer-packet sample packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for offer packet: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Do not copy a value from a prior offer packet record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "Review the offer-packet sample queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the offer-packet sample lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for offer packet: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Close the loop with the person who raised the offer packet issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the offer-packet sample lane, record this as a separate review checkpoint.",
+            "Define reason codes for offer-packet sample: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close offer packet only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Record the exact offer packet source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Close offer-packet sample only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the offer-packet sample lane, record this as a separate review checkpoint."
           ]
         }
       ],
@@ -1894,26 +1778,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-set-approval-boundaries-around-reference-check",
-    "title": "Set approval boundaries around reference check",
-    "mainKeyword": "reference check",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: reference check without unsupported decisions.",
+    "title": "Set approval boundaries around reference checks",
+    "mainKeyword": "reference-check boundary",
+    "excerpt": "A practical hiring workflow for the reference-check boundary: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-set-approval-boundaries-around-reference-check.png",
     "imageAlt": "Set approval boundaries around reference check illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: reference check without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the reference-check boundary: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the reference-check boundary unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: reference check without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the reference-check boundary: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -1927,59 +1810,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why reference check needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The reference check control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the reference check record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Use a short reason code for every reference check exception. The code should describe the evidence problem, not the person who found it.",
-            "Record the exact reference check source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "The reference-check boundary should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the reference-check boundary lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs reference check. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Review one reference check case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count.",
-            "Write the next action as a sentence with an owner and a time. \"Review the reference check exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the reference-check boundary lane, record this as a separate review checkpoint.",
+            "For reference-check boundary, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "If the reference check rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "The assistant can prepare the reference-check boundary packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the reference-check boundary lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for reference check: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Keep a named backup for the reference check owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the reference-check boundary lane, record this as a separate review checkpoint.",
+            "Review the reference-check boundary queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for reference check: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Do not copy a value from a prior reference check record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "Define reason codes for reference-check boundary: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the reference-check boundary lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close reference check only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Close the loop with the person who raised the reference check issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the reference-check boundary lane, record this as a separate review checkpoint.",
+            "Close reference-check boundary only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -2132,25 +2001,24 @@ export const oct25BlogPosts: any[] = [
   {
     "slug": "hireassistantnearme-standardize-30-day-review-updates-across-the-team",
     "title": "Standardize 30-day review updates across the team",
-    "mainKeyword": "30-day review",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: 30-day review without unsupported decisions.",
+    "mainKeyword": "30-day review update",
+    "excerpt": "A practical hiring workflow for the 30-day review update: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-standardize-30-day-review-updates-across-the-team.png",
     "imageAlt": "Standardize 30-day review updates across the team illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: 30-day review without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the 30-day review update: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the 30-day review update unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: 30-day review without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the 30-day review update: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -2164,58 +2032,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why 30-day review needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The 30-day review control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the 30-day review record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Keep a named backup for the 30-day review owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the 30-day review update lane, record this as a separate review checkpoint.",
+            "The 30-day review update should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs 30-day review. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Do not copy a value from a prior 30-day review record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "For 30-day review update, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the 30-day review update lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Close the loop with the person who raised the 30-day review issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the 30-day review update lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the 30-day review update packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for 30-day review: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Record the exact 30-day review source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since."
+            "Review the 30-day review update queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the 30-day review update lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for 30-day review: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Write the next action as a sentence with an owner and a time. \"Review the 30-day review exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the 30-day review update lane, record this as a separate review checkpoint.",
+            "Define reason codes for 30-day review update: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close 30-day review only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Keep the 30-day review queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "Close 30-day review update only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the 30-day review update lane, record this as a separate review checkpoint."
           ]
         }
       ],
@@ -2367,26 +2222,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-write-a-handoff-protocol-for-work-sample",
-    "title": "Write a handoff protocol for work sample",
-    "mainKeyword": "work sample",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
+    "title": "Write a handoff protocol for the work sample",
+    "mainKeyword": "work-sample handoff",
+    "excerpt": "A practical hiring workflow for the work-sample handoff: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-write-a-handoff-protocol-for-work-sample.png",
     "imageAlt": "Write a handoff protocol for work sample illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the work-sample handoff: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the work-sample handoff unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the work-sample handoff: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -2400,59 +2254,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why work sample needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The work sample control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the work sample record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Keep the work sample queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work.",
-            "Do not copy a value from a prior work sample record because it looks familiar. Reopen the source, confirm the version, and record what changed."
+            "The work-sample handoff should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting.",
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the work-sample handoff lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs work sample. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed.",
-            "Close the loop with the person who raised the work sample issue. A record that is internally complete but never confirmed by the requester is only half closed."
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the work-sample handoff lane, record this as a separate review checkpoint.",
+            "For work-sample handoff, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Use a short reason code for every work sample exception. The code should describe the evidence problem, not the person who found it."
+            "The assistant can prepare the work-sample handoff packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval.",
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the work-sample handoff lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for work sample: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "Review one work sample case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the work-sample handoff lane, record this as a separate review checkpoint.",
+            "Review the work-sample handoff queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for work sample: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "If the work sample rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "Define reason codes for work-sample handoff: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction.",
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the work-sample handoff lane, record this as a separate review checkpoint."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close work sample only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Keep a named backup for the work sample owner. Coverage during leave or a time-zone gap should be written into the routine, not improvised when the owner is unavailable."
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the work-sample handoff lane, record this as a separate review checkpoint.",
+            "Close work-sample handoff only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date."
           ]
         }
       ],
@@ -2604,26 +2444,25 @@ export const oct25BlogPosts: any[] = [
   },
   {
     "slug": "hireassistantnearme-write-an-sop-for-work-sample-that-people-use",
-    "title": "Write an SOP for work sample that people use",
-    "mainKeyword": "work sample",
-    "excerpt": "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
+    "title": "Write a work-sample SOP people use",
+    "mainKeyword": "work-sample SOP",
+    "excerpt": "A practical hiring workflow for the work-sample SOP: source, owner, decision boundary, exception, and close evidence.",
     "published": "2026-10-25",
     "richPublished": true,
     "minutes": 6,
     "image": "/images/oct25/hireassistantnearme-write-an-sop-for-work-sample-that-people-use.png",
     "imageAlt": "Write an SOP for work sample that people use illustrated workflow",
-    "sourceBody": "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
+    "sourceBody": "A practical hiring workflow for the work-sample SOP: source, owner, decision boundary, exception, and close evidence.",
     "takeaways": [
-      "Define the unit, evidence, reviewer, and stop rule before adding volume.",
-      "Keep consequential decisions with the named hiring owner.",
-      "Escalate when identity, access, money, or sensitive data is unclear.",
-      "Review every early item, then narrow the sample only after the lane is stable."
+      "Define the work-sample SOP unit and source.",
+      "Keep hiring decisions with the named owner.",
+      "Close only when the destination and confirmation are recorded."
     ],
     "detail": {
       "revision": "2026-10-25",
       "directAnswer": [
-        "A source-bounded assistant hiring guide for assistant hiring managers: work sample without unsupported decisions.",
-        "Start with one written lane, one named reviewer, and one evidence record. The assistant prepares and routes the work; the hiring owner keeps the decisions that cannot safely be inferred from routine activity."
+        "A practical hiring workflow for the work-sample SOP: source, owner, decision boundary, exception, and close evidence.",
+        "The assistant prepares and routes the evidence; the hiring owner keeps fit, compensation, trial, reference, and offer decisions."
       ],
       "bodyLinks": [
         {
@@ -2637,58 +2476,45 @@ export const oct25BlogPosts: any[] = [
       ],
       "sections": [
         {
-          "heading": "Why work sample needs its own control",
+          "heading": "Define the unit and the owner",
           "paragraphs": [
-            "A assistant hiring team can complete a task and still leave the next person unable to verify it. The work sample control exists to make the work reconstructable from a source, a decision, and a close.",
-            "The cost is not only rework. When the work sample record is thin, managers spend time asking what changed, customers hear a different version, and the next reviewer has to rebuild the story from memory.",
-            "Treat the control as a queue item with an owner, a due time, and a close condition. A task that has no close condition becomes an open loop that survives the week.",
-            "Record the exact work sample source and the time it was observed. A later reviewer should be able to tell whether the value was current when the first action was taken, even if the record has changed since.",
-            "If the work sample rule changes, keep the earlier classification and apply the new rule to later cases. A definition that changes quietly makes the trend unreadable."
+            "Name the hiring owner before the assistant prepares anything. The assistant may collect, compare, label, and route; the owner decides fit, compensation, references, and any commitment. Write the stop condition beside the unit so a new reviewer can apply the same rule. In the work-sample SOP lane, record this as a separate review checkpoint.",
+            "The work-sample SOP should start with one countable unit: one candidate, one review, one trial, or one handoff. Record the requester, the hiring stage, the source, the owner, and the date. If the unit is unclear, the team will count the same candidate twice and miss the one who is actually waiting."
           ]
         },
         {
-          "heading": "Start with the source record",
+          "heading": "Capture evidence before action",
           "paragraphs": [
-            "Begin with the record that governs work sample. Record who created it, the version or date observed, the field it supports, and the owner who can confirm it.",
-            "Keep the source and the interpretation in separate fields. A forwarded message or a verbal confirmation can be a lead, but it is not proof that the record changed.",
-            "When two sources disagree, preserve both values and label the discrepancy. Do not overwrite the earlier value to make the report look clean.",
-            "Write the next action as a sentence with an owner and a time. \"Review the work sample exception\" is not a next action; \"Mina checks the missing source by 2pm and routes it to the owner\" is."
+            "For work-sample SOP, collect the source record, the version, the observed date, and the field it supports. Mark missing, unavailable, and confirmed-negative values separately. A forwarded message is a lead, not proof that the candidate record changed.",
+            "Use a compact evidence set that a second reviewer can rebuild. Include the candidate identifier, the stage, the reviewer, the question asked, the answer, and the next action. Do not copy sensitive data into a general tracker when a restricted link will do. In the work-sample SOP lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Separate preparation from approval",
           "paragraphs": [
-            "Name the owner before the VA prepares any action. The VA may collect, compare, label, calculate, and route; the accountable owner decides whether the evidence is enough.",
-            "Write the boundary into the task brief. Name the systems the VA may use, the fields they may change, and the questions they must route.",
-            "A complete packet is not an approval. A drafted message, a proposed schedule, or a reconciled total still needs the named owner decision when policy or risk is involved.",
-            "Keep the work sample queue separate from the general inbox. A shared queue without a named owner hides the oldest item and makes the weekly report look cleaner than the work."
+            "Write the approval threshold into the brief: what may be sent, what must be drafted, and what must be escalated. If the rule does not fit the case, record the exception and the owner rather than improvising a new process. In the work-sample SOP lane, record this as a separate review checkpoint.",
+            "The assistant can prepare the work-sample SOP packet, compare it with the written criteria, and flag gaps. The hiring owner keeps the decision that changes the candidate experience, the offer, the trial, or the reference check. A complete packet is not an approval."
           ]
         },
         {
-          "heading": "Build the routine",
+          "heading": "Run the review cadence",
           "paragraphs": [
-            "Build a short daily routine for work sample: open the queue, check the source, record the exception, and leave a next action with a time.",
-            "Use the same fields every day. Consistency makes the work comparable and lets a reviewer spot a missing source without reading the whole thread.",
-            "Keep the queue small enough to finish. A long queue hides the oldest exception and makes the monthly report look better than the operation.",
-            "When a source is unavailable, record that fact instead of leaving the field blank. Missing, unavailable, and confirmed negative are three different states and should not be collapsed."
+            "Review the work-sample SOP queue on a fixed cadence. Sort by stage, deadline, missing evidence, and owner. Pick one case and ask whether the source, the decision, and the destination are all visible. Do not turn the review into a count of candidate touches.",
+            "Sample one routine case and one adverse case each week. Check whether the reviewer can reconstruct the decision without asking the assistant. If the same field is missing repeatedly, fix the template rather than coaching the same correction. In the work-sample SOP lane, record this as a separate review checkpoint."
           ]
         },
         {
           "heading": "Handle exceptions before they age",
           "paragraphs": [
-            "Define reason codes for work sample: missing evidence, identity mismatch, conflicting record, stale version, unavailable owner, access failure, and scope change.",
-            "Preserve the original request and the correction. A later reviewer should see what was known when the first action was taken.",
-            "If the exception affects pay, safety, access, legal, or a customer commitment, stop the dependent action and route it. Urgency is not permission to work around the control.",
-            "Use a short reason code for every work sample exception. The code should describe the evidence problem, not the person who found it."
+            "If the exception affects identity, compensation, legal status, or a sensitive candidate record, stop the dependent action and route it. Urgency is not permission to work around the control. In the work-sample SOP lane, record this as a separate review checkpoint.",
+            "Define reason codes for work-sample SOP: missing evidence, conflicting candidate information, unavailable owner, scheduling conflict, access gap, and scope change. Give each code an owner and a due date. Preserve the original request and the correction."
           ]
         },
         {
-          "heading": "Verify, close, and review",
+          "heading": "Close with evidence and a retest",
           "paragraphs": [
-            "Close work sample only when the destination record shows the approved change. A sent message or a closed ticket is not proof that the schedule, ledger, access, or assignment changed.",
-            "Reconcile open cases at the end of the day and explain the carryover. A case that is silently carried forward becomes an aging exception.",
-            "Review a sample each month. Check the source, the approval, the execution, and the confirmation. A repeated gap should change the procedure, not only the coaching.",
-            "Review one work sample case end to end in the weekly meeting. Check the source, the decision, the destination record, and the confirmation rather than only the completion count."
+            "Close work-sample SOP only when the destination record shows the approved change. A sent email or a closed task is not proof that the candidate stage, the trial plan, or the reference record changed. Record the confirmation and the next review date.",
+            "At the end of the cycle, test one adverse case and one repaired case. Keep the evidence packet short enough for a hiring manager to review. The goal is a safer hiring lane, not a perfect score. In the work-sample SOP lane, record this as a separate review checkpoint."
           ]
         }
       ],

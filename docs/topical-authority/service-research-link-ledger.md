@@ -21,7 +21,7 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 | --- | --- | --- | --- | --- |
 | `/blog/general-office-clerk-outlook-task-design-2026` | Retired `/research/general-office-clerk-outlook-2024-2034` | `/services/project-coordination` | The fresh route artifact has one self-canonical, its expected H1, and one route-local `/services/project-coordination` anchor. The destination has its own expected H1, self-canonical, and generated-sitemap entry. | The guide keeps payments, account recovery, sensitive exports, final customer promises, and other listed decisions with the accountable owner. The service link prepares a coordination lane; it does not grant authority. |
 
-## Active published-topic map — 2026-10-25
+## Active published-topic map — October 2026
 
 | Published reader question | Existing service path | Current artifact state | Next safe action |
 | --- | --- | --- | --- |

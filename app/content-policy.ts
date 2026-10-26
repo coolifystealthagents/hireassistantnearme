@@ -22,6 +22,18 @@ export const approvedBlogSlugs = new Set([
   'probation-checkin-evidence',
   'offboarding-knowledge-capture',
   'provider-replacement-continuity',
+  'hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review',
+  'hireassistantnearme-map-the-source-of-truth-for-candidate-intake',
+  'hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week',
+  'hireassistantnearme-report-interview-panel-without-vanity-metrics',
+  'hireassistantnearme-review-access-before-changing-trial-plan',
+  'hireassistantnearme-run-a-weekly-review-for-role-scorecard',
+  'hireassistantnearme-run-an-exception-queue-for-interview-panel',
+  'hireassistantnearme-sample-quality-for-offer-packet-without-guessing',
+  'hireassistantnearme-set-approval-boundaries-around-reference-check',
+  'hireassistantnearme-standardize-30-day-review-updates-across-the-team',
+  'hireassistantnearme-write-a-handoff-protocol-for-work-sample',
+  'hireassistantnearme-write-an-sop-for-work-sample-that-people-use',
 ]);
 
 export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug));
@@ -64,6 +76,18 @@ const editorialCards: Record<string, { src: string; alt: string; width: number; 
   'probation-checkin-evidence': { src: '/images/oct22-probation-checkin-evidence.png', alt: 'Probation checkin evidence illustrated workflow', width: 1200, height: 630 },
   'offboarding-knowledge-capture': { src: '/images/oct22-offboarding-knowledge-capture.png', alt: 'Offboarding knowledge capture illustrated workflow', width: 1200, height: 630 },
   'provider-replacement-continuity': { src: '/images/oct22-provider-replacement-continuity.png', alt: 'Provider replacement continuity illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review': { src: '/images/oct25/hireassistantnearme-build-a-role-scorecard-intake-record-that-survives-review.png', alt: 'hireassistantnearme build a role scorecard intake record that survives review illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-map-the-source-of-truth-for-candidate-intake': { src: '/images/oct25/hireassistantnearme-map-the-source-of-truth-for-candidate-intake.png', alt: 'hireassistantnearme map the source of truth for candidate intake illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week': { src: '/images/oct25/hireassistantnearme-onboard-a-va-into-candidate-intake-in-the-first-week.png', alt: 'hireassistantnearme onboard a va into candidate intake in the first week illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-report-interview-panel-without-vanity-metrics': { src: '/images/oct25/hireassistantnearme-report-interview-panel-without-vanity-metrics.png', alt: 'hireassistantnearme report interview panel without vanity metrics illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-review-access-before-changing-trial-plan': { src: '/images/oct25/hireassistantnearme-review-access-before-changing-trial-plan.png', alt: 'hireassistantnearme review access before changing trial plan illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-run-a-weekly-review-for-role-scorecard': { src: '/images/oct25/hireassistantnearme-run-a-weekly-review-for-role-scorecard.png', alt: 'hireassistantnearme run a weekly review for role scorecard illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-run-an-exception-queue-for-interview-panel': { src: '/images/oct25/hireassistantnearme-run-an-exception-queue-for-interview-panel.png', alt: 'hireassistantnearme run an exception queue for interview panel illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-sample-quality-for-offer-packet-without-guessing': { src: '/images/oct25/hireassistantnearme-sample-quality-for-offer-packet-without-guessing.png', alt: 'hireassistantnearme sample quality for offer packet without guessing illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-set-approval-boundaries-around-reference-check': { src: '/images/oct25/hireassistantnearme-set-approval-boundaries-around-reference-check.png', alt: 'hireassistantnearme set approval boundaries around reference check illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-standardize-30-day-review-updates-across-the-team': { src: '/images/oct25/hireassistantnearme-standardize-30-day-review-updates-across-the-team.png', alt: 'hireassistantnearme standardize 30 day review updates across the team illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-write-a-handoff-protocol-for-work-sample': { src: '/images/oct25/hireassistantnearme-write-a-handoff-protocol-for-work-sample.png', alt: 'hireassistantnearme write a handoff protocol for work sample illustrated workflow', width: 1200, height: 630 },
+  'hireassistantnearme-write-an-sop-for-work-sample-that-people-use': { src: '/images/oct25/hireassistantnearme-write-an-sop-for-work-sample-that-people-use.png', alt: 'hireassistantnearme write an sop for work sample that people use illustrated workflow', width: 1200, height: 630 },
 };
 
 export function editorialCard(slug: string) {
@@ -76,7 +100,7 @@ export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlog
 
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.
-const oct22ResearchSlugs = new Set(['trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study']);
+const oct22ResearchSlugs = new Set(['trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
 export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug));
 export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug)).map((post) => post.slug));
 

@@ -27,6 +27,18 @@ export const approvedBlogSlugs = new Set([
 
 // Current date-batch release manifest. Kept separate from the retained cornerstone list.
 const publishedBatchBlogSlugs = new Set([
+    'hireassistantnearme-build-a-daily-queue-review-for-interview-panel',
+    'hireassistantnearme-close-work-sample-only-when-the-destination-record-changes',
+    'hireassistantnearme-create-a-source-preserving-entry-check-for-role-scorecard',
+    'hireassistantnearme-design-a-first-week-shadow-plan-for-30-day-review',
+    'hireassistantnearme-handle-missing-evidence-in-reference-check-without-guessing',
+    'hireassistantnearme-keep-role-scorecard-moving-through-leave-and-time-zone-gaps',
+    'hireassistantnearme-review-access-and-permissions-around-interview-panel-every-month',
+    'hireassistantnearme-run-a-weekly-quality-sample-on-candidate-intake',
+    'hireassistantnearme-separate-preparation-from-approval-in-work-sample',
+    'hireassistantnearme-set-a-safe-stop-rule-for-offer-packet',
+    'hireassistantnearme-trace-every-candidate-intake-change-to-a-named-owner',
+    'hireassistantnearme-write-a-correction-record-for-trial-plan-that-survives-review',
     'hireassistantnearme-build-a-first-week-shadow-plan-for-role-scorecard',
     'hireassistantnearme-build-a-two-person-verification-step-for-work-sample',
     'hireassistantnearme-create-a-recovery-checklist-for-interview-panel',
@@ -129,7 +141,7 @@ export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlog
 
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.
-const oct22ResearchSlugs = new Set(['hireassistantnearme-auditing-access-changes-around-offer-packet','hireassistantnearme-estimating-rework-cost-in-reference-check','hireassistantnearme-measuring-backlog-age-in-work-sample','hireassistantnearme-testing-handoff-completeness-in-interview-panel','hireassistantnearme-testing-monitoring-coverage-for-trial-plan','trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
+const oct22ResearchSlugs = new Set(['hireassistantnearme-auditing-access-changes-around-interview-panel','hireassistantnearme-estimating-rework-in-work-sample-from-correction-and-reopen-records','hireassistantnearme-measuring-cycle-time-for-role-scorecard-from-request-to-verified-close','hireassistantnearme-testing-evidence-completeness-in-candidate-intake-without-a-convenience-sample','hireassistantnearme-testing-whether-reference-check-monitoring-catches-silent-failures','hireassistantnearme-auditing-access-changes-around-offer-packet','hireassistantnearme-estimating-rework-cost-in-reference-check','hireassistantnearme-measuring-backlog-age-in-work-sample','hireassistantnearme-testing-handoff-completeness-in-interview-panel','hireassistantnearme-testing-monitoring-coverage-for-trial-plan','trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
 export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug));
 export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug)).map((post) => post.slug));
 

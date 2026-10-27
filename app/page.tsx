@@ -77,7 +77,7 @@ export default function Home() {
     <section className="section markets-section">
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Built around a real workday</p><h2>One search. Different local needs.</h2></div><p>The same assistant brief will not work for every city or business. These examples show how the task mix can change.</p></div>
-        <div className="market-grid">{localMarkets.map((market, index) => <article key={market.city}><span className="market-number" aria-hidden="true">{index + 1}</span><h3>{market.city}</h3><p>{market.focus}</p><span>{market.tasks}</span></article>)}</div>
+        <div className="market-grid">{localMarkets.map((market) => <article key={market.city}><p className="market-context">Local workflow example</p><h3>{market.city}</h3><p>{market.focus}</p><span>{market.tasks}</span></article>)}</div>
       </div>
     </section>
 

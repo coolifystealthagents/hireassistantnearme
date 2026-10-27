@@ -140,7 +140,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
           <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {formatPublicationDate(published)}.</p>
-          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
+          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /><figcaption>Guide illustration: {post.title}.</figcaption></figure>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
             <h2 id="direct-answer">Direct answer</h2>
@@ -314,7 +314,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
-          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
+          <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /><figcaption>Guide illustration: {post.title}.</figcaption></figure>
           <div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Consolidated planning tables</span></div>
 
           <section className="article-block answer-card" aria-labelledby="direct-answer">
@@ -443,7 +443,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <p className="eyebrow">{site.brand} guide</p>
         <h1>{post.title}</h1>
         <p className="lead">{post.excerpt}</p>
-        <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /></figure>
+        <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /><figcaption>Guide illustration: {post.title}.</figcaption></figure>
         <section className="card"><h2>Start with a defined workflow</h2><p>For Philippines-based staffing, document the work, tools, schedule, and desired outcome before candidate matching. Keep business judgment and final approvals with a named manager. <a href="https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm" target="_blank" rel="noopener noreferrer">International Labour Organization guidance on remote work arrangements</a> reinforces the need for clear expectations, communication rhythms, and accountable handoffs.</p><aside className='article-rotation-banner article-rotation-banner-middle' data-article-banner='true'><p className='eyebrow'>Midpoint planning check</p><h2>Compare providers against one written workflow</h2><p>Use one task lane, one reviewer, and one quality check so each provider conversation is easier to judge.</p><a className='btn' href='/contact-us'>Contact Us</a></aside><h2>Prepare representative examples</h2><p>Use real, appropriately redacted examples to explain quality. Review early work together and update the written process when an exception appears.</p><h2>Plan access and handoffs</h2><p>Provide only the access needed for the position and use named accounts where possible. Write down which questions must be escalated and who receives them.</p></section>
       </article></div>
       <CTA />

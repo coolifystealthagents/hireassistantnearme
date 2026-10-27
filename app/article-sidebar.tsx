@@ -8,7 +8,7 @@ function slugify(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'section';
 }
 
-export function ArticleSidebar({ title, headings = [] }: { title: string; headings?: TocItem[] }) {
+export function ArticleSidebar({ title, headings = [], kind = 'guide' }: { title: string; headings?: TocItem[]; kind?: 'guide' | 'research brief' }) {
   const [items, setItems] = useState<TocItem[]>(headings);
   const [active, setActive] = useState('');
 
@@ -42,7 +42,7 @@ export function ArticleSidebar({ title, headings = [] }: { title: string; headin
   return <>
     <details className="mobile-toc"><summary>On this page</summary><nav>{links}</nav></details>
     <aside className="article-sidebar" aria-label={`On this page: ${title}`}>
-      <div><p>On this page</p><nav>{links}</nav><section className="article-sidebar-context" aria-label="Guide context"><strong>Published by Hire Assistant Near Me</strong><span>Use this guide to evaluate {title.toLowerCase()} before discussing a Philippines-based role.</span><a href="/services">Browse related services</a><a href="/blog">Read all hiring guides</a></section><a className="article-sidebar-cta" href="/contact-us">Discuss this role</a></div>
+      <div><p>On this page</p><nav>{links}</nav><section className="article-sidebar-context" aria-label={`${kind === 'guide' ? 'Guide' : 'Research'} context`}><strong>Published by Hire Assistant Near Me</strong><span>Use this {kind} to evaluate {title.toLowerCase()} before discussing a Philippines-based role.</span><a href="/services">Browse related services</a><a href={kind === 'guide' ? '/blog' : '/research'}>{kind === 'guide' ? 'Read all hiring guides' : 'Browse the research library'}</a></section><a className="article-sidebar-cta" href="/contact-us">Discuss this role</a></div>
     </aside>
   </>;
 }

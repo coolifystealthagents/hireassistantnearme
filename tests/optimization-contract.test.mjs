@@ -32,11 +32,11 @@ test('required conversion routes and direct-access truth are present', () => {
 test('contact page follows the conversion-first parent-brand contract', () => {
   const contact = read('app/contact-us/page.tsx');
   const formPosition = contact.indexOf('StandardContactForm');
-  const assistantPosition = contact.indexOf('contact-assistant.jpg');
-  assert.ok(formPosition >= 0 && assistantPosition > formPosition, 'assistant image section must immediately follow the first-fold form composition');
+  const teamPosition = contact.indexOf('stealth-agents-team.webp');
+  assert.ok(formPosition >= 0 && teamPosition > formPosition, 'official team section must immediately follow the first-fold form composition');
   assert.match(contact, /stealth-agents-logo-black\.png/);
-  assert.match(contact, /Professional remote support/);
-  assert.match(contact, /managed service/i);
+  assert.match(contact, /Official team, Bacolod/);
+  assert.match(contact, /managed-service/i);
   assert.doesNotMatch(contact, /over 35\+|top rated|featured on Forbes/i);
   assert.doesNotMatch(contact, /href=["']\/contact["']/);
   assert.doesNotMatch(contact, /\[\["0[1-9]"/);
@@ -84,12 +84,15 @@ test('global navigation is persistent, compact, and keyboard operable', () => {
   assert.match(css, /scroll-margin-top/);
 });
 
-test('commercial layouts contain no decorative zero-padding system', () => {
+test('commercial layouts contain no decorative numbering or alphabet-label system', () => {
   for (const path of ['app/page.tsx', 'app/services/page.tsx', 'app/services/[slug]/page.tsx', 'app/contact-us/page.tsx']) {
     const source = read(path);
     assert.doesNotMatch(source, /padStart\(2/);
     assert.doesNotMatch(source, /["'`]0[1-9]["'`]/);
   }
+  assert.doesNotMatch(read('app/page.tsx'), /market-number|localMarkets\.map\(\(market, index\)/);
+  assert.doesNotMatch(read('app/services/page.tsx'), /group\.slugs\.map\(\(slug, index\)|>\{index \+ 1\}<\/span>/);
+  assert.doesNotMatch(read('app/services/[slug]/page.tsx'), /Scenario \{index \+ 1\}/);
 });
 
 test('public source copy has no forbidden punctuation', () => {
@@ -125,9 +128,9 @@ test('confirmation routes stay outside the sitemap and official assets exist', (
   assert.doesNotMatch(sitemap, /thank-you|thanks-whats-next/);
   assert.match(sitemap, /\/compare\/local-vs-remote-assistant/);
   assert.match(cancellation, /permanentRedirect\(['"]\/cancellation-policy['"]\)/);
-  assert.match(contact, /contact-assistant\.jpg['"] width=["']560["'] height=["']540["']/);
+  assert.match(contact, /stealth-agents-team\.webp['"] width=["']1600["'] height=["']1067["']/);
   assert.match(contact, /stealth-agents-logo-black\.png['"] width=["']149["'] height=["']50["']/);
-  assert.ok(existsSync(join(root, 'public/images/contact-assistant.jpg')));
+  assert.ok(existsSync(join(root, 'public/images/stealth-agents-team.webp')));
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-logo-black.png')));
 });
 
@@ -149,19 +152,19 @@ test('curated editorial index uses article-owned thumbnails and retired research
   const blog = read('app/blog/page.tsx');
   const pagination = read('app/blog/page/[page]/page.tsx');
   const research = read('app/research/page.tsx');
+  const editorial = read('app/editorial-components.tsx');
   const policy = read('app/content-policy.ts');
   const booking = read('app/thank-you/page.tsx');
-  assert.match(blog, /editorial-image-link[\s\S]*<img/);
-  assert.match(blog, /editorialCard\(p\.slug\)\.src[\s\S]*editorialCard\(p\.slug\)\.alt/);
-  assert.match(pagination, /editorial-image-link[\s\S]*<img/);
-  assert.match(pagination, /<time dateTime=/);
+  assert.match(blog, /<EditorialCard[\s\S]*image=\{editorialCard\(p\.slug\)\}/);
+  assert.match(pagination, /<EditorialCard[\s\S]*image=\{editorialCard\(p\.slug\)\}/);
+  assert.match(editorial, /editorial-image-link[\s\S]*<img/);
+  assert.match(editorial, /<time dateTime=\{published\}>/);
   const cardImages = [...policy.matchAll(/src: '([^']+\.webp)'/g)].map((match) => match[1]);
   assert.equal(cardImages.length, 5);
   assert.equal(new Set(cardImages).size, 5);
   assert.doesNotMatch(policy, /local-team\.jpg/);
   assert.match(research, /publishedResearchPosts/);
-  assert.match(research, /href=\{`\/research\/\$\{post\.slug\}`\}/);
-  assert.match(research, /<time dateTime=\{post\.published\}/);
+  assert.match(research, /<EditorialCard[\s\S]*href=\{`\/research\/\$\{post\.slug\}`\}[\s\S]*image=\{\{ src: post\.image, alt: post\.imageAlt/);
   assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
   assert.match(booking, /scheduler itself confirms the booking/);
 });
@@ -284,8 +287,8 @@ test('V3 route, parent-brand, hero, and article utility contracts are present', 
   const blog = read('app/blog/page.tsx');
   const comparison = read('app/compare/local-vs-remote-assistant/page.tsx');
   const blogLayout = read('app/blog/layout.tsx');
-  assert.match(homepage, /localMarkets\.map\(\(market, index\)/);
-  assert.match(homepage, /className="market-number"[\s\S]*\{index \+ 1\}/);
+  assert.match(homepage, /localMarkets\.map\(\(market\)/);
+  assert.doesNotMatch(homepage, /market-number/);
   assert.match(homepage, /editorialCard\(post\.slug\)[\s\S]*<figure><img/);
   assert.doesNotMatch(blogLayout, /BlogBanner|data-blog-banner-slot/);
   assert.match(header, /Powered by StealthAgents/);

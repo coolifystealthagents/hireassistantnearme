@@ -3,7 +3,7 @@ import { Header, Footer } from "../../../components";
 import { site } from "../../../data";
 import { editorialCard, publishedBlogPosts } from "../../../content-policy";
 import { postsPerPage } from "../../../fleet-data";
-const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
+import { EditorialCard } from "../../../editorial-components";
 export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
   const canonicalPage = /^[1-9]\d*$/.test(page) ? Number(page) : NaN;
@@ -44,12 +44,7 @@ export default async function BlogPage({
         </section>
         <section className="section">
           <div className="container editorial-grid">
-            {posts.map((p) => (
-              <article className="editorial-card" key={p.slug}>
-                <a className="editorial-image-link" href={`/blog/${p.slug}`} aria-label={`Read ${p.title}`}><img src={editorialCard(p.slug).src} alt={editorialCard(p.slug).alt} width={editorialCard(p.slug).width} height={editorialCard(p.slug).height} loading="lazy" /></a>
-                <div><p className="editorial-meta">{'published' in p && typeof p.published === 'string' ? <time dateTime={p.published}>Published {formatDate(p.published)}</time> : null}</p><h2><a href={`/blog/${p.slug}`}>{p.title}</a></h2><p>{p.excerpt}</p><a className="text-link" href={`/blog/${p.slug}`}>Read the guide →</a></div>
-              </article>
-            ))}
+            {posts.map((p) => <EditorialCard key={p.slug} href={`/blog/${p.slug}`} title={p.title} excerpt={p.excerpt} image={editorialCard(p.slug)} published={p.published} kind="Guide" minutes={p.minutes || 10} />)}
           </div>
           <nav className="pagination" aria-label="Blog pages">
             {Array.from({ length: pages }, (_, i) => (

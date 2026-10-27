@@ -4,6 +4,7 @@ import { Header, Footer } from '../../components';
 import { researchPosts } from '../../fleet-data';
 import { site } from '../../data';
 import { canonicalContentHref, consolidationTarget, publishedResearchPosts, retiredResearchSlugs } from '../../content-policy';
+import { ArticleSidebar } from '../../article-sidebar';
 
 const publicationDateFormatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 const formatPublicationDate = (value: string) => publicationDateFormatter.format(new Date(`${value}T00:00:00Z`));
@@ -27,15 +28,15 @@ export default async function ResearchArticle({ params }: { params: Promise<{ sl
     { '@context': 'https://schema.org', '@type': 'TechArticle', headline: post.title, description: post.excerpt, datePublished: post.published, dateModified: post.published, image: `${site.url}${post.image}`, mainEntityOfPage: `${site.url}/research/${post.slug}`, author: { '@type': 'Organization', name: site.brand }, publisher: { '@type': 'Organization', name: site.brand } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Research', item: `${site.url}/research` }, { '@type': 'ListItem', position: 2, name: post.title, item: `${site.url}/research/${post.slug}` }] },
   ];
-  return <><Header /><main><article className="section"><div className="container article-shell"><details className="mobile-toc"><summary>On this page</summary><ol>{post.sections.map((s,i)=><li key={s.heading}><a href={`#research-section-${i+1}`}>{s.heading}</a></li>)}</ol></details><aside className="article-sidebar"><nav aria-label="Table of contents"><p>On this page</p><ol>{post.sections.map((s,i)=><li key={s.heading}><a href={`#research-section-${i+1}`}>{s.heading}</a></li>)}</ol></nav></aside>
+  return <><Header /><main><article className="section"><div className="container article-layout"><ArticleSidebar title={post.title} kind="research brief" headings={post.sections.map((section, index) => ({ id: `research-section-${index + 1}`, label: section.heading, level: 2 }))} /><div className="article-shell research-article" data-article-body>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <p className="eyebrow">{site.brand} research · <time dateTime={post.published}>{formatPublicationDate(post.published)}</time></p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
-    <img className="article-thumbnail" src={post.image} alt={post.imageAlt} />
+    <figure className="article-hero-image"><img className="article-thumbnail" src={post.image} alt={post.imageAlt} /><figcaption>Research brief illustration: {post.title}.</figcaption></figure>
     <section className="card"><h2>Key stats</h2><div className="research-stat-grid">{post.keyStats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span><small>Source: {stat.source}</small></div>)}</div></section>
     <section className="card"><h2>Key takeaways</h2><ul>{post.takeaways.map((takeaway) => <li key={takeaway}>{takeaway}</li>)}</ul></section>
     {post.sections.map((section, si) => <section className="card" key={section.heading}><h2 id={`research-section-${si+1}`}>{section.heading}</h2><p>{section.body}</p></section>)}
     {post.tables.map((table) => <section className="card" key={table.caption}><h2>{table.caption}</h2><div className="research-table-wrap"><table><caption className="sr-only">{table.caption}</caption><thead><tr>{table.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr></thead><tbody>{table.rows.map((row) => <tr key={row.join('|')}>{row.map((cell, index) => <td key={`${cell}-${index}`}>{cell}</td>)}</tr>)}</tbody></table></div></section>)}
     <section className="card"><h2>Sources ({post.sources.length})</h2><ol>{post.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ol></section>
     <section className="card"><h2>Related research</h2><ul>{post.related.map((item) => <li key={item.href}><a href={canonicalContentHref(item.href)}>{item.label}</a></li>)}</ul></section>
-  </div></article></main><Footer /></>;
+  </div></div></article></main><Footer /></>;
 }

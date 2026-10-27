@@ -1,6 +1,6 @@
 import { Header, Footer, JsonLd } from './components';
 import { faqs, localMarkets, roles, site } from './data';
-import { publishedBlogPosts } from './content-policy';
+import { editorialCard, publishedBlogPosts } from './content-policy';
 
 export const metadata = { alternates: { canonical: '/' } };
 
@@ -77,7 +77,7 @@ export default function Home() {
     <section className="section markets-section">
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Built around a real workday</p><h2>One search. Different local needs.</h2></div><p>The same assistant brief will not work for every city or business. These examples show how the task mix can change.</p></div>
-        <div className="market-grid">{localMarkets.map((market) => <article key={market.city}><h3>{market.city}</h3><p>{market.focus}</p><span>{market.tasks}</span></article>)}</div>
+        <div className="market-grid">{localMarkets.map((market, index) => <article key={market.city}><span className="market-number" aria-hidden="true">{index + 1}</span><h3>{market.city}</h3><p>{market.focus}</p><span>{market.tasks}</span></article>)}</div>
       </div>
     </section>
 
@@ -102,7 +102,13 @@ export default function Home() {
     <section className="section reading-section">
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/blog" id="cta-page-action-4">View all guides <span>↗</span></a></div>
-        <div className="reading-grid">{publishedBlogPosts.slice(0,3).map((post) => <a href={`/blog/${post.slug}`} key={post.slug}><span>{(post as { minutes?: number }).minutes || 10} min read</span><h3>{post.title}</h3><p>{post.excerpt}</p></a>)}</div>
+        <div className="reading-grid">{publishedBlogPosts.slice(0,3).map((post) => {
+          const card = editorialCard(post.slug);
+          return <a href={`/blog/${post.slug}`} key={post.slug}>
+            <figure><img src={card.src} alt={card.alt} width={card.width} height={card.height} /></figure>
+            <div><span>{(post as { minutes?: number }).minutes || 10} min read</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Read guide <span aria-hidden="true">→</span></b></div>
+          </a>;
+        })}</div>
       </div>
     </section>
 

@@ -32,10 +32,10 @@ test('required conversion routes and direct-access truth are present', () => {
 test('contact page follows the conversion-first parent-brand contract', () => {
   const contact = read('app/contact-us/page.tsx');
   const formPosition = contact.indexOf('StandardContactForm');
-  const teamPosition = contact.indexOf('stealth-agents-team.webp');
-  assert.ok(formPosition >= 0 && teamPosition > formPosition, 'team section must immediately follow the first-fold form composition');
+  const assistantPosition = contact.indexOf('contact-assistant.jpg');
+  assert.ok(formPosition >= 0 && assistantPosition > formPosition, 'assistant image section must immediately follow the first-fold form composition');
   assert.match(contact, /stealth-agents-logo-black\.png/);
-  assert.match(contact, /Official team, Bacolod/);
+  assert.match(contact, /Professional remote support/);
   assert.match(contact, /managed service/i);
   assert.doesNotMatch(contact, /over 35\+|top rated|featured on Forbes/i);
   assert.doesNotMatch(contact, /href=["']\/contact["']/);
@@ -125,9 +125,9 @@ test('confirmation routes stay outside the sitemap and official assets exist', (
   assert.doesNotMatch(sitemap, /thank-you|thanks-whats-next/);
   assert.match(sitemap, /\/compare\/local-vs-remote-assistant/);
   assert.match(cancellation, /permanentRedirect\(['"]\/cancellation-policy['"]\)/);
-  assert.match(contact, /stealth-agents-team\.webp['"] width=["']1600["'] height=["']1067["']/);
+  assert.match(contact, /contact-assistant\.jpg['"] width=["']560["'] height=["']540["']/);
   assert.match(contact, /stealth-agents-logo-black\.png['"] width=["']149["'] height=["']50["']/);
-  assert.ok(existsSync(join(root, 'public/images/stealth-agents-team.webp')));
+  assert.ok(existsSync(join(root, 'public/images/contact-assistant.jpg')));
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-logo-black.png')));
 });
 
@@ -273,6 +273,7 @@ test('contact marquee uses ten sourced reviews, horizontal recycling, and no pla
 });
 
 test('V3 route, parent-brand, hero, and article utility contracts are present', () => {
+  const homepage = read('app/page.tsx');
   const header = read('app/header-client.tsx');
   const shared = read('app/components.tsx');
   const sitemap = read('app/sitemap.xml/route.ts');
@@ -282,6 +283,11 @@ test('V3 route, parent-brand, hero, and article utility contracts are present', 
   const services = read('app/services/page.tsx');
   const blog = read('app/blog/page.tsx');
   const comparison = read('app/compare/local-vs-remote-assistant/page.tsx');
+  const blogLayout = read('app/blog/layout.tsx');
+  assert.match(homepage, /localMarkets\.map\(\(market, index\)/);
+  assert.match(homepage, /className="market-number"[\s\S]*\{index \+ 1\}/);
+  assert.match(homepage, /editorialCard\(post\.slug\)[\s\S]*<figure><img/);
+  assert.doesNotMatch(blogLayout, /BlogBanner|data-blog-banner-slot/);
   assert.match(header, /Powered by StealthAgents/);
   assert.match(shared, /Powered by StealthAgents/);
   assert.match(sitemap, /'\/about'/);
@@ -294,7 +300,9 @@ test('V3 route, parent-brand, hero, and article utility contracts are present', 
   assert.equal((article.match(/<ArticleSidebar title=\{post\.title\}/g) || []).length, 3);
   assert.match(article, /editorialCard\(post\.slug\)\.width/);
   assert.match(sidebar, /IntersectionObserver/);
-  assert.match(sidebar, /querySelectorAll<HTMLHeadingElement>\('h2, h3'\)/);
+  assert.match(sidebar, /querySelectorAll<HTMLHeadingElement>\('h2'\)/);
+  assert.match(sidebar, /<details className="mobile-toc">/);
+  assert.match(sidebar, /<aside className="article-sidebar"/);
   assert.match(sidebar, /toc-level-\$\{item\.level\}/);
   assert.match(sidebar, /aria-current=\{active === item\.id \? 'location'/);
   const v3Css = read('app/release-v3.css');

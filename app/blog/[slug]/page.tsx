@@ -135,7 +135,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <div className="container article-layout"><details className="mobile-toc"><summary>On this page</summary><ol>{[{id:"direct-answer",label:"Direct answer"},...detail.sections.slice(0,6).map((s: any,i:number)=>({id:`section-${i+1}`,label:s.heading}))].map((x:any)=><li key={x.id}><a href={`#${x.id}`}>{x.label}</a></li>)}</ol></details><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
+        <div className="container article-layout"><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
@@ -310,7 +310,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Header />
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
-        <div className="container article-layout"><details className="mobile-toc"><summary>On this page</summary><ol>{[{id:"direct-answer",label:"Direct answer"},...detail.sections.slice(0,6).map((s: any,i:number)=>({id:`section-${i+1}`,label:s.heading}))].map((x:any)=><li key={x.id}><a href={`#${x.id}`}>{x.label}</a></li>)}</ol></details><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
+        <div className="container article-layout"><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.slice(0,6).map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
           <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>

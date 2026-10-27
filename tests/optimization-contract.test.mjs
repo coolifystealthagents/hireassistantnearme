@@ -159,7 +159,9 @@ test('curated editorial index uses article-owned thumbnails and retired research
   assert.equal(cardImages.length, 5);
   assert.equal(new Set(cardImages).size, 5);
   assert.doesNotMatch(policy, /local-team\.jpg/);
-  assert.match(research, /permanentRedirect\('\/blog'\)/);
+  assert.match(research, /publishedResearchPosts/);
+  assert.match(research, /href=\{`\/research\/\$\{post\.slug\}`\}/);
+  assert.match(research, /<time dateTime=\{post\.published\}/);
   assert.doesNotMatch(booking, /I booked a time|href=["']\/thanks-whats-next/);
   assert.match(booking, /scheduler itself confirms the booking/);
 });

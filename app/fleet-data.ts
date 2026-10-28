@@ -34,6 +34,7 @@ import { oct8ResearchPosts } from './research-oct8';
 import { oct9ResearchPosts } from './research-oct9';
 import { oct12ResearchPosts } from './research-oct12';
 import { oct13ResearchPosts } from './research-oct13';
+import { oct28ResearchPosts } from './research-oct28';
 import { oct27ResearchPosts } from './research-oct27';
 import { oct26ResearchPosts } from './research-oct26';
 import { oct25ResearchPosts } from './research-oct25';
@@ -190,6 +191,7 @@ const aug17ResearchPostsBase: ResearchPost[] = [
 const aug17ResearchPosts: ResearchPost[] = aug17ResearchPostsBase;
 
 export const researchPosts: readonly ResearchPost[] = [
+  ...oct28ResearchPosts,
   ...oct27ResearchPosts,
   ...oct26ResearchPosts,
   ...oct25ResearchPosts,

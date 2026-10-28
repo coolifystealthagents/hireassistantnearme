@@ -27,6 +27,20 @@ export const approvedBlogSlugs = new Set([
 
 // Current date-batch release manifest. Kept separate from the retained cornerstone list.
 const publishedBatchBlogSlugs = new Set([
+    // 2026-10-28 batch. Keep each date batch explicit so a later run cannot
+    // relabel or silently retire an earlier publication.
+    'hireassistantnearme-audit-a-role-scorecard-handoff-for-hidden-assumptions',
+    'hireassistantnearme-design-an-exception-lane-for-candidate-intake-that-stops-safely',
+    'hireassistantnearme-rebuild-trust-in-work-sample-after-a-wrong-update',
+    'hireassistantnearme-keep-interview-panel-evidence-usable-across-a-system-migration',
+    'hireassistantnearme-write-a-backup-owner-plan-for-reference-check',
+    'hireassistantnearme-set-a-same-day-close-rule-for-offer-packet',
+    'hireassistantnearme-review-trial-plan-permissions-after-a-role-change',
+    'hireassistantnearme-create-a-weekly-30-day-review-evidence-sample',
+    'hireassistantnearme-document-a-role-scorecard-decision-without-overstepping',
+    'hireassistantnearme-handle-a-disputed-candidate-intake-record-without-rewriting-history',
+    'hireassistantnearme-prepare-work-sample-for-an-audit-walkthrough',
+    'hireassistantnearme-run-a-monthly-interview-panel-recovery-drill',
     'hireassistantnearme-build-a-daily-queue-review-for-interview-panel',
     'hireassistantnearme-close-work-sample-only-when-the-destination-record-changes',
     'hireassistantnearme-create-a-source-preserving-entry-check-for-role-scorecard',
@@ -141,6 +155,18 @@ const editorialCards: Record<string, { src: string; alt: string; width: number; 
   'hireassistantnearme-set-a-safe-stop-rule-for-offer-packet': { src: '/images/oct27/hireassistantnearme-set-a-safe-stop-rule-for-offer-packet.png', alt: 'hireassistantnearme-set-a-safe-stop-rule-for-offer-packet editorial card', width: 1200, height: 630 },
   'hireassistantnearme-trace-every-candidate-intake-change-to-a-named-owner': { src: '/images/oct27/hireassistantnearme-trace-every-candidate-intake-change-to-a-named-owner.png', alt: 'hireassistantnearme-trace-every-candidate-intake-change-to-a-named-owner editorial card', width: 1200, height: 630 },
   'hireassistantnearme-write-a-correction-record-for-trial-plan-that-survives-review': { src: '/images/oct27/hireassistantnearme-write-a-correction-record-for-trial-plan-that-survives-review.png', alt: 'hireassistantnearme-write-a-correction-record-for-trial-plan-that-survives-review editorial card', width: 1200, height: 630 },
+  'hireassistantnearme-audit-a-role-scorecard-handoff-for-hidden-assumptions': { src: '/images/oct28/hireassistantnearme-audit-a-role-scorecard-handoff-for-hidden-assumptions.png', alt: 'Audit a role scorecard handoff for hidden assumptions — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-design-an-exception-lane-for-candidate-intake-that-stops-safely': { src: '/images/oct28/hireassistantnearme-design-an-exception-lane-for-candidate-intake-that-stops-safely.png', alt: 'Design an exception lane for candidate intake that stops safely — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-rebuild-trust-in-work-sample-after-a-wrong-update': { src: '/images/oct28/hireassistantnearme-rebuild-trust-in-work-sample-after-a-wrong-update.png', alt: 'Rebuild trust in work sample after a wrong update — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-keep-interview-panel-evidence-usable-across-a-system-migration': { src: '/images/oct28/hireassistantnearme-keep-interview-panel-evidence-usable-across-a-system-migration.png', alt: 'Keep interview panel evidence usable across a system migration — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-write-a-backup-owner-plan-for-reference-check': { src: '/images/oct28/hireassistantnearme-write-a-backup-owner-plan-for-reference-check.png', alt: 'Write a backup-owner plan for reference check — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-set-a-same-day-close-rule-for-offer-packet': { src: '/images/oct28/hireassistantnearme-set-a-same-day-close-rule-for-offer-packet.png', alt: 'Set a same-day close rule for offer packet — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-review-trial-plan-permissions-after-a-role-change': { src: '/images/oct28/hireassistantnearme-review-trial-plan-permissions-after-a-role-change.png', alt: 'Review trial plan permissions after a role change — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-create-a-weekly-30-day-review-evidence-sample': { src: '/images/oct28/hireassistantnearme-create-a-weekly-30-day-review-evidence-sample.png', alt: 'Create a weekly 30-day review evidence sample — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-document-a-role-scorecard-decision-without-overstepping': { src: '/images/oct28/hireassistantnearme-document-a-role-scorecard-decision-without-overstepping.png', alt: 'Document a role scorecard decision without overstepping — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-handle-a-disputed-candidate-intake-record-without-rewriting-history': { src: '/images/oct28/hireassistantnearme-handle-a-disputed-candidate-intake-record-without-rewriting-history.png', alt: 'Handle a disputed candidate intake record without rewriting history — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-prepare-work-sample-for-an-audit-walkthrough': { src: '/images/oct28/hireassistantnearme-prepare-work-sample-for-an-audit-walkthrough.png', alt: 'Prepare work sample for an audit walkthrough — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
+  'hireassistantnearme-run-a-monthly-interview-panel-recovery-drill': { src: '/images/oct28/hireassistantnearme-run-a-monthly-interview-panel-recovery-drill.png', alt: 'Run a monthly interview panel recovery drill — Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
 };
 
 export function editorialCard(slug: string) {
@@ -154,8 +180,11 @@ export const retiredBlogSlugs = new Set(blogPosts.filter((post) => !approvedBlog
 // The former research collection consisted of repeated date-batch templates.
 // Preserve its URLs through redirects, but do not advertise those pages as research.
 const oct22ResearchSlugs = new Set(['hireassistantnearme-auditing-access-changes-around-interview-panel','hireassistantnearme-estimating-rework-in-work-sample-from-correction-and-reopen-records','hireassistantnearme-measuring-cycle-time-for-role-scorecard-from-request-to-verified-close','hireassistantnearme-testing-evidence-completeness-in-candidate-intake-without-a-convenience-sample','hireassistantnearme-testing-whether-reference-check-monitoring-catches-silent-failures','hireassistantnearme-auditing-access-changes-around-offer-packet','hireassistantnearme-estimating-rework-cost-in-reference-check','hireassistantnearme-measuring-backlog-age-in-work-sample','hireassistantnearme-testing-handoff-completeness-in-interview-panel','hireassistantnearme-testing-monitoring-coverage-for-trial-plan','trial-task-evidence-completeness-study','reference-check-latency-study','interview-reschedule-impact-study','equipment-readiness-failure-study','replacement-continuity-evidence-study','hireassistantnearme-attributing-rework-in-reference-check','hireassistantnearme-capacity-planning-for-offer-packet','hireassistantnearme-early-warning-signals-in-trial-plan','hireassistantnearme-measuring-response-time-for-work-sample','hireassistantnearme-testing-completeness-in-interview-panel']);
-export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug));
-export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug)).map((post) => post.slug));
+// 2026-10-28 research batch. Added as a separate manifest so the earlier
+// published research set and its redirect decisions stay unchanged.
+const oct28ResearchSlugs = new Set(['hireassistantnearme-measuring-decision-latency-in-role-scorecard','hireassistantnearme-testing-evidence-retention-across-candidate-intake-corrections','hireassistantnearme-estimating-exception-spillover-in-work-sample','hireassistantnearme-auditing-backup-owner-coverage-for-interview-panel','hireassistantnearme-testing-whether-reference-check-audit-samples-detect-silent-gaps']);
+export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug) || oct28ResearchSlugs.has(post.slug));
+export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug) && !oct28ResearchSlugs.has(post.slug)).map((post) => post.slug));
 
 function topicTarget(slug: string) {
   if (/(security|access|permission|privacy|mfa|phishing|credential|incident|offboard|retention)/.test(slug)) return '/blog/virtual-assistant-security-checklist';

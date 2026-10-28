@@ -198,7 +198,7 @@ test('editorial consolidation uses an explicit manifest and preserves permanent 
   const approved = [...policy.matchAll(/^  '([^']+)',$/gm)].map((match) => match[1]);
   assert.equal(approved.length, 17);
   assert.match(policy, /approvedBlogSlugs\.has\(post\.slug\)/);
-  assert.match(policy, /publishedResearchPosts = researchPosts\.filter\(\(post\) => oct22ResearchSlugs\.has\(post\.slug\)\)/);
+  assert.match(policy, /publishedResearchPosts = researchPosts\.filter\(\(post\) => oct22ResearchSlugs\.has\(post\.slug\) \|\| oct28ResearchSlugs\.has\(post\.slug\)\)/);
   assert.doesNotMatch(policy, /distinctWords|narrativeStrings|frequency/);
   assert.match(sitemap, /publishedBlogPosts\.map/);
   assert.doesNotMatch(sitemap, /['"]\/research['"]/);

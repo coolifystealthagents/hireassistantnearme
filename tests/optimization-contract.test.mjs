@@ -31,11 +31,15 @@ test('required conversion routes and direct-access truth are present', () => {
 
 test('contact page follows the conversion-first parent-brand contract', () => {
   const contact = read('app/contact-us/page.tsx');
+  const footer = read('app/components.tsx');
   const formPosition = contact.indexOf('StandardContactForm');
-  const teamPosition = contact.indexOf('stealth-agents-team.webp');
+  const teamPosition = contact.indexOf('stealth-agents-team-bacolod.jpg');
   assert.ok(formPosition >= 0 && teamPosition > formPosition, 'official team section must immediately follow the first-fold form composition');
+  assert.doesNotMatch(contact, /stealth-agents-team\.webp/);
   assert.match(contact, /stealth-agents-logo-black\.png/);
   assert.match(contact, /Official team, Bacolod/);
+  assert.match(footer, /href=["']\/blog["']>Blog<\/a>/);
+  assert.doesNotMatch(footer, />Evidence-backed guides<\/a>/);
   assert.match(contact, /managed-service/i);
   assert.doesNotMatch(contact, /over 35\+|top rated|featured on Forbes/i);
   assert.doesNotMatch(contact, /href=["']\/contact["']/);
@@ -128,9 +132,9 @@ test('confirmation routes stay outside the sitemap and official assets exist', (
   assert.doesNotMatch(sitemap, /thank-you|thanks-whats-next/);
   assert.match(sitemap, /\/compare\/local-vs-remote-assistant/);
   assert.match(cancellation, /permanentRedirect\(['"]\/cancellation-policy['"]\)/);
-  assert.match(contact, /stealth-agents-team\.webp['"] width=["']1600["'] height=["']1067["']/);
+  assert.match(contact, /stealth-agents-team-bacolod\.jpg['"] width=["']953["'] height=["']540["']/);
   assert.match(contact, /stealth-agents-logo-black\.png['"] width=["']149["'] height=["']50["']/);
-  assert.ok(existsSync(join(root, 'public/images/stealth-agents-team.webp')));
+  assert.ok(existsSync(join(root, 'public/images/stealth-agents-team-bacolod.jpg')));
   assert.ok(existsSync(join(root, 'public/images/stealth-agents-logo-black.png')));
 });
 

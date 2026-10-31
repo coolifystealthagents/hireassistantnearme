@@ -33,8 +33,15 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 
 The five inventoried cornerstone articles already have reader-useful service paths. Their service links are rendered, so they are delivered and non-duplicable until a distinct reader question and destination are verified. This ledger does not claim a ranking effect or public rollout.
 
+## Verified next candidate — 2026-10-31
+
+| Published source | Proposed service destination | Fresh artifact result | Reader question | Decision boundary | Candidate state |
+| --- | --- | --- | --- | --- | --- |
+| `/blog/assistant-trial-task-safety` | `/services/recruitment-assistance` | The source has its expected H1 and self-canonical in the current build, is in the sitemap, and has zero `/services/recruitment-assistance` anchors inside route-local `<main>`. The destination has the H1 `Recruitment Assistance`, its self-canonical, and a sitemap entry. | After a safe, redacted trial task, what recruitment-support lane can an owner define without handing over the hiring decision? | A Philippines-based assistant may prepare candidate records, scheduling, and evidence against approved fields. Authorized hiring staff keep selection, rejection rationale, compensation, accommodation, and other employment decisions. | Verified absent and ready for one typed, route-local handoff. Do not add a second generic link or replace the existing executive-assistance resource link. |
+
 ## Verification record
 
+- Fresh local build on 2026-10-31 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract. The candidate row is source-only planning evidence, not a rendered-link or ranking claim.
 - Fresh local build on 2026-10-23 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract.
 - A local production-server probe with the canonical host and HTTPS forwarding headers parsed the source and destination HTML independently. It found the source H1, its sole canonical, and the new service anchor in `<main>`; it also found the destination H1 and sole canonical.
 - Both canonical URLs are in the generated sitemap. The sitemap deliberately has no `<lastmod>` fields. This evidence is local source proof only and makes no deployment or public-route claim.

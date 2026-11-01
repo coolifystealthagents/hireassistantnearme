@@ -271,6 +271,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     const detail: any = richPost.detail;
     const canonical = `${site.url}/blog/${post.slug}`;
     const published = richPost.published || '2026-07-24';
+    const modified = richPost.updated || published;
     const articleSchema = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -280,7 +281,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       url: canonical,
       mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
       datePublished: published,
-      dateModified: published,
+      dateModified: modified,
       keywords: richPost.mainKeyword,
       author: { '@id': `${site.url}/#organization` },
       publisher: { '@id': `${site.url}/#organization` },

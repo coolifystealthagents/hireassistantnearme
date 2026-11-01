@@ -227,6 +227,21 @@ test('the general-office clerk guide replaces its retired research path with a s
   assert.match(record, /Keep payments, account recovery, legal or medical judgment, sensitive exports, and final customer promises with the accountable owner/);
 });
 
+test('the assistant trial-task guide routes its next hiring step to recruitment assistance without changing hiring authority', () => {
+  const source = read('app/oct22-blog-posts.ts');
+  const start = source.indexOf('"slug": "assistant-trial-task-safety"');
+  const end = source.indexOf('\n  },', start);
+  assert.ok(start >= 0 && end > start, 'the assistant trial-task record must remain bounded');
+  const record = source.slice(start, end);
+  assert.match(record, /"updated": "2026-11-01"/);
+  assert.match(record, /"href": "\/services\/recruitment-assistance",\s*\n\s*"label": "Plan recruitment assistance after the trial"/);
+  assert.match(record, /the hiring manager remains accountable for decisions outside the written brief/);
+  assert.match(record, /"href": "\/services\/executive-assistance"/);
+  const page = read('app/blog/[slug]/page.tsx');
+  assert.match(page, /const modified = richPost\.updated \|\| published/);
+  assert.match(page, /dateModified: modified/);
+});
+
 test('contact ingestion preserves required fields, consent, and measured limits', () => {
   const api = read('app/api/contact/route.ts');
   const form = read('app/contact-us/StandardContactForm.tsx');

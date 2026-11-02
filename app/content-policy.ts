@@ -79,6 +79,8 @@ const publishedBatchBlogSlugs = new Set([
     'hireassistantnearme-write-an-sop-for-work-sample-that-people-use',
 ]);
 
+for (const post of blogPosts) if (post.published === '2026-11-02') publishedBatchBlogSlugs.add(post.slug);
+
 export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug) || publishedBatchBlogSlugs.has(post.slug));
 
 const editorialCards: Record<string, { src: string; alt: string; width: number; height: number }> = {

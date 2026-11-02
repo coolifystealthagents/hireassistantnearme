@@ -8,7 +8,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-build-a-offer-packet-close-that-holds-up-nov-2.png",
-    "imageAlt": "Build a offer packet close that holds up — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Build a offer packet close that holds up - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: offer packet with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: offer packet with explicit evidence, decision rights, and a verified close.",
@@ -100,7 +100,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-draw-a-source-map-for-candidate-intake-nov-2.png",
-    "imageAlt": "Draw a source map for candidate intake — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Draw a source map for candidate intake - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: candidate intake with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: candidate intake with explicit evidence, decision rights, and a verified close.",
@@ -192,7 +192,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-find-the-first-weak-link-in-role-scorecard-nov-2.png",
-    "imageAlt": "Find the first weak link in role scorecard — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Find the first weak link in role scorecard - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
@@ -284,7 +284,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-handle-reference-check-when-it-does-not-fit-the-rule-nov-2.png",
-    "imageAlt": "Handle reference check when it does not fit the rule — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Handle reference check when it does not fit the rule - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: reference check with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: reference check with explicit evidence, decision rights, and a verified close.",
@@ -376,7 +376,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-keep-30-day-review-evidence-readable-after-a-handoff-nov-2.png",
-    "imageAlt": "Keep 30-day review evidence readable after a handoff — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Keep 30-day review evidence readable after a handoff - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: 30-day review with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: 30-day review with explicit evidence, decision rights, and a verified close.",
@@ -468,7 +468,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-make-the-monthly-trial-plan-check-useful-nov-2.png",
-    "imageAlt": "Make the monthly trial plan check useful — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Make the monthly trial plan check useful - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: trial plan with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: trial plan with explicit evidence, decision rights, and a verified close.",
@@ -560,7 +560,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-recover-candidate-intake-after-a-missed-step-nov-2.png",
-    "imageAlt": "Recover candidate intake after a missed step — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Recover candidate intake after a missed step - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: candidate intake with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: candidate intake with explicit evidence, decision rights, and a verified close.",
@@ -652,7 +652,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-retire-a-interview-panel-workaround-safely-nov-2.png",
-    "imageAlt": "Retire a interview panel workaround safely — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Retire a interview panel workaround safely - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
@@ -744,7 +744,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-run-interview-panel-across-a-normal-day-nov-2.png",
-    "imageAlt": "Run interview panel across a normal day — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Run interview panel across a normal day - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
@@ -836,7 +836,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-set-authority-limits-around-work-sample-nov-2.png",
-    "imageAlt": "Set authority limits around work sample — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Set authority limits around work sample - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: work sample with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: work sample with explicit evidence, decision rights, and a verified close.",
@@ -928,7 +928,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-test-a-role-scorecard-shortcut-before-adopting-it-nov-2.png",
-    "imageAlt": "Test a role scorecard shortcut before adopting it — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Test a role scorecard shortcut before adopting it - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
@@ -1020,7 +1020,7 @@ export const nov02BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 8,
     "image": "/images/nov02/hireassistantnearme-write-a-work-sample-brief-a-reviewer-can-use-nov-2.png",
-    "imageAlt": "Write a work sample brief a reviewer can use — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Write a work sample brief a reviewer can use - Hire Assistant Near Me, published November 2, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: work sample with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: work sample with explicit evidence, decision rights, and a verified close.",

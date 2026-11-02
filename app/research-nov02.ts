@@ -6,7 +6,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
     "published": "2026-11-02",
     "image": "/images/nov02/hireassistantnearme-build-a-data-dictionary-for-interview-panel-evidence-nov-2.png",
-    "imageAlt": "Build a data dictionary for interview panel evidence — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Build a data dictionary for interview panel evidence - Hire Assistant Near Me, published November 2, 2026",
     "keyStats": [
       {
         "value": "4",
@@ -70,11 +70,11 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
         "url": "https://www.eeoc.gov/"
       },
       {
-        "name": "U.S. Department of Labor — recordkeeping",
+        "name": "U.S. Department of Labor - recordkeeping",
         "url": "https://www.dol.gov/agencies/whd/recordkeeping"
       },
       {
-        "name": "U.S. Small Business Administration — manage your business",
+        "name": "U.S. Small Business Administration - manage your business",
         "url": "https://www.sba.gov/business-guide/manage-your-business"
       },
       {
@@ -90,7 +90,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A grounded assistant hiring note for assistant hiring managers: work sample with explicit evidence, decision rights, and a verified close.",
     "published": "2026-11-02",
     "image": "/images/nov02/hireassistantnearme-choose-work-sample-measures-that-can-be-defended-nov-2.png",
-    "imageAlt": "Choose work sample measures that can be defended — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Choose work sample measures that can be defended - Hire Assistant Near Me, published November 2, 2026",
     "keyStats": [
       {
         "value": "4",
@@ -158,11 +158,11 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
         "url": "https://www.eeoc.gov/"
       },
       {
-        "name": "U.S. Department of Labor — recordkeeping",
+        "name": "U.S. Department of Labor - recordkeeping",
         "url": "https://www.dol.gov/agencies/whd/recordkeeping"
       },
       {
-        "name": "U.S. Small Business Administration — manage your business",
+        "name": "U.S. Small Business Administration - manage your business",
         "url": "https://www.sba.gov/business-guide/manage-your-business"
       }
     ],
@@ -174,7 +174,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A grounded assistant hiring note for assistant hiring managers: candidate intake with explicit evidence, decision rights, and a verified close.",
     "published": "2026-11-02",
     "image": "/images/nov02/hireassistantnearme-decide-who-belongs-in-the-candidate-intake-frame-nov-2.png",
-    "imageAlt": "Decide who belongs in the candidate intake frame — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Decide who belongs in the candidate intake frame - Hire Assistant Near Me, published November 2, 2026",
     "keyStats": [
       {
         "value": "4",
@@ -234,7 +234,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "tables": [],
     "sources": [
       {
-        "name": "U.S. Small Business Administration — manage your business",
+        "name": "U.S. Small Business Administration - manage your business",
         "url": "https://www.sba.gov/business-guide/manage-your-business"
       },
       {
@@ -246,7 +246,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
         "url": "https://www.eeoc.gov/"
       },
       {
-        "name": "U.S. Department of Labor — recordkeeping",
+        "name": "U.S. Department of Labor - recordkeeping",
         "url": "https://www.dol.gov/agencies/whd/recordkeeping"
       }
     ],
@@ -258,7 +258,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A grounded assistant hiring note for assistant hiring managers: reference check with explicit evidence, decision rights, and a verified close.",
     "published": "2026-11-02",
     "image": "/images/nov02/hireassistantnearme-draw-a-reference-check-sample-that-can-be-repeated-nov-2.png",
-    "imageAlt": "Draw a reference check sample that can be repeated — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Draw a reference check sample that can be repeated - Hire Assistant Near Me, published November 2, 2026",
     "keyStats": [
       {
         "value": "4",
@@ -318,11 +318,11 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "tables": [],
     "sources": [
       {
-        "name": "U.S. Department of Labor — recordkeeping",
+        "name": "U.S. Department of Labor - recordkeeping",
         "url": "https://www.dol.gov/agencies/whd/recordkeeping"
       },
       {
-        "name": "U.S. Small Business Administration — manage your business",
+        "name": "U.S. Small Business Administration - manage your business",
         "url": "https://www.sba.gov/business-guide/manage-your-business"
       },
       {
@@ -342,7 +342,7 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
     "published": "2026-11-02",
     "image": "/images/nov02/hireassistantnearme-frame-the-role-scorecard-question-before-collecting-data-nov-2.png",
-    "imageAlt": "Frame the role scorecard question before collecting data — Hire Assistant Near Me, published November 2, 2026",
+    "imageAlt": "Frame the role scorecard question before collecting data - Hire Assistant Near Me, published November 2, 2026",
     "keyStats": [
       {
         "value": "4",
@@ -402,11 +402,11 @@ export const nov02ResearchPosts: readonly ResearchPost[] = [
     "tables": [],
     "sources": [
       {
-        "name": "U.S. Department of Labor — recordkeeping",
+        "name": "U.S. Department of Labor - recordkeeping",
         "url": "https://www.dol.gov/agencies/whd/recordkeeping"
       },
       {
-        "name": "U.S. Small Business Administration — manage your business",
+        "name": "U.S. Small Business Administration - manage your business",
         "url": "https://www.sba.gov/business-guide/manage-your-business"
       },
       {

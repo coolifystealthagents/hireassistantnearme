@@ -8,7 +8,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-role-scorecard-01.png",
-    "imageAlt": "Map the role scorecard decision to one accountable owner — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Map the role scorecard decision to one accountable owner - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: role scorecard with explicit evidence, decision rights, and a verified close.",
@@ -80,7 +80,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-candidate-shortlist-02.png",
-    "imageAlt": "Write the candidate shortlist intake note that survives a later review — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Write the candidate shortlist intake note that survives a later review - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: candidate shortlist with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: candidate shortlist with explicit evidence, decision rights, and a verified close.",
@@ -152,7 +152,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-trial-task-03.png",
-    "imageAlt": "Cut rework at the trial task handoff with a two-field check — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Cut rework at the trial task handoff with a two-field check - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: trial task with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: trial task with explicit evidence, decision rights, and a verified close.",
@@ -224,7 +224,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-interview-panel-04.png",
-    "imageAlt": "Resolve a conflicting interview panel record without erasing history — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Resolve a conflicting interview panel record without erasing history - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: interview panel with explicit evidence, decision rights, and a verified close.",
@@ -296,7 +296,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-placement-agreement-05.png",
-    "imageAlt": "Sample placement agreement quality weekly, not only volume — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Sample placement agreement quality weekly, not only volume - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: placement agreement with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: placement agreement with explicit evidence, decision rights, and a verified close.",
@@ -368,7 +368,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-onboarding-plan-06.png",
-    "imageAlt": "Build an exception code list the onboarding plan team will use — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Build an exception code list the onboarding plan team will use - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: onboarding plan with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: onboarding plan with explicit evidence, decision rights, and a verified close.",
@@ -440,7 +440,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-role-scorecard-queue-07.png",
-    "imageAlt": "Keep role scorecard queue evidence durable when the systems change — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Keep role scorecard queue evidence durable when the systems change - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: role scorecard queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: role scorecard queue with explicit evidence, decision rights, and a verified close.",
@@ -512,7 +512,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-candidate-shortlist-queue-08.png",
-    "imageAlt": "Prepare candidate shortlist queue work for month-end without a scramble — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Prepare candidate shortlist queue work for month-end without a scramble - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: candidate shortlist queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: candidate shortlist queue with explicit evidence, decision rights, and a verified close.",
@@ -584,7 +584,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-trial-task-queue-09.png",
-    "imageAlt": "Coach a specialist through a trial task queue near miss — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Coach a specialist through a trial task queue near miss - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: trial task queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: trial task queue with explicit evidence, decision rights, and a verified close.",
@@ -656,7 +656,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-interview-panel-queue-10.png",
-    "imageAlt": "Decide what a VA may send on interview panel queue without a second review — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Decide what a VA may send on interview panel queue without a second review - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: interview panel queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: interview panel queue with explicit evidence, decision rights, and a verified close.",
@@ -728,7 +728,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-placement-agreement-queue-11.png",
-    "imageAlt": "Turn a placement agreement queue backlog into a dated work plan — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Turn a placement agreement queue backlog into a dated work plan - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: placement agreement queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: placement agreement queue with explicit evidence, decision rights, and a verified close.",
@@ -800,7 +800,7 @@ export const nov01BlogPosts: any[] = [
     "richPublished": true,
     "minutes": 7,
     "image": "/images/nov01/hanm01-onboarding-plan-queue-12.png",
-    "imageAlt": "Protect onboarding plan queue coverage during leave and turnover — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Protect onboarding plan queue coverage during leave and turnover - Hire Assistant Near Me, published November 1, 2026",
     "sourceBody": "A grounded assistant hiring note for assistant hiring managers: onboarding plan queue with explicit evidence, decision rights, and a verified close.",
     "takeaways": [
       "A grounded assistant hiring note for assistant hiring managers: onboarding plan queue with explicit evidence, decision rights, and a verified close.",

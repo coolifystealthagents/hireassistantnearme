@@ -7,7 +7,7 @@ export const nov01ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A measurement protocol for role scorecard in assistant hiring, with a frozen population, an evidence sample, and a dated review.",
     "published": "2026-11-01",
     "image": "/images/nov01/hanm01-research-role-scorecard-01.png",
-    "imageAlt": "How complete is the evidence in the role scorecard record? — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "How complete is the evidence in the role scorecard record? - Hire Assistant Near Me, published November 1, 2026",
     "keyStats": [
       {
         "value": "8",
@@ -130,7 +130,7 @@ export const nov01ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A measurement protocol for candidate shortlist in assistant hiring, with a frozen population, an evidence sample, and a dated review.",
     "published": "2026-11-01",
     "image": "/images/nov01/hanm01-research-candidate-shortlist-02.png",
-    "imageAlt": "Where does delay accumulate in the candidate shortlist handoff? — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Where does delay accumulate in the candidate shortlist handoff? - Hire Assistant Near Me, published November 1, 2026",
     "keyStats": [
       {
         "value": "8",
@@ -253,7 +253,7 @@ export const nov01ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A measurement protocol for trial task in assistant hiring, with a frozen population, an evidence sample, and a dated review.",
     "published": "2026-11-01",
     "image": "/images/nov01/hanm01-research-trial-task-03.png",
-    "imageAlt": "How old are the exceptions in the trial task queue? — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "How old are the exceptions in the trial task queue? - Hire Assistant Near Me, published November 1, 2026",
     "keyStats": [
       {
         "value": "8",
@@ -376,7 +376,7 @@ export const nov01ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A measurement protocol for interview panel in assistant hiring, with a frozen population, an evidence sample, and a dated review.",
     "published": "2026-11-01",
     "image": "/images/nov01/hanm01-research-interview-panel-04.png",
-    "imageAlt": "What happens to interview panel coverage when the owner is away? — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "What happens to interview panel coverage when the owner is away? - Hire Assistant Near Me, published November 1, 2026",
     "keyStats": [
       {
         "value": "8",
@@ -499,7 +499,7 @@ export const nov01ResearchPosts: readonly ResearchPost[] = [
     "excerpt": "A measurement protocol for placement agreement in assistant hiring, with a frozen population, an evidence sample, and a dated review.",
     "published": "2026-11-01",
     "image": "/images/nov01/hanm01-research-placement-agreement-05.png",
-    "imageAlt": "Can the placement agreement report be reproduced from its sources? — Hire Assistant Near Me, published November 1, 2026",
+    "imageAlt": "Can the placement agreement report be reproduced from its sources? - Hire Assistant Near Me, published November 1, 2026",
     "keyStats": [
       {
         "value": "8",

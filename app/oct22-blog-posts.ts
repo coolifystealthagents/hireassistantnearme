@@ -6,7 +6,6 @@ export const oct22BlogPosts: any[] = [
     "mainKeyword": "assistant trial task",
     "excerpt": "A practical guide for a business owner wants to assess a candidate before granting production access. Define the unit, evidence, reviewer, and stop rule before adding volume.",
     "published": published,
-    "updated": "2026-11-01",
     "richPublished": true,
     "minutes": 11,
     "image": "/images/oct22-assistant-trial-task-safety.png",
@@ -254,6 +253,7 @@ export const oct22BlogPosts: any[] = [
         }
       ]
     }
+    "updated": "2026-11-01"
   },
   {
     "slug": "assistant-reference-consent-control",

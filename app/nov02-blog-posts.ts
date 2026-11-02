@@ -105,7 +105,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Build a offer packet close that holds up"
+        "title": "Build a offer packet close that holds up",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -218,7 +219,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Draw a source map for candidate intake"
+        "title": "Draw a source map for candidate intake",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -331,7 +333,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Find the first weak link in role scorecard"
+        "title": "Find the first weak link in role scorecard",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -444,7 +447,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Handle reference check when it does not fit the rule"
+        "title": "Handle reference check when it does not fit the rule",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -557,7 +561,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Keep 30-day review evidence readable after a handoff"
+        "title": "Keep 30-day review evidence readable after a handoff",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -670,7 +675,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Make the monthly trial plan check useful"
+        "title": "Make the monthly trial plan check useful",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -783,7 +789,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Recover candidate intake after a missed step"
+        "title": "Recover candidate intake after a missed step",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -896,7 +903,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Retire a interview panel workaround safely"
+        "title": "Retire a interview panel workaround safely",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -1009,7 +1017,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Run interview panel across a normal day"
+        "title": "Run interview panel across a normal day",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -1122,7 +1131,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Set authority limits around work sample"
+        "title": "Set authority limits around work sample",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -1235,7 +1245,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Test a role scorecard shortcut before adopting it"
+        "title": "Test a role scorecard shortcut before adopting it",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],
@@ -1348,7 +1359,8 @@ export const nov02BlogPosts: any[] = [
       "statisticRows": [],
       "processSteps": [],
       "scenario": {
-        "title": "Write a work sample brief a reviewer can use"
+        "title": "Write a work sample brief a reviewer can use",
+        "steps": []
       },
       "expertQuote": null,
       "relatedLinks": [],

@@ -252,7 +252,7 @@ export const oct22BlogPosts: any[] = [
           "note": "Occupational context; it does not define a particular remote role or staffing result."
         }
       ]
-    }
+    },
     "updated": "2026-11-01"
   },
   {

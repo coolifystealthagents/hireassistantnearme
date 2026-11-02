@@ -109,7 +109,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -223,7 +228,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -337,7 +347,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -451,7 +466,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -565,7 +585,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -679,7 +704,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -793,7 +823,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -907,7 +942,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -1021,7 +1061,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -1135,7 +1180,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -1249,7 +1299,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   },
@@ -1363,7 +1418,12 @@ export const nov02BlogPosts: any[] = [
         "steps": []
       },
       "expertQuote": null,
-      "relatedLinks": [],
+      "relatedLinks": [
+        {
+          "label": "the hiring guide library",
+          "href": "/blog"
+        }
+      ],
       "sources": []
     }
   }

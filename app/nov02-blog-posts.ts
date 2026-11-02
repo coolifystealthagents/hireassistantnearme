@@ -88,7 +88,28 @@ export const nov02BlogPosts: any[] = [
             "Pick five cases, rebuild each from the record, and note where the reviewer needed outside knowledge. If the reviewer cannot access the interview scheduler, the review measures access rather than quality. Close by confirming the next sample date is on the calendar. Fix the template rather than writing a longer note. The November 2 control note for Hire Assistant Near Me should name the offer packet source, owner, and next review time."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Build a offer packet close that holds up"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -180,7 +201,28 @@ export const nov02BlogPosts: any[] = [
             "Pick five cases, rebuild each from the record, and note where the reviewer needed outside knowledge. If the reviewer cannot access the reference check log, the review measures access rather than quality. Record the selection method, even if simple, so the sample can be defended. The review is complete when the owner accepts the finding and the next test is scheduled. The November 2 candidate intake exception log should show the reason code, owner, and release decision."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Draw a source map for candidate intake"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -272,7 +314,28 @@ export const nov02BlogPosts: any[] = [
             "Start with the question: accuracy, timeliness, evidence completeness, or rework? A case that cannot be reconstructed is a finding even when the outcome was correct. Keep the review to one page: sample, method, findings, decision, owner, next check. Five cases can find a broken step; they cannot rank owners. At Hire Assistant Near Me, record the November 2 role scorecard correction and link it to the original source."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Find the first weak link in role scorecard"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -364,7 +427,28 @@ export const nov02BlogPosts: any[] = [
             "Record what was verified, what was missing, and what could not be tested. A case that cannot be reconstructed is a finding even when the outcome was correct. Keep the review to one page: sample, method, findings, decision, owner, next check. The note should name the reference check population and the number of available cases. At Hire Assistant Near Me, the November 2 reference check review should name the backup owner and coverage window."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Handle reference check when it does not fit the rule"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -456,7 +540,28 @@ export const nov02BlogPosts: any[] = [
             "Record what was verified, what was missing, and what could not be tested. A finding repeated across owners points to the the reference check log setup or the 30-day review definition, not to effort. Record the selection method, even if simple, so the sample can be defended. The note should name the 30-day review population and the number of available cases. The November 2 30-day review close should name the destination field, approver, and offer approval cycle check."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Keep 30-day review evidence readable after a handoff"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -548,7 +653,28 @@ export const nov02BlogPosts: any[] = [
             "Compare the sample with scorecard completion for the same period; a gap is a definition problem. A finding repeated across owners points to the the work sample portal setup or the trial plan definition, not to effort. Record the selection method, even if simple, so the sample can be defended. Fix the template rather than writing a longer note. On November 2, Hire Assistant Near Me should compare the trial plan queue count with the scorecard completion denominator."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Make the monthly trial plan check useful"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -640,7 +766,28 @@ export const nov02BlogPosts: any[] = [
             "Start with the question: accuracy, timeliness, evidence completeness, or rework? If the reviewer cannot access the onboarding tracker, the review measures access rather than quality. Close by confirming the next sample date is on the calendar. Fix the template rather than writing a longer note. The candidate intake review at Hire Assistant Near Me should state whether the work sample was current on November 2."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Recover candidate intake after a missed step"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -732,7 +879,28 @@ export const nov02BlogPosts: any[] = [
             "Compare the sample with interview completion for the same period; a gap is a definition problem. If the sample shows missing role scorecard attachments, fix the request form before coaching people. Record the selection method, even if simple, so the sample can be defended. Keep the sampled case keys so the test can be repeated. The November 2 interview panel recovery test should record the restore point and the interview completion result."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Retire a interview panel workaround safely"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -824,7 +992,28 @@ export const nov02BlogPosts: any[] = [
             "Record what was verified, what was missing, and what could not be tested. If the sample shows missing work sample attachments, fix the request form before coaching people. Keep the review to one page: sample, method, findings, decision, owner, next check. When a case appears in two reviews, check whether the first action was applied. The November 2 interview panel note should distinguish a missing work sample from a confirmed negative."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Run interview panel across a normal day"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -916,7 +1105,28 @@ export const nov02BlogPosts: any[] = [
             "Pick five cases, rebuild each from the record, and note where the reviewer needed outside knowledge. If the reviewer cannot access the offer approval system, the review measures access rather than quality. Record the selection method, even if simple, so the sample can be defended. Five cases can find a broken step; they cannot rank owners. At Hire Assistant Near Me, keep the role scorecard attached to the work sample case and record the 30-day retention observation date."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Set authority limits around work sample"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -1008,7 +1218,28 @@ export const nov02BlogPosts: any[] = [
             "A monthly role scorecard review should test a small random sample, not the cases that are easiest to explain. If the reviewer cannot access the offer approval system, the review measures access rather than quality. Use the same frame each month so comparisons mean something. When a case appears in two reviews, check whether the first action was applied. For the November 2 review at Hire Assistant Near Me, record the role scorecard check with the role scorecard and the 30-day retention result."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Test a role scorecard shortcut before adopting it"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   },
   {
@@ -1100,7 +1331,28 @@ export const nov02BlogPosts: any[] = [
             "Record what was verified, what was missing, and what could not be tested. If the reviewer cannot access the applicant tracking system, the review measures access rather than quality. Keep the review to one page: sample, method, findings, decision, owner, next check. The note should name the work sample population and the number of available cases. For the November 2 sample, Hire Assistant Near Me should include one work sample case that crossed owners."
           ]
         }
-      ]
+      ],
+      "faqs": [],
+      "chartRows": [],
+      "chartNote": "",
+      "ctas": [],
+      "decisionRows": [],
+      "planningNumbers": [],
+      "scripts": [
+        {
+          "title": "planning"
+        }
+      ],
+      "accessRows": [],
+      "benchmarkRows": [],
+      "statisticRows": [],
+      "processSteps": [],
+      "scenario": {
+        "title": "Write a work sample brief a reviewer can use"
+      },
+      "expertQuote": null,
+      "relatedLinks": [],
+      "sources": []
     }
   }
 ];

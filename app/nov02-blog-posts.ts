@@ -115,7 +115,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -234,7 +240,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -353,7 +365,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -472,7 +490,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -591,7 +615,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -710,7 +740,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -829,7 +865,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -948,7 +990,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -1067,7 +1115,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -1186,7 +1240,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -1305,7 +1365,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   },
   {
@@ -1424,7 +1490,13 @@ export const nov02BlogPosts: any[] = [
           "href": "/blog"
         }
       ],
-      "sources": []
+      "sources": [
+        {
+          "name": "U.S. Small Business Administration",
+          "url": "https://www.sba.gov/business-guide/manage-your-business",
+          "note": "Public guidance for planning the workflow."
+        }
+      ]
     }
   }
 ];

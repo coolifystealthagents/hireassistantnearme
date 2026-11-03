@@ -61,7 +61,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for interview panel evidence completeness",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -167,7 +167,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for work sample scoring agreement",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -273,7 +273,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for reference check turnaround",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -379,7 +379,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for offer packet approval cycle",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -485,7 +485,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for onboarding access readiness",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -591,7 +591,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for trial task closure",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"
@@ -697,7 +697,7 @@ export const nov03ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for candidate pipeline coverage",
-        "headers": [
+        "columns": [
           "Field",
           "Required",
           "Reviewer"

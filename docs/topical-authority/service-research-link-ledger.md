@@ -1,6 +1,6 @@
 # Service-led research link ledger
 
-Updated: 2026-11-03
+Updated: November 3, 2026
 
 This is an execution ledger, not a published page or a claim about rankings. It records whether an existing reader path can be changed safely. It does not create a new reader-facing link when the proposed source no longer renders as a page.
 
@@ -33,7 +33,7 @@ This is an execution ledger, not a published page or a claim about rankings. It 
 
 The five inventoried cornerstone articles already have reader-useful service paths. Their service links are rendered, so they are delivered and non-duplicable until a distinct reader question and destination are verified. This ledger does not claim a ranking effect or public rollout.
 
-## Reconciled trial-task handoff — 2026-11-03
+## Reconciled trial-task handoff — November 3, 2026
 
 | Published source | Reader-useful destination | Fresh artifact result | Reader question | Decision boundary | Current relationship |
 | --- | --- | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ The five inventoried cornerstone articles already have reader-useful service pat
 
 ## Verification record
 
-- Fresh local build on 2026-11-03 passed `npm run lint`, the declared source suite (20 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract. A canonical-host local production probe confirmed the trial-task source H1, sole canonical, and exactly one route-local recruitment-assistance anchor; the service destination had its expected H1 and sole canonical. Both canonical URLs are in the generated sitemap, which deliberately has no `<lastmod>` fields. This is local source proof only and makes no deployment or public-route claim.
+- Fresh local build on November 3, 2026 passed `npm run lint`, the declared source suite (20 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract. A canonical-host local production probe confirmed the trial-task source H1, sole canonical, and exactly one route-local recruitment-assistance anchor; the service destination had its expected H1 and sole canonical. Both canonical URLs are in the generated sitemap, which deliberately has no `<lastmod>` fields. This is local source proof only and makes no deployment or public-route claim.
 - Fresh local build on 2026-10-31 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract. The candidate row then recorded source-only planning evidence, not a public-route claim.
 - Fresh local build on 2026-10-23 passed `npm run lint`, the declared source suite (19 optimization contracts plus the H1 contract), `next build`, and the 16/16 artifact contract.
 - A local production-server probe with the canonical host and HTTPS forwarding headers parsed the source and destination HTML independently. It found the source H1, its sole canonical, and the new service anchor in `<main>`; it also found the destination H1 and sole canonical.

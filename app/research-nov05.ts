@@ -1,4 +1,5 @@
 import type { ResearchPost } from './fleet-data';
+
 export const nov05ResearchPosts: readonly ResearchPost[] = [
   {
     "slug": "how-consistently-are-role-briefs-approved-before-sourcing",
@@ -61,11 +62,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for role brief approval",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -82,6 +78,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -167,11 +168,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for work sample scoring consistency",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -188,6 +184,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -273,11 +274,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for reference check closure time",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -294,6 +290,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -379,11 +380,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for offer packet approval completeness",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -400,6 +396,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -485,11 +486,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for first-week access readiness",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -506,6 +502,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -591,11 +592,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for trial task closure evidence",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -612,6 +608,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],
@@ -697,11 +698,6 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
     "tables": [
       {
         "caption": "Evidence fields for candidate communication during delays",
-        "headers": [
-          "Field",
-          "Required",
-          "Reviewer"
-        ],
         "rows": [
           [
             "Source",
@@ -718,6 +714,11 @@ export const nov05ResearchPosts: readonly ResearchPost[] = [
             "Yes",
             "QA"
           ]
+        ],
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
         ]
       }
     ],

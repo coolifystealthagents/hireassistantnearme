@@ -1,5 +1,5 @@
 import type { ResearchPost } from './fleet-data';
-export const nov06ResearchPosts: readonly ResearchPost[
+export const nov06ResearchPosts: readonly ResearchPost[] = [
   {
     "slug": "how-often-do-candidate-scorecards-record-a-specific-evidence-gap",
     "title": "How often do candidate scorecards record a specific evidence gap?",
@@ -61,6 +61,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for scorecard evidence gap coverage",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -77,11 +82,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -167,6 +167,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for work sample rubric currency",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -183,11 +188,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -273,6 +273,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for reference call consent evidence",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -289,11 +294,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -379,6 +379,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for panel question consistency",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -395,11 +400,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -485,6 +485,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for offer packet salary band alignment",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -501,11 +506,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -591,6 +591,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for first-week access confirmation",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -607,11 +612,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],
@@ -697,6 +697,11 @@ export const nov06ResearchPosts: readonly ResearchPost[
     "tables": [
       {
         "caption": "Evidence fields for trial task exception aging",
+        "columns": [
+          "Field",
+          "Required",
+          "Reviewer"
+        ],
         "rows": [
           [
             "Source",
@@ -713,11 +718,6 @@ export const nov06ResearchPosts: readonly ResearchPost[
             "Yes",
             "QA"
           ]
-        ],
-        "columns": [
-          "Field",
-          "Required",
-          "Reviewer"
         ]
       }
     ],

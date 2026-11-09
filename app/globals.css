@@ -105,7 +105,7 @@ time{text-transform:none}
 .reading-grid>a>div{display:flex;flex:1;flex-direction:column;padding:24px}
 .reading-grid h3{margin:18px 0 12px}
 .reading-grid b{display:flex;justify-content:space-between;margin-top:auto;padding-top:16px;border-top:1px solid #ddd8cd;font-size:13px}
-.article-sidebar{position:relative;top:auto;align-self:stretch;max-height:none;overflow:visible}
+.article-sidebar{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow:auto}
 @media(max-width:900px){
  .article-layout{display:block}
  .article-sidebar{display:none}

@@ -16,7 +16,7 @@ export type ResearchPost = {
   slug: string; title: string; excerpt: string; published: string; image: string; imageAlt: string;
   keyStats: readonly { value: string; label: string; source: string }[];
   takeaways: readonly string[];
-  sections: readonly { heading: string; body: string }[];
+  sections: readonly { heading: string; body: string; paragraphs?: readonly string[] }[];
   tables: readonly ResearchTable[];
   sources: readonly { name: string; url: string }[];
   related: readonly { label: string; href: string }[];
@@ -37,6 +37,7 @@ import { oct13ResearchPosts } from './research-oct13';
 import { nov02ResearchPosts } from './research-nov02';
 import { nov03ResearchPosts } from './research-nov03';
 import { nov06ResearchPosts } from './research-nov06';
+import { nov08ResearchPosts } from './research-nov08';
 import { nov07ResearchPosts } from './research-nov07';
 import { nov05ResearchPosts } from './research-nov05';
 import { november04ResearchPosts } from './research-nov04';
@@ -200,6 +201,7 @@ const aug17ResearchPosts: ResearchPost[] = aug17ResearchPostsBase;
 export const researchPosts: readonly ResearchPost[] = [
   ...november04ResearchPosts,
   ...nov05ResearchPosts,
+  ...nov08ResearchPosts,
   ...nov07ResearchPosts,
   ...nov06ResearchPosts,
   ...nov03ResearchPosts,

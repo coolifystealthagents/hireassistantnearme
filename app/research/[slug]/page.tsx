@@ -30,7 +30,7 @@ export default async function ResearchArticle({ params }: { params: Promise<{ sl
   ];
   return <><Header /><main><article className="section"><div className="container article-layout"><ArticleSidebar title={post.title} kind="research brief" headings={post.sections.map((section, index) => ({ id: `research-section-${index + 1}`, label: section.heading, level: 2 }))} /><div className="article-shell research-article" data-article-body>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <p className="eyebrow">{site.brand} research · <time dateTime={post.published}>{formatPublicationDate(post.published)}</time></p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
+    <p className="eyebrow">Published <time dateTime={post.published}>{formatPublicationDate(post.published)}</time></p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
     <figure className="article-hero-image"><img className="article-thumbnail" src={post.image} alt={post.imageAlt} /><figcaption>Research brief illustration: {post.title}.</figcaption></figure>
     <section className="card"><h2>Key stats</h2><div className="research-stat-grid">{post.keyStats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span><small>Source: {stat.source}</small></div>)}</div></section>
     <section className="card"><h2>Key takeaways</h2><ul>{post.takeaways.map((takeaway) => <li key={takeaway}>{takeaway}</li>)}</ul></section>

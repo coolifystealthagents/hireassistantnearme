@@ -136,7 +136,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article strict-article" data-article-slug={post.slug} data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <div className="container article-layout"><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
-          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
+          <p className="eyebrow">Published <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead" data-narrative="true">{post.excerpt} The owner keeps final control while the assistant works inside a clear task lane.</p>
           <p className="revision-note" data-revision-note={detail.revision}>Reviewed against primary sources on {formatPublicationDate(published)}.</p>
@@ -312,7 +312,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <main className="section rich-article" data-article-revision={detail.revision}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }} />
         <div className="container article-layout"><ArticleSidebar title={post.title} headings={[{id:"direct-answer",label:"Direct answer",level:2},...detail.sections.map((s: any, i: number)=>({id:`section-${i+1}`,label:s.heading,level:2}))]} /><article className="article-shell" data-article-body>
-          <p className="eyebrow">Philippines-only hiring guide · <time dateTime={published}>{formatPublicationDate(published)}</time></p>
+          <p className="eyebrow">Published <time dateTime={published}>{formatPublicationDate(published)}</time></p>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p>
           <figure className="article-hero-image"><img src={editorialCard(post.slug).src} alt={editorialCard(post.slug).alt} width={editorialCard(post.slug).width} height={editorialCard(post.slug).height} /><figcaption>Guide illustration: {post.title}.</figcaption></figure>

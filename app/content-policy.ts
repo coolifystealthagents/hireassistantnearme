@@ -85,6 +85,7 @@ for (const post of blogPosts) if (post.published === '2026-11-06') publishedBatc
 for (const post of blogPosts) if (post.published === '2026-11-07') publishedBatchBlogSlugs.add(post.slug);
 for (const post of blogPosts) if (post.published === '2026-11-08') publishedBatchBlogSlugs.add(post.slug);
 for (const post of blogPosts) if (post.published === '2026-11-09') publishedBatchBlogSlugs.add(post.slug);
+for (const post of blogPosts) if (post.published === '2026-11-10') publishedBatchBlogSlugs.add(post.slug);
 
 export const publishedBlogPosts = blogPosts.filter((post) => approvedBlogSlugs.has(post.slug) || publishedBatchBlogSlugs.has(post.slug));
 
@@ -182,6 +183,7 @@ for (const post of blogPosts) if (post.published === '2026-11-06' && !editorialC
 for (const post of blogPosts) if (post.published === '2026-11-07' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 for (const post of blogPosts) if (post.published === '2026-11-08' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 for (const post of blogPosts) if (post.published === '2026-11-09' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
+for (const post of blogPosts) if (post.published === '2026-11-10' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 
 export function editorialCard(slug: string) {
   const card = editorialCards[slug];
@@ -203,6 +205,7 @@ for (const post of researchPosts) if (post.published === '2026-11-06') oct28Rese
 for (const post of researchPosts) if (post.published === '2026-11-07') oct28ResearchSlugs.add(post.slug);
 for (const post of researchPosts) if (post.published === '2026-11-08') oct28ResearchSlugs.add(post.slug);
 for (const post of researchPosts) if (post.published === '2026-11-09') oct28ResearchSlugs.add(post.slug);
+for (const post of researchPosts) if (post.published === '2026-11-10') oct28ResearchSlugs.add(post.slug);
 export const publishedResearchPosts = researchPosts.filter((post) => oct22ResearchSlugs.has(post.slug) || oct28ResearchSlugs.has(post.slug));
 export const retiredResearchSlugs = new Set(researchPosts.filter((post) => !oct22ResearchSlugs.has(post.slug) && !oct28ResearchSlugs.has(post.slug)).map((post) => post.slug));
 

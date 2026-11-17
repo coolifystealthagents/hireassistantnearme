@@ -40,7 +40,7 @@ export const nov16BlogPosts = [
           "heading": "Where the Filipino specialist's authority stops",
           "paragraphs": [
             "Authority should be narrow enough to test. For a candidate's escalation example against the role's written authority, name the decisions the specialist can make alone and the ones that return to the hiring manager. Add an end date to every temporary delegation. Review the boundary when the client contact or the process changes. Record the decision and the next action before the case leaves the queue.",
-            "A good escalation states the impact, the options, and the recommended next step. The recruiting coordinator sends it to the hiring manager and records the response time. Do not keep the issue in a private chat while the client believes work is continuing. If the decision is urgent, call and then write the summary. The recruiting coordinator dates the entry and links the source document."
+            "A good escalation names the impact, the available options, and the recommended next step. The recruiting coordinator sends that note to the hiring manager and logs the reply time. Leaving the issue in a private chat while the process continues is not acceptable. If the matter is urgent, call first and write the summary immediately afterward. The recruiting coordinator dates the entry and links the source document."
           ]
         },
         {
@@ -595,7 +595,7 @@ export const nov16BlogPosts = [
           "heading": "Close only after the destination value is verified",
           "paragraphs": [
             "Verification is a separate step from completion. The hiring manager checks the authority matrix, the sample workflow, and the surviving value in the role brief review before marking the case closed. If the values differ, the case stays open. The close note should name the evidence that settled it. A second reviewer should see the same prompt, rubric, and evidence.",
-            "Look for the failure modes that survive a status change: a value updated in one system but not another, an approval recorded after the work, and a case closed by someone who did not see the evidence. The hiring manager checks all three before closing. Each one is cheaper to fix now than after a client question. Record the extra check in the close note. Record the decision and the next action before the case leaves the queue."
+            "Check the failure modes that a status change can hide: a record updated in one system but not another, an approval logged after the work, and a case closed by someone who never saw the evidence. The hiring manager checks all three before closing. Fixing them now is cheaper than explaining them after a candidate question. Note the extra check in the close record. Record the decision and the next action before the case leaves the queue."
           ]
         }
       ],
@@ -752,7 +752,7 @@ export const nov16BlogPosts = [
           "heading": "Where the Filipino specialist's authority stops",
           "paragraphs": [
             "The recruiting coordinator prepares and routes the case; the hiring manager keeps the decision that changes money, access, or a client promise. Write that boundary into the case template instead of relying on habit. A delegation should state its scope and end date. When the limit is unclear, the specialist pauses and asks rather than guessing. Record the decision and the next action before the case leaves the queue.",
-            "A good escalation states the impact, the options, and the recommended next step. The recruiting coordinator sends it to the hiring manager and records the response time. Do not keep the issue in a private chat while the client believes work is continuing. If the decision is urgent, call and then write the summary. The recruiting coordinator dates the entry and links the source document."
+            "A good escalation names the impact, the available options, and the recommended next step. The recruiting coordinator sends that note to the hiring manager and logs the reply time. Leaving the issue in a private chat while the process continues is not acceptable. If the matter is urgent, call first and write the summary immediately afterward. The recruiting coordinator dates the entry and links the source document."
           ]
         },
         {
@@ -951,7 +951,7 @@ export const nov16BlogPosts = [
           "heading": "Close only after the destination value is verified",
           "paragraphs": [
             "Use a short close note: decision, destination value, checker, time. The hiring manager writes it in the skills exercise record rather than in a private message. That note is what a client auditor or a new team lead will read first. Make it complete enough to stand alone. A second reviewer should see the same prompt, rubric, and evidence.",
-            "Look for the failure modes that survive a status change: a value updated in one system but not another, an approval recorded after the work, and a case closed by someone who did not see the evidence. The hiring manager checks all three before closing. Each one is cheaper to fix now than after a client question. Record the extra check in the close note. Record the decision and the next action before the case leaves the queue."
+            "Check the failure modes that a status change can hide: a record updated in one system but not another, an approval logged after the work, and a case closed by someone who never saw the evidence. The hiring manager checks all three before closing. Fixing them now is cheaper than explaining them after a candidate question. Note the extra check in the close record. Record the decision and the next action before the case leaves the queue."
           ]
         }
       ],
@@ -1129,7 +1129,7 @@ export const nov16BlogPosts = [
           "heading": "Close only after the destination value is verified",
           "paragraphs": [
             "Use a short close note: decision, destination value, checker, time. The recruiting coordinator writes it in the accommodation request log rather than in a private message. That note is what a client auditor or a new team lead will read first. Make it complete enough to stand alone. A second reviewer should see the same prompt, rubric, and evidence.",
-            "Look for the failure modes that survive a status change: a value updated in one system but not another, an approval recorded after the work, and a case closed by someone who did not see the evidence. The recruiting coordinator checks all three before closing. Each one is cheaper to fix now than after a client question. Record the extra check in the close note. Record the decision and the next action before the case leaves the queue."
+            "Check the failure modes that a status change can hide: a record updated in one system but not another, an approval logged after the work, and a case closed by someone who never saw the evidence. The recruiting coordinator checks all three before closing. Fixing them now is cheaper than explaining them after a candidate question. Note the extra check in the close record. Record the decision and the next action before the case leaves the queue."
           ]
         }
       ],
@@ -1286,7 +1286,7 @@ export const nov16BlogPosts = [
           "heading": "Where the Filipino specialist's authority stops",
           "paragraphs": [
             "Separate preparation from approval in a candidate rejection with a dated reason code. The hiring manager may compare, label, and route the evidence, but the recruiting lead approves any change to scope, cost, access, or a service promise. Record the approval in the candidate decision record with a date. A verbal approval that nobody can find is not authority. Record the decision and the next action before the case leaves the queue.",
-            "A good escalation states the impact, the options, and the recommended next step. The hiring manager sends it to the recruiting lead and records the response time. Do not keep the issue in a private chat while the client believes work is continuing. If the decision is urgent, call and then write the summary. The recruiting coordinator dates the entry and links the source document."
+            "A good escalation names the impact, the available options, and the recommended next step. The hiring manager sends that note to the recruiting lead and logs the reply time. Leaving the issue in a private chat while the process continues is not acceptable. If the matter is urgent, call first and write the summary immediately afterward. The recruiting coordinator dates the entry and links the source document."
           ]
         },
         {
@@ -1307,7 +1307,7 @@ export const nov16BlogPosts = [
           "heading": "Close only after the destination value is verified",
           "paragraphs": [
             "Verification is a separate step from completion. The hiring manager checks the role requirements, the rejection reason code, and the surviving value in the candidate decision record before marking the case closed. If the values differ, the case stays open. The close note should name the evidence that settled it. A second reviewer should see the same prompt, rubric, and evidence.",
-            "Look for the failure modes that survive a status change: a value updated in one system but not another, an approval recorded after the work, and a case closed by someone who did not see the evidence. The hiring manager checks all three before closing. Each one is cheaper to fix now than after a client question. Record the extra check in the close note. Record the decision and the next action before the case leaves the queue."
+            "Check the failure modes that a status change can hide: a record updated in one system but not another, an approval logged after the work, and a case closed by someone who never saw the evidence. The hiring manager checks all three before closing. Fixing them now is cheaper than explaining them after a candidate question. Note the extra check in the close record. Record the decision and the next action before the case leaves the queue."
           ]
         }
       ],

@@ -96,7 +96,7 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
         "paragraphs": [
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
           "Close the review by writing what the team will stop doing as well as what it will start. A control that only adds work will be abandoned. Set the next review date before the meeting ends. That date is the difference between a study and a habit. The hiring manager should be able to repeat this check from the candidate record.",
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
     ],
@@ -225,7 +225,7 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
         "paragraphs": [
           "Close the review by writing what the team will stop doing as well as what it will start. A control that only adds work will be abandoned. Set the next review date before the meeting ends. That date is the difference between a study and a habit. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. The hiring manager should be able to repeat this check from the candidate record.",
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
     ],
@@ -353,8 +353,8 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
         "body": "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
         "paragraphs": [
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
-          "Give the finding one owner, one change, and one review date. The hiring manager chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
-          "Give the finding one owner, one change, and one review date. The hiring manager chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
+          "The monthly review should end with one owner, one change, and one review date. The hiring manager picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
+          "The monthly review should end with one owner, one change, and one review date. The hiring manager picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
     ],
@@ -482,7 +482,7 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
         "body": "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
         "paragraphs": [
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
@@ -737,11 +737,11 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
       },
       {
         "heading": "Review and next action",
-        "body": "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
+        "body": "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
         "paragraphs": [
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
-          "Give the finding one owner, one change, and one review date. The recruiting coordinator chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. The hiring manager should be able to repeat this check from the candidate record.",
+          "The monthly review should end with one owner, one change, and one review date. The recruiting coordinator picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
     ],
@@ -870,7 +870,7 @@ export const nov16ResearchPosts: readonly ResearchPost[] = [
         "paragraphs": [
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. In the Hire Assistant Near Me hiring file, the note names the interviewer and the date.",
           "Re-run the same measure after the change and compare like with like. If the result improves, keep the change and document why. If it does not, inspect the sample before assuming the change failed. The next review should test the rule, not the person. The hiring manager should be able to repeat this check from the candidate record.",
-          "Give the finding one owner, one change, and one review date. The hiring manager chooses the smallest change that addresses the most common gap. Update the template or evidence list rather than adding a new report. Record the change in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
+          "The monthly review should end with one owner, one change, and one review date. The hiring manager picks the smallest change that addresses the most common gap. Update the template or evidence list instead of adding another report. Record the decision in the same file as the finding. Keep the evidence with the candidate file rather than in a private message."
         ]
       }
     ],

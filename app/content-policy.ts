@@ -79,6 +79,7 @@ const publishedBatchBlogSlugs = new Set([
     'hireassistantnearme-write-an-sop-for-work-sample-that-people-use',
 ]);
 
+for (const post of blogPosts) if (post.published === '2026-11-18') publishedBatchBlogSlugs.add(post.slug);
 for (const post of blogPosts) if (post.published === '2026-11-17') publishedBatchBlogSlugs.add(post.slug);
 for (const post of blogPosts) if (post.published === '2026-11-16') publishedBatchBlogSlugs.add(post.slug);
 for (const post of blogPosts) if (post.published === '2026-11-02') publishedBatchBlogSlugs.add(post.slug);
@@ -181,6 +182,7 @@ const editorialCards: Record<string, { src: string; alt: string; width: number; 
   'hireassistantnearme-run-a-monthly-interview-panel-recovery-drill': { src: '/images/oct28/hireassistantnearme-run-a-monthly-interview-panel-recovery-drill.png', alt: 'Run a monthly interview panel recovery drill - Hire Assistant Near Me, published October 28, 2026', width: 1200, height: 630 },
 };
 
+for (const post of blogPosts) if (post.published === '2026-11-18' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 for (const post of blogPosts) if (post.published === '2026-11-17' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 for (const post of blogPosts) if (post.published === '2026-11-16' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
 for (const post of blogPosts) if (post.published === '2026-11-02' && !editorialCards[post.slug]) editorialCards[post.slug] = { src: post.image, alt: post.imageAlt, width: 1200, height: 630 };
@@ -205,6 +207,7 @@ const oct22ResearchSlugs = new Set(['hireassistantnearme-auditing-access-changes
 // 2026-10-28 research batch. Added as a separate manifest so the earlier
 // published research set and its redirect decisions stay unchanged.
 const oct28ResearchSlugs = new Set(['hireassistantnearme-measuring-decision-latency-in-role-scorecard','hireassistantnearme-testing-evidence-retention-across-candidate-intake-corrections','hireassistantnearme-estimating-exception-spillover-in-work-sample','hireassistantnearme-auditing-backup-owner-coverage-for-interview-panel','hireassistantnearme-testing-whether-reference-check-audit-samples-detect-silent-gaps']);
+for (const post of researchPosts) if (post.published === '2026-11-18') oct28ResearchSlugs.add(post.slug);
 for (const post of researchPosts) if (post.published === '2026-11-17') oct28ResearchSlugs.add(post.slug);
 for (const post of researchPosts) if (post.published === '2026-11-16') oct28ResearchSlugs.add(post.slug);
 for (const post of researchPosts) if (post.published === '2026-11-02') oct28ResearchSlugs.add(post.slug);

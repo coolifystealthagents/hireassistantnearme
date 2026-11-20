@@ -1081,6 +1081,7 @@ import { nov03BlogPosts } from './nov03-blog-posts';
 import { nov06BlogPosts } from './nov06-blog-posts';
 import { nov10BlogPosts } from './nov10-blog-posts';
 import { nov17BlogPosts } from './nov17-blog-posts';
+import { nov20BlogPosts } from './nov20-blog-posts';
 import { nov19BlogPosts } from './nov19-blog-posts';
 import { nov18BlogPosts } from './nov18-blog-posts';
 import { nov16BlogPosts } from './nov16-blog-posts';
@@ -1097,7 +1098,7 @@ import { oct26BlogPosts } from './oct26-blog-posts';
 import { oct25BlogPosts } from './oct25-blog-posts';
 import { oct22BlogPosts } from './oct22-blog-posts';
 
-export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts, ...sep10BlogPosts, ...sep11BlogPosts, ...sep16BlogPosts, ...sep18BlogPosts, ...sep22BlogPosts, ...sep23BlogPosts, ...sep24BlogPosts, ...sep25BlogPosts, ...sep28BlogPosts, ...oct2BlogPosts, ...oct5BlogPosts, ...oct8BlogPosts, ...oct9BlogPosts, ...oct12BlogPosts, ...oct13BlogPosts, ...oct22BlogPosts, ...oct25BlogPosts, ...oct26BlogPosts, ...oct27BlogPosts, ...nov04BlogPosts, ...nov05BlogPosts, ...nov10BlogPosts, ...nov17BlogPosts, ...nov19BlogPosts, ...nov18BlogPosts, ...nov16BlogPosts, ...nov11BlogPosts, ...nov09BlogPosts, ...nov08BlogPosts, ...nov07BlogPosts, ...nov06BlogPosts, ...nov03BlogPosts, ...nov02BlogPosts, ...nov01BlogPosts, ...oct28BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
+export const blogPosts = [...baseBlogPosts, ...dailyBlogPosts, ...aug18BlogPosts, ...aug19BlogFinalPosts, ...aug20BlogPosts, ...aug21BlogPosts, ...aug23BlogPosts, ...aug31BlogPosts, ...sep1BlogPosts, ...sep2BlogPosts, ...sep3BlogPosts, ...sep4BlogPosts, ...sep7BlogPosts, ...sep8BlogPosts, ...sep9BlogPosts, ...sep10BlogPosts, ...sep11BlogPosts, ...sep16BlogPosts, ...sep18BlogPosts, ...sep22BlogPosts, ...sep23BlogPosts, ...sep24BlogPosts, ...sep25BlogPosts, ...sep28BlogPosts, ...oct2BlogPosts, ...oct5BlogPosts, ...oct8BlogPosts, ...oct9BlogPosts, ...oct12BlogPosts, ...oct13BlogPosts, ...oct22BlogPosts, ...oct25BlogPosts, ...oct26BlogPosts, ...oct27BlogPosts, ...nov04BlogPosts, ...nov05BlogPosts, ...nov10BlogPosts, ...nov17BlogPosts, ...nov20BlogPosts, ...nov19BlogPosts, ...nov18BlogPosts, ...nov16BlogPosts, ...nov11BlogPosts, ...nov09BlogPosts, ...nov08BlogPosts, ...nov07BlogPosts, ...nov06BlogPosts, ...nov03BlogPosts, ...nov02BlogPosts, ...nov01BlogPosts, ...oct28BlogPosts].sort((a, b) => b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug));
 
 export const routes = [
   '/',

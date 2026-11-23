@@ -40,6 +40,7 @@ import { nov06ResearchPosts } from './research-nov06';
 import { nov10ResearchPosts } from './research-nov10';
 import { nov17ResearchPosts } from './research-nov17';
 import { nov20ResearchPosts } from './research-nov20';
+import { nov23ResearchPosts } from './research-nov23';
 import { nov22ResearchPosts } from './research-nov22';
 import { nov21ResearchPosts } from './research-nov21';
 import { nov19ResearchPosts } from './research-nov19';
@@ -212,7 +213,7 @@ export const researchPosts: readonly ResearchPost[] = [
   ...november04ResearchPosts,
   ...nov05ResearchPosts,
   ...nov10ResearchPosts,
-  ...nov17ResearchPosts, ...nov20ResearchPosts, ...nov22ResearchPosts, ...nov21ResearchPosts, ...nov19ResearchPosts, ...nov18ResearchPosts, ...nov16ResearchPosts, ...nov11ResearchPosts,
+  ...nov17ResearchPosts, ...nov20ResearchPosts, ...nov23ResearchPosts, ...nov22ResearchPosts, ...nov21ResearchPosts, ...nov19ResearchPosts, ...nov18ResearchPosts, ...nov16ResearchPosts, ...nov11ResearchPosts,
   ...nov09ResearchPosts,
   ...nov08ResearchPosts,
   ...nov07ResearchPosts,

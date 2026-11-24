@@ -20,7 +20,7 @@ export default function ResearchLibrary() {
       <main>
         <section className="fleet-hero editorial-index-hero"><div className="container editorial-index-opening">
           <div className="editorial-index-copy"><p className="eyebrow">{site.brand} research</p><h1>Evidence for better support-role decisions.</h1><p className="lead">Source-bounded briefs on workflow design, delegated access, quality review, and the decisions that remain with an accountable owner.</p><div className="research-hero-links"><a className="btn primary" href="#research-library">Browse the library</a><a className="text-link" href="/services">Apply it to a role plan <span>↗</span></a></div></div>
-          <figure className="research-hero-visual"><img src="/images/research-library-evidence-flow.svg" alt="Diagram showing sources becoming bounded findings and accountable operating decisions" width="1200" height="760" /><figcaption>Question → evidence → limitations → practical takeaway.</figcaption></figure>
+          <figure className="research-hero-visual"><img src="/images/marketing/evidence-review-laptop.jpg" alt="Two people reviewing evidence together on a laptop" width="1200" height="800" /><figcaption>Read the source, test the limitation, and keep the operating judgment with an accountable owner.</figcaption></figure>
         </div></section>
         <section className="research-method-strip"><div className="container"><p>Every brief includes</p><ul><li>A stated question</li><li>Cited sources</li><li>Explicit limitations</li><li>Owner decisions</li></ul></div></section>
         <section className="section research-library-section" id="research-library"><div className="container">

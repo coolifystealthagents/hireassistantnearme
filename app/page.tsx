@@ -1,13 +1,14 @@
 import { Header, Footer, JsonLd } from './components';
 import { faqs, localMarkets, roles, site } from './data';
 import { editorialCard, publishedBlogPosts } from './content-policy';
+import { TestimonialsRail } from './booking-components';
 
 export const metadata = { alternates: { canonical: '/' } };
 
 const roleDetails = [
-  { title: roles[0], note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Owner and leadership support', signal: 'Protect attention' },
-  { title: roles[1], note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Customer operations', signal: 'Keep queues moving' },
-  { title: roles[3], note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Back-office operations', signal: 'Make work visible' },
+  { title: roles[0], note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Owner and leadership support', signal: 'Protect attention', image: '/images/marketing/team-workflow-review.jpg', alt: 'Colleagues reviewing work together around laptops' },
+  { title: roles[1], note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Customer operations', signal: 'Keep queues moving', image: '/images/marketing/remote-operations-work.jpg', alt: 'A professional working at a desktop computer in an office' },
+  { title: roles[3], note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Back-office operations', signal: 'Make work visible', image: '/images/marketing/distributed-operations-office.jpg', alt: 'A distributed operations team working at shared desks' },
 ];
 
 const tasks = ['Inbox and calendar', 'Customer follow-up', 'CRM cleanup', 'Reports and admin'];
@@ -30,14 +31,8 @@ export default function Home() {
           </div>
         </div>
         <figure className="hero-visual editorial-hero-media">
-          <img src="/images/local-team.jpg" alt="Two colleagues discussing a digital workflow beside a laptop" width="1600" height="1067"/>
-          <figcaption>A useful assistant brief starts with the workflow, not a generic list of skills. Image used as a work-planning illustration.</figcaption>
-          <div className="location-card">
-            <div className="location-top"><span>Role lens</span><b>Scope before search</b></div>
-            <h2>Where should the work happen?</h2>
-            <div className="choice active"><span>✓</span><div><b>Online tools and repeat tasks</b><small>Plan for remote support</small></div></div>
-            <div className="choice"><span>•</span><div><b>Front desk and physical access</b><small>Keep with a local team</small></div></div>
-          </div>
+          <img src="/images/marketing/team-workflow-review.jpg" alt="Colleagues reviewing a shared workflow around laptops" width="1200" height="1799"/>
+          <figcaption>Start with the work: the tools, handoffs, decisions, and review rhythm.</figcaption>
         </figure>
         <div className="hero-proof" aria-label="Service boundaries">
           <div><strong>Philippines</strong><span>Recruiting location</span></div>
@@ -45,6 +40,7 @@ export default function Home() {
           <div><strong>Role first</strong><span>Matching approach</span></div>
         </div>
       </div>
+      <div className="container home-review-proof"><TestimonialsRail /></div>
       <div className="container task-strip" aria-label="Common assistant tasks">
         <span className="strip-label">Common starting points</span>
         {tasks.map((task) => <a href="#roles" key={task}>{task}</a>)}
@@ -56,6 +52,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the lane, then the person</p><h2>Give recurring work a clear edge.</h2></div><p>A tighter brief makes screening, onboarding, and review easier. Start with one workstream and add responsibility only when the handoff is working.</p></div>
         <div className="role-grid editorial-role-grid">
           {roleDetails.map((role, index) => <article className="role-card editorial-role-card" key={role.title}>
+            <figure><img src={role.image} alt={role.alt} width="1200" height={index === 0 ? 1799 : 800} /></figure>
             <header><small>{role.fit}</small><span>{role.signal}</span></header>
             <div className="role-body"><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this lane to my brief <span>→</span></a></div>
           </article>)}
@@ -104,10 +101,10 @@ export default function Home() {
     <section className="section reading-section">
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/research" id="cta-page-action-4">Explore research <span>↗</span></a></div>
-        <div className="reading-grid">{publishedBlogPosts.slice(0,3).map((post) => {
+        <div className="reading-grid editorial-reading-list">{publishedBlogPosts.slice(0,3).map((post) => {
           const card = editorialCard(post.slug);
           return <a href={`/blog/${post.slug}`} key={post.slug}>
-            <figure><img src={card.src} alt={card.alt} width={card.width} height={card.height} /></figure>
+            <figure><img src={card.src} alt="" width={card.width} height={card.height} /></figure>
             <div><span>{(post as { minutes?: number }).minutes || 10} min read</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Read guide <span aria-hidden="true">→</span></b></div>
           </a>;
         })}</div>

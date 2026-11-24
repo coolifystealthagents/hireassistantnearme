@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence flow for a support-role research brief</title>
+  <desc id="desc">An editorial diagram connecting source review, bounded findings, operating decisions, and accountable ownership.</desc>
+  <rect width="1200" height="760" fill="#172d25"/>
+  <path d="M0 610C220 520 420 690 650 590s360-80 550-10v180H0Z" fill="#24483b"/>
+  <circle cx="1030" cy="118" r="210" fill="none" stroke="#d6a85f" stroke-width="2" opacity=".55"/>
+  <circle cx="1030" cy="118" r="150" fill="none" stroke="#d6a85f" stroke-width="2" opacity=".32"/>
+  <text x="74" y="76" fill="#e4b275" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">RESEARCH LIBRARY</text>
+  <text x="74" y="145" fill="#fffaf1" font-family="Georgia, serif" font-size="48">From evidence to a</text>
+  <text x="74" y="202" fill="#fffaf1" font-family="Georgia, serif" font-size="48">reviewable operating decision.</text>
+  <g transform="translate(74 290)">
+    <g>
+      <rect width="226" height="218" rx="4" fill="#fffaf1"/>
+      <text x="24" y="38" fill="#a14736" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">01 · SOURCE</text>
+      <path d="M24 72h142M24 99h178M24 126h156M24 153h172" stroke="#a9b2ab" stroke-width="7"/>
+      <path d="M24 184h76" stroke="#d75c3f" stroke-width="7"/>
+      <text x="24" y="205" fill="#59665f" font-family="Arial, sans-serif" font-size="12">Citations and limits</text>
+    </g>
+    <path d="M246 109h72" stroke="#e4b275" stroke-width="3"/><path d="m307 99 12 10-12 10" fill="none" stroke="#e4b275" stroke-width="3"/>
+    <g transform="translate(338)">
+      <rect width="226" height="218" rx="4" fill="#e8efe9"/>
+      <text x="24" y="38" fill="#a14736" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">02 · FINDING</text>
+      <circle cx="70" cy="109" r="40" fill="none" stroke="#24483b" stroke-width="14" stroke-dasharray="155 97" transform="rotate(-90 70 109)"/>
+      <path d="M132 82h64M132 109h48M132 136h72" stroke="#73847a" stroke-width="7"/>
+      <text x="24" y="205" fill="#59665f" font-family="Arial, sans-serif" font-size="12">Bounded, not absolute</text>
+    </g>
+    <path d="M584 109h72" stroke="#e4b275" stroke-width="3"/><path d="m645 99 12 10-12 10" fill="none" stroke="#e4b275" stroke-width="3"/>
+    <g transform="translate(676)">
+      <rect width="226" height="218" rx="4" fill="#fffaf1"/>
+      <text x="24" y="38" fill="#a14736" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">03 · DECISION</text>
+      <rect x="24" y="70" width="178" height="34" fill="#d9e5dc"/>
+      <rect x="24" y="116" width="142" height="34" fill="#d9e5dc"/>
+      <path d="m34 87 8 8 16-18M34 133l8 8 16-18" fill="none" stroke="#a14736" stroke-width="5"/>
+      <text x="24" y="205" fill="#59665f" font-family="Arial, sans-serif" font-size="12">Owner retains judgment</text>
+    </g>
+  </g>
+  <g transform="translate(74 596)">
+    <text fill="#fffaf1" font-family="Arial, sans-serif" font-size="17" font-weight="700">QUESTION</text><text x="132" fill="#aebfb5" font-family="Arial, sans-serif" font-size="17">→</text>
+    <text x="166" fill="#fffaf1" font-family="Arial, sans-serif" font-size="17" font-weight="700">EVIDENCE</text><text x="282" fill="#aebfb5" font-family="Arial, sans-serif" font-size="17">→</text>
+    <text x="316" fill="#fffaf1" font-family="Arial, sans-serif" font-size="17" font-weight="700">LIMITS</text><text x="398" fill="#aebfb5" font-family="Arial, sans-serif" font-size="17">→</text>
+    <text x="432" fill="#fffaf1" font-family="Arial, sans-serif" font-size="17" font-weight="700">PRACTICAL TAKEAWAY</text>
+  </g>
+  <text x="74" y="694" fill="#aebfb5" font-family="Arial, sans-serif" font-size="15">Every brief separates what the sources support from what an accountable owner must still decide.</text>
+</svg>

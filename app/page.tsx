@@ -5,9 +5,9 @@ import { editorialCard, publishedBlogPosts } from './content-policy';
 export const metadata = { alternates: { canonical: '/' } };
 
 const roleDetails = [
-  { title: roles[0], image: '/images/assistant-maya.jpg', note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Role example · owner-led teams' },
-  { title: roles[1], image: '/images/assistant-daniel.jpg', note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Role example · busy service desks' },
-  { title: roles[3], image: '/images/assistant-elena.jpg', note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Role example · growing operations' },
+  { title: roles[0], note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Owner and leadership support', signal: 'Protect attention' },
+  { title: roles[1], note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Customer operations', signal: 'Keep queues moving' },
+  { title: roles[3], note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Back-office operations', signal: 'Make work visible' },
 ];
 
 const tasks = ['Inbox and calendar', 'Customer follow-up', 'CRM cleanup', 'Reports and admin'];
@@ -17,47 +17,49 @@ export default function Home() {
     { '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: site.url },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
   ];
-  return <><Header/><main className="finder-home" data-design="local-finder-2026" data-gi-rollout="two-illustration-packs-one-icon-pack"><JsonLd data={schema}/>
-    <section className="finder-hero">
+  return <><Header/><main className="finder-home editorial-home" data-design="editorial-role-finder-2026"><JsonLd data={schema}/>
+    <section className="finder-hero editorial-home-hero">
       <div className="container hero-shell">
         <div className="hero-copy">
-          <p className="eyebrow">A clearer way to hire assistant help</p>
+          <p className="eyebrow">Philippines-based remote support</p>
           <h1>Find an assistant who fits your workday.</h1>
-          <p className="hero-deck">Keep in-person work with your local team. Move repeat online work to a Filipino assistant hired for your hours, tools, and task list.</p>
+          <p className="hero-deck">Keep in-person work with your local team. Give repeat online work a clear owner, documented boundaries, and hours that fit your workday.</p>
           <div className="hero-actions">
             <a className="btn primary" href="/contact-us" id="cta-page-action-1">Build my role brief</a>
-            <a className="text-link" href="/compare/local-vs-remote-assistant" id="cta-page-action-2">Compare local and remote <span>↗</span></a>
+            <a className="text-link" href="/services" id="cta-page-action-2">Explore role plans <span>↗</span></a>
           </div>
-          <div className="hero-note"><span className="note-icon">⌖</span><p><strong>Searching "near me"?</strong> We recruit only in the Philippines. You get remote help planned around your local workday, not an in-person hire.</p></div>
         </div>
-        <div className="hero-visual">
-          <img src="/illustrations/getillustrations/goodle-business-illustrations-svg/remote-filipino-assistant.svg" alt="Illustration of a remote Filipino assistant approved for clearly scoped online work" width="600" height="600"/>
+        <figure className="hero-visual editorial-hero-media">
+          <img src="/images/local-team.jpg" alt="Two colleagues discussing a digital workflow beside a laptop" width="1600" height="1067"/>
+          <figcaption>A useful assistant brief starts with the workflow, not a generic list of skills. Image used as a work-planning illustration.</figcaption>
           <div className="location-card">
-            <div className="location-top"><span>Role brief</span><b>Location check</b></div>
+            <div className="location-top"><span>Role lens</span><b>Scope before search</b></div>
             <h2>Where should the work happen?</h2>
-            <div className="choice active"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/remote-fit.svg" alt="Remote assistant role fit icon" width="24" height="24"/></span><div><b>Filipino remote assistant</b><small>For work handled in your online tools</small></div></div>
-            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/local-fit.svg" alt="Local in-person role fit icon" width="24" height="24"/></span><div><b>Keep it with your local team</b><small>For front desk, errands, or paper files</small></div></div>
-            <div className="choice"><span><img src="/icons/getillustrations/sharpie-business-icons-svg/role-planning.svg" alt="Assistant role planning icon" width="24" height="24"/></span><div><b>Help me sort the role</b><small>Separate online tasks from in-person work</small></div></div>
+            <div className="choice active"><span>✓</span><div><b>Online tools and repeat tasks</b><small>Plan for remote support</small></div></div>
+            <div className="choice"><span>•</span><div><b>Front desk and physical access</b><small>Keep with a local team</small></div></div>
           </div>
-
+        </figure>
+        <div className="hero-proof" aria-label="Service boundaries">
+          <div><strong>Philippines</strong><span>Recruiting location</span></div>
+          <div><strong>Remote only</strong><span>Delivery model</span></div>
+          <div><strong>Role first</strong><span>Matching approach</span></div>
         </div>
       </div>
       <div className="container task-strip" aria-label="Common assistant tasks">
-        <span className="strip-label">Popular starting points</span>
+        <span className="strip-label">Common starting points</span>
         {tasks.map((task) => <a href="#roles" key={task}>{task}</a>)}
       </div>
     </section>
 
     <section className="section role-section" id="roles">
       <div className="container">
-        <div className="section-heading"><div><p className="eyebrow">Choose the work, then the person</p><h2>Start with a role that has edges.</h2></div><p>An assistant can do a lot. That does not mean one person should do everything. A tighter brief makes screening, onboarding, and review much easier.</p></div>
-        <div className="role-grid">
-          {roleDetails.map((role, index) => <article className="role-card" key={role.title}>
-            <div className="role-photo"><img src={index === 0 ? '/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-role-collaboration.svg' : role.image} alt={index === 0 ? 'Assistant and manager collaborating on role priorities' : `${role.title} support role example`} width={index === 0 ? 750 : 800} height={index === 0 ? 750 : 1200}/></div>
-            <div className="role-body"><small>{role.fit}</small><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this to my brief <span>→</span></a></div>
+        <div className="section-heading"><div><p className="eyebrow">Choose the lane, then the person</p><h2>Give recurring work a clear edge.</h2></div><p>A tighter brief makes screening, onboarding, and review easier. Start with one workstream and add responsibility only when the handoff is working.</p></div>
+        <div className="role-grid editorial-role-grid">
+          {roleDetails.map((role, index) => <article className="role-card editorial-role-card" key={role.title}>
+            <header><small>{role.fit}</small><span>{role.signal}</span></header>
+            <div className="role-body"><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this lane to my brief <span>→</span></a></div>
           </article>)}
         </div>
-        <p className="image-disclaimer">These photos illustrate assistant roles. They do not show available candidates or customer endorsements.</p>
       </div>
     </section>
 
@@ -81,14 +83,14 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="brief-section">
+    <section className="brief-section editorial-brief-section">
       <div className="container brief-grid">
-        <div className="brief-copy"><p className="eyebrow">A useful first brief</p><h2>A short task list is enough to begin.</h2><p>Add the hours and the decisions that stay with you. You do not need a polished job description or a stack of SOPs before the first conversation.</p></div>
-        <ol className="brief-steps">
-          <li><span>1</span><div><b>List the repeat work</b><p>Write down what keeps coming back every day or week.</p></div></li>
-          <li><span>2</span><div><b>Mark the sensitive parts</b><p>Keep approvals, money decisions, and customer promises with the right owner.</p></div></li>
-          <li><span>3</span><div><b>Decide when to review it</b><p>Check the work daily at first. Review less often once the assistant can handle it reliably.</p></div></li>
-        </ol>
+        <div className="brief-copy"><p className="eyebrow">A useful first brief</p><h2>Start with three operating decisions.</h2><p>You do not need a polished job description or a stack of SOPs. You need a repeatable task, a clear boundary, and a review point.</p></div>
+        <div className="brief-steps editorial-brief-steps">
+          <article><span>Repeat work</span><div><b>Name what keeps returning</b><p>Capture the task that comes back every day or week.</p></div></article>
+          <article><span>Decision boundary</span><div><b>Keep judgment with an owner</b><p>Mark approvals, money decisions, and customer promises.</p></div></article>
+          <article><span>Review rhythm</span><div><b>Decide when the work is checked</b><p>Review closely at first, then adjust as reliability grows.</p></div></article>
+        </div>
       </div>
     </section>
 
@@ -101,7 +103,7 @@ export default function Home() {
 
     <section className="section reading-section">
       <div className="container">
-        <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/blog" id="cta-page-action-4">View all guides <span>↗</span></a></div>
+        <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/research" id="cta-page-action-4">Explore research <span>↗</span></a></div>
         <div className="reading-grid">{publishedBlogPosts.slice(0,3).map((post) => {
           const card = editorialCard(post.slug);
           return <a href={`/blog/${post.slug}`} key={post.slug}>
@@ -112,6 +114,5 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="final-section"><div className="container final-inner"><div><p className="eyebrow light">Ready when the task list is messy</p><h2>Bring the work. We'll help shape the role.</h2></div><a className="btn coral" href="/contact-us" id="cta-page-action-5">Build my role brief</a></div></section>
   </main><Footer/></>;
 }

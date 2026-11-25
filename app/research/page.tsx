@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '../components';
 import { site } from '../data';
-import { publishedResearchPosts } from '../content-policy';
-import { EditorialCard, formatEditorialDate } from '../editorial-components';
+import { EditorialCard } from '../editorial-components';
+import { archivedResearchPosts, sortedResearchPosts } from './archive-data';
 
 export const metadata: Metadata = {
   title: 'Research library',
@@ -11,16 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default function ResearchLibrary() {
-  const posts = [...publishedResearchPosts].sort((a, b) =>
-    b.published.localeCompare(a.published) || a.slug.localeCompare(b.slug),
-  );
+  const posts = sortedResearchPosts();
   const latestPosts = posts.slice(0, 9);
-  const archive = posts.slice(9).reduce<Record<string, typeof posts>>((groups, post) => {
-    const month = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })
-      .format(new Date(`${post.published}T00:00:00Z`));
-    (groups[month] ||= []).push(post);
-    return groups;
-  }, {});
+  const archiveCount = archivedResearchPosts().length;
   return (
     <>
       <Header />
@@ -35,12 +28,9 @@ export default function ResearchLibrary() {
           <div className="editorial-grid">
             {latestPosts.map((post) => <EditorialCard key={post.slug} href={`/research/${post.slug}`} title={post.title} excerpt={post.excerpt} image={{ src: post.image, alt: post.imageAlt, width: 1200, height: 630 }} published={post.published} kind="Research brief" />)}
           </div>
-          <div className="research-archive" aria-labelledby="research-archive-title">
-            <div className="research-archive-heading"><div><p className="eyebrow">Complete archive</p><h2 id="research-archive-title">Browse earlier briefs by month.</h2></div><p>Open a month to scan titles without loading another wall of images.</p></div>
-            {Object.entries(archive).map(([month, monthPosts]) => <details key={month}>
-              <summary><span>{month}</span><small>{monthPosts.length} briefs</small></summary>
-              <ul>{monthPosts.map((post) => <li key={post.slug}><a href={`/research/${post.slug}`}>{post.title}</a><time dateTime={post.published}>{formatEditorialDate(post.published)}</time></li>)}</ul>
-            </details>)}
+          <div className="research-archive research-archive-gateway" aria-labelledby="research-archive-title">
+            <div className="research-archive-heading"><div><p className="eyebrow">Complete archive</p><h2 id="research-archive-title">Browse {archiveCount} earlier briefs in manageable pages.</h2></div><p>The archive is split into groups of 24 for faster loading and easier navigation.</p></div>
+            <a className="btn primary" href="/research/archive">Open the research archive</a>
           </div>
         </div></section>
       </main>

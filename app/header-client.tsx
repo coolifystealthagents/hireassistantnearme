@@ -8,6 +8,15 @@ export function HeaderClient({ brand }: { brand: string }) {
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const mobile = window.matchMedia('(max-width: 780px)');
+    const closeAtDesktop = (event: MediaQueryListEvent) => {
+      if (!event.matches) setOpen(false);
+    };
+    mobile.addEventListener('change', closeAtDesktop);
+    return () => mobile.removeEventListener('change', closeAtDesktop);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
     const nav = navRef.current;
     const focusable = [...(nav?.querySelectorAll<HTMLElement>('a,button') ?? [])];

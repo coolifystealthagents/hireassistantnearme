@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 type Props = { endpoint?: string; encoding?: "json" | "form" };
 type LeadPayload = Record<string, string>;
@@ -33,13 +33,12 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
     }
   }
 
-  function handleKeyDown(event: KeyboardEvent<HTMLFormElement>) {
-    if (event.key !== "Enter" || event.shiftKey || event.nativeEvent.isComposing || event.target instanceof HTMLTextAreaElement) return;
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     void submit(event.currentTarget);
   }
 
-  return <form id="standard-contact" className="standard-contact-form" data-acr-managed="react" onKeyDown={handleKeyDown}>
+  return <form id="standard-contact" className="standard-contact-form" data-acr-managed="react" onSubmit={handleSubmit}>
     <div className="form-heading"><p className="contact-kicker">Start with the work</p><h2>Tell us what support would move work forward.</h2><p>Share practical context. A staffing specialist can use it to prepare a focused role conversation.</p></div>
     <div className="form-grid">
       <label><span>First name</span><input name="firstName" autoComplete="given-name" required /></label>
@@ -52,6 +51,6 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
       <label className="wide"><span>What would you like the assistant to own?</span><textarea name="message" rows={5} required placeholder="Describe the recurring work, systems, schedule, and approval points." /></label>
     </div>
     <label className="consent-row"><input type="checkbox" name="consent" value="yes" required /><span>I agree to be contacted about this request. I understand this is a remote staffing conversation, not a local job application.</span></label>
-    <div className="form-action"><button type="button" className="submit-button" disabled={busy} onClick={(event) => void submit(event.currentTarget.form!)}>{busy ? "Sending..." : "Continue to scheduling"}</button><p aria-live="polite" role="status">{status}</p></div>
+    <div className="form-action"><button type="submit" className="submit-button" disabled={busy}>{busy ? "Sending..." : "Continue to scheduling"}</button><p aria-live="polite" role="status">{status}</p></div>
   </form>;
 }

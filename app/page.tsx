@@ -1,6 +1,6 @@
 import { Header, Footer, JsonLd } from './components';
 import { faqs, localMarkets, roles, site } from './data';
-import { editorialCard, publishedBlogPosts } from './content-policy';
+import { publishedBlogPosts } from './content-policy';
 import { TestimonialsRail } from './booking-components';
 
 export const metadata = { alternates: { canonical: '/' } };
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the lane, then the person</p><h2>Give recurring work a clear edge.</h2></div><p>A tighter brief makes screening, onboarding, and review easier. Start with one workstream and add responsibility only when the handoff is working.</p></div>
         <div className="role-grid editorial-role-grid">
           {roleDetails.map((role, index) => <article className="role-card editorial-role-card" key={role.title}>
-            <figure><img src={role.image} alt={role.alt} width={role.width} height={role.height} /></figure>
+            <figure><img src={role.image} alt={role.alt} width={role.width} height={role.height} loading="lazy" /></figure>
             <header><small>{role.fit}</small><span>{role.signal}</span></header>
             <div className="role-body"><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this lane to my brief <span>→</span></a></div>
           </article>)}
@@ -96,9 +96,7 @@ export default function Home() {
       <div className="container">
         <div className="section-heading compact"><div><p className="eyebrow">Do the homework without the rabbit hole</p><h2>Plain hiring guides.</h2></div><a className="text-link" href="/research" id="cta-page-action-4">Explore research <span>↗</span></a></div>
         <div className="reading-grid editorial-reading-list">{publishedBlogPosts.slice(0,3).map((post) => {
-          const card = editorialCard(post.slug);
           return <a href={`/blog/${post.slug}`} key={post.slug}>
-            <figure><img src={card.src} alt="" width={card.width} height={card.height} /></figure>
             <div><span>{(post as { minutes?: number }).minutes || 10} min read</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Read guide <span aria-hidden="true">→</span></b></div>
           </a>;
         })}</div>

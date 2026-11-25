@@ -6,9 +6,9 @@ import { TestimonialsRail } from './booking-components';
 export const metadata = { alternates: { canonical: '/' } };
 
 const roleDetails = [
-  { title: roles[0], note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Owner and leadership support', signal: 'Protect attention', image: '/images/marketing/team-workflow-review.jpg', alt: 'Colleagues reviewing work together around laptops' },
-  { title: roles[1], note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Customer operations', signal: 'Keep queues moving', image: '/images/marketing/remote-operations-work.jpg', alt: 'A professional working at a desktop computer in an office' },
-  { title: roles[3], note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Back-office operations', signal: 'Make work visible', image: '/images/marketing/distributed-operations-office.jpg', alt: 'A distributed operations team working at shared desks' },
+  { title: roles[0], note: 'Calendar, inbox, meeting prep, and loose ends that follow you home.', fit: 'Owner and leadership support', signal: 'Protect attention', image: '/images/marketing/team-workflow-review.jpg', alt: 'Colleagues reviewing work together around laptops', width: 1200, height: 1799 },
+  { title: roles[1], note: 'Ticket sorting, reply drafts, call notes, and follow-up during your business hours.', fit: 'Customer operations', signal: 'Keep queues moving', image: '/images/marketing/remote-operations-work.jpg', alt: 'A professional working at a desktop computer in an office', width: 1200, height: 800 },
+  { title: roles[3], note: 'CRM upkeep, document prep, reports, and recurring admin that needs a steady owner.', fit: 'Back-office operations', signal: 'Make work visible', image: '/images/marketing/evidence-review-laptop.jpg', alt: 'People reviewing a work item together on a laptop', width: 1200, height: 800 },
 ];
 
 const tasks = ['Inbox and calendar', 'Customer follow-up', 'CRM cleanup', 'Reports and admin'];
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </div>
         <figure className="hero-visual editorial-hero-media">
-          <img src="/images/marketing/team-workflow-review.jpg" alt="Colleagues reviewing a shared workflow around laptops" width="1200" height="1799"/>
+          <img src="/images/marketing/distributed-operations-office.jpg" alt="A team working across shared desks in a professional office" width="1200" height="800"/>
           <figcaption>Start with the work: the tools, handoffs, decisions, and review rhythm.</figcaption>
         </figure>
         <div className="hero-proof" aria-label="Service boundaries">
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">Choose the lane, then the person</p><h2>Give recurring work a clear edge.</h2></div><p>A tighter brief makes screening, onboarding, and review easier. Start with one workstream and add responsibility only when the handoff is working.</p></div>
         <div className="role-grid editorial-role-grid">
           {roleDetails.map((role, index) => <article className="role-card editorial-role-card" key={role.title}>
-            <figure><img src={role.image} alt={role.alt} width="1200" height={index === 0 ? 1799 : 800} /></figure>
+            <figure><img src={role.image} alt={role.alt} width={role.width} height={role.height} /></figure>
             <header><small>{role.fit}</small><span>{role.signal}</span></header>
             <div className="role-body"><h3>{role.title}</h3><p>{role.note}</p><a id={`cta-home-role-add-${index}`} href="/contact-us">Add this lane to my brief <span>→</span></a></div>
           </article>)}
@@ -91,12 +91,6 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="section guidance-section">
-      <div className="container guidance-card">
-        <div><p className="eyebrow">Planning guidance</p><h2>Test the role before you add more work.</h2><p>A limited weekly schedule makes it easier to spot missing instructions. The range below is an example for planning, not a promised result.</p></div>
-        <div className="guidance-range"><span>Suggested pilot</span><strong>10 to 20</strong><b>hours each week</b><small>Adjust for the role, tools, and review time.</small></div>
-      </div>
-    </section>
 
     <section className="section reading-section">
       <div className="container">

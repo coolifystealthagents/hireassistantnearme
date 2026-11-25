@@ -275,21 +275,24 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.match(tracker, /status: upstream\.ok \? 200 : 502/);
 });
 
-test('contact marquee uses ten sourced reviews, horizontal recycling, and no playback controls', () => {
+test('testimonial rail uses ten sourced reviews with user-controlled horizontal scrolling', () => {
   const rail = read('app/booking-components.tsx');
   const provenance = JSON.parse(read('app/review-provenance.json'));
   const css = read('app/release-v3.css');
+  const systemCss = read('app/site-system.css');
   const legacyCss = read('app/globals.css');
   assert.equal(provenance.source, 'https://stealthagents.com/');
   assert.equal(provenance.records.length, 10);
   assert.equal(new Set(provenance.records.map((item) => item.name)).size, 10);
   assert.match(rail, /StealthAgents reviews/);
-  assert.match(rail, /requestAnimationFrame/);
-  assert.match(rail, /track\.append\(first\)/);
-  assert.doesNotMatch(rail, /Pause|Play|Previous|Next|\.\.\.stealthAgentsReviews/);
+  assert.match(rail, /Scroll horizontally to read more/);
+  assert.match(rail, /stealthAgentsReviews\.map/);
+  assert.doesNotMatch(rail, /requestAnimationFrame|track\.append|useEffect/);
   assert.match(css, /\.sa-testimonial-track\{display:flex/);
   assert.match(css, /animation:none/);
-  assert.match(css, /\.sa-testimonial-card\{display:block!important/);
+  assert.match(systemCss, /overflow-x:auto/);
+  assert.match(systemCss, /scroll-snap-type:x mandatory/);
+  assert.match(systemCss, /height:auto;min-height:196px/);
   assert.doesNotMatch(legacyCss, /contact-review-scroll|sa-testimonial-scroll|nth-child\(n\+4\)/);
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
 });

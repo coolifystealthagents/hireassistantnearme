@@ -51,6 +51,8 @@ test('component-managed form waits for a truthful accepted response and emits no
   const layout = read('app/layout.tsx');
   assert.match(form, /data-acr-managed=["']react["']/);
   assert.match(form, /type=["']submit["']/);
+  assert.match(form, /action=\{endpoint\}/);
+  assert.match(form, /method=["']post["']/);
   assert.match(form, /onSubmit=\{handleSubmit\}/);
   assert.doesNotMatch(form, /onKeyDown=/);
   assert.doesNotMatch(form, /type=["']button["']/);
@@ -221,6 +223,7 @@ test('editorial consolidation uses an explicit manifest and preserves permanent 
   assert.doesNotMatch(retiredRanking, /const companies|editor pick|Top 25/);
   assert.match(homepage, /publishedBlogPosts\.slice\(0,3\)/);
   assert.doesNotMatch(homepage, /blogPosts\.slice\(0,3\)/);
+  assert.doesNotMatch(homepage, /FAQPage|mainEntity|faqs\.map/);
 });
 
 test('the general-office clerk guide replaces its retired research path with a scoped project-coordination handoff', () => {
@@ -269,6 +272,7 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.match(api, /if \(!upstream\.ok \|\| result\?\.ok !== true\) return errorPage\(502\);[\s\S]*after\(\(\) => attemptAcceptedLeadEvent\(clientEventId/);
   assert.match(api, /Analytics is deliberately nonblocking after accepted lead ingestion/);
   assert.match(api, /return NextResponse\.json\(\{ ok: true, redirect: '\/thank-you' \}/);
+  assert.match(api, /!request\.headers\.get\('accept'\)\?\.includes\('application\/json'\)[\s\S]*NextResponse\.redirect\(new URL\('\/thank-you', request\.url\), 303\)/);
   assert.doesNotMatch(tracker, /'lead_submit',/);
   assert.match(api, /TRUST_PROXY_HEADERS === '1'[\s\S]*x-forwarded-for[\s\S]*\.at\(-1\)[\s\S]*isIP\(forwarded\)/);
   assert.match(tracker, /TRUST_PROXY_HEADERS === '1'[\s\S]*x-forwarded-for[\s\S]*\.at\(-1\)[\s\S]*isIP\(forwarded\)/);

@@ -24,7 +24,7 @@ export default function ResearchLibrary() {
         </div></section>
         <section className="research-method-strip"><div className="container"><p>Every brief includes</p><ul><li>A stated question</li><li>Cited sources</li><li>Explicit limitations</li><li>Owner decisions</li></ul></div></section>
         <section className="section research-library-section" id="research-library"><div className="container">
-          <div className="section-heading compact research-library-heading"><div><p className="eyebrow">Latest evidence briefs</p><h2>Read the finding. Keep the judgment.</h2></div><p>These briefs support planning; they do not replace legal, financial, security, or operating judgment.</p></div>
+          <div className="section-heading compact research-library-heading"><div><p className="eyebrow">Recent evidence briefs</p><h2>Read the finding. Keep the judgment.</h2></div><p>These briefs support planning; they do not replace legal, financial, security, or operating judgment.</p></div>
           <div className="editorial-grid">
             {latestPosts.map((post) => <EditorialCard key={post.slug} href={`/research/${post.slug}`} title={post.title} excerpt={post.excerpt} image={{ src: post.image, alt: post.imageAlt, width: 1200, height: 630 }} published={post.published} kind="Research brief" />)}
           </div>

@@ -165,5 +165,8 @@ export async function POST(request: NextRequest) {
     userAgent: request.headers.get('user-agent') || '',
   });
   after(() => attemptAcceptedLeadEvent(clientEventId, request.headers.get('user-agent') || ''));
+  if (!request.headers.get('accept')?.includes('application/json')) {
+    return NextResponse.redirect(new URL('/thank-you', request.url), 303);
+  }
   return NextResponse.json({ ok: true, redirect: '/thank-you' }, { headers: { 'Cache-Control': 'no-store' } });
 }

@@ -1,5 +1,5 @@
 import { Header, Footer, JsonLd } from './components';
-import { faqs, localMarkets, roles, site } from './data';
+import { localMarkets, roles, site } from './data';
 import { publishedBlogPosts } from './content-policy';
 import { TestimonialsRail } from './booking-components';
 
@@ -14,10 +14,7 @@ const roleDetails = [
 const tasks = ['Inbox and calendar', 'Customer follow-up', 'CRM cleanup', 'Reports and admin'];
 
 export default function Home() {
-  const schema = [
-    { '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: site.url },
-    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
-  ];
+  const schema = { '@context': 'https://schema.org', '@type': 'WebSite', name: site.brand, url: site.url };
   return <><Header/><main className="finder-home editorial-home" data-design="editorial-role-finder-2026"><JsonLd data={schema}/>
     <section className="finder-hero editorial-home-hero">
       <div className="container hero-shell">

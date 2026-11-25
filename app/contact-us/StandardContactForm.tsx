@@ -38,7 +38,7 @@ export default function StandardContactForm({ endpoint = "/api/contact", encodin
     void submit(event.currentTarget);
   }
 
-  return <form id="standard-contact" className="standard-contact-form" data-acr-managed="react" onSubmit={handleSubmit}>
+  return <form id="standard-contact" className="standard-contact-form" action={endpoint} method="post" data-acr-managed="react" onSubmit={handleSubmit}>
     <div className="form-heading"><p className="contact-kicker">Start with the work</p><h2>Tell us what support would move work forward.</h2><p>Share practical context. A staffing specialist can use it to prepare a focused role conversation.</p></div>
     <div className="form-grid">
       <label><span>First name</span><input name="firstName" autoComplete="given-name" required /></label>

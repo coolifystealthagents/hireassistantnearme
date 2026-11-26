@@ -38,7 +38,7 @@ test('contact page follows the conversion-first parent-brand contract', () => {
   assert.doesNotMatch(contact, /stealth-agents-team\.webp/);
   assert.match(contact, /stealth-agents-logo-black\.png/);
   assert.match(contact, /Official team, Bacolod/);
-  assert.match(footer, /href=["']\/blog["']>Blog<\/a>/);
+  assert.match(footer, /aria-label=["']Learning resources["'][\s\S]*className=["']footer-blog-link["'] href=["']\/blog["']>Blog<\/a>/);
   assert.doesNotMatch(footer, />Evidence-backed guides<\/a>/);
   assert.match(contact, /managed-service/i);
   assert.doesNotMatch(contact, /over 35\+|top rated|featured on Forbes/i);

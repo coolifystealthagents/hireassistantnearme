@@ -13,6 +13,6 @@
 @media(max-width:600px) { [data-site-footer] .site-parent-company { grid-template-columns: minmax(0,1fr); gap: 20px; } }
 
 /* Clip horizontal decoration without creating a scroll container around the sticky header. */
-html, body { overflow-x: clip; }
+html, body { overflow-x: clip !important; }
 
 [data-site-footer] > div > .site-parent-company { width:100%; }

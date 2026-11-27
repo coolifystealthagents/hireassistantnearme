@@ -7,6 +7,8 @@ import './site-system.css';
 import type { Metadata } from 'next';
 import { site } from './data';
 
+import "./site-chrome-fixes.css";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: 'Hire Assistant Near Me | Filipino remote assistants', template: '%s | Hire Assistant Near Me' },

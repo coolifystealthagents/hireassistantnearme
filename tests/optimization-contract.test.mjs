@@ -286,7 +286,7 @@ test('contact ingestion preserves required fields, consent, and measured limits'
   assert.match(tracker, /status: upstream\.ok \? 200 : 502/);
 });
 
-test('testimonial rail uses ten sourced reviews with user-controlled horizontal scrolling', () => {
+test('testimonial rail loops the same ten sourced reviews with keyboard and reduced-motion support', () => {
   const rail = read('app/booking-components.tsx');
   const provenance = JSON.parse(read('app/review-provenance.json'));
   const css = read('app/release-v3.css');
@@ -296,15 +296,19 @@ test('testimonial rail uses ten sourced reviews with user-controlled horizontal 
   assert.equal(provenance.records.length, 10);
   assert.equal(new Set(provenance.records.map((item) => item.name)).size, 10);
   assert.match(rail, /StealthAgents reviews/);
-  assert.match(rail, /Scroll or use Tab to read more/);
-  assert.match(rail, /stealthAgentsReviews\.map/);
+  assert.match(rail, /Reviews scroll automatically/);
+  assert.ok(rail.includes('[...stealthAgentsReviews, ...stealthAgentsReviews].map'));
   assert.match(rail, /role=["']region["'][\s\S]*aria-describedby/);
-  assert.match(rail, /tabIndex=\{0\}[\s\S]*Review \$\{index \+ 1\} of/);
+  assert.match(rail, /tabIndex=\{index < stealthAgentsReviews.length \? 0 : -1\}/);
+  assert.match(rail, /aria-hidden=\{index >= stealthAgentsReviews.length/);
   assert.doesNotMatch(rail, /requestAnimationFrame|track\.append|useEffect/);
   assert.match(css, /\.sa-testimonial-track\{display:flex/);
   assert.match(css, /animation:none/);
-  assert.match(systemCss, /overflow-x:auto/);
-  assert.match(systemCss, /scroll-snap-type:x mandatory/);
+  const motionCss = read('app/site-chrome-fixes.css');
+  assert.match(motionCss, /animation: site-review-loop 100s linear infinite/);
+  assert.match(motionCss, /:focus-within[\s\S]*animation-play-state: paused/);
+  assert.match(motionCss, /prefers-reduced-motion:reduce/);
+  assert.match(motionCss, /data-review-copy/);
   assert.match(systemCss, /height:auto;min-height:196px/);
   assert.doesNotMatch(legacyCss, /contact-review-scroll|sa-testimonial-scroll|nth-child\(n\+4\)/);
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)/);
